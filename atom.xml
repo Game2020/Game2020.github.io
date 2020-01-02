@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Game 2020</title>
+  
+  <subtitle>https://2020.iosdevlog.com</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://2020.iosdevlog.com/"/>
+  <updated>2020-01-02T06:08:58.304Z</updated>
+  <id>https://2020.iosdevlog.com/</id>
+  
+  <author>
+    <name>iOSDevLog</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>B 站直播</title>
+    <link href="https://2020.iosdevlog.com/2020/01/01/bilibili-live/"/>
+    <id>https://2020.iosdevlog.com/2020/01/01/bilibili-live/</id>
+    <published>2020-01-01T02:38:04.000Z</published>
+    <updated>2020-01-02T06:08:58.304Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png" alt="2020/01/01"></p><a id="more"></a><p>bilibili 直播帮助: <a href="https://live.bilibili.com/help" target="_blank" rel="noopener">https://live.bilibili.com/help</a></p><h2 id="实名认证"><a href="#实名认证" class="headerlink" title="实名认证"></a>实名认证</h2><ol><li>需要绑定手机并经过实名认证才能获得直播权限，实名认证时需要上传您本人的身份证反面照片+手持身份证照片。<br>点此前去进行实名认证</li><li>已完成实名认证的用户，请登录直播页面点击【我要直播】按钮根据提示完成开通直播的申请，提交后请等待审核通过。<br>(一般会在48小时之内完成审核)</li><li>通过审核之后再次点击【我要直播】按钮，可进入自己的直播间再次编辑直播间信息。</li></ol><h2 id="填写直播间信息"><a href="#填写直播间信息" class="headerlink" title="填写直播间信息"></a>填写直播间信息</h2><ol><li>开启开播前请填写您的直播间标题，长度限制为20个汉字。</li><li>请根据您直播的内容正确选择分区，此项为必填。恶意切换分区（例如直播的是电子竞技游戏，却切换到绘画分区），30天内将不能更改直播分区。</li><li>主播等级达到1级可以上传自定义封面，20级可以上传自定义房间背景图。</li></ol><h2 id="开启直播"><a href="#开启直播" class="headerlink" title="开启直播"></a>开启直播</h2><p>OBS （Open Broadcaster Software）: <a href="https://obsproject.com" target="_blank" rel="noopener">https://obsproject.com</a></p><p>打开 OBS 后，可以看到 Audio 已经可以正常使用了。</p><img src="/2020/01/01/bilibili-live/OBS.png" class="" title="OBS 主界面"><p>菜单 &gt; 工具 &gt; 自动配置向导</p><img src="/2020/01/01/bilibili-live/Wizard.png" class="" title="自动配置向导 (Wizard)"><img src="/2020/01/01/bilibili-live/Display_Capture.png" class="" title="添加 显示捕获(Display Capture)"><img src="/2020/01/01/bilibili-live/Resize.png" class="" title="调整输出大小到源大小 Resize"><p>OBS 请点击直播网页上的【我要直播】按钮来到自己的直播间页面；点击播放器右上角的【开启直播】开关，把你在对话框里看到的 rtmp 地址和直播码，填写到 OBS 的设置&gt;&gt;广播设定 中，然后点击【开始串联】即可正常开播。</p><p>直播地址：<a href="https://live.bilibili.com/4311135" target="_blank" rel="noopener">https://live.bilibili.com/4311135</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png&quot; alt=&quot;2020/01/01&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://2020.iosdevlog.com/2020/01/01/hello-world/"/>
+    <id>https://2020.iosdevlog.com/2020/01/01/hello-world/</id>
+    <published>2020-01-01T01:52:45.000Z</published>
+    <updated>2020-01-02T02:01:10.942Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
