@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-05T14:54:58.911Z</updated>
+  <updated>2020-01-06T15:19:16.470Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>从 0 开始学游戏开发</title>
+    <link href="https://2020.iosdevlog.com/2020/01/06/game/"/>
+    <id>https://2020.iosdevlog.com/2020/01/06/game/</id>
+    <published>2020-01-06T14:15:51.000Z</published>
+    <updated>2020-01-06T15:19:16.470Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-06.png" alt="2020/01/06"></p><a id="more"></a><p>游戏行业一直是公认的“吸金”行业。对于热爱游戏的人，能够开发出一款自己的游戏，绝对是一件很酷很有格调的事。游戏行业的高回报，也吸引着越来越多的人跃跃欲试。</p><p>那么，如果想成为一名专业的游戏开发工程师，究竟该如何入门呢？</p><ul><li>基础知识<ul><li>游戏开发中最重要的三个武器<ul><li>游戏引擎</li><li>底层绘图接口</li><li>地图编辑器</li></ul></li></ul></li><li>客户端开发<ul><li>将梳理整个开发流程，手把手教你编写一个窗体、区分图形和图像、绘制游戏背景及內容填充。</li></ul></li><li>UI 和键盘鼠标<ul><li>将讲述如何在游戏中载入 UI 和菜单，如何用鼠标和键盘控制游戏精灵，以及整个客户端的网络连接问题。</li></ul></li><li>脚本语言<ul><li>将用简单易懂的 C/C++ 代码讲解如何嵌入脚本语言，阐述脚本语言在游戏开发中的应用，以及如何使用脚本语言编写更多的周边工具。</li></ul></li><li>服务器端开发<ul><li>将闻述游戏开发中网络传输相关问题，比如选择开发语言、定制开发协议，多线程和并发问题，心跳包离线和断网处理，用网关服务器进行负载均衡，內容保存和缓存处理等。</li></ul></li><li>热点剖析<ul><li>将解析热门的 HTML5 游戏和移动端游戏的技术及威力，并带你编写一款 HTML5 游戏，教你选择移动端游戏引擎，最后谈一谈独立游戏开发者的未来发展。</li></ul></li></ul><p>跟着我，可以从最简单的 2D 小游戏开始，到炫酷的 AR 多人对战游戏。</p><p>参考：<a href="https://time.geekbang.org/column/intro/87" target="_blank" rel="noopener">从0开始学游戏开发-你的游戏开发入门第一课</a></p><p>明天介绍一些游戏开发的基础知识。</p><p>游戏开发直播地址：<a href="https://live.bilibili.com/4311135" target="_blank" rel="noopener">https://live.bilibili.com/4311135</a></p><p>GitHub 游戏源码: <a href="https://github.com/GameDevLog/GameDevLogTemplete" target="_blank" rel="noopener">https://github.com/GameDevLog/GameDevLogTemplete</a></p><h2 id="计划未完成怎么办？"><a href="#计划未完成怎么办？" class="headerlink" title="计划未完成怎么办？"></a>计划未完成怎么办？</h2><ol><li>减少工作量</li><li>根据精力，排好序，按计划执行</li></ol><p>找了几个相关俗语：</p><ul><li>计划赶不上变化</li><li>以不变应万变</li><li>未雨绸缪</li><li>不打无准备之仗</li><li>亡羊补牢，未为迟也</li></ul><p>总结一下就是提前准备，计划不能按时完成是不可避免的，要能找到补救方法。</p><p>我应该提前一点做好准备，在未完成前给出提示，后期再将计划补上。</p><p>最后附上明天的桌面背景。</p><p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-07.png" alt="2020/01/07"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-06.png&quot; alt=&quot;2020/01/06&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
+    
+    
+      <category term="beginner" scheme="https://2020.iosdevlog.com/tags/beginner/"/>
+    
+  </entry>
   
   <entry>
     <title>《精力管理》-计划未完成怎么办？</title>
