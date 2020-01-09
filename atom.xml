@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-09T00:41:35.867Z</updated>
+  <updated>2020-01-09T13:53:37.211Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《变身》人物关系图</title>
+    <link href="https://2020.iosdevlog.com/2020/01/09/henshin/"/>
+    <id>https://2020.iosdevlog.com/2020/01/09/henshin/</id>
+    <published>2020-01-09T13:50:03.000Z</published>
+    <updated>2020-01-09T13:53:37.211Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2020/01/09/henshin/%E5%8F%98%E8%BA%AB.png" class="" title="变身"><a id="more"></a><p>阿纯最后怎么样了？</p><p>看完这部小说，你有什么想说的吗？</p><p>最后附上明天的桌面背景。</p><p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-10.png" alt="2020/01/10"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2020/01/09/henshin/%E5%8F%98%E8%BA%AB.png&quot; class=&quot;&quot; title=&quot;变身&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>UI和键盘鼠标</title>
+    <link href="https://2020.iosdevlog.com/2020/01/09/UI-Input/"/>
+    <id>https://2020.iosdevlog.com/2020/01/09/UI-Input/</id>
+    <published>2020-01-09T12:15:02.000Z</published>
+    <updated>2020-01-09T13:45:55.870Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png" alt="2020/01/09"></p><a id="more"></a><h2 id="如何在游戏中载入UI和菜单？"><a href="#如何在游戏中载入UI和菜单？" class="headerlink" title="如何在游戏中载入UI和菜单？"></a>如何在游戏中载入UI和菜单？</h2><h3 id="UI-的两种呈现形式"><a href="#UI-的两种呈现形式" class="headerlink" title="UI 的两种呈现形式"></a>UI 的两种呈现形式</h3><ol><li>美术画好 UI 图片，然后直接贴图，用鼠标控制一系列的点击和按下操作</li><li>自己画 UI 界面，比如画一个框，并且在框里面写上文字</li></ol><ul><li>绘制矩形</li><li>绘制字体和字符</li></ul><p>鼠标的操作基本有 3 个值需要控制</p><ul><li>左键</li><li>中键</li><li>右键</li></ul><h2 id="如何用鼠标和键盘来操作游戏？"><a href="#如何用鼠标和键盘来操作游戏？" class="headerlink" title="如何用鼠标和键盘来操作游戏？"></a>如何用鼠标和键盘来操作游戏？</h2><ul><li>首先是键盘事件判断，这里会出现按一下键盘做一下操作的情况，问题出在 KEYDOWN 事件判断上。但是如果你需要一直按键的判断，可以使用 get_pressed 函数。</li><li>组合键可以写在同一个判断下，使用 and 连起来做判断。get_pressed 会返回一个 tuple，里面存放了所有的 key 值，只要判断 key 值是不是为 True 就是判断了有没有按键。</li><li>鼠标操作也可以使用 get_pressed 函数，也是返回 tuple，其中下标 0、1、2 分别代表了左、中、右三个按键。</li></ul><h2 id="如何判断客户端的网络连接？"><a href="#如何判断客户端的网络连接？" class="headerlink" title="如何判断客户端的网络连接？"></a>如何判断客户端的网络连接？</h2><p>OSI 七层模型: <code>巫术忘传会飚鹰</code></p><ul><li><code>应</code>用层</li><li><code>表</code>示层</li><li><code>会</code>话层</li><li><code>传</code>输层</li><li><code>网</code>络层</li><li><code>数</code>据链路层</li><li><code>物</code>理层</li></ul><p>最后附上明天的桌面背景。</p><p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png" alt="2020/01/09"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png&quot; alt=&quot;2020/01/09&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
+    
+    
+      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
+    
+  </entry>
   
   <entry>
     <title>《刻意练习-如何从新手到大师》</title>
