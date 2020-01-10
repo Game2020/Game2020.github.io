@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-09T13:53:37.211Z</updated>
+  <updated>2020-01-10T11:47:37.654Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Lua 脚本语言</title>
+    <link href="https://2020.iosdevlog.com/2020/01/10/Script-Language/"/>
+    <id>https://2020.iosdevlog.com/2020/01/10/Script-Language/</id>
+    <published>2020-01-10T11:07:54.000Z</published>
+    <updated>2020-01-10T11:47:37.654Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lua-logo-nolabel.svg/1200px-Lua-logo-nolabel.svg.png" alt="Lua"></p><a id="more"></a><h2 id="如何嵌入脚本语言"><a href="#如何嵌入脚本语言" class="headerlink" title="如何嵌入脚本语言?"></a>如何嵌入脚本语言?</h2><ol><li>因为 <code>Lua</code> 脚本足够轻量级，几乎没有冗余的代码。Lua 虚拟机的执行效率几乎可以媲美 C/C++ 的执行效率。所以我们选择使用 Lua 脚本来嵌入 C/C++ 硬代码。</li><li>Lua 脚本在 C/C++ 语言里面嵌入，需要先声明一个虚拟机并且赋值给指针。</li><li>Lua 脚本需要先 loadfile 再 pcall 调用脚本文件，loadfile 会检查最基本的脚本文件内容，比如文件是否存在，比如脚本代码是否出错，而 pcall 会在运行时出错的时候将错误压至栈顶。</li><li>Lua 错误会将错误压制栈顶，我们要取出来，需要使用 -1 下标取出栈顶的内容，并转成 string 打印。</li></ol><h2 id="脚本语言在游戏开发中有哪些应用？"><a href="#脚本语言在游戏开发中有哪些应用？" class="headerlink" title="脚本语言在游戏开发中有哪些应用？"></a>脚本语言在游戏开发中有哪些应用？</h2><ul><li>在 Lua 与 C 的结合过程中，C 语言需要新建一个 Lua 虚拟机，然后使用虚拟机的指针来操作 Lua 函数。</li><li>在程序的应用中，使用 C 语言中的一些宏的技巧，可以使代码能够便利地应用在程序里。</li></ul><h2 id="如何使用脚本语言编写周边工具？"><a href="#如何使用脚本语言编写周边工具？" class="headerlink" title="如何使用脚本语言编写周边工具？"></a>如何使用脚本语言编写周边工具？</h2><ol><li><code>利用 C/C++ 语言和 Lua 源代码进行交互，从 Lua 代码中获取数据并且在 C 语言里面进行算法的封装和计算，最后将结果返回给 Lua。</code>我们在 C/C++ 语言里面进行大量的封装和算法提取，并且也利用 C/C++ 进行调用和结果的呈现，这是一种常用的方式，也就是 C 语言占比 60%～70%，Lua 代码占比 30%～40%。</li><li>另一种比较好的方式是，<code>使用 C/C++ 编写底层实现逻辑，随后将数据传输给 Lua，让 Lua 来做逻辑运算，最终将结果返回给 C 语言并且呈现出来。</code>这是很多人在游戏开发中都会做的事情，比如我们编写地图编辑器，先在 Lua 中编写好逻辑，用 C 语言在界面中呈现出来即可。如果反过来做的话，那就会出现大量的硬代码，是很不合适的。所以这种情况下，C 语言占比 30%～40%，Lua 代码占比 60%～70%。</li><li><code>Lua 可以是一种胶水语言。严谨地说，像 Python、Ruby 等脚本语言，都是合格的胶水语言。</code> 在这种情况下，胶水语言起到的作用就是粘合系统语言（C/C++）和上层脚本逻辑。所以，使用胶水语言，就像是一种动态的配置文件。按照普通的配置文件来讲，你需要手工解析比如类似 INI、XML、JSON 等配置文件，随后按照这些文件的内容来做出一系列的配置，但是胶水语言不需要，它本身就是一种动态的语言。</li></ol><p>参考：<a href="https://time.geekbang.org/column/intro/87" target="_blank" rel="noopener">从0开始学游戏开发</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lua-logo-nolabel.svg/1200px-Lua-logo-nolabel.svg.png&quot; alt=&quot;Lua&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
+    
+    
+      <category term="Language" scheme="https://2020.iosdevlog.com/tags/Language/"/>
+    
+      <category term="Lua" scheme="https://2020.iosdevlog.com/tags/Lua/"/>
+    
+  </entry>
   
   <entry>
     <title>《变身》人物关系图</title>
