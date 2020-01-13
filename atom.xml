@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-13T07:56:08.533Z</updated>
+  <updated>2020-01-13T14:26:14.281Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为什么你要学习编译原理？</title>
+    <link href="https://2020.iosdevlog.com/2020/01/13/Compiler-Construction/"/>
+    <id>https://2020.iosdevlog.com/2020/01/13/Compiler-Construction/</id>
+    <published>2020-01-13T14:14:34.000Z</published>
+    <updated>2020-01-13T14:26:14.281Z</updated>
+    
+    <content type="html"><![CDATA[<img src="/2020/01/13/Compiler-Construction/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%B9%8B%E7%BE%8E.jpg" class="" title="宫文学-《编译原理之美》"><a id="more"></a><p>编译技术并不难学</p><blockquote><p>“我知道编译技术很重要，我也很想把它啃下，可是我每次鼓起勇气拿起《编译原理》，啃不了多少页就放下了。编译原理已经成了我的心魔……”</p></blockquote><ul><li>具体的案例带你理解抽象的原理</li><li>真正运用到编译技术<ul><li>实现一门脚本语言<ul><li>词法分析</li><li>语法分析</li><li>语义分析</li></ul></li><li>实现一门编译型语言<ul><li>目标代码生成</li><li>代码优化</li></ul></li><li>面向未来的编程语言<ul><li>人工智能编程</li><li>云编程的新模式</li></ul></li></ul></li></ul><p>参考：<a href="https://time.geekbang.org/column/intro/219?utm_source=website&utm_medium=chaping&utm_term=pc_interstitial_65" target="_blank" rel="noopener">编译原理之美</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;img src=&quot;/2020/01/13/Compiler-Construction/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%B9%8B%E7%BE%8E.jpg&quot; class=&quot;&quot; title=&quot;宫文学-《编译原理之美》&quot;&gt;
+    
+    </summary>
+    
+    
+      <category term="编译原理" scheme="https://2020.iosdevlog.com/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/"/>
+    
+    
+      <category term="Compiler" scheme="https://2020.iosdevlog.com/tags/Compiler/"/>
+    
+      <category term="Construction" scheme="https://2020.iosdevlog.com/tags/Construction/"/>
+    
+  </entry>
   
   <entry>
     <title>《只差一个谎言》人物关系图</title>
@@ -486,29 +511,6 @@
     
     
       <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>B 站直播</title>
-    <link href="https://2020.iosdevlog.com/2020/01/01/bilibili-live/"/>
-    <id>https://2020.iosdevlog.com/2020/01/01/bilibili-live/</id>
-    <published>2020-01-01T02:38:04.000Z</published>
-    <updated>2020-01-03T02:27:21.638Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png" alt="2020/01/01"></p><a id="more"></a><p>bilibili 直播帮助: <a href="https://live.bilibili.com/help" target="_blank" rel="noopener">https://live.bilibili.com/help</a></p><h2 id="实名认证"><a href="#实名认证" class="headerlink" title="实名认证"></a>实名认证</h2><ol><li>需要绑定手机并经过实名认证才能获得直播权限，实名认证时需要上传您本人的身份证反面照片+手持身份证照片。<br>点此前去进行实名认证</li><li>已完成实名认证的用户，请登录直播页面点击【我要直播】按钮根据提示完成开通直播的申请，提交后请等待审核通过。<br>(一般会在48小时之内完成审核)</li><li>通过审核之后再次点击【我要直播】按钮，可进入自己的直播间再次编辑直播间信息。</li></ol><h2 id="填写直播间信息"><a href="#填写直播间信息" class="headerlink" title="填写直播间信息"></a>填写直播间信息</h2><ol><li>开启开播前请填写您的直播间标题，长度限制为20个汉字。</li><li>请根据您直播的内容正确选择分区，此项为必填。恶意切换分区（例如直播的是电子竞技游戏，却切换到绘画分区），30天内将不能更改直播分区。</li><li>主播等级达到1级可以上传自定义封面，20级可以上传自定义房间背景图。</li></ol><h2 id="开启直播"><a href="#开启直播" class="headerlink" title="开启直播"></a>开启直播</h2><p>OBS （Open Broadcaster Software）: <a href="https://obsproject.com" target="_blank" rel="noopener">https://obsproject.com</a></p><p>打开 OBS 后，可以看到 Audio 已经可以正常使用了。</p><img src="/2020/01/01/bilibili-live/OBS.png" class="" title="OBS 主界面"><p>菜单 &gt; 工具 &gt; 自动配置向导</p><img src="/2020/01/01/bilibili-live/Wizard.png" class="" title="自动配置向导 (Wizard)"><img src="/2020/01/01/bilibili-live/Display_Capture.png" class="" title="添加 显示捕获(Display Capture)"><img src="/2020/01/01/bilibili-live/Resize.png" class="" title="调整输出大小到源大小 Resize"><p>OBS 请点击直播网页上的【我要直播】按钮来到自己的直播间页面；点击播放器右上角的【开启直播】开关，把你在对话框里看到的 rtmp 地址和直播码，填写到 OBS 的设置&gt;&gt;广播设定 中，然后点击【开始串联】即可正常开播。</p><p>直播地址：<a href="https://live.bilibili.com/4311135" target="_blank" rel="noopener">https://live.bilibili.com/4311135</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png&quot; alt=&quot;2020/01/01&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="准备" scheme="https://2020.iosdevlog.com/categories/%E5%87%86%E5%A4%87/"/>
-    
-    
-      <category term="直播" scheme="https://2020.iosdevlog.com/tags/%E7%9B%B4%E6%92%AD/"/>
     
   </entry>
   
