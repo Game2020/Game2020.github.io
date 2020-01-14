@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>实现一门脚本语言-原理篇 | Game 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="实现一门脚本语言-原理篇">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/01/14/Construction/index.html">
+<meta property="og:site_name" content="Game 2020">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/Compiler.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/Token.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/AST.jpg">
+<meta property="article:published_time" content="2020-01-14T05:58:32.000Z">
+<meta property="article:modified_time" content="2020-01-14T09:26:24.341Z">
+<meta property="article:author" content="iOSDevLog">
+<meta property="article:tag" content="Compiler">
+<meta property="article:tag" content="Construction">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/Compiler.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Game 2020</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">https://2020.iosdevlog.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/2020">2020 Calendar</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://2020.iosdevlog.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Construction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/14/Construction/" class="article-date">
+  <time datetime="2020-01-14T05:58:32.000Z" itemprop="datePublished">2020-01-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实现一门脚本语言-原理篇
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <img src="/2020/01/14/Construction/Compiler.jpg" class="" title="宫文学- 编译原理">
+
+<a id="more"></a>
+
+<h2 id="理解代码：编译器的前端技术"><a href="#理解代码：编译器的前端技术" class="headerlink" title="理解代码：编译器的前端技术"></a>理解代码：编译器的前端技术</h2><ul>
+<li><code>前端（Front End）</code>: 编译器对程序代码的分析和理解过程<ul>
+<li>词法分析（Lexical Analysis）<ul>
+<li><code>程序分割成一个个 Token 的过程，可以通过构造有限自动机来实现</code></li>
+<li>识别一个个的单词</li>
+<li><code>词法记号（Token）</code></li>
+<li>Lex（或其 GNU 版本，Flex）<ul>
+<li>正则文法（Regular Grammar）<ul>
+<li>符合正则文法的表达式</li>
+</ul>
+</li>
+<li>有限自动机（Finite-state Automaton，FSA，or Finite Automaton） 算法</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>语法分析 （Syntactic Analysis, or Parsing）<ul>
+<li><code>把程序的结构识别出来，并形成一棵便于由计算机处理的抽象语法树。可以用递归下降的算法来实现</code>。*`</li>
+<li>别出程序的语法结构</li>
+<li>Yacc（或 GNU 的版本，Bison）、Antlr、JavaCC</li>
+<li><code>抽象语法树（Abstract Syntax Tree，AST</code>）</li>
+<li><code>clang -cc1 -ast-dump hello.c</code></li>
+<li>递归下降算法（Recursive Descent Parsing）</li>
+</ul>
+</li>
+<li>语义分析（Semantic Analysis）<ul>
+<li><code>消除语义模糊，生成一些属性信息，让计算机能够依据这些信息生成目标代码。</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><code>后端（Back End）</code>: 生成目标代码的过程，跟目标机器有关</li>
+</ul>
+<h2 id="正则文法和有限自动机：纯手工打造词法分析器"><a href="#正则文法和有限自动机：纯手工打造词法分析器" class="headerlink" title="正则文法和有限自动机：纯手工打造词法分析器"></a>正则文法和有限自动机：纯手工打造词法分析器</h2><ul>
+<li><code>关键字</code>: 语言设计中作为语法要素的词汇</li>
+<li><code>保留字</code>: 当前的语言设计中还没用到，但是保留下来，因为将来会用到</li>
+</ul>
+<img src="/2020/01/14/Construction/Token.jpg" class="" title="Token">
+
+<blockquote>
+<p>关键字和保留字跟标识符区分开呢？</p>
+</blockquote>
+<ul>
+<li>识别普通的 <code>标识符</code> 之前，是否 <code>关键字</code> / <code>保留字</code></li>
+</ul>
+<h2 id="语法分析"><a href="#语法分析" class="headerlink" title="语法分析"></a>语法分析</h2><img src="/2020/01/14/Construction/AST.jpg" class="" title="AST">
+
+<h3 id="纯手工打造公式计算器"><a href="#纯手工打造公式计算器" class="headerlink" title="纯手工打造公式计算器"></a>纯手工打造公式计算器</h3><p>推导（Derivation）过程</p>
+<ul>
+<li><code>左边</code>：非终结符（Non-terminal）</li>
+<li><code>右边</code>：产生式（Production Rule）</li>
+<li>语法解析的过程中，左边会被右边替代</li>
+<li>如果替代之后还有非终结符，那么继续这个替代过程，直到最后全部都是终结符（Terminal），也就是 Token。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">intDeclaration : <span class="function">Int <span class="title">Identifier</span> <span class="params">(<span class="string">'='</span> additiveExpression)</span>?</span>;</span><br></pre></td></tr></table></figure>
+
+<p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MatchIntDeclare() &#123;</span><br><span class="line">  MatchToken(Int)；        <span class="comment">// 匹配Int关键字</span></span><br><span class="line">  MatchIdentifier();       <span class="comment">// 匹配标识符</span></span><br><span class="line">  MatchToken(equal);       <span class="comment">// 匹配等号</span></span><br><span class="line">  MatchExpression();       <span class="comment">// 匹配表达式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>“下降”的含义</p>
+<ol>
+<li>上级文法嵌套下级文法</li>
+<li>上级的算法调用下级的算法</li>
+</ol>
+<ul>
+<li>上下文无关文法</li>
+<li>正则文法(不允许递归调用)</li>
+</ul>
+<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><ul>
+<li>初步了解上下文无关文法，知道它能表达主流的计算机语言，以及与正则文法的区别。</li>
+<li>理解递归下降算法中的 <strong>下降</strong> 和 <strong>递归</strong> 两个特点。</li>
+<li>它跟文法规则基本上是同构的，通过文法一定能写出算法。通过遍历 AST 对表达式求值，加深对计算机程序执行机制的理解。</li>
+</ul>
+<h3 id="解决二元表达式中的难点"><a href="#解决二元表达式中的难点" class="headerlink" title="解决二元表达式中的难点"></a>解决二元表达式中的难点</h3><p><code>左递归（Left Recursive）</code>：产生式的第一个元素是它自身，那么程序就会无限地递归下去</p>
+<ul>
+<li><code>优先级（Priority）</code></li>
+<li><code>结合性（Associativity）</code></li>
+<li><code>产生式</code>: 一组替换规则</li>
+</ul>
+<p>巴科斯范（BNF):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">add ::&#x3D; mul | add + mul</span><br><span class="line">mul ::&#x3D; pri | mul * pri</span><br><span class="line">pri ::&#x3D; Id | Num | (add)</span><br></pre></td></tr></table></figure>
+
+<p>扩展巴科斯范式 (EBNF)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add -&gt; mul (+ mul)*</span><br></pre></td></tr></table></figure>
+
+<h3 id="确保正确的优先级"><a href="#确保正确的优先级" class="headerlink" title="确保正确的优先级"></a>确保正确的优先级</h3><ul>
+<li>括号</li>
+</ul>
+<h3 id="确保正确的结合性"><a href="#确保正确的结合性" class="headerlink" title="确保正确的结合性"></a>确保正确的结合性</h3><ul>
+<li>左结合的运算符，递归项放在左边</li>
+<li>右结合的运算符，递归项放在右边</li>
+</ul>
+<h3 id="消除左递归"><a href="#消除左递归" class="headerlink" title="消除左递归"></a>消除左递归</h3><p>左递归文法 <code>-&gt;</code> 非左递归的文法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add -&gt; mul add&#39;</span><br><span class="line">add&#39; -&gt; + mul add&#39; | ε</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>ε（读作 epsilon）:空集</li>
+</ul>
+<h3 id="小结-1"><a href="#小结-1" class="headerlink" title="小结"></a>小结</h3><ul>
+<li><code>优先级</code> 是通过在语法推导中的层次来决定的，优先级越低的，越先尝试推导。</li>
+<li><code>结合性</code> 是跟左递归还是右递归有关的，左递归导致左结合，右递归导致右结合。</li>
+<li><code>左递归</code> 可以通过改写语法规则来避免，而改写后的语法又可以表达成简洁的 EBNF 格式，从而启发我们用循环代替右递归。</li>
+</ul>
+<h3 id="实现一门简单的脚本语言"><a href="#实现一门简单的脚本语言" class="headerlink" title="实现一门简单的脚本语言"></a>实现一门简单的脚本语言</h3><p><code>回溯</code>: 尝试一个规则不成功之后，恢复到原样，再去尝试另外的规则<br><code>REPL（Read-Eval-Print Loop）</code>: 输入、执行、打印的循环过程</p>
+<h2 id="编译器前端工具"><a href="#编译器前端工具" class="headerlink" title="编译器前端工具"></a>编译器前端工具</h2><h3 id="用Antlr生成词法、语法分析器"><a href="#用Antlr生成词法、语法分析器" class="headerlink" title="用Antlr生成词法、语法分析器"></a>用Antlr生成词法、语法分析器</h3><p><code>Antlr:</code> Antlr 是一个开源的工具，支持根据规则文件生成词法分析器和语法分析器，它自身是用 <code>Java</code> 实现的。</p>
+<p><a href="https://github.com/antlr/antlr4/blob/master/doc/getting-started.md" target="_blank" rel="noopener">https://github.com/antlr/antlr4/blob/master/doc/getting-started.md</a></p>
+<h4 id="用-Antlr-生成词法分析器"><a href="#用-Antlr-生成词法分析器" class="headerlink" title="用 Antlr 生成词法分析器"></a>用 Antlr 生成词法分析器</h4><p><code>Hello.g4</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">lexer grammar Hello;  &#x2F;&#x2F; lexer关键字意味着这是一个词法规则文件，名称是Hello，要与文件名相同</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 关键字</span><br><span class="line">If :               &#39;if&#39;;</span><br><span class="line">Int :              &#39;int&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 字面量</span><br><span class="line">IntLiteral:        [0-9]+;</span><br><span class="line">StringLiteral:      &#39;&quot;&#39; .*? &#39;&quot;&#39; ;  &#x2F;&#x2F; 字符串字面量</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 操作符</span><br><span class="line">AssignmentOP:       &#39;&#x3D;&#39; ;    </span><br><span class="line">RelationalOP:       &#39;&gt;&#39;|&#39;&gt;&#x3D;&#39;|&#39;&lt;&#39; |&#39;&lt;&#x3D;&#39; ;    </span><br><span class="line">Star:               &#39;*&#39;;</span><br><span class="line">Plus:               &#39;+&#39;;</span><br><span class="line">Sharp:              &#39;#&#39;;</span><br><span class="line">SemiColon:          &#39;;&#39;;</span><br><span class="line">Dot:                &#39;.&#39;;</span><br><span class="line">Comm:               &#39;,&#39;;</span><br><span class="line">LeftBracket :       &#39;[&#39;;</span><br><span class="line">RightBracket:       &#39;]&#39;;</span><br><span class="line">LeftBrace:          &#39;&#123;&#39;;</span><br><span class="line">RightBrace:         &#39;&#125;&#39;;</span><br><span class="line">LeftParen:          &#39;(&#39;;</span><br><span class="line">RightParen:         &#39;)&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 标识符</span><br><span class="line">Id :                [a-zA-Z_] ([a-zA-Z_] | [0-9])*;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 空白字符，抛弃</span><br><span class="line">Whitespace:         [ \t]+ -&gt; skip;</span><br><span class="line">Newline:            ( &#39;\r&#39; &#39;\n&#39;?|&#39;\n&#39;)-&gt; skip;</span><br></pre></td></tr></table></figure>
+
+<h5 id="编译词法规则"><a href="#编译词法规则" class="headerlink" title="编译词法规则"></a>编译词法规则</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">antlr Hello.g4</span><br></pre></td></tr></table></figure>
+
+<h5 id="编译-Hello-java"><a href="#编译-Hello-java" class="headerlink" title="编译 Hello.java"></a>编译 Hello.java</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac *.java</span><br></pre></td></tr></table></figure>
+
+<h5 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h5><p><code>hello.play</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int age &#x3D; 45;</span><br><span class="line">if (age &gt;&#x3D; 17+8+20) &#123;</span><br><span class="line">    printf(&quot;Hello old man!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>词法分析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grun Hello tokens -tokens hello.play</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[@0,0:2&#x3D;&#39;int&#39;,&lt;&#39;int&#39;&gt;,1:0]</span><br><span class="line">[@1,4:6&#x3D;&#39;age&#39;,&lt;Id&gt;,1:4]</span><br><span class="line">[@2,8:8&#x3D;&#39;&#x3D;&#39;,&lt;&#39;&#x3D;&#39;&gt;,1:8]</span><br><span class="line">[@3,10:11&#x3D;&#39;45&#39;,&lt;IntLiteral&gt;,1:10]</span><br><span class="line">[@4,12:12&#x3D;&#39;;&#39;,&lt;&#39;;&#39;&gt;,1:12]</span><br><span class="line">[@5,14:15&#x3D;&#39;if&#39;,&lt;&#39;if&#39;&gt;,2:0]</span><br><span class="line">[@6,17:17&#x3D;&#39;(&#39;,&lt;&#39;(&#39;&gt;,2:3]</span><br><span class="line">[@7,18:20&#x3D;&#39;age&#39;,&lt;Id&gt;,2:4]</span><br><span class="line">[@8,22:23&#x3D;&#39;&gt;&#x3D;&#39;,&lt;RelationalOP&gt;,2:8]</span><br><span class="line">[@9,25:26&#x3D;&#39;17&#39;,&lt;IntLiteral&gt;,2:11]</span><br><span class="line">[@10,27:27&#x3D;&#39;+&#39;,&lt;&#39;+&#39;&gt;,2:13]</span><br><span class="line">[@11,28:28&#x3D;&#39;8&#39;,&lt;IntLiteral&gt;,2:14]</span><br><span class="line">[@12,29:29&#x3D;&#39;+&#39;,&lt;&#39;+&#39;&gt;,2:15]</span><br><span class="line">[@13,30:31&#x3D;&#39;20&#39;,&lt;IntLiteral&gt;,2:16]</span><br><span class="line">[@14,32:32&#x3D;&#39;)&#39;,&lt;&#39;)&#39;&gt;,2:18]</span><br><span class="line">[@15,34:34&#x3D;&#39;&#123;&#39;,&lt;&#39;&#123;&#39;&gt;,2:20]</span><br><span class="line">[@16,40:45&#x3D;&#39;printf&#39;,&lt;Id&gt;,3:4]</span><br><span class="line">[@17,46:46&#x3D;&#39;(&#39;,&lt;&#39;(&#39;&gt;,3:10]</span><br><span class="line">[@18,47:62&#x3D;&#39;&quot;Hello old man!&quot;&#39;,&lt;StringLiteral&gt;,3:11]</span><br><span class="line">[@19,63:63&#x3D;&#39;)&#39;,&lt;&#39;)&#39;&gt;,3:27]</span><br><span class="line">[@20,64:64&#x3D;&#39;;&#39;,&lt;&#39;;&#39;&gt;,3:28]</span><br><span class="line">[@21,66:66&#x3D;&#39;&#125;&#39;,&lt;&#39;&#125;&#39;&gt;,4:0]</span><br><span class="line">[@22,68:67&#x3D;&#39;&lt;EOF&gt;&#39;,&lt;EOF&gt;,5:0]</span><br></pre></td></tr></table></figure>
+
+<h4 id="用-Antlr-生成语法分析器"><a href="#用-Antlr-生成语法分析器" class="headerlink" title="用 Antlr 生成语法分析器"></a>用 Antlr 生成语法分析器</h4><p><code>PlayScript.g4</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">grammar PlayScript;</span><br><span class="line">import CommonLexer;   &#x2F;&#x2F;导入词法定义</span><br><span class="line"></span><br><span class="line">&#x2F;*下面的内容加到所生成的Java源文件的头部，如包名称，import语句等。*&#x2F;</span><br><span class="line">@header &#123;</span><br><span class="line">package antlrtest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">expression</span><br><span class="line">    :   assignmentExpression</span><br><span class="line">    |   expression &#39;,&#39; assignmentExpression</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">assignmentExpression</span><br><span class="line">    :   additiveExpression</span><br><span class="line">    |   Identifier assignmentOperator additiveExpression</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">assignmentOperator</span><br><span class="line">    :   &#39;&#x3D;&#39;</span><br><span class="line">    |   &#39;*&#x3D;&#39;</span><br><span class="line">    |  &#39;&#x2F;&#x3D;&#39;</span><br><span class="line">    |   &#39;%&#x3D;&#39;</span><br><span class="line">    |   &#39;+&#x3D;&#39;</span><br><span class="line">    |   &#39;-&#x3D;&#39;</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">additiveExpression</span><br><span class="line">    :   multiplicativeExpression</span><br><span class="line">    |   additiveExpression &#39;+&#39; multiplicativeExpression</span><br><span class="line">    |   additiveExpression &#39;-&#39; multiplicativeExpression</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">multiplicativeExpression</span><br><span class="line">    :   primaryExpression</span><br><span class="line">    |   multiplicativeExpression &#39;*&#39; primaryExpression</span><br><span class="line">    |   multiplicativeExpression &#39;&#x2F;&#39; primaryExpression</span><br><span class="line">    |   multiplicativeExpression &#39;%&#39; primaryExpression</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+
+<h5 id="生成语法分析器"><a href="#生成语法分析器" class="headerlink" title="生成语法分析器"></a>生成语法分析器</h5><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">antlr PlayScript.g4</span><br><span class="line">javac antlrtest/*.java</span><br></pre></td></tr></table></figure>
+
+<h5 id="测试-1"><a href="#测试-1" class="headerlink" title="测试"></a>测试</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grun antlrtest.PlayScript expression -gui</span><br></pre></td></tr></table></figure>
+
+<p>Console</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">age + 10 * 2  + 10</span><br><span class="line">^D</span><br></pre></td></tr></table></figure>
+
+<p><strong>懂得基础原理，会让你站得更高</strong></p>
+<h3 id="用Antlr重构脚本语言"><a href="#用Antlr重构脚本语言" class="headerlink" title="用Antlr重构脚本语言"></a>用Antlr重构脚本语言</h3><ul>
+<li><p>完善表达式（Expression）的语法</p>
+</li>
+<li><p>完善各类语句（Statement）的语法</p>
+</li>
+<li><p>语句</p>
+<ul>
+<li>条件语句<ul>
+<li>if 语句</li>
+<li>switch 语句</li>
+</ul>
+</li>
+<li>循环语句<ul>
+<li>for 循环语句</li>
+<li>while 循环语句</li>
+</ul>
+</li>
+<li>return 语句</li>
+</ul>
+</li>
+<li><p>表达式语句</p>
+<ul>
+<li>表达式后面加一个分号</li>
+</ul>
+</li>
+</ul>
+<p>用 <code>Vistor</code> 模式升级脚本解释器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">antlr -visitor PlayScript.g4</span><br></pre></td></tr></table></figure>
+
+<h2 id="作用域和生存期：实现块作用域和函数"><a href="#作用域和生存期：实现块作用域和函数" class="headerlink" title="作用域和生存期：实现块作用域和函数"></a>作用域和生存期：实现块作用域和函数</h2><p><code>作用域（Scope）</code>: 计算机语言中变量、函数、类等起作用的范围<br><code>生存期（Extent）</code>: 变量可以访问的时间段，也就是从分配内存给它，到收回它的内存之间的时间</p>
+<ol>
+<li>实现作用域和栈</li>
+<li>实现块作用域</li>
+<li>实现函数功能: 参数<ul>
+<li>建立一个栈桢</li>
+<li>计算所有参数的值，并放入栈桢</li>
+<li>执行函数声明中的函数体。</li>
+</ul>
+</li>
+</ol>
+<h2 id="面向对象：实现数据和方法的封装"><a href="#面向对象：实现数据和方法的封装" class="headerlink" title="面向对象：实现数据和方法的封装"></a>面向对象：实现数据和方法的封装</h2><p>语法规则</p>
+<ul>
+<li>类声明以 class 关键字开头，有一个标识符是类型名称，后面跟着类的主体。</li>
+<li>类的主体里要声明类的成员。在简化的情况下，可以只关注类的属性和方法两种成员。</li>
+<li>类的方法也叫做 function，而不是 method，是想把对象方法和函数做一些统一的设计。</li>
+<li>函数声明现在的角色是类的方法。类的成员变量的声明和普通变量声明在语法上没什么区别。</li>
+</ul>
+<blockquote>
+<p>如何在内存里管理对象的数据</p>
+</blockquote>
+<p>把对象的数据像其他数据一样，保存在栈</p>
+<blockquote>
+<p>访问对象的属性和方法</p>
+</blockquote>
+<p>点操作符来</p>
+<h2 id="闭包：-理解了原理，它就不反直觉了"><a href="#闭包：-理解了原理，它就不反直觉了" class="headerlink" title="闭包： 理解了原理，它就不反直觉了"></a>闭包： 理解了原理，它就不反直觉了</h2><p>对于初学者来讲是一个挑战。其实，闭包就是把函数在静态作用域中所访问的变量的生存期拉长，形成一份可以由这个函数单独访问的数据。正因为这些数据只能被闭包函数访问，所以也就具备了对信息进行封装、隐藏内部细节的特性。</p>
+<h2 id="语义分析"><a href="#语义分析" class="headerlink" title="语义分析"></a>语义分析</h2><h3 id="如何建立一个完善的类型系统？"><a href="#如何建立一个完善的类型系统？" class="headerlink" title="如何建立一个完善的类型系统？"></a>如何建立一个完善的类型系统？</h3><ul>
+<li><code>静态类型语言</code>: 全部或者几乎全部的类型检查是在编译期进行的</li>
+<li><code>动态类型语言</code>: 类型的检查是在运行期进行的</li>
+<li><code>强类型语言</code>: 变量的类型一旦声明就不能改变</li>
+<li><code>弱类型语言</code>: 变量类型在运行期时可以改变</li>
+</ul>
+<p>如何做类型检查、类型推导和类型转换</p>
+<ul>
+<li>类型推导（Type Inference）</li>
+<li>类型检查（Type Checking）<ul>
+<li>赋值语句（检查赋值操作左边和右边的类型是否匹配）</li>
+<li>变量声明语句（因为变量声明语句中也会有初始化部分，所以也需要类型匹配）</li>
+<li>函数传参（调用函数的时候，传入的参数要符合形参的要求）</li>
+<li>函数返回值（从函数中返回一个值的时候，要符合函数返回值的规定）。</li>
+</ul>
+</li>
+<li>类型转换（Type Conversion）</li>
+</ul>
+<h3 id="如何做上下文相关情况的处理？"><a href="#如何做上下文相关情况的处理？" class="headerlink" title="如何做上下文相关情况的处理？"></a>如何做上下文相关情况的处理？</h3><p><code>语义分析的本质，就是针对上下文相关的情况做处理。</code></p>
+<h4 id="语义分析场景：引用的消解"><a href="#语义分析场景：引用的消解" class="headerlink" title="语义分析场景：引用的消解"></a>语义分析场景：引用的消解</h4><h4 id="语义分析场景：左值和右值"><a href="#语义分析场景：左值和右值" class="headerlink" title="语义分析场景：左值和右值"></a>语义分析场景：左值和右值</h4><ul>
+<li><code>左值（L-value）</code>：最早是在 C 语言中提出的，通常出现在表达式的左边，如赋值语句的左边。左值取的是变量的地址（或者说变量的引用），获得地址以后，我们就可以把新值写进去了。</li>
+<li><code>右值（R-value）</code>：通常所说的值，不是地址。</li>
+</ul>
+<p>语义分析过程</p>
+<ol>
+<li>类型和作用域解析（TypeAndScopeScanner.java）</li>
+<li>类型的消解（TypeResolver.java</li>
+<li>引用的消解和 S 属性的类型的推导（RefResolver.java）</li>
+<li>做类型检查（TypeChecker.java）</li>
+<li>做一些语义合法性的检查（SematicValidator.java）</li>
+</ol>
+<h2 id="继承和多态：面向对象运行期的动态特性"><a href="#继承和多态：面向对象运行期的动态特性" class="headerlink" title="继承和多态：面向对象运行期的动态特性"></a>继承和多态：面向对象运行期的动态特性</h2><p>从类型体系的角度理解继承和多态</p>
+<ul>
+<li><code>继承</code>: 一个类的子类，自动具备了父类的属性和方法，除非被父类声明为私有的。</li>
+<li><code>多态</code>: 同一个类的不同子类，在调用同一个方法时会执行不同的动作。</li>
+</ul>
+<p><code>子类型</code>:  is-a 的操作</p>
+<ul>
+<li>名义子类型（Nominal Subtyping）<ul>
+<li>像 Java 和 C++ 语言，需要显式声明继承了什么类，或者实现了什么接口</li>
+</ul>
+</li>
+<li>结构化子类型（Structural Subtyping），又叫鸭子类型（Duck Type）<ul>
+<li>一个类不需要显式地说自己是什么类型，只要它实现了某个类型的所有方法，那就属于这个类型</li>
+</ul>
+</li>
+</ul>
+<p>如何对继承和多态的特性做语义分析</p>
+<ol>
+<li>识别出新的类型</li>
+<li>设置正确的作用域</li>
+<li>变量和函数做类型的引用消解</li>
+</ol>
+<h3 id="小结-2"><a href="#小结-2" class="headerlink" title="小结"></a>小结</h3><ol>
+<li>从类型的角度，面向对象的继承和多态是一种叫做子类型的现象，子类型能够放宽对类型的检查，从而支持多态。</li>
+<li>在编译期，无法准确地完成对象方法和属性的消解，因为无法确切知道对象的子类型。在运行期，我们能够获得对象的确切的子类型信息，从而绑定正确的方法和属性，实现继承和多态。</li>
+<li>另一个需要注意的运行期的特征，是对象的逐级初始化过程。</li>
+</ol>
+<p>参考：<a href="https://time.geekbang.org/column/intro/219" target="_blank" rel="noopener">编译原理之美</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/01/14/Construction/" data-id="ck5doab9g001tri2wdq0meihg" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li></ul>
+
+      
+        <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/01/13/Compiler-Construction/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">为什么你要学习编译原理？</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA/" rel="tag">加贺</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Compiler/" style="font-size: 13.33px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 13.33px;">Construction</a> <a href="/tags/Godot/" style="font-size: 16.67px;">Godot</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/beginner/" style="font-size: 13.33px;">beginner</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E5%8A%A0%E8%B4%BA/" style="font-size: 16.67px;">加贺</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 13.33px;">读书</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/01/14/Construction/">实现一门脚本语言-原理篇</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/Compiler-Construction/">为什么你要学习编译原理？</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/9787544261678/">《只差一个谎言》人物关系图</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/9787544246873/">《名侦探的守则》</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/13/9787544255899/">《红手指》人物关系图</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iOSDevLog<br>
+      Powered by © 2020 - <a href="https://www.iosdevlog.com" target="_blank">贾献华 2020 博客</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/2020" class="mobile-nav-link">2020 Calendar</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
