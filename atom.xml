@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-17T04:47:07.242Z</updated>
+  <updated>2020-01-18T06:30:49.085Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人工智能-深度学习总结</title>
+    <link href="https://2020.iosdevlog.com/2020/01/18/dl/"/>
+    <id>https://2020.iosdevlog.com/2020/01/18/dl/</id>
+    <published>2020-01-18T06:29:02.000Z</published>
+    <updated>2020-01-18T06:30:49.085Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png" alt="2020/01/01"></p><a id="more"></a><h2 id="空山鸣响，静水流深：深度学习概述"><a href="#空山鸣响，静水流深：深度学习概述" class="headerlink" title="空山鸣响，静水流深：深度学习概述"></a>空山鸣响，静水流深：深度学习概述</h2><hr><p>深度学习的一些简介，其要点如下：</p><ul><li>深度学习实际上是基于具有多个隐藏层的神经网络的学习；</li><li>深度学习的思想来源于人类处理视觉信息的方式；</li><li>深度学习的发展得益于数据的井喷和计算力的飙升；</li><li>深度学习的理论基础依然有待深入。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/1.jpg" alt=""></p><h2 id="前方有路，未来可期：深度前馈网络"><a href="#前方有路，未来可期：深度前馈网络" class="headerlink" title="前方有路，未来可期：深度前馈网络"></a>前方有路，未来可期：深度前馈网络</h2><hr><p>作为学习模型的深度前馈网络存在的一些共性问题，其要点如下：</p><ul><li>深度前馈网络利用深度架构实现工程上可实现的对任意函数的通用逼近；</li><li>深度前馈网络使用梯度下降的方法进行学习；</li><li>深度前馈网络的损失函数通常是交叉熵或最小均方误差；</li><li>深度前馈网络的隐藏神经元通常使用整流线性单元作为传递函数。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/2.jpg" alt=""></p><h2 id="小树不修不直溜：深度学习中的正则化"><a href="#小树不修不直溜：深度学习中的正则化" class="headerlink" title="小树不修不直溜：深度学习中的正则化"></a>小树不修不直溜：深度学习中的正则化</h2><hr><p>实现正则化的思路，其要点如下：</p><ul><li><p>基于训练数据的正则化方法包括数据集增强和 Dropout；</p></li><li><p>基于网络架构的正则化方法包括参数共享和传递函数正则化；</p></li><li><p>基于误差函数和正则化项的正则化方法包括使用 <em>L²</em> 范数和 <em>L¹</em> 范数；</p></li><li><p>基于最优化过程的正则化方法包括早停。</p></li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/3.jpg" alt=""></p><h2 id="玉不琢不成器：深度学习中的优化"><a href="#玉不琢不成器：深度学习中的优化" class="headerlink" title="玉不琢不成器：深度学习中的优化"></a>玉不琢不成器：深度学习中的优化</h2><hr><p>深度学习中实现优化的思路，其要点如下：</p><ul><li><p>深度学习中的优化需要解决病态矩阵、局部极小值和鞍点等问题；</p></li><li><p>深度学习优化中的降噪方法包括动态采样、梯度聚合和迭代平均；</p></li><li><p>深度学习优化中的二阶导数近似方法是对原始牛顿法的各种改进；</p></li><li><p>其他优化方法包括动量方法、加速下降方法和坐标下降方法。</p></li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/4.jpg" alt=""></p><h2 id="空竹里的秘密：自编码器"><a href="#空竹里的秘密：自编码器" class="headerlink" title="空竹里的秘密：自编码器"></a>空竹里的秘密：自编码器</h2><hr><p>自编码器的原理与特点，其要点如下：</p><ul><li>自编码器是一种无监督学习方式，目的在于学习数据的重新表达；</li><li>多个浅层自编码器级联可以得到深度的栈式自编码器，并使用无监督预训练结合有监督微调的方式加以训练；</li><li>稀疏自编码器利用稀疏的高维表达提取出训练集中隐含的统计规律；</li><li>变分自编码器对隐藏层做参数化处理，可以用于学习数据的生成模型。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/5.jpg" alt=""></p><h2 id="困知勉行者勇：深度强化学习"><a href="#困知勉行者勇：深度强化学习" class="headerlink" title="困知勉行者勇：深度强化学习"></a>困知勉行者勇：深度强化学习</h2><hr><p>深度强化学习（deep reinforcement learning）是深度学习和强化学习的结合，它将深度学习的感知能力和强化学习的决策能力熔于一炉，用深度学习的运行机制达到强化学习的优化目标，从而向通用人工智能迈进。</p><p>深度强化学习的简单原理与方法分类，其要点如下：</p><ul><li>深度强化学习是深度学习和强化学习的结合，有望成为实现通用人工智能的关键技术；</li><li>基于价值的深度强化学习的基本思路是建立价值函数的表示，通过优化价值函数得到最优策略；</li><li>基于策略的深度强化学习的基本思路是直接搜索能够使未来奖励最大化的最优策略；</li><li>基于模型的深度强化学习的基本思路是构造关于环境的转移概率模型，再用这个模型指导策略。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/6.jpg" alt=""></p><h2 id="拓展阅读参考书"><a href="#拓展阅读参考书" class="headerlink" title="拓展阅读参考书"></a>拓展阅读参考书</h2><hr><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/7.jpg" alt=""></p><p>总结自：人工智能基础课: <a href="https://time.geekbang.org/column/62" target="_blank" rel="noopener">https://time.geekbang.org/column/62</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png&quot; alt=&quot;2020/01/01&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
+    
+      <category term="ANN" scheme="https://2020.iosdevlog.com/tags/ANN/"/>
+    
+      <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
+    
+  </entry>
   
   <entry>
     <title>《假面饭店》人物关系图</title>
@@ -480,32 +507,6 @@
     
     
       <category term="Client" scheme="https://2020.iosdevlog.com/tags/Client/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《高效能人士的七个习惯》</title>
-    <link href="https://2020.iosdevlog.com/2020/01/07/The-7-Habits-of-Highly-Effective-People/"/>
-    <id>https://2020.iosdevlog.com/2020/01/07/The-7-Habits-of-Highly-Effective-People/</id>
-    <published>2020-01-07T11:31:46.000Z</published>
-    <updated>2020-01-08T14:33:53.635Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2020/01/07/The-7-Habits-of-Highly-Effective-People/The-7-Habits-of-Highly-Effective-People.jpeg" class="" title="高效能人士的七个习惯 (Wizard)"><p>高效能人士的七个习惯（精华版） </p><p>作者:  [美] 史蒂芬·柯维<br>出版社: 中国青年出版社<br>原作名: The Seven Habits of Highly Effective People<br>译者: 高新勇 / 王亦兵 / 葛雪蕾<br>出版年: 2011-6<br>页数: 286<br>定价: 29.00元<br>装帧: 平装<br>ISBN: 9787500649038</p><a id="more"></a><h2 id="习惯一：积极主动（BE-PROACTIVE）"><a href="#习惯一：积极主动（BE-PROACTIVE）" class="headerlink" title="习惯一：积极主动（BE PROACTIVE）"></a>习惯一：积极主动（BE PROACTIVE）</h2><p>积极主动即采取主动，为自己过去、现在及未来的行为负责，并依据原则及价值观，而非情绪或外在环境来下决定。</p><p>积极主动的人是改变的催生者，他们摒弃被动的受害者角色，不怨天尤人，发挥了人类四项独特的禀赋——自觉、良知、想象力和自主意志，同时以由内而外的方式来创造改变，积极面对一切。他们选择创造自己的人生，这也是每个人最基本的决定。</p><h2 id="习惯二：以终为始（BEGIN-WITH-THE-END-IN-MIND）"><a href="#习惯二：以终为始（BEGIN-WITH-THE-END-IN-MIND）" class="headerlink" title="习惯二：以终为始（BEGIN WITH THE END IN MIND）"></a>习惯二：以终为始（BEGIN WITH THE END IN MIND）</h2><p>所有事物都经过两次的创造——先是在脑海里酝酿，其次才是实质的创造。</p><p>个人、家庭、团队和组织在做任何计划时，均先拟出愿景和目标，并据此塑造未来，全心投入自己最重视的原则、价值观、关系及目标。对个人、家庭或组织而言，使命宣言可以说是愿景的最高形式，它是根本的决策，主宰了所有其他决定。</p><p>领导工作的核心，就是基于共有的使命、愿景和价值观，创造出一个文化。</p><h2 id="习惯三：要事第一（PUT-FIRST-THINGS-FIRST）"><a href="#习惯三：要事第一（PUT-FIRST-THINGS-FIRST）" class="headerlink" title="习惯三：要事第一（PUT FIRST THINGS FIRST）"></a>习惯三：要事第一（PUT FIRST THINGS FIRST）</h2><p>要事第一即实质的创造，是梦想（你的目标、愿景、价值观及要事处理顺序）的组织与实践。</p><p>次要的事不必摆在第一，要事也不能放在第二。无论迫切性如何，个人与组织均要更多聚焦要事，重点是，把要事放在第一位。</p><h2 id="习惯四：双赢思维（THINK-WIN-WIN）"><a href="#习惯四：双赢思维（THINK-WIN-WIN）" class="headerlink" title="习惯四：双赢思维（THINK WIN-WIN）"></a>习惯四：双赢思维（THINK WIN-WIN）</h2><p>双赢思维是一种基于互敬、寻求互惠的思考框架与心意，目的是分享更多的机会、财富及资源，而非敌对式竞争。双赢既非损人利己（赢输），亦非损己利人（输赢）。</p><p>我们的工作伙伴及家庭成员要从互赖式的角度来思考（“我们”，而非“我”）。双赢思维鼓励我们解决问题，并协助个人找到互惠的解决办法，是一种资讯、力量、认可及报酬的分享。</p><h2 id="习惯五：知彼解己（SEEK-FIRST-TO-UNDERSTAND-THEN-TO-BE-UNDERSTOOD）"><a href="#习惯五：知彼解己（SEEK-FIRST-TO-UNDERSTAND-THEN-TO-BE-UNDERSTOOD）" class="headerlink" title="习惯五：知彼解己（SEEK FIRST TO UNDERSTAND,THEN TO BE UNDERSTOOD）"></a>习惯五：知彼解己（SEEK FIRST TO UNDERSTAND,THEN TO BE UNDERSTOOD）</h2><p>当我们不再急切回答，改以诚心去了解、聆听别人，便能开启真正的沟通，增进彼此关系。</p><p>对方获得理解后，会觉得受到尊重与认可，进而卸下心理防备，坦然而谈，双方对彼此的了解也就更顺畅自然。知彼需要仁慈心，解己需要勇气，能平衡两者，则可大幅提升沟通的效率。</p><h2 id="习惯六：统合综效（SYNERGIZE）"><a href="#习惯六：统合综效（SYNERGIZE）" class="headerlink" title="习惯六：统合综效（SYNERGIZE）"></a>习惯六：统合综效（SYNERGIZE）</h2><p>统合综效谈的是创造第三种选择，即非按照我的方式，亦非遵循你的方式，而是创造第三种更好的办法。</p><p>它是互相尊重的成果——不但了解了彼此，甚至还称赞彼此的差异，欣赏对方解决问题及把握机会的手法。</p><p>个人的力量是团队和家庭统合综效的基础，能使整体获得一加一大于二的成效。实践统合综效的人际关系和团队会扬弃敌对的态度 <em>（1+1＝0.5）</em>，不以妥协为目标 <em>（1+1＝1.5）</em>，也不仅仅止于合作 <em>（1+1＝2）</em>，他们要的是创造式的合作 <em>（1＋1＞2）</em>。</p><h2 id="习惯七：不断更新（SHARPEN-THE-SAW）"><a href="#习惯七：不断更新（SHARPEN-THE-SAW）" class="headerlink" title="习惯七：不断更新（SHARPEN THE SAW）"></a>习惯七：不断更新（SHARPEN THE SAW）</h2><p>“不断更新”谈的是，如何在四个生活基本面（身体、精神、智力、社会/情感）中，不断更新自己。</p><p>这个习惯提升了其他六个习惯的实施效率。对组织而言，习惯七提供了愿景、更新及不断的改善，使组织不至呈现老化及疲态，并迈向新的成长之路。对家庭而言，习惯七通过固定的个人及家庭活动，使家庭效能升级，就像建立传统，使家庭日新月异，即是一例。</p><img src="/2020/01/07/The-7-Habits-of-Highly-Effective-People/7-Habits.jpeg" class="" title="7-Habits"><p>最后附上明天的桌面背景。</p><p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-08.png" alt="2020/01/08"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2020/01/07/The-7-Habits-of-Highly-Effective-People/The-7-Habits-of-Highly-Effective-People.jpeg&quot; class=&quot;&quot; title=&quot;高效能人士的七个习惯 (Wizard)&quot;&gt;
-
-&lt;p&gt;高效能人士的七个习惯（精华版） &lt;/p&gt;
-&lt;p&gt;作者:  [美] 史蒂芬·柯维&lt;br&gt;出版社: 中国青年出版社&lt;br&gt;原作名: The Seven Habits of Highly Effective People&lt;br&gt;译者: 高新勇 / 王亦兵 / 葛雪蕾&lt;br&gt;出版年: 2011-6&lt;br&gt;页数: 286&lt;br&gt;定价: 29.00元&lt;br&gt;装帧: 平装&lt;br&gt;ISBN: 9787500649038&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="自我提升" scheme="https://2020.iosdevlog.com/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/tags/%E8%AF%BB%E4%B9%A6/"/>
     
   </entry>
   
