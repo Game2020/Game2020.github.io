@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-22T16:08:00.134Z</updated>
+  <updated>2020-01-23T13:18:24.585Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>VS Code 插件开发: tolower</title>
+    <link href="https://2020.iosdevlog.com/2020/01/23/tolower/"/>
+    <id>https://2020.iosdevlog.com/2020/01/23/tolower/</id>
+    <published>2020-01-23T12:31:18.000Z</published>
+    <updated>2020-01-23T13:18:24.585Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/01/23/tolower/1.gif" alt=""></p><ol><li>首先，读取文档中的内容。需要使用的 API 是 selection、selections、getText 等。</li><li>其次，对这些内容进行二次加工，这部分就是 business logic 了。</li><li>最后，修改编辑器内的内容。我们可以使用 edit 来修改文本，也可以直接修改 editor.selection 和 editor.selections 来改变光标的位置。</li></ol><a id="more"></a><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p>VS Code 的插件就是一个 <code>Node.js</code> 的应用。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># yeoman</span></span><br><span class="line">npm -g install yo</span><br><span class="line"><span class="comment"># VS Code 的模板</span></span><br><span class="line">npm install -g generator-code</span><br></pre></td></tr></table></figure><h2 id="创建-tolower-插件"><a href="#创建-tolower-插件" class="headerlink" title="创建 tolower 插件"></a>创建 <code>tolower</code> 插件</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># tolower</span></span><br><span class="line">yo code tolower</span><br><span class="line">     _-----_     ╭──────────────────────────╮</span><br><span class="line">    |       |    │   Welcome to the Visual  │</span><br><span class="line">    |--(o)--|    │   Studio Code Extension  │</span><br><span class="line">   `---------´   │        generator!        │</span><br><span class="line">    ( _´U`_ )    ╰──────────────────────────╯</span><br><span class="line">    /___A___\   /</span><br><span class="line">     |  ~  |</span><br><span class="line">   __<span class="string">'.___.'</span>__</span><br><span class="line"> ´   `  |° ´ Y `</span><br><span class="line"></span><br><span class="line">? What <span class="built_in">type</span> of extension <span class="keyword">do</span> you want to create?</span><br><span class="line">  New Extension (TypeScript)</span><br><span class="line">❯ New Extension (JavaScript)</span><br><span class="line">  New Color Theme</span><br><span class="line">  New Language Support</span><br><span class="line">  New Code Snippets</span><br><span class="line">  New Keymap</span><br><span class="line">  New Extension Pack</span><br><span class="line">(Move up and down to reveal more choices)</span><br></pre></td></tr></table></figure><h2 id="访问编辑器"><a href="#访问编辑器" class="headerlink" title="访问编辑器"></a>访问编辑器</h2><p>既然是编辑器相关的命令，那么我们肯定需要能够访问到编辑器，以及其中的内容。首先我们要获取的就是：当前工作区内，用户正在使用的编辑器。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> editor = vscode.window.activeTextEditor;</span><br></pre></td></tr></table></figure><p>如果你是手动敲入上面的代码，你可以看到 VS Code 提示的插件 API 建议。</p><p>有了这个编辑器，我们就能获取非常多的信息了。不过先别急，editor 这个变量并非一定总是有效的值，比如用户现在并没有打开任何文件，编辑器是空的，那么此时 editor 的值就是 undefined。所以， 在正式使用 editor 之前，我们要判断一下，editor 是否为 undefined，是的话就结束命令的运行。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!editor) &#123;</span><br><span class="line">    <span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>接下来，我们可以输入 editor.，自动补全立刻给我们提示了不少的属性。</p><p>这其中几个值得一提的有如下：</p><ul><li><code>document</code> :也就是当前编辑器中的文档内容；</li><li><code>edit</code> :用于修改编辑器中的内容；</li><li><code>revealRange</code> :用于将某段代码滚动到当前窗口中；</li><li><code>selection</code> :当前编辑器内的主光标；</li><li><code>selections</code> :当前编辑器中的所有光标，第一个光标就是主光标，后面的则是用户创建出来的多光标；</li><li><code>setDecorations</code> :设置编辑器装饰器</li></ul><p>首先，我们要读取的信息就是当前的文档信息和主光标的信息。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="built_in">document</span> = editor.document;</span><br><span class="line"><span class="keyword">let</span> selection = editor.selection;</span><br></pre></td></tr></table></figure><p>有了这两个信息，读取光标选中的内容就简单了。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="built_in">document</span>.getText(selection);</span><br></pre></td></tr></table></figure><p>document 一共哪些 API 这里我就不介绍了，相信你可以自己探索，这里我们使用就是 getText，以获取某段代码。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> result = text.toLowerCase();</span><br></pre></td></tr></table></figure><p>最后一步操作就是将原来编辑器内的文本进行替换了。此时我们就要用到 edit 这个 API 了。值得注意的是，这个 API 的第一参数，是一个 callback，callback 的参数是 editBuilder，也就是真正用于修改代码的对象。editBuilder 有以下几个 API：</p><ul><li>delete</li><li>insert</li><li>replace</li><li>setEndOfLine</li></ul><p>这里我们要使用的当然就是 replace 了。</p><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">editBuilder.replace(selection, result);</span><br></pre></td></tr></table></figure><p>我们只需将原先的 selection 里的内容，替换成新的 result 即可。</p><h2 id="快捷键"><a href="#快捷键" class="headerlink" title="快捷键"></a>快捷键</h2><p>上面我们介绍了如何去书写一个命令，但是这只是完成了工作的一半，剩下的一半则是为这个命令绑定一个快捷键了。要完成快捷键的绑定，我们需要在 package.json 中的 contributes 片段添加一段新的配置：</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">"contributes": &#123;</span><br><span class="line">"commands": [</span><br><span class="line">&#123;</span><br><span class="line"><span class="attr">"command"</span>: <span class="string">"extension.tolower"</span>,</span><br><span class="line"><span class="attr">"title"</span>: <span class="string">"to lower"</span></span><br><span class="line">&#125;</span><br><span class="line">],</span><br><span class="line">"keybindings": [</span><br><span class="line"> &#123;</span><br><span class="line"> <span class="attr">"key"</span>: <span class="string">"ctrl+l"</span>,</span><br><span class="line"> <span class="attr">"command"</span>: <span class="string">"extension.tolower"</span>,</span><br><span class="line"> <span class="attr">"when"</span>: <span class="string">"editorTextFocus"</span></span><br><span class="line"> &#125;</span><br><span class="line"> ]</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure><p>我们在 contributes 添加了新的字段 “keybindings” ，它的值是一个数组，里面就是所有的快捷键设置了。</p><p>我们给 “extension.sayHello” 这个命令，绑定了 ctrl+t ，同时只有当 editorTextToLower 为真时才会激活这个快捷键。此时如果我们运行这个插件，就可以直接使用 ctrl + l 来转换成小写。</p><h2 id="运行插件"><a href="#运行插件" class="headerlink" title="运行插件"></a>运行插件</h2><ol><li><code>F5</code></li><li>选中要转换成小写的文本</li><li>运行<ol><li>命令<ol><li><code>Ctrl + Shift + P</code></li><li><code>to lower</code></li></ol></li><li>快捷键<ol><li><code>Ctrl + l</code></li></ol></li></ol></li></ol><p>源码：<a href="https://github.com/Game2020/tolower" target="_blank" rel="noopener">https://github.com/Game2020/tolower</a></p><p>参考：<a href="https://time.geekbang.org/column/article/69768" target="_blank" rel="noopener">玩转VS Code</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/23/tolower/1.gif&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;首先，读取文档中的内容。需要使用的 API 是 selection、selections、getText 等。&lt;/li&gt;
+&lt;li&gt;其次，对这些内容进行二次加工，这部分就是 business logic 了。&lt;/li&gt;
+&lt;li&gt;最后，修改编辑器内的内容。我们可以使用 edit 来修改文本，也可以直接修改 editor.selection 和 editor.selections 来改变光标的位置。&lt;/li&gt;
+&lt;/ol&gt;
+    
+    </summary>
+    
+    
+      <category term="editor" scheme="https://2020.iosdevlog.com/categories/editor/"/>
+    
+    
+      <category term="vscode" scheme="https://2020.iosdevlog.com/tags/vscode/"/>
+    
+      <category term="plugin" scheme="https://2020.iosdevlog.com/tags/plugin/"/>
+    
+  </entry>
   
   <entry>
     <title>《地球编年史》简介</title>
@@ -491,31 +521,6 @@
     
     
       <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Lua 脚本语言</title>
-    <link href="https://2020.iosdevlog.com/2020/01/10/Script-Language/"/>
-    <id>https://2020.iosdevlog.com/2020/01/10/Script-Language/</id>
-    <published>2020-01-10T11:07:54.000Z</published>
-    <updated>2020-01-10T11:47:37.654Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lua-logo-nolabel.svg/1200px-Lua-logo-nolabel.svg.png" alt="Lua"></p><a id="more"></a><h2 id="如何嵌入脚本语言"><a href="#如何嵌入脚本语言" class="headerlink" title="如何嵌入脚本语言?"></a>如何嵌入脚本语言?</h2><ol><li>因为 <code>Lua</code> 脚本足够轻量级，几乎没有冗余的代码。Lua 虚拟机的执行效率几乎可以媲美 C/C++ 的执行效率。所以我们选择使用 Lua 脚本来嵌入 C/C++ 硬代码。</li><li>Lua 脚本在 C/C++ 语言里面嵌入，需要先声明一个虚拟机并且赋值给指针。</li><li>Lua 脚本需要先 loadfile 再 pcall 调用脚本文件，loadfile 会检查最基本的脚本文件内容，比如文件是否存在，比如脚本代码是否出错，而 pcall 会在运行时出错的时候将错误压至栈顶。</li><li>Lua 错误会将错误压制栈顶，我们要取出来，需要使用 -1 下标取出栈顶的内容，并转成 string 打印。</li></ol><h2 id="脚本语言在游戏开发中有哪些应用？"><a href="#脚本语言在游戏开发中有哪些应用？" class="headerlink" title="脚本语言在游戏开发中有哪些应用？"></a>脚本语言在游戏开发中有哪些应用？</h2><ul><li>在 Lua 与 C 的结合过程中，C 语言需要新建一个 Lua 虚拟机，然后使用虚拟机的指针来操作 Lua 函数。</li><li>在程序的应用中，使用 C 语言中的一些宏的技巧，可以使代码能够便利地应用在程序里。</li></ul><h2 id="如何使用脚本语言编写周边工具？"><a href="#如何使用脚本语言编写周边工具？" class="headerlink" title="如何使用脚本语言编写周边工具？"></a>如何使用脚本语言编写周边工具？</h2><ol><li><code>利用 C/C++ 语言和 Lua 源代码进行交互，从 Lua 代码中获取数据并且在 C 语言里面进行算法的封装和计算，最后将结果返回给 Lua。</code>我们在 C/C++ 语言里面进行大量的封装和算法提取，并且也利用 C/C++ 进行调用和结果的呈现，这是一种常用的方式，也就是 C 语言占比 60%～70%，Lua 代码占比 30%～40%。</li><li>另一种比较好的方式是，<code>使用 C/C++ 编写底层实现逻辑，随后将数据传输给 Lua，让 Lua 来做逻辑运算，最终将结果返回给 C 语言并且呈现出来。</code>这是很多人在游戏开发中都会做的事情，比如我们编写地图编辑器，先在 Lua 中编写好逻辑，用 C 语言在界面中呈现出来即可。如果反过来做的话，那就会出现大量的硬代码，是很不合适的。所以这种情况下，C 语言占比 30%～40%，Lua 代码占比 60%～70%。</li><li><code>Lua 可以是一种胶水语言。严谨地说，像 Python、Ruby 等脚本语言，都是合格的胶水语言。</code> 在这种情况下，胶水语言起到的作用就是粘合系统语言（C/C++）和上层脚本逻辑。所以，使用胶水语言，就像是一种动态的配置文件。按照普通的配置文件来讲，你需要手工解析比如类似 INI、XML、JSON 等配置文件，随后按照这些文件的内容来做出一系列的配置，但是胶水语言不需要，它本身就是一种动态的语言。</li></ol><p>参考：<a href="https://time.geekbang.org/column/intro/87" target="_blank" rel="noopener">从0开始学游戏开发</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lua-logo-nolabel.svg/1200px-Lua-logo-nolabel.svg.png&quot; alt=&quot;Lua&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
-    
-    
-      <category term="Language" scheme="https://2020.iosdevlog.com/tags/Language/"/>
-    
-      <category term="Lua" scheme="https://2020.iosdevlog.com/tags/Lua/"/>
     
   </entry>
   
