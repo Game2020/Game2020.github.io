@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-23T13:18:24.585Z</updated>
+  <updated>2020-01-24T12:30:51.202Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>打通修炼机器学习的任督二脉</title>
+    <link href="https://2020.iosdevlog.com/2020/01/24/ml/"/>
+    <id>https://2020.iosdevlog.com/2020/01/24/ml/</id>
+    <published>2020-01-24T12:26:11.000Z</published>
+    <updated>2020-01-24T12:30:51.202Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-24.png" alt="2020/01/24"></p><a id="more"></a><h2 id="机器学习概观"><a href="#机器学习概观" class="headerlink" title="机器学习概观"></a>机器学习概观</h2><p>介绍机器学习中超脱于具体模型和方法之上的一些共性问题，将从概率的两大派别开始。</p><p>众所周知，概率在机器学习中扮演着核心角色，而频率学派与贝叶斯学派对概率迥异的认知也将机器学习一分为二，发展出两套完全不同的理论体系。</p><p>正所谓兼听则明偏听则暗，理解机器学习时应该看到这同一枚硬币的两面，以获得完整的认知。除此之外，本模块还涵盖了计算学习等机器学习的理论问题，以及关于模型和特征的一些实验主题。</p><h2 id="统计学习"><a href="#统计学习" class="headerlink" title="统计学习"></a>统计学习</h2><p>频率学派发展出的机器学习理论——统计学习。</p><p>统计机器学习的核心是数据，它既从数据中来，利用不同的模型去拟合数据背后的规律；也到数据中去，用拟合出的规律去推断和预测未知的结果。</p><p>统计学习中最基础的模型是线性回归，几乎所有其他模型都是从不同角度对线性回归模型做出的扩展与修正。</p><p>因此，在这个模块中，我将以线性模型为主线，和你一起浏览它的万千变化，观察从简单线性回归到复杂深度网络的发展历程。</p><h2 id="符号学习"><a href="#符号学习" class="headerlink" title="符号学习"></a>符号学习</h2><p>贝叶斯学派发展出的机器学习理论，也就是 <strong>概率图模型</strong>。</p><p>和基于数据的统计学习相比，基于关系的图模型更多地代表了因果推理的发展方向。</p><p>贝叶斯主义也需要计算待学习对象的概率分布，但它利用的不是海量的具体数据，而是变量之间的相关关系、每个变量的先验分布和大量复杂的积分技巧。</p><ul><li>表示</li><li>推断</li><li>学习</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-24.png&quot; alt=&quot;2020/01/24&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title>VS Code 插件开发: tolower</title>
@@ -498,29 +521,6 @@
       <category term="AR" scheme="https://2020.iosdevlog.com/tags/AR/"/>
     
       <category term="VR" scheme="https://2020.iosdevlog.com/tags/VR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>服务器开发</title>
-    <link href="https://2020.iosdevlog.com/2020/01/11/Server-Development/"/>
-    <id>https://2020.iosdevlog.com/2020/01/11/Server-Development/</id>
-    <published>2020-01-11T10:51:36.000Z</published>
-    <updated>2020-01-11T11:34:19.052Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png" alt="2020/01/01"></p><a id="more"></a><h2 id="如何选择合适的开发语言？"><a href="#如何选择合适的开发语言？" class="headerlink" title="如何选择合适的开发语言？"></a>如何选择合适的开发语言？</h2><ol><li>系统级编程语言，诸如汇编、C、C++<ul><li>这种编程语言执行效率快，并发量也比较高，作为编写网络服务的第一语言，一台服务器就能支撑许多人。缺点是开发效率不够高，需要几年以上经验的程序员才能搞定。</li></ul></li><li>专门为网络服务器开发的语言，诸如 Go、Erlang<ul><li>这种语言编写高并发和开发效率都不是问题，有很好的折中效果。缺点就是语言比较新，有许多的坑等着后来的程序员去填，而且语言、语法等系统机制要随着进一步的发展才能稳定下来。</li></ul></li><li>解释型脚本语言，诸如 Python、Ruby。<ul><li>这类语言的开发效率非常高效，在现在的服务器硬件上，也能支撑不少用户，但是唯一的缺点是，运行效率低下。虽然也有解决方案，但仍然不能对抗高性能的系统编程语言和专业网络开发的语言。如何选择一种合适的语言来编写网络服务？</li></ul></li></ol><h3 id="网络服务"><a href="#网络服务" class="headerlink" title="网络服务"></a>网络服务</h3><ul><li>Web 服务</li><li>Socket 服务</li><li>混合模式</li></ul><h2 id="如何定制合适的开发协议？"><a href="#如何定制合适的开发协议？" class="headerlink" title="如何定制合适的开发协议？"></a>如何定制合适的开发协议？</h2><p><code>一种客户端和服务器端的网络沟通协议（Protocol）。</code></p><h3 id="三种最流行的开发协议"><a href="#三种最流行的开发协议" class="headerlink" title="三种最流行的开发协议"></a>三种最流行的开发协议</h3><ol><li>XML<ol><li>PULL 方式：专门为安卓设备解析 XML 文件设计的解析方式</li><li>SAX 方式：SAX（Simple API for XML）采用事件驱动型方式</li><li>DOM 方式：DOM（Document Object Model）是最传统的解析方式</li></ol></li><li>JSON</li><li>ProtoBuf<ol><li>Google Protocol Buffer</li><li>ProtoBuf 适合用作数据存储或 RPC 数据交换格式，缺点是保存比较麻烦，但是总体来讲还是比较方便的</li></ol></li></ol><h3 id="自己定义协议"><a href="#自己定义协议" class="headerlink" title="自己定义协议"></a>自己定义协议</h3><p>自己定义协议包需要考虑完整性和安全性。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[协议头][协议体][协议结尾分隔符]</span><br></pre></td></tr></table></figure><p>接收方需要知道协议的长度，或者知道协议的尾部在哪里，就可以保证协议包的完整性。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[协议长度2字节][协议体]</span><br></pre></td></tr></table></figure><p>而最直接的给协议包加密，就可以保证安全性。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[协议长度2字节][加密协议体]</span><br></pre></td></tr></table></figure><h2 id="不可忽视的多线程及并发问题"><a href="#不可忽视的多线程及并发问题" class="headerlink" title="不可忽视的多线程及并发问题"></a>不可忽视的多线程及并发问题</h2><ol><li><code>并发</code> 是单个 CPU 之间切换多线程任务的操作</li><li><code>并行</code> 是多个 CPU 同时分配和运行多线程任务的操作</li><li><code>线程</code> 是进程内的独立任务单元，但是共享这个进程的所有资源</li></ol><h2 id="如何判断心跳包是否离线？"><a href="#如何判断心跳包是否离线？" class="headerlink" title="如何判断心跳包是否离线？"></a>如何判断心跳包是否离线？</h2><ol><li>判断非阻塞模型的网络是否断开，可以使用心跳包和计算超时的方式进行断开操作，比如 30 秒没收到心跳包，则可以强制关闭 Socket 句柄断开。</li><li>心跳包是一种服务器之间交互的方法，也可以用作服务器数据调试和回滚的策略方案。</li><li>心跳包有两种策略<ol><li>第一种就是运算时间 A 和心跳时间 B 相对固定</li><li>第二种策略是运算时间 A 和心跳时间 B 是实时调整</li></ol></li></ol><p>CPU 的负载很高的时候用策略一，CPU 负载并不是那么严重的情况下，策略二是比较好的选择。</p><h2 id="如何用网关服务器进行负载均衡？"><a href="#如何用网关服务器进行负载均衡？" class="headerlink" title="如何用网关服务器进行负载均衡？"></a>如何用网关服务器进行负载均衡？</h2><p>两种常用的负载均衡技术</p><h3 id="软件模式"><a href="#软件模式" class="headerlink" title="软件模式"></a>软件模式</h3><p>LVS、Nginx、HAProxy。</p><ul><li>LVS 是四层负载均衡，根据目标地址和端口选择内部服务器</li><li>Nginx 这种负载均衡工具是七层负载均衡</li><li>而 HAProxy 同时支持四层、七层负载均衡，还可以根据报文内容选择内部服务器</li></ul><p>因此，LVS 分发路径优于 Nginx 和 HAProxy，性能上也要高些。但 Nginx 和 HAProxy 则更具配置性，比如说可以用来做动静分离。</p><p>所谓动静分离，就是根据请求协议的特征，去选择静态资源服务器还是应用服务器。</p><h3 id="硬件模式"><a href="#硬件模式" class="headerlink" title="硬件模式"></a>硬件模式</h3><p>其中，硬件模式用得比较多的是 F5。</p><p>F5 是 F5 Networks 公司提供的一个负载均衡器专用设备， F5 BIG-IP LTM 的官方名称叫本地流量管理器，可以做 4～7 层负载均衡，具有负载均衡、应用交换、会话交换、状态监控等等全备的强大网络功能。</p><p>F5 硬件负载均衡的优点是，负载均衡能直接通过智能交换机实现, 处理能力更强，与操作系统无关，负载性能强，适用于一大堆设备、大访问量，其缺点也是很明显的，那就是购买成本高，设备的配置冗余，有些用不上的都给默认配置了。</p><p>另外，由于设备只有单个，所以单个负载均衡配置无法有效掌握所有服务器及应用状态。硬件的负载均衡，是从网络层来判断负载规则，所以有时候软件的系统处理能力出现问题，网络硬件还可以作出负载的动作。</p><h3 id="网关服务器有哪些功能？"><a href="#网关服务器有哪些功能？" class="headerlink" title="网关服务器有哪些功能？"></a>网关服务器有哪些功能？</h3><ol><li>中转功能</li><li>负载均衡</li></ol><h2 id="如何制作游戏内容保存和缓存处理？"><a href="#如何制作游戏内容保存和缓存处理？" class="headerlink" title="如何制作游戏内容保存和缓存处理？"></a>如何制作游戏内容保存和缓存处理？</h2><p>Redis 不仅是内存缓存</p><p>Redis 是一种 <code>key-value</code> 型的存储系统。它支持存储的 value 类型很多，包括字符串、链表、集合、有序集合和哈希类型。这些数据类型都支持 push/pop、add/remove 及取交集并集和差集及更丰富的操作，而且这些操作都具有原子性。</p><ul><li>Redis 不仅仅可以用作普通的缓存机制使用，也可以当作正常的数据库使用，Redis 也支持主从同步，要按照应用场景不同来配置不同的 Redis 使用场景。</li><li>缓存机制不仅仅针对读取游戏保存文件这么一种方案，也可以用作各种数据文件的读取和写入操作。</li><li>使用现成的 Redis 等缓存数据软件，是一个好的方案。<br>而设计好的框架、好的缓存机制、好的网络模型，是一款好网游必不可少的条件。</li></ul><p>参考：<a href="https://time.geekbang.org/column/intro/87" target="_blank" rel="noopener">从0开始学游戏开发</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png&quot; alt=&quot;2020/01/01&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
-    
-    
-      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
     
   </entry>
   
