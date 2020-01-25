@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-24T12:30:51.202Z</updated>
+  <updated>2020-01-25T13:09:12.823Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>频率视角下的机器学习</title>
+    <link href="https://2020.iosdevlog.com/2020/01/25/Frequency/"/>
+    <id>https://2020.iosdevlog.com/2020/01/25/Frequency/</id>
+    <published>2020-01-25T12:59:28.000Z</published>
+    <updated>2020-01-25T13:09:12.823Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/01/25/Frequency/1.jpg" alt="Frequency"></p><p> <strong>笑话</strong>: 频率学派 &amp; 贝叶斯学派</p><blockquote><p>有个病人找医生看病，医生检查之后对他说：“你这病说得上是九死一生，但多亏到我这里来看了。不瞒你说，在你之前我已经看了九个得一同样病的患者，结果他们都死了，那你这第十个就一定能看得好啦，妥妥的！”</p></blockquote><a id="more"></a><p>频率学派口中的概率表示的是事件发生频率的极限值，它只有在无限次的独立重复试验之下才有绝对的精确意义。</p><p>在频率学派眼中，当重复试验的次数趋近于无穷大时，事件发生的频率会收敛到真实的概率之上。这种观点背后暗含了一个前提，那就是概率是一个确定的值，并不会受单次观察结果的影响。</p><p>频率统计理论的核心在于认定待估计的参数是固定不变的常量，讨论参数的概率分布是没有意义的；而用来估计参数的数据是随机的变量，每个数据都是参数支配下一次独立重复试验的结果。由于参数本身是确定的，那频率的波动就并非来源于参数本身的不确定性，而是由有限次观察造成的干扰而导致。</p><p>这可以从两个角度来解释：</p><ol><li>一方面，根据这些不精确的数据就可以对未知参数的精确取值做出有效的推断；</li><li>另一方面，数据中包含的只是关于参数不完全的信息，所以从样本估计整体就必然会产生误差。</li></ol><p>统计学的核⼼任务之一是根据从总体中抽取出的样本，也就是数据来估计未知的总体参数。参数的最优估计可以通过样本数据的分布，也就是 <strong>采样分布（sampling distribution）</strong> 来求解，由于频率统计将数据看作随机变量，所以计算采样分布是没有问题的。确定采样分布之后，参数估计可以等效成一个最优化的问题，而频率统计最常使用的最优化方法，就是 <strong>最大似然估计（maximum likelihood estimation）</strong>。</p><p>那么如何来度量作为随机变量的估计值和作为客观常量的真实值之间的偏差呢？<strong>置信区间（confidence interval）</strong> 就是频率学派给出的答案。</p><p>频率主义解决统计问题的基本思路如下：</p><ul><li>参数是确定的，</li><li>数据是随机的，</li><li>利用随机的数据推断确定的参数，</li><li>得到的结果也是随机的。</li></ul><p>将频率主义“参数确定，数据随机”的思路应用在机器学习当中，得到的就是统计机器学习（statistical learning）。</p><p>和参数相关的信息全部来源于数据，输出的则是未知参数唯一的估计结果，这是统计机器学习的核心特征。</p><h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ol><li>频率学派认为概率是随机事件发生频率的极限值； </li><li>频率学派执行参数估计时，视参数为确定取值，视数据为随机变量；</li><li>频率学派主要使用最大似然估计法，让数据在给定参数下的似然概率最大化；</li><li>频率学派对应机器学习中的统计学习，以经验风险最小化作为模型选择的准则。</li></ol><p>参考：<a href="https://time.geekbang.org/column/article/8530" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8530</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/25/Frequency/1.jpg&quot; alt=&quot;Frequency&quot;&gt;&lt;/p&gt;
+&lt;p&gt; &lt;strong&gt;笑话&lt;/strong&gt;: 频率学派 &amp;amp; 贝叶斯学派&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有个病人找医生看病，医生检查之后对他说：“你这病说得上是九死一生，但多亏到我这里来看了。不瞒你说，在你之前我已经看了九个得一同样病的患者，结果他们都死了，那你这第十个就一定能看得好啦，妥妥的！”&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title>打通修炼机器学习的任督二脉</title>
@@ -494,33 +521,6 @@
       <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
     
       <category term="加贺恭一郎系列" scheme="https://2020.iosdevlog.com/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>游戏热点剖析</title>
-    <link href="https://2020.iosdevlog.com/2020/01/12/hot/"/>
-    <id>https://2020.iosdevlog.com/2020/01/12/hot/</id>
-    <published>2020-01-12T12:57:16.000Z</published>
-    <updated>2020-01-12T14:08:47.826Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2020/01/12/hot/%E5%BC%95%E6%93%8E.jpg" class="" title="引擎"><a id="more"></a><h2 id="HTML5技术是如何取代Flash的？"><a href="#HTML5技术是如何取代Flash的？" class="headerlink" title="HTML5技术是如何取代Flash的？"></a>HTML5技术是如何取代Flash的？</h2><ul><li>H5 游戏拥有比 Flash 更好用更开放的规范，开发和发布也更方便，修改代码后放到网上，只需要刷新一下页面就可以看到修改的内容</li><li>另外，Flash 技术需要安装一个插件，而 H5 技术直接在浏览器就可以呈现。所以 H5 技术完全替代 Flash 只是时间问题</li></ul><h2 id="如何选择一款HTML5引擎？"><a href="#如何选择一款HTML5引擎？" class="headerlink" title="如何选择一款HTML5引擎？"></a>如何选择一款HTML5引擎？</h2><ul><li>如果美术熟悉 Cocos2d-JS，或者想要快速上手 2D 游戏，可以选择 Cocos2d-JS</li><li>如果对编程不太熟练，可以选择 Construct 2</li><li>如果是拥有完整流程的开发公司，Cocos2d-JS 和白鹭都可以选择</li></ul><h2 id="试试看，你也可以编写一款HTML5小游戏！"><a href="#试试看，你也可以编写一款HTML5小游戏！" class="headerlink" title="试试看，你也可以编写一款HTML5小游戏！"></a>试试看，你也可以编写一款HTML5小游戏！</h2><p><code>lufylegend</code></p><h2 id="安卓端和苹果端游戏开发有什么区别？"><a href="#安卓端和苹果端游戏开发有什么区别？" class="headerlink" title="安卓端和苹果端游戏开发有什么区别？"></a>安卓端和苹果端游戏开发有什么区别？</h2><ul><li>从游戏角度讲，手机、掌上游戏机、iPad 都属于移动端设备。而进入智能机时代之后，掌上游戏机逐渐退居幕后，成为少部分游戏发烧友的选择。</li><li>安卓端和苹果端在开发游戏中的区别，主要体现在开发语言上。苹果系统大量使用 Objective-C、Swift，而安卓大量使用的是 Java。</li><li>苹果端的比较流行的引擎 SpriteKit 以及适用于各种平台的 libGDX。使用 libGDX 在各个平台编写出的游戏，表现几乎是一样的，除了执行效率或者耗电水平会有细微的差别，但这和引擎其实关系不大。</li></ul><h2 id="如何选择移动端的游戏引擎？"><a href="#如何选择移动端的游戏引擎？" class="headerlink" title="如何选择移动端的游戏引擎？"></a>如何选择移动端的游戏引擎？</h2><p>我决定用 Godot。</p><h2 id="AR和人工智能在游戏领域有哪些应用？"><a href="#AR和人工智能在游戏领域有哪些应用？" class="headerlink" title="AR和人工智能在游戏领域有哪些应用？"></a>AR和人工智能在游戏领域有哪些应用？</h2><ul><li><code>VR</code>：虚拟现实（Virual Reality ）</li><li><code>AR</code>：增强现实（Augmented Reality）</li><li><code>MR</code>：混合现实（Mixed Reality）</li><li><code>SLAM</code>：同时定位与映射（Simultaneously Localization And Mapping）</li></ul><h2 id="谈谈微信小游戏的成功点"><a href="#谈谈微信小游戏的成功点" class="headerlink" title="谈谈微信小游戏的成功点"></a>谈谈微信小游戏的成功点</h2><ul><li>微信小游戏、小程序都是基于 HTML5 技术的，而微信小游戏的技术就是 HTML5 技术，只是在小游戏中运用的框架并不是普通的 HTML5 的框架。</li><li>微信小程序用的是基于 WebView 的技术；小游戏却没有用到 WebView 技术，而是修改了 HTML5 规范的一些接口内容，成为腾讯自己的内容。</li><li>微信平台之所以要自定义自己的一套体系，比如 Web 标准、开发标准等等，是因为可以结合微信本身的特性，在此基础上制作出更契合腾讯生态的产品，一句话就是，为了方便自己开发、优化和管理。</li><li>微信小游戏基于微信的底层获取功能、广告接入优势和打击拷贝的能力，塑造了一个更好的微信小程序生态。</li></ul><h2 id="谈谈移动游戏的未来发展"><a href="#谈谈移动游戏的未来发展" class="headerlink" title="谈谈移动游戏的未来发展"></a>谈谈移动游戏的未来发展</h2><ul><li>移动端游戏将往更加精品、高画质、高品位的游戏转型。3D、VR、AR 等游戏也会层出不穷，移动端和大屏幕之间的阻隔也会逐渐模糊，两边都可以互相游戏。</li><li>如果摆脱了电池的掣肘，那么移动端游戏将往 PC 端游戏的方向发展，更高质量的 3D 游戏也不用担心电池耗尽而半途无法玩了。</li></ul><h2 id="谈谈独立开发者的未来发展"><a href="#谈谈独立开发者的未来发展" class="headerlink" title="谈谈独立开发者的未来发展"></a>谈谈独立开发者的未来发展</h2><p>职责</p><ul><li><p>策划</p></li><li><p>美工</p></li><li><p>原画</p></li><li><p>推广</p></li><li><p>DOS 时代的时候，一个人或者一个小团队就可以做出一款游戏，但是这种时代已经过去了。游戏开发难度变小了，但是游戏制作难度变得越来越大了。</p></li><li><p>尽管 Steam 依旧是目前最大的发布平台，但是由于它本身没有对上架的游戏进行分类、整理，有选择的展示。对独立开发者其实是不利的。加上 Switch、XBOX 等主机游戏相继都推出了自己的独立游戏计划，我其实更看好主机游戏的发展。</p></li><li><p>其实不管基于什么平台，把游戏本身做好，才是最重要的。</p></li></ul><p>参考：<a href="https://time.geekbang.org/column/intro/87" target="_blank" rel="noopener">从0开始学游戏开发</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2020/01/12/hot/%E5%BC%95%E6%93%8E.jpg&quot; class=&quot;&quot; title=&quot;引擎&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
-    
-    
-      <category term="热点" scheme="https://2020.iosdevlog.com/tags/%E7%83%AD%E7%82%B9/"/>
-    
-      <category term="AR" scheme="https://2020.iosdevlog.com/tags/AR/"/>
-    
-      <category term="VR" scheme="https://2020.iosdevlog.com/tags/VR/"/>
     
   </entry>
   
