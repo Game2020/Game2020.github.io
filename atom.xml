@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-25T13:09:12.823Z</updated>
+  <updated>2020-01-26T13:28:20.942Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>贝叶斯视角下的机器学习</title>
+    <link href="https://2020.iosdevlog.com/2020/01/26/Bayes/"/>
+    <id>https://2020.iosdevlog.com/2020/01/26/Bayes/</id>
+    <published>2020-01-26T13:22:39.000Z</published>
+    <updated>2020-01-26T13:28:20.942Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-26.png" alt="2020/01/26"></p><a id="more"></a><p>为了解决频率主义的问题，贝叶斯学派给出了一种更加通用的概率定义：</p><blockquote><p>概率表示的是客观上事件的可信程度（degree of belief），也可以说成是主观上主体对事件的信任程度，它是建立在对事件的已有知识基础上的。</p></blockquote><p>比方说，当一个球迷提出“明天皇家马德里战胜拉斯帕尔马斯的概率是 86%”的时候，可以理解成他对皇马获胜有 86% 的把握程度，要是买球的话自然就会在独胜上下出重注（其实贝叶斯概率正是来源于对赌博的分析）。</p><p>除了对概率的置信度解释之外，贝叶斯学派中的另一个核心内容是贝叶斯定理（Bayes’ theorem），用来解决“逆向概率问题”（inverse probability problem）。</p><p>机器学习能够解决的问题必然会包含某些显式或者隐式的模式，没有模式的问题就不能通过机器学习解决。完全随机的问题是不可能被求解，也不可能被学习的，就像我们永远也没法预测示波器下一时刻的本底噪声一样。</p><p>一提到模式，你可能会一下子联系到另一个专业词汇——<strong>模式识别（pattern recognition）</strong>。模式识别和机器学习实际上有大量的共通之处，严格地将两者区分开来既没方法也没必要。如果非要找到些不同的话，模式识别是被更广泛地应用在计算机视觉（computer vision）等专门领域之中的专门概念，工程上的意义更浓一些。如果说机器学习侧重于将预先设定的准确率等指标最大化，那模式识别就更注重于潜在模式的提取与解释。</p><p>参考：<a href="https://time.geekbang.org/column/intro/97" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/97</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-26.png&quot; alt=&quot;2020/01/26&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title>频率视角下的机器学习</title>
@@ -486,31 +509,6 @@
     <summary type="html">
     
       &lt;img src=&quot;/2020/01/13/9787544266161/9787544266161.png&quot; class=&quot;&quot; title=&quot;东野圭吾-《麒麟之翼》&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
-    
-      <category term="加贺恭一郎系列" scheme="https://2020.iosdevlog.com/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《祈祷落幕时》人物关系图</title>
-    <link href="https://2020.iosdevlog.com/2020/01/12/9787544274692/"/>
-    <id>https://2020.iosdevlog.com/2020/01/12/9787544274692/</id>
-    <published>2020-01-12T13:02:40.000Z</published>
-    <updated>2020-01-15T04:13:46.267Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2020/01/12/9787544274692/9787544274692.png" class="" title="东野圭吾-《祈祷落幕时》"><a id="more"></a><p>祈祷落幕时 </p><p>作者: (日)东野圭吾<br>出版社: 南海出版公司<br>原作名: 祈りの幕が下りる时<br>译者: 代珂<br>出版年: 2015-1<br>页数: 296<br>定价: 39.50元<br>装帧: 精装<br>丛书: 新经典文库·东野圭吾作品<br>ISBN: 9787544274692</p><p>两个离异家庭，一个父亲为了女儿，杀了两个无辜的人。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2020/01/12/9787544274692/9787544274692.png&quot; class=&quot;&quot; title=&quot;东野圭吾-《祈祷落幕时》&quot;&gt;
     
     </summary>
     
