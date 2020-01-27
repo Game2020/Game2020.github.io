@@ -5,20 +5,19 @@
   
 
   
-  <title>UI和键盘鼠标 | Game 2020</title>
+  <title>特征工程 | Game 2020</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="article">
-<meta property="og:title" content="UI和键盘鼠标">
-<meta property="og:url" content="https://2020.iosdevlog.com/2020/01/09/UI-Input/index.html">
+<meta property="og:title" content="特征工程">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/index.html">
 <meta property="og:site_name" content="Game 2020">
-<meta property="og:image" content="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png">
-<meta property="article:published_time" content="2020-01-09T12:15:02.000Z">
-<meta property="article:modified_time" content="2020-01-09T13:45:55.870Z">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg">
+<meta property="article:published_time" content="2020-01-27T13:24:34.000Z">
+<meta property="article:modified_time" content="2020-01-27T14:08:40.299Z">
 <meta property="article:author" content="iOSDevLog">
-<meta property="article:tag" content="Godot">
+<meta property="article:tag" content="ML">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
   
@@ -73,14 +72,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-UI-Input" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Feature-engineering" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/01/09/UI-Input/" class="article-date">
-  <time datetime="2020-01-09T12:15:02.000Z" itemprop="datePublished">2020-01-09</time>
+    <a href="/2020/01/27/Feature-engineering/" class="article-date">
+  <time datetime="2020-01-27T13:24:34.000Z" itemprop="datePublished">2020-01-27</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/game/">game</a>
+    <a class="article-category-link" href="/categories/AI/">AI</a>
   </div>
 
   </div>
@@ -91,7 +90,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      UI和键盘鼠标
+      特征工程
     </h1>
   
 
@@ -99,55 +98,51 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png" alt="2020/01/09"></p>
+        <p><img src="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg" alt="Frequency"></p>
 <a id="more"></a>
 
-<h2 id="如何在游戏中载入UI和菜单？"><a href="#如何在游戏中载入UI和菜单？" class="headerlink" title="如何在游戏中载入UI和菜单？"></a>如何在游戏中载入UI和菜单？</h2><h3 id="UI-的两种呈现形式"><a href="#UI-的两种呈现形式" class="headerlink" title="UI 的两种呈现形式"></a>UI 的两种呈现形式</h3><ol>
-<li>美术画好 UI 图片，然后直接贴图，用鼠标控制一系列的点击和按下操作</li>
-<li>自己画 UI 界面，比如画一个框，并且在框里面写上文字</li>
-</ol>
+<p>多明戈斯的观点是：</p>
+<blockquote>
+<p>数据量比算法更重要。</p>
+</blockquote>
+<p>即使算法本身并没有什么精巧的设计，但使用大量数据进行训练也能起到填鸭的效果，获得比用少量数据训练出来的聪明算法更好的性能。这也应了那句老话：</p>
+<blockquote>
+<p>数据决定了机器学习的上限，而算法只是尽可能逼近这个上限。</p>
+</blockquote>
+<p><strong>特征工程（feature engineering）才是机器学习的关键</strong></p>
+<p>通常来说，原始数据并不直接适用于学习，而是特征筛选、构造和生成的基础。一个好的预测模型与高效的特征提取和明确的特征表示息息相关，如果通过特征工程得到很多独立的且与所属类别相关的特征，那学习过程就变成小菜一碟。</p>
+<h2 id="在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）"><a href="#在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）" class="headerlink" title="在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）?"></a>在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）?</h2><h3 id="特征缩放（feature-scaling）"><a href="#特征缩放（feature-scaling）" class="headerlink" title="特征缩放（feature scaling）"></a>特征缩放（feature scaling）</h3><p>可能是最广为人知的预处理技巧了，它的目的是保证所有的特征数值具有相同的数量级。</p>
+<p>特征缩放的作用就是消除特征的不同尺度所造成的偏差，具体的变换方法有以下这两种：</p>
 <ul>
-<li>绘制矩形</li>
-<li>绘制字体和字符</li>
+<li>标准化（standardization）</li>
 </ul>
-<p>鼠标的操作基本有 3 个值需要控制</p>
+<p>$$<br>x_{s t}=\frac{x-\operatorname{mean}(x)}{\operatorname{stdev}(x)}<br>$$</p>
 <ul>
-<li>左键</li>
-<li>中键</li>
-<li>右键</li>
+<li>归一化（normalization）</li>
 </ul>
-<h2 id="如何用鼠标和键盘来操作游戏？"><a href="#如何用鼠标和键盘来操作游戏？" class="headerlink" title="如何用鼠标和键盘来操作游戏？"></a>如何用鼠标和键盘来操作游戏？</h2><ul>
-<li>首先是键盘事件判断，这里会出现按一下键盘做一下操作的情况，问题出在 KEYDOWN 事件判断上。但是如果你需要一直按键的判断，可以使用 get_pressed 函数。</li>
-<li>组合键可以写在同一个判断下，使用 and 连起来做判断。get_pressed 会返回一个 tuple，里面存放了所有的 key 值，只要判断 key 值是不是为 True 就是判断了有没有按键。</li>
-<li>鼠标操作也可以使用 get_pressed 函数，也是返回 tuple，其中下标 0、1、2 分别代表了左、中、右三个按键。</li>
-</ul>
-<h2 id="如何判断客户端的网络连接？"><a href="#如何判断客户端的网络连接？" class="headerlink" title="如何判断客户端的网络连接？"></a>如何判断客户端的网络连接？</h2><p>OSI 七层模型: <code>巫术忘传会飚鹰</code></p>
+<p>$$<br>x_{\text {norm}}=\frac{x-\min (x)}{\max (x)-\min (x)}<br>$$</p>
 <ul>
-<li><code>应</code>用层</li>
-<li><code>表</code>示层</li>
-<li><code>会</code>话层</li>
-<li><code>传</code>输层</li>
-<li><code>网</code>络层</li>
-<li><code>数</code>据链路层</li>
-<li><code>物</code>理层</li>
+<li>特征缩放可以让不同特征的取值具有相同的尺度，方法包括标准化和归一化；</li>
+<li>异常点会导致数据的有偏分布，对数变换和空间标识都可以去除数据的偏度；</li>
+<li>k 近邻方法和线性回归可以用来对特征的缺失值进行人为赋值；</li>
+<li>删除不具备区分度的特征能够降低计算开销，增强可解释性。</li>
 </ul>
-<p>最后附上明天的桌面背景。</p>
-<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-09.png" alt="2020/01/09"></p>
+<p>参考：<a href="https://time.geekbang.org/column/article/8530" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8530</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/09/UI-Input/" data-id="ck5wj3trl000txo2wf0ia1dtd" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/" data-id="ck5wj3tug0035xo2wb5mmb7wj" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
 
       
         <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
         <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li></ul>
 
     </footer>
   </div>
@@ -155,19 +150,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/01/09/9787544244848/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          《变身》人物关系图
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/01/08/PEAK/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/01/26/Bayes/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">《刻意练习-如何从新手到大师》</div>
+      <div class="article-nav-title">贝叶斯视角下的机器学习</div>
     </a>
   
 </nav>
@@ -290,6 +276,23 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config("");
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+      all[i].SourceElement().parentNode.className += ' has-jax';
+    }
+  });
+</script>
+
+<script type="text/javascript" src="custom_mathjax_source">
+</script>
+<!-- End: Injected MathJax -->
+<!-- hexo-inject:end -->
 </body>
 </html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-26T13:28:20.942Z</updated>
+  <updated>2020-01-27T14:08:40.299Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>特征工程</title>
+    <link href="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/"/>
+    <id>https://2020.iosdevlog.com/2020/01/27/Feature-engineering/</id>
+    <published>2020-01-27T13:24:34.000Z</published>
+    <updated>2020-01-27T14:08:40.299Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg" alt="Frequency"></p><a id="more"></a><p>多明戈斯的观点是：</p><blockquote><p>数据量比算法更重要。</p></blockquote><p>即使算法本身并没有什么精巧的设计，但使用大量数据进行训练也能起到填鸭的效果，获得比用少量数据训练出来的聪明算法更好的性能。这也应了那句老话：</p><blockquote><p>数据决定了机器学习的上限，而算法只是尽可能逼近这个上限。</p></blockquote><p><strong>特征工程（feature engineering）才是机器学习的关键</strong></p><p>通常来说，原始数据并不直接适用于学习，而是特征筛选、构造和生成的基础。一个好的预测模型与高效的特征提取和明确的特征表示息息相关，如果通过特征工程得到很多独立的且与所属类别相关的特征，那学习过程就变成小菜一碟。</p><h2 id="在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）"><a href="#在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）" class="headerlink" title="在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）?"></a>在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）?</h2><h3 id="特征缩放（feature-scaling）"><a href="#特征缩放（feature-scaling）" class="headerlink" title="特征缩放（feature scaling）"></a>特征缩放（feature scaling）</h3><p>可能是最广为人知的预处理技巧了，它的目的是保证所有的特征数值具有相同的数量级。</p><p>特征缩放的作用就是消除特征的不同尺度所造成的偏差，具体的变换方法有以下这两种：</p><ul><li>标准化（standardization）</li></ul><p>$$<br>x_{s t}=\frac{x-\operatorname{mean}(x)}{\operatorname{stdev}(x)}<br>$$</p><ul><li>归一化（normalization）</li></ul><p>$$<br>x_{\text {norm}}=\frac{x-\min (x)}{\max (x)-\min (x)}<br>$$</p><ul><li>特征缩放可以让不同特征的取值具有相同的尺度，方法包括标准化和归一化；</li><li>异常点会导致数据的有偏分布，对数变换和空间标识都可以去除数据的偏度；</li><li>k 近邻方法和线性回归可以用来对特征的缺失值进行人为赋值；</li><li>删除不具备区分度的特征能够降低计算开销，增强可解释性。</li></ul><p>参考：<a href="https://time.geekbang.org/column/article/8530" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8530</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg&quot; alt=&quot;Frequency&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title>贝叶斯视角下的机器学习</title>
@@ -484,31 +507,6 @@
     <summary type="html">
     
       &lt;img src=&quot;/2020/01/13/9787544255899/9787544255899.png&quot; class=&quot;&quot; title=&quot;东野圭吾-《红手指》&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
-    
-      <category term="加贺恭一郎系列" scheme="https://2020.iosdevlog.com/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《麒麟之翼》人物关系图</title>
-    <link href="https://2020.iosdevlog.com/2020/01/13/9787544266161/"/>
-    <id>https://2020.iosdevlog.com/2020/01/13/9787544266161/</id>
-    <published>2020-01-13T02:41:51.000Z</published>
-    <updated>2020-01-15T04:13:46.266Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2020/01/13/9787544266161/9787544266161.png" class="" title="东野圭吾-《麒麟之翼》"><a id="more"></a><p>作者:  [日] 东野圭吾<br>出版社: 南海出版公司<br>副标题: 加贺探案集9<br>原作名: 麒麟の翼<br>译者: 田秀娟<br>出版年: 2013-8-1<br>页数: 288<br>定价: 33<br>装帧: 平装<br>丛书: 加贺探案集<br>ISBN: 9787544266161</p><p>“够了！说什么不想伤害孩子。你根本不明白自己做错了什么！杉野刺杀了青柳先生之后，为什么不自首？你知道吗？就是因为你把他教错了！即使 <code>犯了错误，也能蒙混过关</code> ——这就是三年前你教给他们的。所以，杉野会做相同的事情，会<code>犯相同的错误</code>。而青柳先生，看到自己的儿子如此误入歧途，他想告诉儿子什么才是正确的。你如果连这点都不明白，就别当老师！你这样的人，根本没有资格教育别人！”</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2020/01/13/9787544266161/9787544266161.png&quot; class=&quot;&quot; title=&quot;东野圭吾-《麒麟之翼》&quot;&gt;
     
     </summary>
     
