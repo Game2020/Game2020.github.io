@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-01-27T14:11:14.787Z</updated>
+  <updated>2020-01-28T16:03:21.046Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>写给孩子的冠状病毒绘本</title>
+    <link href="https://2020.iosdevlog.com/2020/01/28/Coronavirus/"/>
+    <id>https://2020.iosdevlog.com/2020/01/28/Coronavirus/</id>
+    <published>2020-01-28T15:34:41.000Z</published>
+    <updated>2020-01-28T16:03:21.046Z</updated>
+    
+    <content type="html"><![CDATA[<p>分享小武幼儿园宣传的 <strong>冠状病毒绘本</strong>。</p><p><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0001.jpg" alt="Coronavirus"></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0002.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0003.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0004.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0005.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0006.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0007.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0008.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0009.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0010.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0011.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0012.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0013.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0014.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0015.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0016.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0017.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0018.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0019.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0020.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0021.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0022.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0023.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0024.jpg" alt="Coronavirus"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;分享小武幼儿园宣传的 &lt;strong&gt;冠状病毒绘本&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/28/Feature-engineering/0001.jpg&quot; alt=&quot;Coronavirus&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="小武" scheme="https://2020.iosdevlog.com/categories/%E5%B0%8F%E6%AD%A6/"/>
+    
+    
+      <category term="绘本" scheme="https://2020.iosdevlog.com/tags/%E7%BB%98%E6%9C%AC/"/>
+    
+  </entry>
   
   <entry>
     <title>特征工程</title>
@@ -492,31 +516,6 @@
       <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
     
       <category term="天下一大五郎系列" scheme="https://2020.iosdevlog.com/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《红手指》人物关系图</title>
-    <link href="https://2020.iosdevlog.com/2020/01/13/9787544255899/"/>
-    <id>https://2020.iosdevlog.com/2020/01/13/9787544255899/</id>
-    <published>2020-01-13T02:54:16.000Z</published>
-    <updated>2020-01-15T04:13:46.257Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2020/01/13/9787544255899/9787544255899.png" class="" title="东野圭吾-《红手指》"><a id="more"></a><p>作者: [日] 东野圭吾<br>出版社: 南海出版公司<br>出品方: 新经典文化<br>副标题: 加贺探案集07<br>原作名: 赤い指<br>译者: 于壮<br>出版年: 2011-10<br>页数: 211<br>定价: 25.00元<br>装帧: 平装<br>丛书: 加贺探案集<br>ISBN: 9787544255899</p><blockquote><p>养不教，父之过。</p><p>教不严，师之惰。</p><p>子不学，非所宜。</p><p>幼不学，老何为。</p></blockquote><p>–三字经</p><p><code>逃避</code> 并不能解决问题。</p><p>小的过错不及及时纠正，只会引来无法挽回的过错。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2020/01/13/9787544255899/9787544255899.png&quot; class=&quot;&quot; title=&quot;东野圭吾-《红手指》&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
-    
-      <category term="加贺恭一郎系列" scheme="https://2020.iosdevlog.com/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/"/>
     
   </entry>
   
