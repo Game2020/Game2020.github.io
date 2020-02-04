@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-03T15:50:58.347Z</updated>
+  <updated>2020-02-04T14:32:35.383Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《游戏剧本怎么写》</title>
+    <link href="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/"/>
+    <id>https://2020.iosdevlog.com/2020/02/04/Game-scenarios/</id>
+    <published>2020-02-04T14:23:37.000Z</published>
+    <updated>2020-02-04T14:32:35.383Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png" alt="游戏剧本怎么写"></p><p>作者: (日) 佐佐木智广<br>出版社: 人民邮电出版社<br>副标题: 游戏编剧新手的入门指南<br>原作名: ゲームシナリオの書き方 基礎から学ぶキャラクター・構成・テキストの秘訣<br>译者: 支鹏浩<br>出版年: 2018-8<br>页数: 277<br>定价: 59<br>装帧: 平装<br>ISBN: 9787115484338</p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E8%AE%BE%E5%AE%9A%E4%B8%BB%E9%A2%98.png" alt="设定主题"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E8%A7%92%E8%89%B2%E8%AE%BE%E5%AE%9A.png" alt="角色设定"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png" alt="结构"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png" alt="结构"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC.png" alt="游戏剧本"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%95%85%E4%BA%8B%E8%B5%B0%E5%90%91.png" alt="故事走向"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E5%85%B3%E7%B3%BB.png" alt="关系"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E4%B8%96%E7%95%8C%E8%AE%BE%E5%AE%9A%E8%A1%A8.png" alt="世界设定表"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E9%80%89%E9%A1%B9.png" alt="选项"></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png&quot; alt=&quot;游戏剧本怎么写&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者: (日) 佐佐木智广&lt;br&gt;出版社: 人民邮电出版社&lt;br&gt;副标题: 游戏编剧新手的入门指南&lt;br&gt;原作名: ゲームシナリオの書き方 基礎から学ぶキャラクター・構成・テキストの秘訣&lt;br&gt;译者: 支鹏浩&lt;br&gt;出版年: 2018-8&lt;br&gt;页数: 277&lt;br&gt;定价: 59&lt;br&gt;装帧: 平装&lt;br&gt;ISBN: 9787115484338&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="设计" scheme="https://2020.iosdevlog.com/tags/%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>英语学习</title>
@@ -495,29 +519,6 @@
       <category term="ANN" scheme="https://2020.iosdevlog.com/tags/ANN/"/>
     
       <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人工智能-机器学习总结</title>
-    <link href="https://2020.iosdevlog.com/2020/01/16/ml/"/>
-    <id>https://2020.iosdevlog.com/2020/01/16/ml/</id>
-    <published>2020-01-16T07:58:12.000Z</published>
-    <updated>2020-01-16T08:03:22.499Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-16.png" alt="2020/01/16"></p><a id="more"></a><h2 id="数山有路，学海无涯：机器学习概论"><a href="#数山有路，学海无涯：机器学习概论" class="headerlink" title="数山有路，学海无涯：机器学习概论"></a>数山有路，学海无涯：机器学习概论</h2><hr><p>机器学习的基本原理与基础概念，其要点如下：</p><ul><li>机器学习是计算机基于数据构建概率统计模型并运用模型对数据进行预测与分析的学科；</li><li>根据输入输出类型的不同，机器学习可分为分类问题、回归问题、标注问题三类；</li><li>过拟合是机器学习中不可避免的问题，可通过选择合适的模型降低其影响；</li><li>监督学习是目前机器学习的主流任务，包括生成方法和判别方法两类。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/1.jpg" alt=""></p><h2 id="简约而不简单：线性回归"><a href="#简约而不简单：线性回归" class="headerlink" title="简约而不简单：线性回归"></a>简约而不简单：线性回归</h2><hr><p>线性回归的基本原理，其要点如下：</p><ul><li>线性回归假设输出变量是若干输入变量的线性组合，并根据这一关系求解线性组合中的最优系数；</li><li>最小二乘法可用于解决单变量线性回归问题，当误差函数服从正态分布时，它与最大似然估计等价；</li><li>多元线性回归问题也可以用最小二乘法求解，但极易出现过拟合现象；</li><li>岭回归和 LASSO 回归分别通过引入二范数惩罚项和一范数惩罚项抑制过拟合。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/2.jpg" alt=""></p><h2 id="大道至简：朴素贝叶斯方法"><a href="#大道至简：朴素贝叶斯方法" class="headerlink" title="大道至简：朴素贝叶斯方法"></a>大道至简：朴素贝叶斯方法</h2><hr><p>朴素贝叶斯方法的基本原理，其要点如下：</p><ul><li>朴素贝叶斯方法利用后验概率选择最佳分类，后验概率可以通过贝叶斯定理求解；</li><li>朴素贝叶斯方法假定所有属性相互独立，基于这一假设将类条件概率转化为属性条件概率的乘积；</li><li>朴素贝叶斯方法可以使期望风险最小化；</li><li>影响朴素贝叶斯分类的是所有属性之间的依赖关系在不同类别上的分布。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/3.jpg" alt=""></p><h2 id="衍化至繁：逻辑回归"><a href="#衍化至繁：逻辑回归" class="headerlink" title="衍化至繁：逻辑回归"></a>衍化至繁：逻辑回归</h2><hr><p>逻辑回归方法的基本原理，其要点如下：</p><ul><li>逻辑回归模型是对线性回归的改进，用于解决分类问题；</li><li>逻辑回归输出的是实例属于每个类别的似然概率，似然概率最大的类别就是分类结果；</li><li>在一定条件下，逻辑回归模型与朴素贝叶斯分类器是等价的；</li><li>多分类问题时可以通过多次使用二分类逻辑回归或者使用 Softmax 回归解决。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/4.jpg" alt=""></p><h2 id="步步为营，有章可循：决策树"><a href="#步步为营，有章可循：决策树" class="headerlink" title="步步为营，有章可循：决策树"></a>步步为营，有章可循：决策树</h2><hr><p>决策树的基本原理，其要点如下：</p><ul><li>决策树是包含根节点、内部节点和叶节点的树结构，通过判定不同属性的特征来解决分类问题；</li><li>决策树的学习过程包括特征选择、决策树生成、决策树剪枝三个步骤；</li><li>决策树生成的基础是特征选择，特征选择的指标包括信息增益、信息增益比和基尼系数；</li><li>决策树的剪枝策略包括预剪枝和后剪枝。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/5.jpg" alt=""></p><h2 id="穷则变，变则通：支持向量机"><a href="#穷则变，变则通：支持向量机" class="headerlink" title="穷则变，变则通：支持向量机"></a>穷则变，变则通：支持向量机</h2><hr><p>支持向量机的基本原理，其要点如下：</p><ul><li>线性可分支持向量机通过硬间隔最大化求出划分超平面，解决线性分类问题；</li><li>线性支持向量机通过软间隔最大化求出划分超平面，解决线性分类问题；</li><li>非线性支持向量机利用核函数实现从低维原始空间到高维特征空间的转换，在高维空间上解决非线性分类问题；</li><li>支持向量机的学习是个凸二次规划问题，可以用 SMO 算法快速求解。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/6.jpg" alt=""></p><h2 id="三个臭皮匠，赛过诸葛亮：集成学习"><a href="#三个臭皮匠，赛过诸葛亮：集成学习" class="headerlink" title="三个臭皮匠，赛过诸葛亮：集成学习"></a>三个臭皮匠，赛过诸葛亮：集成学习</h2><hr><p>集成学习的基本原理，其要点如下：</p><ul><li>集成学习使用多个个体学习器来获得比每个单独学习器更好的预测性能，包括序列化方法和并行化方法两类；</li><li>多样性要求集成学习中的不同个体学习器之间具有足够的差异性；</li><li>序列化方法采用 Boosting 机制，通过重复使用概率分布不同的训练数据实现集成，可以降低泛化误差中的偏差；</li><li>并行化方法采用 Bagging 机制，通过在训练数据中多次自助抽取不同的采样子集实现集成，可以降低泛化误差中的方差。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/7.jpg" alt=""></p><h2 id="物以类聚，人以群分：聚类分析"><a href="#物以类聚，人以群分：聚类分析" class="headerlink" title="物以类聚，人以群分：聚类分析"></a>物以类聚，人以群分：聚类分析</h2><hr><p>聚类分析的基本原理，其要点如下：</p><ul><li>聚类分析是一种无监督学习方法，通过学习没有分类标记的训练样本发现数据的内在性质和规律；</li><li>数据之间的相似性通常用距离度量，类内差异应尽可能小，类间差异应尽可能大；</li><li>根据形成聚类方式的不同，聚类算法可以分为层次聚类、原型聚类、分布聚类、密度聚类等几类；</li><li>聚类分析的一个重要应用是对用户进行分组与归类。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/8.jpg" alt=""></p><h2 id="好钢用在刀刃上：降维学习"><a href="#好钢用在刀刃上：降维学习" class="headerlink" title="好钢用在刀刃上：降维学习"></a>好钢用在刀刃上：降维学习</h2><hr><p>主成分分析是一种主要的降维方法，另一种更加直观的降维方式则是直接对样本的属性做出筛选，这种降维方法就是“特征选择”，其要点如下：</p><ul><li>主成分分析利用正交变换将可能存在相关性的原始属性转换成一组线性无关的新属性，并通过选择重要的新属性实现降维；</li><li>主成分分析的解满足最大方差和最小均方误差两类约束条件，因而具有最大可分性和最近重构性；</li><li>特征选择则是选取原始特征中的一个子集用于学习任务，是另一种主要的降维技术；</li><li>特征选择的关键问题是对特征子集的评价，主要的特征选择算法包括包裹法、过滤法和嵌入法。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/9.jpg" alt=""></p><h2 id="拓展阅读参考书"><a href="#拓展阅读参考书" class="headerlink" title="拓展阅读参考书"></a>拓展阅读参考书</h2><hr><p><img src="https://2020.iosdevlog.com/2020/01/16/ml/10.jpg" alt=""></p><p>总结自：人工智能基础课: <a href="https://time.geekbang.org/column/62" target="_blank" rel="noopener">https://time.geekbang.org/column/62</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-16.png&quot; alt=&quot;2020/01/16&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
     
   </entry>
   
