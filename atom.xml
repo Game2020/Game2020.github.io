@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-05T14:16:32.286Z</updated>
+  <updated>2020-02-06T14:32:05.532Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>因为玩手机，差点铸成大错</title>
+    <link href="https://2020.iosdevlog.com/2020/02/06/phone/"/>
+    <id>https://2020.iosdevlog.com/2020/02/06/phone/</id>
+    <published>2020-02-06T13:07:51.000Z</published>
+    <updated>2020-02-06T14:32:05.532Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/06/phone/1.png" alt="小久受伤"></p><a id="more"></a><p>今天小武的二姨还两个小孩回外婆家。</p><p>二姨家一男一女，大的哥哥比小武小一点，他们两个在一起玩木头撬撬板；小的妹妹比小久小一点，他们一起跑着玩。</p><p>小久带着妹妹去冰箱里拿出 3 盒旺仔牛奶，让爸爸分开。</p><p>爸爸坐在电动车上看手机，让小久去找妈妈打开。</p><p>小久上了二楼找妈妈，妈妈在晾衣服，又叫小久找爸爸。</p><p>小久带着妹妹下来，哥哥看到有旺仔牛奶，就去抢。4 个小孩就在一起抢 3 盒牛奶。</p><p>哥哥在挣抢的过程中把小久推倒，后脑勺着地，小久大哭。</p><p>爸爸赶紧过来揉小久，妈妈下来时看到小久的头上有两处流血。</p><p>舅舅带小久去二爷家拿红药水。再买 1 箱旺仔牛奶。</p><p>小武午睡起来后，对妈妈说：<strong>“头，疼！“</strong></p><p><img src="https://2020.iosdevlog.com/2020/02/06/phone/2.png" alt="事件"></p><h2 id="责任化分"><a href="#责任化分" class="headerlink" title="责任化分"></a>责任化分</h2><ul><li>舅舅：喝了 1 盒牛奶（起因）1%</li><li>小久：拿 3 盒牛奶 5%</li><li>妈妈：晾衣服（拆开可避免）10%</li><li>哥哥：推小久，导致头着地 5%</li><li>爸爸：看手机 100%</li></ul><p>这次爸爸因为看手机，没有照看好小孩，导致小久头部受伤。</p><p>还不知道有没有引起 <strong>脑震荡</strong> 等后遗证。最近 2019 新型肺炎这么严重，也不敢带小久去医院检查。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/06/phone/1.png&quot; alt=&quot;小久受伤&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
+    
+    
+      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
+    
+  </entry>
   
   <entry>
     <title>《明日歌》</title>
@@ -492,31 +515,6 @@
       <category term="ANN" scheme="https://2020.iosdevlog.com/tags/ANN/"/>
     
       <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《假面饭店》人物关系图</title>
-    <link href="https://2020.iosdevlog.com/2020/01/17/9787544259101/"/>
-    <id>https://2020.iosdevlog.com/2020/01/17/9787544259101/</id>
-    <published>2020-01-17T04:36:13.000Z</published>
-    <updated>2020-01-17T04:47:07.242Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2020/01/17/9787544259101/9787544259101.png" class="" title="东野圭吾-《假面饭店》"><a id="more"></a><p>作者:  [日] 东野圭吾<br>出版社: 南海出版公司<br>原作名: マスカレードホテル<br>译者: 中森<br>出版年: 2012-12<br>页数: 288<br>定价: 39.80元<br>装帧: 精装<br>丛书: 假面系列<br>ISBN: 9787544259101</p><p>四个不相关的 x1-x4 杀人事件，让 x4 误导成连环杀人事件。</p><p>服务业为客人着想。。。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2020/01/17/9787544259101/9787544259101.png&quot; class=&quot;&quot; title=&quot;东野圭吾-《假面饭店》&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
-    
-      <category term="假面系列" scheme="https://2020.iosdevlog.com/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/"/>
     
   </entry>
   
