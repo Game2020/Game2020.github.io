@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-06T14:43:09.585Z</updated>
+  <updated>2020-02-07T14:52:31.872Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>知错能改，善莫大焉</title>
+    <link href="https://2020.iosdevlog.com/2020/02/07/wrong/"/>
+    <id>https://2020.iosdevlog.com/2020/02/07/wrong/</id>
+    <published>2020-02-07T14:32:33.000Z</published>
+    <updated>2020-02-07T14:52:31.872Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/2.jpg" alt=""></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/1.jpg" alt=""></p><p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/3.png" alt=""></p><p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/4.png" alt=""></p><p><a href="http://www.ccdi.gov.cn/toutiao/202002/t20200207_211015.html" target="_blank" rel="noopener">http://www.ccdi.gov.cn/toutiao/202002/t20200207_211015.html</a></p><p>经中央批准，国家监察委员会决定派出调查组赴湖北省武汉市，就群众反映的涉及李文亮医生的有关问题作全面调查<br>来源：中央纪委国家监委网站 发布时间：2020-02-07 13:02 </p><p>　　本网讯  经中央批准，国家监察委员会决定派出调查组赴湖北省武汉市，就群众反映的涉及李文亮医生的有关问题作全面调查。</p><p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/8.png" alt=""></p><p><a href="http://www.ccdi.gov.cn/yaowen/202002/t20200207_211028.html" target="_blank" rel="noopener">http://www.ccdi.gov.cn/yaowen/202002/t20200207_211028.html</a></p><p>国家卫生健康委员会向李文亮医生表示深切哀悼</p><p>来源：国家卫健委网站 发布时间：2020-02-07 15:07 </p><p>　　武汉市中心医院李文亮医生在抗击疫情中感染新型冠状病毒肺炎，经全力救治不幸逝世，国家卫生健康委表示深切哀悼，向李文亮医生的家属表示诚挚慰问。</p><p>　　疫情发生以来，广大医务工作者不顾个人安危，舍小家，为大家，迎难而上，英勇奋战在抗疫最前线，为保护人民生命健康作出了重大贡献，我们表示崇高敬意。</p><p>　　当前，抗击疫情正处于关键时期，防控形势依然严峻复杂，需要全社会更加关心关爱医务人员，团结一致，万众一心，共克时艰，坚决打赢疫情防控阻击战。</p><p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/5.png" alt=""></p><p><a href="http://www.ccdi.gov.cn/yaowen/202002/t20200207_211029.html" target="_blank" rel="noopener">http://www.ccdi.gov.cn/yaowen/202002/t20200207_211029.html</a></p><p>武汉市人民政府向李文亮医生致敬</p><p>来源：武汉市人民政府网站 发布时间：2020-02-07 15:07 </p><p>　　武汉中心医院李文亮医生，因感染新型肺炎，经全力抢救无效不幸去世。我们深表哀悼，万分惋惜！对其坚守一线抗击疫情表示敬意，对其家人表示诚挚慰问！</p><p>武汉市人民政府</p><p>　　2020年2月7日</p><p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/6.jpg" alt=""></p><p><img src="https://2020.iosdevlog.com/2020/02/07/wrong/7.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/07/wrong/2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="肺炎" scheme="https://2020.iosdevlog.com/categories/%E8%82%BA%E7%82%8E/"/>
+    
+    
+      <category term="错误" scheme="https://2020.iosdevlog.com/tags/%E9%94%99%E8%AF%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>因为玩手机，差点铸成大错</title>
@@ -488,33 +511,6 @@
       <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
     
       <category term="NN" scheme="https://2020.iosdevlog.com/tags/NN/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人工智能-深度学习总结</title>
-    <link href="https://2020.iosdevlog.com/2020/01/18/dl/"/>
-    <id>https://2020.iosdevlog.com/2020/01/18/dl/</id>
-    <published>2020-01-18T06:29:02.000Z</published>
-    <updated>2020-01-20T13:37:40.644Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-18.png" alt="2020/01/18"></p><a id="more"></a><h2 id="空山鸣响，静水流深：深度学习概述"><a href="#空山鸣响，静水流深：深度学习概述" class="headerlink" title="空山鸣响，静水流深：深度学习概述"></a>空山鸣响，静水流深：深度学习概述</h2><hr><p>深度学习的一些简介，其要点如下：</p><ul><li>深度学习实际上是基于具有多个隐藏层的神经网络的学习；</li><li>深度学习的思想来源于人类处理视觉信息的方式；</li><li>深度学习的发展得益于数据的井喷和计算力的飙升；</li><li>深度学习的理论基础依然有待深入。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/1.jpg" alt=""></p><h2 id="前方有路，未来可期：深度前馈网络"><a href="#前方有路，未来可期：深度前馈网络" class="headerlink" title="前方有路，未来可期：深度前馈网络"></a>前方有路，未来可期：深度前馈网络</h2><hr><p>作为学习模型的深度前馈网络存在的一些共性问题，其要点如下：</p><ul><li>深度前馈网络利用深度架构实现工程上可实现的对任意函数的通用逼近；</li><li>深度前馈网络使用梯度下降的方法进行学习；</li><li>深度前馈网络的损失函数通常是交叉熵或最小均方误差；</li><li>深度前馈网络的隐藏神经元通常使用整流线性单元作为传递函数。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/2.jpg" alt=""></p><h2 id="小树不修不直溜：深度学习中的正则化"><a href="#小树不修不直溜：深度学习中的正则化" class="headerlink" title="小树不修不直溜：深度学习中的正则化"></a>小树不修不直溜：深度学习中的正则化</h2><hr><p>实现正则化的思路，其要点如下：</p><ul><li><p>基于训练数据的正则化方法包括数据集增强和 Dropout；</p></li><li><p>基于网络架构的正则化方法包括参数共享和传递函数正则化；</p></li><li><p>基于误差函数和正则化项的正则化方法包括使用 <em>L²</em> 范数和 <em>L¹</em> 范数；</p></li><li><p>基于最优化过程的正则化方法包括早停。</p></li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/3.jpg" alt=""></p><h2 id="玉不琢不成器：深度学习中的优化"><a href="#玉不琢不成器：深度学习中的优化" class="headerlink" title="玉不琢不成器：深度学习中的优化"></a>玉不琢不成器：深度学习中的优化</h2><hr><p>深度学习中实现优化的思路，其要点如下：</p><ul><li><p>深度学习中的优化需要解决病态矩阵、局部极小值和鞍点等问题；</p></li><li><p>深度学习优化中的降噪方法包括动态采样、梯度聚合和迭代平均；</p></li><li><p>深度学习优化中的二阶导数近似方法是对原始牛顿法的各种改进；</p></li><li><p>其他优化方法包括动量方法、加速下降方法和坐标下降方法。</p></li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/4.jpg" alt=""></p><h2 id="空竹里的秘密：自编码器"><a href="#空竹里的秘密：自编码器" class="headerlink" title="空竹里的秘密：自编码器"></a>空竹里的秘密：自编码器</h2><hr><p>自编码器的原理与特点，其要点如下：</p><ul><li>自编码器是一种无监督学习方式，目的在于学习数据的重新表达；</li><li>多个浅层自编码器级联可以得到深度的栈式自编码器，并使用无监督预训练结合有监督微调的方式加以训练；</li><li>稀疏自编码器利用稀疏的高维表达提取出训练集中隐含的统计规律；</li><li>变分自编码器对隐藏层做参数化处理，可以用于学习数据的生成模型。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/5.jpg" alt=""></p><h2 id="困知勉行者勇：深度强化学习"><a href="#困知勉行者勇：深度强化学习" class="headerlink" title="困知勉行者勇：深度强化学习"></a>困知勉行者勇：深度强化学习</h2><hr><p>深度强化学习（deep reinforcement learning）是深度学习和强化学习的结合，它将深度学习的感知能力和强化学习的决策能力熔于一炉，用深度学习的运行机制达到强化学习的优化目标，从而向通用人工智能迈进。</p><p>深度强化学习的简单原理与方法分类，其要点如下：</p><ul><li>深度强化学习是深度学习和强化学习的结合，有望成为实现通用人工智能的关键技术；</li><li>基于价值的深度强化学习的基本思路是建立价值函数的表示，通过优化价值函数得到最优策略；</li><li>基于策略的深度强化学习的基本思路是直接搜索能够使未来奖励最大化的最优策略；</li><li>基于模型的深度强化学习的基本思路是构造关于环境的转移概率模型，再用这个模型指导策略。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/6.jpg" alt=""></p><h2 id="拓展阅读参考书"><a href="#拓展阅读参考书" class="headerlink" title="拓展阅读参考书"></a>拓展阅读参考书</h2><hr><p><img src="https://2020.iosdevlog.com/2020/01/18/dl/7.jpg" alt=""></p><p>总结自：人工智能基础课: <a href="https://time.geekbang.org/column/62" target="_blank" rel="noopener">https://time.geekbang.org/column/62</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-18.png&quot; alt=&quot;2020/01/18&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
-    
-      <category term="ANN" scheme="https://2020.iosdevlog.com/tags/ANN/"/>
-    
-      <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
     
   </entry>
   
