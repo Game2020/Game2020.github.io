@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-07T14:52:31.872Z</updated>
+  <updated>2020-02-08T15:32:53.119Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《蜗居》</title>
+    <link href="https://2020.iosdevlog.com/2020/02/08/9787535435828/"/>
+    <id>https://2020.iosdevlog.com/2020/02/08/9787535435828/</id>
+    <published>2020-02-08T15:26:33.000Z</published>
+    <updated>2020-02-08T15:32:53.119Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/08/9787535435828/1.png" alt="人物关系图"></p><p>作者:  六六<br>出版社: 长江文艺出版社<br>出版年: 2007-12<br>页数: 303<br>定价: 25.00元<br>装帧: 平装<br>ISBN: 9787535435828</p><a id="more"></a><blockquote><p>“海藻啊!人家兜，婚姻是爱情的坟墓。但我要告诉你，没有坟墓，这个婚姻就走不过去!而我呢!我现在就在自掘坟墓。海藻啊，我真不该打破你的梦，让你看到婚姻的疮疤丑陋。可你早看比迟看好，早醒悟比迟后悔好。我告诉你，爱情，爱情那都是男人骗女人的把戏。什么‘把我的心交给你，你会永远拥有我’，那都是一穷二白的穷光蛋的障眼术。他那是什么都没有了，就说点甜言蜜语。男人若真爱一个女人，别净玩儿虚的，你爱这个女人，第一个要给的，既不是你的心，也不是你的身体，一是拍上一摞票子，让女人不必担心未来，二是奉上一幢房子，至少在拥有不了男人的时候，心失落了，身体还有着落。哼哼，可惜，等我明白的时候，都太迟了。这世界上有两大毒草，一是莎士比亚，另一个就是琼瑶，这两个人最坏的地方，就是把无知少女给诱导了。”</p></blockquote><p><img src="https://2020.iosdevlog.com/2020/02/08/9787535435828/2.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/08/9787535435828/1.png&quot; alt=&quot;人物关系图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;作者:  六六&lt;br&gt;出版社: 长江文艺出版社&lt;br&gt;出版年: 2007-12&lt;br&gt;页数: 303&lt;br&gt;定价: 25.00元&lt;br&gt;装帧: 平装&lt;br&gt;ISBN: 9787535435828&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>知错能改，善莫大焉</title>
@@ -484,33 +506,6 @@
       <category term="Scene" scheme="https://2020.iosdevlog.com/tags/Scene/"/>
     
       <category term="App" scheme="https://2020.iosdevlog.com/tags/App/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>人工智能-深度学习框架下的神经网络总结</title>
-    <link href="https://2020.iosdevlog.com/2020/01/19/dl-nn/"/>
-    <id>https://2020.iosdevlog.com/2020/01/19/dl-nn/</id>
-    <published>2020-01-19T14:40:19.000Z</published>
-    <updated>2020-01-20T13:37:31.748Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-19.png" alt="2020/01/19"></p><a id="more"></a><h2 id="枯木逢春：深度信念网络"><a href="#枯木逢春：深度信念网络" class="headerlink" title="枯木逢春：深度信念网络"></a>枯木逢春：深度信念网络</h2><hr><p>深度信念网络的基本概念和基本原理，其要点如下：</p><ul><li>深度信念网络是一种生成模型，能够建立输入和输出的联合概率分布；</li><li>受限玻尔兹曼机是构成深度信念网络的基本单元，是由可见层和隐藏层构成的神经网络；</li><li>受限玻尔兹曼机的训练方法是对比散度法，通过可见层和隐藏层的多轮交互实现；</li><li>深度神经网络的通用训练方式是无监督逐层预训练和有监督微调的结合。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/1.jpg" alt=""></p><h2 id="见微知著：卷积神经网络"><a href="#见微知著：卷积神经网络" class="headerlink" title="见微知著：卷积神经网络"></a>见微知著：卷积神经网络</h2><hr><p>卷积神经网络的原理与机制，其要点如下：</p><ul><li>卷积神经网络是应用了卷积运算的神经网络，适用于处理网格化数据；</li><li>卷积神经网络具有稀疏感知性、参数共享性和平移不变性；</li><li>卷积神经网络的结构包括交替出现的卷积层、激活层和池化层，以及作为输出的全连接层；</li><li>卷积神经网络的作用是逐层提取输入对象的特征。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/2.jpg" alt=""></p><h2 id="昨日重现：循环神经网络"><a href="#昨日重现：循环神经网络" class="headerlink" title="昨日重现：循环神经网络"></a>昨日重现：循环神经网络</h2><hr><p>循环神经网络和递归神经网络的基本原理与简要的工作机制。其要点如下：</p><ul><li>循环神经网络是具有记忆的神经网络，适用于处理序列化数据；</li><li>循环神经网络引入反馈结构，能够在时间上共享参数，从而具有记忆；</li><li>循环神经网络的扩展包括双向循环网络和深度循环网络；</li><li>递归神经网络能够处理具有层次化结构的数据，可以看成循环神经网络的推广。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/3.jpg" alt=""></p><h2 id="左右互搏：生成式对抗网络"><a href="#左右互搏：生成式对抗网络" class="headerlink" title="左右互搏：生成式对抗网络"></a>左右互搏：生成式对抗网络</h2><hr><p>生成式对抗网络的原理与机制。其要点如下：</p><ul><li>生成式对抗网络是一类运行在零和博弈框架下的无监督学习算法，由生成器和判别器构成；</li><li>生成器的目的是精确模拟真实数据的分布，判别器的目的是精确区分真实数据和生成数据；</li><li>生成式对抗网络的主要优点是超越了传统神经网络分类和特征提取的功能，能够按照真实数据的特点生成新的数据；</li><li>生成式对抗网络的主要问题是理论基础的缺失。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/4.jpg" alt=""></p><h2 id="三重门：长短期记忆网络"><a href="#三重门：长短期记忆网络" class="headerlink" title="三重门：长短期记忆网络"></a>三重门：长短期记忆网络</h2><hr><p>长短期记忆网络的基本原理与简单工作机制。其要点如下：</p><ul><li>长短期记忆网络可以实现任意长度的记忆，对信息进行长期而精确的跟踪；</li><li>长短期记忆单元的组成包括记忆模块、输入门、遗忘门和输出门；</li><li>长短期记忆网络根据当前的输入、当前的记忆和前一时刻的输出确定当前的输出；</li><li>长短期记忆网络能够解决梯度弥散的问题。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/5.jpg" alt=""></p><h2 id="一图胜千言：概率图模型"><a href="#一图胜千言：概率图模型" class="headerlink" title="一图胜千言：概率图模型"></a>一图胜千言：概率图模型</h2><hr><p>概率图模型的原理，包括有向的贝叶斯网络和无向的马尔可夫随机场。其要点如下：</p><ul><li>概率图模型是概率论与图论的结合，是用图论表现随机变量之间的条件依赖关系的建模方法；</li><li>贝叶斯网络是有向无环图，侧重于表示随机变量之间的依赖关系；</li><li>马尔可夫随机场是无向图，侧重于表示随机变量之间的相互作用；</li><li>概率图模型体现了“表示 - 推断 - 学习”的问题解决框架。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/6.jpg" alt=""></p><h2 id="乌合之众的逆袭：集群智能"><a href="#乌合之众的逆袭：集群智能" class="headerlink" title="乌合之众的逆袭：集群智能"></a>乌合之众的逆袭：集群智能</h2><hr><p>集群智能方法的现实依据，以及它所代表的研究方向。其要点如下：</p><ul><li>集群智能是由众多简单个体通过自组织和去中心化的简单合作实现的智能；</li><li>集群智能具有可扩展性、并行性和容错性等特点；</li><li>集群智能体现出微观个体之间的相互作用能够实现整体大于部分之和的效果，其实例是蚁群算法；</li><li>集群智能在人工智能中的应用代表的是从宏观模仿到微观解构的方向转变。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/7.jpg" alt=""></p><h2 id="一图胜千言：概率图模型-1"><a href="#一图胜千言：概率图模型-1" class="headerlink" title="一图胜千言：概率图模型"></a>一图胜千言：概率图模型</h2><hr><p>概率图模型的原理，包括有向的贝叶斯网络和无向的马尔可夫随机场。其要点如下：</p><ul><li>概率图模型是概率论与图论的结合，是用图论表现随机变量之间的条件依赖关系的建模方法；</li><li>贝叶斯网络是有向无环图，侧重于表示随机变量之间的依赖关系；</li><li>马尔可夫随机场是无向图，侧重于表示随机变量之间的相互作用；</li><li>概率图模型体现了“表示 - 推断 - 学习”的问题解决框架。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/8.jpg" alt=""></p><h2 id="授人以鱼不如授人以渔：迁移学习"><a href="#授人以鱼不如授人以渔：迁移学习" class="headerlink" title="授人以鱼不如授人以渔：迁移学习"></a>授人以鱼不如授人以渔：迁移学习</h2><hr><p>迁移学习的基本原理和常用方法。其要点如下：</p><ul><li>迁移学习是运用已学习的知识来求解不同但相关领域问题的新的机器学习方法，目的是让机器“学会学习”；</li><li>迁移学习适用于跨领域和小数据的学习任务；</li><li>迁移学习的任务类型可以分为归纳迁移学习，直推式迁移学习和无监督迁移学习；</li><li>迁移学习的学习方法包括基于样本、基于特征、基于模型和基于关系。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/9.jpg" alt=""></p><h2 id="滴水藏海：知识图谱"><a href="#滴水藏海：知识图谱" class="headerlink" title="滴水藏海：知识图谱"></a>滴水藏海：知识图谱</h2><hr><p>知识图谱的基本原理与简单应用。其要点如下：</p><ul><li>知识图谱是由大量的概念实体以及它们之间的关系构成的语义网络；</li><li>用知识图谱实现从特殊到一般的归纳推理，典型的方法是路径排序算法；</li><li>用知识图谱实现从一般到特殊的演绎推理，典型的方法是马尔可夫逻辑网和概率软逻辑；</li><li>用知识图谱实现数值推理，典型的方法是基于分布式知识表示的方法。</li></ul><p><img src="https://2020.iosdevlog.com/2020/01/19/dl-nn/10.jpg" alt=""></p><p>总结自：人工智能基础课: <a href="https://time.geekbang.org/column/62" target="_blank" rel="noopener">https://time.geekbang.org/column/62</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-19.png&quot; alt=&quot;2020/01/19&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
-    
-      <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
-    
-      <category term="NN" scheme="https://2020.iosdevlog.com/tags/NN/"/>
     
   </entry>
   
