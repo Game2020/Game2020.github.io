@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-13T11:50:21.115Z</updated>
+  <updated>2020-02-13T15:52:29.666Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据的重要性</title>
+    <link href="https://2020.iosdevlog.com/2020/02/13/data/"/>
+    <id>https://2020.iosdevlog.com/2020/02/13/data/</id>
+    <published>2020-02-13T15:26:32.000Z</published>
+    <updated>2020-02-13T15:52:29.666Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/13/data/1.png" alt="数据"></p><a id="more"></a><p>机器学习三要素包括 <strong>数据</strong>、<strong>模型</strong>、<strong>算法</strong>。</p><p>总结成一句话:</p><blockquote><p>算法通过在数据上进行运算产生模型。</p></blockquote><p>2020年2月12日0时-24时，湖北省新增新冠状肺炎病例14840例(含临床诊断病例13332例)。</p><p>你有什么想说的？</p><p>​<strong>数据和特征决定了机器学习的上限，而模型和算法只是逼近这个上限。</strong></p><p><strong>数据和特征决定了机器学习的上限，而模型和算法只是逼近这个上限。</strong></p><p><strong>数据和特征决定了机器学习的上限，而模型和算法只是逼近这个上限。</strong></p><p>重要的事情说 3 遍。</p><h2 id="特征工程"><a href="#特征工程" class="headerlink" title="特征工程"></a>特征工程</h2><h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><blockquote><p>特征工程是利用数据领域的相关知识来创建能够使机器学习算法达到最佳性能的特征的过程。通俗的说，就是尽可能的从原始数据中获取更多信息，从而使得预测模型达到最佳。</p></blockquote><p>–维基百科</p><p>简而言之，特征工程是一个把原始数据变成特征的过程，这些特征可以很好的描述数据，并且利用它们建立的模型在未知数据上表现性能可以达到最优。</p><h3 id="重要性"><a href="#重要性" class="headerlink" title="重要性"></a>重要性</h3><p>实验结果取决于获取的数据、使用的特征以及选择的模型，甚至问题的形式和评估精度的客观方法也扮演了一部分。我们需要的是能够很好地描述数据内部结构的好特征。</p><ul><li>特征越好，灵活性越强</li></ul><p>只要特征选得好，即使是一般的模型（或算法）也能获得很好的性能，因为大多数模型（或算法）在好的数据特征下表现的性能都还不错。好特征的灵活性在于它允许你选择不复杂的模型，同时运行速度也更快，也更容易理解和维护。</p><ul><li>特征越好，构建的模型越简单</li></ul><p>有了好的特征，即便你的参数不是最优的，你的模型性能也能仍然会表现的很nice，所以你就不需要花太多的时间去寻找最有参数，这大大的降低了模型的复杂度，使模型趋于简单。</p><ul><li>特征越好，模型的性能越出色</li></ul><p>特征工程的最终目的就是提升模型的性能。</p><p>总结：</p><p><strong>数据和特征决定了机器学习的上限，而模型和算法只是逼近这个上限。</strong></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/13/data/1.png&quot; alt=&quot;数据&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
+    
+  </entry>
   
   <entry>
     <title>《AI技术内参》开篇</title>
@@ -472,29 +495,6 @@
     
     
       <category term="绘本" scheme="https://2020.iosdevlog.com/tags/%E7%BB%98%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>特征工程</title>
-    <link href="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/"/>
-    <id>https://2020.iosdevlog.com/2020/01/27/Feature-engineering/</id>
-    <published>2020-01-27T13:24:34.000Z</published>
-    <updated>2020-01-27T14:11:14.787Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg" alt="Feature engineering"></p><a id="more"></a><p>多明戈斯的观点是：</p><blockquote><p>数据量比算法更重要。</p></blockquote><p>即使算法本身并没有什么精巧的设计，但使用大量数据进行训练也能起到填鸭的效果，获得比用少量数据训练出来的聪明算法更好的性能。这也应了那句老话：</p><blockquote><p>数据决定了机器学习的上限，而算法只是尽可能逼近这个上限。</p></blockquote><p><strong>特征工程（feature engineering）才是机器学习的关键</strong></p><p>通常来说，原始数据并不直接适用于学习，而是特征筛选、构造和生成的基础。一个好的预测模型与高效的特征提取和明确的特征表示息息相关，如果通过特征工程得到很多独立的且与所属类别相关的特征，那学习过程就变成小菜一碟。</p><h2 id="在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）"><a href="#在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）" class="headerlink" title="在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）?"></a>在特征工程之前，数据的特征需要经过哪些必要的预处理（preprocessing）?</h2><h3 id="特征缩放（feature-scaling）"><a href="#特征缩放（feature-scaling）" class="headerlink" title="特征缩放（feature scaling）"></a>特征缩放（feature scaling）</h3><p>可能是最广为人知的预处理技巧了，它的目的是保证所有的特征数值具有相同的数量级。</p><p>特征缩放的作用就是消除特征的不同尺度所造成的偏差，具体的变换方法有以下这两种：</p><ul><li>标准化（standardization）</li></ul><p>$$<br>x_{s t}=\frac{x-\operatorname{mean}(x)}{\operatorname{stdev}(x)}<br>$$</p><ul><li>归一化（normalization）</li></ul><p>$$<br>x_{\text {norm}}=\frac{x-\min (x)}{\max (x)-\min (x)}<br>$$</p><ul><li>特征缩放可以让不同特征的取值具有相同的尺度，方法包括标准化和归一化；</li><li>异常点会导致数据的有偏分布，对数变换和空间标识都可以去除数据的偏度；</li><li>k 近邻方法和线性回归可以用来对特征的缺失值进行人为赋值；</li><li>删除不具备区分度的特征能够降低计算开销，增强可解释性。</li></ul><p>参考：<a href="https://time.geekbang.org/column/article/8530" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8530</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg&quot; alt=&quot;Feature engineering&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
     
   </entry>
   
