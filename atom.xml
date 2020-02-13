@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-12T15:52:19.209Z</updated>
+  <updated>2020-02-13T11:50:21.115Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,52 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《AI技术内参》开篇</title>
+    <link href="https://2020.iosdevlog.com/2020/02/13/ai/"/>
+    <id>https://2020.iosdevlog.com/2020/02/13/ai/</id>
+    <published>2020-02-13T11:44:32.000Z</published>
+    <updated>2020-02-13T11:50:21.115Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/13/ai/1.png" alt="《AI技术内参》"></p><a id="more"></a><p>第一，一些经典的人工智能技术。这些技术涵盖搜索、推荐系统、广告系统、图像处理等领域。了解这些经典技术能够让你迅速入门并能为今后的学习打下基础。这部分内容帮助你分析核心的算法模型，并为你进行系统性学习提供纲要和指引。</p><p>第二，最新的顶级学术会议动态，帮助你了解和掌握这些学术会议最火热和最新的研究成果。每一年和人工智能相关的顶级学术会议有十余个，每个会议都会有上百篇甚至几百篇论文发表。从这些论文和成果中找到有价值的信息，对于初学者，甚至是有一定经验的从业人员来说都是非常困难、也非常耗时的一件事情。那么，在这个专栏里，我会为你精选内容，可以让你不错过任何有价值的最新成果。</p><p>第三，人工智能的从业人员提供指南，帮助数据科学家和工程师提升自我价值，帮助人工智能团队的管理者构建团队，为你在职场发展中的关键步骤出谋划策。</p><p><img src="https://2020.iosdevlog.com/2020/02/13/ai/2.png" alt="《AI技术内参》"></p><p>总结：<a href="https://time.geekbang.org/column/article/153" target="_blank" rel="noopener">https://time.geekbang.org/column/article/153</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/13/ai/1.png&quot; alt=&quot;《AI技术内参》&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="极客时间" scheme="https://2020.iosdevlog.com/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyTorch Mobile</title>
+    <link href="https://2020.iosdevlog.com/2020/02/13/PyTorch-Mobile/"/>
+    <id>https://2020.iosdevlog.com/2020/02/13/PyTorch-Mobile/</id>
+    <published>2020-02-13T08:56:19.000Z</published>
+    <updated>2020-02-13T08:59:18.829Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://pytorch.org/assets/images/pytorch-mobile.png" alt="PyTorch Mobile"></p><a id="more"></a><ul><li>Anaconda</li></ul><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># The version of Anaconda may be different depending on when you are installing`</span></span><br><span class="line">curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh</span><br><span class="line">sh Miniconda3-latest-MacOSX-x86_64.sh</span><br><span class="line"><span class="comment"># and follow the prompts. The defaults are generally good.`</span></span><br></pre></td></tr></table></figure><p>To install PyTorch via Anaconda, use the following conda command:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pytorch torchvision -c pytorch</span><br></pre></td></tr></table></figure><p>VERIFICATION<br>To ensure that PyTorch was installed correctly, we can verify the installation by running sample PyTorch code. Here we will construct a randomly initialized tensor.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> __future__ <span class="keyword">import</span> print_function</span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">x = torch.rand(<span class="number">5</span>, <span class="number">3</span>)</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure><p>The output should be something similar to:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tensor([[0.3380, 0.3845, 0.3217],</span><br><span class="line">        [0.8337, 0.9050, 0.2650],</span><br><span class="line">        [0.2979, 0.7141, 0.9069],</span><br><span class="line">        [0.1449, 0.1132, 0.1375],</span><br><span class="line">        [0.4675, 0.3947, 0.1426]])</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://pytorch.org/assets/images/pytorch-mobile.png&quot; alt=&quot;PyTorch Mobile&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
+    
+    
+      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
+    
+  </entry>
   
   <entry>
     <title>移动深度学习</title>
@@ -441,56 +487,6 @@
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/27/Feature-engineering/1.jpg&quot; alt=&quot;Feature engineering&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>贝叶斯视角下的机器学习</title>
-    <link href="https://2020.iosdevlog.com/2020/01/26/Bayes/"/>
-    <id>https://2020.iosdevlog.com/2020/01/26/Bayes/</id>
-    <published>2020-01-26T13:22:39.000Z</published>
-    <updated>2020-01-26T13:28:20.942Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-26.png" alt="2020/01/26"></p><a id="more"></a><p>为了解决频率主义的问题，贝叶斯学派给出了一种更加通用的概率定义：</p><blockquote><p>概率表示的是客观上事件的可信程度（degree of belief），也可以说成是主观上主体对事件的信任程度，它是建立在对事件的已有知识基础上的。</p></blockquote><p>比方说，当一个球迷提出“明天皇家马德里战胜拉斯帕尔马斯的概率是 86%”的时候，可以理解成他对皇马获胜有 86% 的把握程度，要是买球的话自然就会在独胜上下出重注（其实贝叶斯概率正是来源于对赌博的分析）。</p><p>除了对概率的置信度解释之外，贝叶斯学派中的另一个核心内容是贝叶斯定理（Bayes’ theorem），用来解决“逆向概率问题”（inverse probability problem）。</p><p>机器学习能够解决的问题必然会包含某些显式或者隐式的模式，没有模式的问题就不能通过机器学习解决。完全随机的问题是不可能被求解，也不可能被学习的，就像我们永远也没法预测示波器下一时刻的本底噪声一样。</p><p>一提到模式，你可能会一下子联系到另一个专业词汇——<strong>模式识别（pattern recognition）</strong>。模式识别和机器学习实际上有大量的共通之处，严格地将两者区分开来既没方法也没必要。如果非要找到些不同的话，模式识别是被更广泛地应用在计算机视觉（computer vision）等专门领域之中的专门概念，工程上的意义更浓一些。如果说机器学习侧重于将预先设定的准确率等指标最大化，那模式识别就更注重于潜在模式的提取与解释。</p><p>参考：<a href="https://time.geekbang.org/column/intro/97" target="_blank" rel="noopener">https://time.geekbang.org/column/intro/97</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-26.png&quot; alt=&quot;2020/01/26&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="ML" scheme="https://2020.iosdevlog.com/tags/ML/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>频率视角下的机器学习</title>
-    <link href="https://2020.iosdevlog.com/2020/01/25/Frequency/"/>
-    <id>https://2020.iosdevlog.com/2020/01/25/Frequency/</id>
-    <published>2020-01-25T12:59:28.000Z</published>
-    <updated>2020-01-25T13:09:12.823Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/01/25/Frequency/1.jpg" alt="Frequency"></p><p> <strong>笑话</strong>: 频率学派 &amp; 贝叶斯学派</p><blockquote><p>有个病人找医生看病，医生检查之后对他说：“你这病说得上是九死一生，但多亏到我这里来看了。不瞒你说，在你之前我已经看了九个得一同样病的患者，结果他们都死了，那你这第十个就一定能看得好啦，妥妥的！”</p></blockquote><a id="more"></a><p>频率学派口中的概率表示的是事件发生频率的极限值，它只有在无限次的独立重复试验之下才有绝对的精确意义。</p><p>在频率学派眼中，当重复试验的次数趋近于无穷大时，事件发生的频率会收敛到真实的概率之上。这种观点背后暗含了一个前提，那就是概率是一个确定的值，并不会受单次观察结果的影响。</p><p>频率统计理论的核心在于认定待估计的参数是固定不变的常量，讨论参数的概率分布是没有意义的；而用来估计参数的数据是随机的变量，每个数据都是参数支配下一次独立重复试验的结果。由于参数本身是确定的，那频率的波动就并非来源于参数本身的不确定性，而是由有限次观察造成的干扰而导致。</p><p>这可以从两个角度来解释：</p><ol><li>一方面，根据这些不精确的数据就可以对未知参数的精确取值做出有效的推断；</li><li>另一方面，数据中包含的只是关于参数不完全的信息，所以从样本估计整体就必然会产生误差。</li></ol><p>统计学的核⼼任务之一是根据从总体中抽取出的样本，也就是数据来估计未知的总体参数。参数的最优估计可以通过样本数据的分布，也就是 <strong>采样分布（sampling distribution）</strong> 来求解，由于频率统计将数据看作随机变量，所以计算采样分布是没有问题的。确定采样分布之后，参数估计可以等效成一个最优化的问题，而频率统计最常使用的最优化方法，就是 <strong>最大似然估计（maximum likelihood estimation）</strong>。</p><p>那么如何来度量作为随机变量的估计值和作为客观常量的真实值之间的偏差呢？<strong>置信区间（confidence interval）</strong> 就是频率学派给出的答案。</p><p>频率主义解决统计问题的基本思路如下：</p><ul><li>参数是确定的，</li><li>数据是随机的，</li><li>利用随机的数据推断确定的参数，</li><li>得到的结果也是随机的。</li></ul><p>将频率主义“参数确定，数据随机”的思路应用在机器学习当中，得到的就是统计机器学习（statistical learning）。</p><p>和参数相关的信息全部来源于数据，输出的则是未知参数唯一的估计结果，这是统计机器学习的核心特征。</p><h2 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h2><ol><li>频率学派认为概率是随机事件发生频率的极限值； </li><li>频率学派执行参数估计时，视参数为确定取值，视数据为随机变量；</li><li>频率学派主要使用最大似然估计法，让数据在给定参数下的似然概率最大化；</li><li>频率学派对应机器学习中的统计学习，以经验风险最小化作为模型选择的准则。</li></ol><p>参考：<a href="https://time.geekbang.org/column/article/8530" target="_blank" rel="noopener">https://time.geekbang.org/column/article/8530</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/25/Frequency/1.jpg&quot; alt=&quot;Frequency&quot;&gt;&lt;/p&gt;
-&lt;p&gt; &lt;strong&gt;笑话&lt;/strong&gt;: 频率学派 &amp;amp; 贝叶斯学派&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有个病人找医生看病，医生检查之后对他说：“你这病说得上是九死一生，但多亏到我这里来看了。不瞒你说，在你之前我已经看了九个得一同样病的患者，结果他们都死了，那你这第十个就一定能看得好啦，妥妥的！”&lt;/p&gt;
-&lt;/blockquote&gt;
     
     </summary>
     
