@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-13T15:52:29.666Z</updated>
+  <updated>2020-02-14T13:58:29.468Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>线性大规模支持向量机</title>
+    <link href="https://2020.iosdevlog.com/2020/02/14/svm/"/>
+    <id>https://2020.iosdevlog.com/2020/02/14/svm/</id>
+    <published>2020-02-14T13:41:28.000Z</published>
+    <updated>2020-02-14T13:58:29.468Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/14/data/svm.png" alt="svm"></p><a id="more"></a><p><a href="https://www.cs.cornell.edu/people/tj/publications/joachims_06a.pdf" target="_blank" rel="noopener">Training Linear SVMs in Linear Time</a></p><p>回到这篇时间检验奖的论文，它解决的是大规模优化支持向量机的问题，特别是线性支持向量机。</p><p>这篇文章第一次提出了简单易行的线性支持向量机实现，包括对有序回归（Ordinal Regression）的支持。</p><p>算法对于分类问题达到了 O(sn)（其中 s 是非 0 的特征数目而 n 是数据点的个数），也就是实现了线性复杂度，而对有序回归的问题达到了 O(snlog(n)) 的复杂度。</p><p>算法本身简单、高效、易于实现，并且理论上可以扩展到核函数（Kernel）的情况。</p><p>在此之前，很多线性支持向量机的实现都无法达到线性复杂度 。</p><p>比如当时的 LibSVM（台湾国立大学的学者发明）、SVM-Torch、以及早期的 SVM-Light 中采用的分解算法（Decomposition Method）都只能比较有效地处理大规模的特征。</p><p>而对于大规模的数据 (n)，则是超线性（Super-Linear）的复杂度。</p><p>另外的一些方法，能够训练复杂度线性地随着训练数据的增长而增长，但是却对于特征数 N 呈现了二次方 (N^2) 的复杂度。</p><p>因此之前的这些方法无法应用到大规模的数据上。</p><p>这样的情况对于有序回归支持向量机更加麻烦。</p><p>从德国学者拉尔夫·赫布里希（Ralf Herbrich）提出有序回归支持向量机以来，一直需要通过转化为普通的支持向量机的分类问题而求解。</p><p>这个转换过程需要产生 O(n^2) 的训练数据，使得整个问题的求解也在这个量级的复杂度。</p><p>这篇文章里，Thorsten 首先做的是对普通的支持向量机算法的模型形式（Formalism）进行了变形。</p><p>他把传统的分类支持向量机（Classification SVM）写成了结构化分类支持向量机（Structural Classification SVM），并且提供了一个定理来证明两者之间的等价性。</p><p>粗一看，这个等价的结构化分类支持向量机并没有提供更多有价值的信息。</p><p>然而这个新的优化目标函数的对偶（Dual）形式，由于它特殊的稀疏性，使它能够被用来进行大规模训练。</p><p>紧接着，Thorsten 又把传统的有序回归支持向量机的优化函数，写成了结构化支持向量机的形式，并且证明了两者的等价性。</p><p>把两种模型表达成结构化向量机的特例之后，Thorsten 开始把解决结构化向量机的一种算法——切割平面算法（Cutting-Plane），以下称 CP 算法，运用到了这两种特例上。</p><p>首先，他展示了 CP 算法在分类问题上的应用。</p><p>简单说来，这个算法就是保持一个工作集合（Working Set），来存放当前循环时依然被违反的约束条件（Constraints），然后在下一轮中集中优化这部分工作集合的约束条件。</p><p>整个流程开始于一个空的工作集合，每一轮优化的是一个基于当前工作集合的支持向量机子问题，算法直到所有的约束条件的误差小于一个全局的参数误差为止。</p><p>Thorsten 在文章中详细证明了这个算法的有效性和时间复杂度。</p><p>相同的方法也使得有序回归支持向量机的算法能够转换成为更加计算有效的优化过程。</p><p>Thorsten 在文章中做了详尽的实验来展现新算法的有效性。</p><p>从数据的角度，他使用了 5 个不同的数据集，分别是路透社 RCV1 数据集的好几个子集。</p><p>数据的大小从 6 万多数据点到 80 多万数据点不等，特征数也从几十到四万多特征不等，这几种不同的数据集还是比较有代表性的。</p><p>从方法的比较上来说，Thorsten 主要比较了传统的分解方法。</p><p>有两个方面是重点比较的，第一就是训练时间。</p><p>在所有的数据集上，这篇文章提出的算法都比传统算法快几个数量级，提速达到近 100 倍。</p><p>而有序回归的例子中，传统算法在所有数据集上都无法得到最后结果。</p><p>Thorsten 进一步展示了训练时间和数据集大小的线性关系，从而验证了提出算法在真实数据上的表现。</p><p>第二个重要的比较指标是算法的准确度是否有所牺牲。</p><p>因为有时候算法的提速是在牺牲算法精度的基础上做到的，因此验证算法的准确度就很有意义。</p><p>在这篇文章里，Thorsten 展示，提出的算法精度，也就是分类准确度并没有统计意义上的区分度，也让这个算法的有效性有了保证。</p><p>Thorsten 在他的软件包 SVM-Perf 中实现了这个算法。</p><p>这个软件包一度成了支持向量机研究和开发的标准工具。</p><p>参考: <a href="https://time.geekbang.org/column/article/159" target="_blank" rel="noopener">https://time.geekbang.org/column/article/159</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/14/data/svm.png&quot; alt=&quot;svm&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="svm" scheme="https://2020.iosdevlog.com/tags/svm/"/>
+    
+  </entry>
   
   <entry>
     <title>数据的重要性</title>
@@ -471,30 +494,6 @@
       <category term="wiki" scheme="https://2020.iosdevlog.com/tags/wiki/"/>
     
       <category term="MediaWiki" scheme="https://2020.iosdevlog.com/tags/MediaWiki/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写给孩子的冠状病毒绘本</title>
-    <link href="https://2020.iosdevlog.com/2020/01/28/Coronavirus/"/>
-    <id>https://2020.iosdevlog.com/2020/01/28/Coronavirus/</id>
-    <published>2020-01-28T15:34:41.000Z</published>
-    <updated>2020-01-28T16:07:56.710Z</updated>
-    
-    <content type="html"><![CDATA[<p>分享小武幼儿园宣传的 <strong>冠状病毒绘本</strong>。</p><p><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0001.jpg" alt="Coronavirus"></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0002.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0003.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0004.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0005.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0006.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0007.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0008.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0009.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0010.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0011.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0012.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0013.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0014.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0015.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0016.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0017.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0018.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0019.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0020.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0021.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0022.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0023.jpg" alt="Coronavirus"><br><img src="https://2020.iosdevlog.com/2020/01/28/Coronavirus/0024.jpg" alt="Coronavirus"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;分享小武幼儿园宣传的 &lt;strong&gt;冠状病毒绘本&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/01/28/Coronavirus/0001.jpg&quot; alt=&quot;Coronavirus&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="小武" scheme="https://2020.iosdevlog.com/categories/%E5%B0%8F%E6%AD%A6/"/>
-    
-    
-      <category term="绘本" scheme="https://2020.iosdevlog.com/tags/%E7%BB%98%E6%9C%AC/"/>
     
   </entry>
   
