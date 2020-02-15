@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-15T15:06:00.068Z</updated>
+  <updated>2020-02-15T15:22:22.548Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="https://2020.iosdevlog.com/2020/02/15/kindle/"/>
     <id>https://2020.iosdevlog.com/2020/02/15/kindle/</id>
     <published>2020-02-15T15:01:35.000Z</published>
-    <updated>2020-02-15T15:06:00.068Z</updated>
+    <updated>2020-02-15T15:22:22.548Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/15/kindle/1.jpg" alt="kindle"></p><a id="more"></a><p><code>Kindle</code> 的 <code>USB</code> 接口连接到 <code>macOS</code> 上面，能充电，却不能显示 <code>U</code> 盘。</p><p>除了使用邮箱推送，还可以让 <code>Kindle</code> 访问 <code>http</code>。</p><h2 id="查看本机-ip-地址"><a href="#查看本机-ip-地址" class="headerlink" title="查看本机 ip 地址"></a>查看本机 <code>ip</code> 地址</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig | grep 192.168</span><br><span class="line">192.168.x.x</span><br></pre></td></tr></table></figure><h2 id="http-服务"><a href="#http-服务" class="headerlink" title="http 服务"></a>http 服务</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure><ol><li>Kindle 主页</li><li>最左侧三个点</li><li>体验网页版浏览器</li><li><code>192.168.x.x:8000</code></li></ol><p>下载文件即可。</p>]]></content>
+    <content type="html"><![CDATA[<p>&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD<br><img src="https://2020.iosdevlog.com/2020/02/15/kindle/1.jpg" alt="不能连 USB"></p><a id="more"></a><p>如何把电子书资源导入到Kindle？</p><ol><li>亚马逊官方商城直接购买</li><li>使用 Kindle 电子邮箱传书（包括第三方推送）</li><li>使用 USB 数据线导入</li><li>通过公众号【亚马逊 Kindle 服务号】将文章推送到 Kindle</li><li>通过 Cailbre 传书到 Kindle</li><li>通过手机发送传书到 Kindle app</li></ol><p>如果是已经在电脑里面的书籍需要传书，使用 USB 数据线导入。</p><p>Kindle 的 USB 接口连接到 macOS 上面，能充电，却不能显示 U 盘。<br>还可以选 使用 Kindle 电子邮箱传书（包括第三方推送）。<br>不过电子邮箱传书大小有限制。<br>Kindle 如果可以访问网页版浏览器，这时候就可以自己搭建 <code>http</code> 服务器传书。<br>=======<br><img src="https://2020.iosdevlog.com/2020/02/15/kindle/1.jpg" alt="kindle"></p><!-- more --><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><blockquote><p>0dd9bd3428ea5ffd0fae58d6ae00240e2eb170d6</p></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote><p><code>Kindle</code> 的 <code>USB</code> 接口连接到 <code>macOS</code> 上面，能充电，却不能显示 <code>U</code> 盘。</p><p>除了使用邮箱推送，还可以让 <code>Kindle</code> 访问 <code>http</code>。</p><h2 id="查看本机-ip-地址"><a href="#查看本机-ip-地址" class="headerlink" title="查看本机 ip 地址"></a>查看本机 <code>ip</code> 地址</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig | grep 192.168</span><br><span class="line">192.168.x.x</span><br></pre></td></tr></table></figure><h2 id="http-服务"><a href="#http-服务" class="headerlink" title="http 服务"></a>http 服务</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure><ol><li>Kindle 主页</li><li>最左侧三个点</li><li>体验网页版浏览器</li><li><code>192.168.x.x:8000</code></li></ol><p>下载文件即可。</p>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/15/kindle/1.jpg&quot; alt=&quot;kindle&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt;&amp;lt; HEAD&lt;br&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/15/kindle/1.jpg&quot; alt=&quot;不能连 USB&quot;&gt;&lt;/p&gt;
     
     </summary>
     
