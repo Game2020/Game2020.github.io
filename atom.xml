@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-15T13:18:45.432Z</updated>
+  <updated>2020-02-15T13:30:15.722Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://2020.iosdevlog.com/2020/02/15/mining/"/>
     <id>https://2020.iosdevlog.com/2020/02/15/mining/</id>
     <published>2020-02-15T13:00:11.000Z</published>
-    <updated>2020-02-15T13:18:45.432Z</updated>
+    <updated>2020-02-15T13:30:15.722Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/15/mining/1.png" alt="挖掘"></p><p>Paper: <a href="http://www.hyadatalab.com/papers/analogy-kdd17.pdf" target="_blank" rel="noopener">Accelerating Innovation Through Analogy Mining</a></p><p>这篇文章主要阐述了帮助创新的一个重要步骤，那就是如何找到合适并且有效的类比案例。</p><p>如何找到合适的类比，并能从中获取灵感，可能就是创新的一个关键因素。</p><a id="more"></a><h2 id="论文的核心方法"><a href="#论文的核心方法" class="headerlink" title="论文的核心方法"></a>论文的核心方法</h2><p>首先，作者们提出了一组叫“目的”（Purpose）和“机制”（Mechanism）的概念。什么叫“目的”呢？那就是当前的产品是要解决什么问题的。什么叫“机制”呢？那就是当前的产品是使用什么手段或者方法来解决这个问题的。对于一个产品，如果我们能够明确这个产品的目的和机制，找到类比就变得更加容易。比如，我们可以针对某一个问题，相同的目的，采用不同的机制或者对不同的问题采用相同的机制。</p><p>作者们认为，<strong>这种对产品信息的分类符合很多工程设计的过程，是创新过程中的一个必要环节</strong>。</p><p>有了这种想法以后，很自然的下一个步骤就是如何从数据中学习到目的和机制，如何自动挖掘出海量产品信息的目的和机制。要想学习到这样的信息，作者们提出了一种依靠标签数据的监督学习（Supervised Leanring）机制。具体说来，作者们把文本信息中的每句话、短语交给亚马逊土耳其机器人（Amazon Mechanical Turk）上的在线工人，来标注每个文本信息是目的信息还是机制信息。也就是说，作者们依靠有标注的数据来训练提出的算法。</p><p>首先，我们有一组文本，每组文本都有这些文本的原始文字。<strong>针对每个文档，我们都收集 K 个目的标注和 K 个机制标注</strong>。这时，我们定义一组“目的标注”（Purpose Annotation）向量，其实也就是一组 0 或者 1 的向量。当文本原始文字中的某个字被标识为目的的时候，这个向量的相应元素置 1，反之置 0。类似的，我们也可以定义“机制标注”（Mechanism Annotation）向量。因为我们有 K 个标注，因此我们也有相应的 K 个“目的标注”向量和“机制标注”向量。这两组向量可以说是原始标签信息的一种向量的表达。</p><p>下一步就是从每一个有标签信息的文档里产生 <strong>唯一的目的向量和机制向量</strong>。这篇文章采用的方法是，利用每个单词的 <strong>嵌入向量（Embedding）</strong> 来获得这个唯一的向量。</p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/15/mining/1.png" alt="挖掘"></p><p>Paper: <a href="http://www.hyadatalab.com/papers/analogy-kdd17.pdf" target="_blank" rel="noopener">Accelerating Innovation Through Analogy Mining</a></p><p>这篇文章主要阐述了帮助创新的一个重要步骤，那就是如何找到合适并且有效的类比案例。</p><p>如何找到合适的类比，并能从中获取灵感，可能就是创新的一个关键因素。</p><a id="more"></a><h2 id="论文的核心方法"><a href="#论文的核心方法" class="headerlink" title="论文的核心方法"></a>论文的核心方法</h2><p>首先，作者们提出了一组叫“目的”（Purpose）和“机制”（Mechanism）的概念。什么叫“目的”呢？那就是当前的产品是要解决什么问题的。什么叫“机制”呢？那就是当前的产品是使用什么手段或者方法来解决这个问题的。对于一个产品，如果我们能够明确这个产品的目的和机制，找到类比就变得更加容易。比如，我们可以针对某一个问题，相同的目的，采用不同的机制或者对不同的问题采用相同的机制。</p><p>作者们认为，<strong>这种对产品信息的分类符合很多工程设计的过程，是创新过程中的一个必要环节</strong>。</p><p>有了这种想法以后，很自然的下一个步骤就是如何从数据中学习到目的和机制，如何自动挖掘出海量产品信息的目的和机制。要想学习到这样的信息，作者们提出了一种依靠标签数据的监督学习（Supervised Leanring）机制。具体说来，作者们把文本信息中的每句话、短语交给亚马逊土耳其机器人（Amazon Mechanical Turk）上的在线工人，来标注每个文本信息是目的信息还是机制信息。也就是说，作者们依靠有标注的数据来训练提出的算法。</p><p>首先，我们有一组文本，每组文本都有这些文本的原始文字。<strong>针对每个文档，我们都收集 K 个目的标注和 K 个机制标注</strong>。这时，我们定义一组“目的标注”（Purpose Annotation）向量，其实也就是一组 0 或者 1 的向量。当文本原始文字中的某个字被标识为目的的时候，这个向量的相应元素置 1，反之置 0。类似的，我们也可以定义“机制标注”（Mechanism Annotation）向量。因为我们有 K 个标注，因此我们也有相应的 K 个“目的标注”向量和“机制标注”向量。这两组向量可以说是原始标签信息的一种向量的表达。</p><p>下一步就是从每一个有标签信息的文档里产生 <strong>唯一的目的向量和机制向量</strong>。这篇文章采用的方法是，利用每个单词的 <strong>嵌入向量（Embedding）</strong> 来获得这个唯一的向量。</p><p>参考: <a href="https://time.geekbang.org/column/article/391" target="_blank" rel="noopener">https://time.geekbang.org/column/article/391</a></p>]]></content>
     
     <summary type="html">
     
