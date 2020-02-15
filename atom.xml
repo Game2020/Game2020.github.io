@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-15T13:30:15.722Z</updated>
+  <updated>2020-02-15T15:06:00.068Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Kindle 无 USB 传书</title>
+    <link href="https://2020.iosdevlog.com/2020/02/15/kindle/"/>
+    <id>https://2020.iosdevlog.com/2020/02/15/kindle/</id>
+    <published>2020-02-15T15:01:35.000Z</published>
+    <updated>2020-02-15T15:06:00.068Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/15/kindle/1.jpg" alt="kindle"></p><a id="more"></a><p><code>Kindle</code> 的 <code>USB</code> 接口连接到 <code>macOS</code> 上面，能充电，却不能显示 <code>U</code> 盘。</p><p>除了使用邮箱推送，还可以让 <code>Kindle</code> 访问 <code>http</code>。</p><h2 id="查看本机-ip-地址"><a href="#查看本机-ip-地址" class="headerlink" title="查看本机 ip 地址"></a>查看本机 <code>ip</code> 地址</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ifconfig | grep 192.168</span><br><span class="line">192.168.x.x</span><br></pre></td></tr></table></figure><h2 id="http-服务"><a href="#http-服务" class="headerlink" title="http 服务"></a>http 服务</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python -m SimpleHTTPServer</span><br></pre></td></tr></table></figure><ol><li>Kindle 主页</li><li>最左侧三个点</li><li>体验网页版浏览器</li><li><code>192.168.x.x:8000</code></li></ol><p>下载文件即可。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/15/kindle/1.jpg&quot; alt=&quot;kindle&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="kindle" scheme="https://2020.iosdevlog.com/tags/kindle/"/>
+    
+  </entry>
   
   <entry>
     <title>通过挖掘类比关系加速创新</title>
@@ -471,33 +494,6 @@
     
     
       <category term="体育" scheme="https://2020.iosdevlog.com/tags/%E4%BD%93%E8%82%B2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>wiki 添加 https 支持</title>
-    <link href="https://2020.iosdevlog.com/2020/01/30/htttps/"/>
-    <id>https://2020.iosdevlog.com/2020/01/30/htttps/</id>
-    <published>2020-01-30T07:58:26.000Z</published>
-    <updated>2020-01-31T15:36:05.714Z</updated>
-    
-    <content type="html"><![CDATA[<img src="/2020/01/30/htttps/1.png" class="" title="https"><a id="more"></a><h2 id="1-安装-acme-sh"><a href="#1-安装-acme-sh" class="headerlink" title="1. 安装 acme.sh"></a>1. 安装 acme.sh</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl https://get.acme.sh | sh</span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure><h3 id="DNSPod-cn-Option"><a href="#DNSPod-cn-Option" class="headerlink" title="DNSPod.cn Option:"></a>DNSPod.cn Option:</h3><p>The DNSPod.cn Domain API option requires that you first login to your account to get a DNSPod API Key and ID.</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> DP_Id=<span class="string">"1234"</span></span><br><span class="line"><span class="built_in">export</span> DP_Key=<span class="string">"sADDsdasdgdsf"</span></span><br></pre></td></tr></table></figure><p>Ok, let’s issue a cert now:</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo chmod -R 775 /etc/letsencrypt</span><br><span class="line">sudo chmod -R 777 /var/www/html/</span><br><span class="line">acme.sh --issue --dns dns_dp -d 1001.iosdevlog.com -w /var/www/html</span><br></pre></td></tr></table></figure><p>The DP_Id and DP_Key will be saved in ~/.acme.sh/account.conf and will be reused when needed.</p><h2 id="2-生成证书"><a href="#2-生成证书" class="headerlink" title="2. 生成证书"></a>2. 生成证书</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /etc/apache2/ssl/</span><br><span class="line">sudo chmod 777 -R /etc/apache2/ssl/</span><br></pre></td></tr></table></figure><p><code>/etc/apache2/sites-available/1001.conf</code></p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">SSLCertificateFile      /etc/apache2/ssl/cert.pem</span><br><span class="line">SSLCertificateKeyFile   /etc/apache2/ssl/key.pem</span><br></pre></td></tr></table></figure><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">acme.sh --installcert -d 1001.iosdevlog.com \</span><br><span class="line">--cert-file /etc/apache2/ssl/cert.pem \</span><br><span class="line">--key-file /etc/apache2/ssl/key.pem \</span><br><span class="line">--reloadcmd <span class="string">"service apache2 force-reload"</span></span><br></pre></td></tr></table></figure><h2 id="https"><a href="#https" class="headerlink" title="https"></a>https</h2><p>非常关键的一步</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo apt install openssl</span></span><br><span class="line"><span class="comment"># 加载 Apache 的 SSL 模块</span></span><br><span class="line">sudo a2enmod ssl</span><br><span class="line">service apache2 restart</span><br></pre></td></tr></table></figure><p>访问：<a href="https://1001.iosdevlog.com/mediawiki/" target="_blank" rel="noopener">https://1001.iosdevlog.com/mediawiki/</a></p><h3 id="测试-https"><a href="#测试-https" class="headerlink" title="测试 https"></a>测试 https</h3><p><a href="https://www.ssllabs.com/ssltest" target="_blank" rel="noopener">https://www.ssllabs.com/ssltest</a></p><p><a href="https://console.dnspod.cn/account/token" target="_blank" rel="noopener">https://console.dnspod.cn/account/token</a></p><p>参考：<a href="https://certbot.eff.org/lets-encrypt/ubuntuxenial-apache" target="_blank" rel="noopener">https://certbot.eff.org/lets-encrypt/ubuntuxenial-apache</a></p><p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-30.png" alt="2020/01/30"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;img src=&quot;/2020/01/30/htttps/1.png&quot; class=&quot;&quot; title=&quot;https&quot;&gt;
-    
-    </summary>
-    
-    
-      <category term="1001" scheme="https://2020.iosdevlog.com/categories/1001/"/>
-    
-    
-      <category term="wiki" scheme="https://2020.iosdevlog.com/tags/wiki/"/>
-    
-      <category term="MediaWiki" scheme="https://2020.iosdevlog.com/tags/MediaWiki/"/>
-    
-      <category term="https" scheme="https://2020.iosdevlog.com/tags/https/"/>
     
   </entry>
   
