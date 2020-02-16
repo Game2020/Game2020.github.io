@@ -25,7 +25,7 @@
 <meta property="og:image" content="https://2020.iosdevlog.com/2020/01/29/wiki/11.png">
 <meta property="og:image" content="https://2020.iosdevlog.com/2020/01/29/wiki/12.png">
 <meta property="article:published_time" content="2020-01-29T13:56:45.000Z">
-<meta property="article:modified_time" content="2020-01-30T13:29:40.231Z">
+<meta property="article:modified_time" content="2020-02-16T07:03:36.368Z">
 <meta property="article:author" content="iOSDevLog">
 <meta property="article:tag" content="wiki">
 <meta property="article:tag" content="MediaWiki">
@@ -209,7 +209,7 @@
 <h2 id="配置-MySQL"><a href="#配置-MySQL" class="headerlink" title="配置 MySQL"></a>配置 MySQL</h2><ul>
 <li>创建一个新的mysql用户（wiki）</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mysql -u root -p</span><br><span class="line">Enter password: </span><br><span class="line">Welcome to the MySQL monitor.  Commands <span class="keyword">end</span> <span class="keyword">with</span> ; or \g.</span><br><span class="line">Your MySQL connection id is 8</span><br><span class="line">Server version: 5.7.29-0ubuntu0.16.04.1 (Ubuntu)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type '<span class="keyword">help</span>;' or '\h' for help. <span class="keyword">Type</span> <span class="string">'\c'</span> <span class="keyword">to</span> <span class="keyword">clear</span> the <span class="keyword">current</span> <span class="keyword">input</span> statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'wiki'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'THISpasswordSHOULDbeCHANGED'</span>;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; quit;</span><br><span class="line">Bye</span><br></pre></td></tr></table></figure>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">$ sudo mysql -u root -p</span><br><span class="line">Enter password:</span><br><span class="line">Welcome to the MySQL monitor.  Commands <span class="keyword">end</span> <span class="keyword">with</span> ; or \g.</span><br><span class="line">Your MySQL connection id is 8</span><br><span class="line">Server version: 5.7.29-0ubuntu0.16.04.1 (Ubuntu)</span><br><span class="line"></span><br><span class="line">Copyright (c) 2000, 2020, Oracle and/or its affiliates. All rights reserved.</span><br><span class="line"></span><br><span class="line">Oracle is a registered trademark of Oracle Corporation and/or its</span><br><span class="line">affiliates. Other names may be trademarks of their respective</span><br><span class="line">owners.</span><br><span class="line"></span><br><span class="line">Type '<span class="keyword">help</span>;' or '\h' for help. <span class="keyword">Type</span> <span class="string">'\c'</span> <span class="keyword">to</span> <span class="keyword">clear</span> the <span class="keyword">current</span> <span class="keyword">input</span> statement.</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="keyword">CREATE</span> <span class="keyword">USER</span> <span class="string">'wiki'</span>@<span class="string">'localhost'</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">'THISpasswordSHOULDbeCHANGED'</span>;</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; quit;</span><br><span class="line">Bye</span><br></pre></td></tr></table></figure>
 
 <ul>
 <li>创建一个新的 <code>mysql</code> 数据库 <code>wiki</code>：</li>
@@ -239,14 +239,14 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/29/wiki/" data-id="ck6nr27ou003fab2wgahv1tmi" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/29/wiki/" data-id="ck6oq1ssx003cgz2wgz81bdw8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li></ul>
 
       
         <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
-        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li></ul>
@@ -327,6 +327,10 @@
       <ul>
         
           <li>
+            <a href="/2020/02/16/9787544242516/">《白夜行》人物关系图</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/15/kindle/">Kindle 无 USB 传书</a>
           </li>
         
@@ -340,10 +344,6 @@
         
           <li>
             <a href="/2020/02/14/svm/">线性大规模支持向量机</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/13/data/">数据的重要性</a>
           </li>
         
       </ul>
