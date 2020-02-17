@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>《Python深度学习：基于PyTorch》 读书笔记 | Game 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="书名：Python深度学习：基于PyTorch作者：吴茂贵，郁明敏，杨本法，李涛，张粤磊出版社：机械工业出版社出版时间：2019-10ISBN：9787111637172">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Python深度学习：基于PyTorch》 读书笔记">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/02/17/pytorch/index.html">
+<meta property="og:site_name" content="Game 2020">
+<meta property="og:description" content="书名：Python深度学习：基于PyTorch作者：吴茂贵，郁明敏，杨本法，李涛，张粤磊出版社：机械工业出版社出版时间：2019-10ISBN：9787111637172">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/7.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/8.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/9.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/10.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/11.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/12.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/13.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/14.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/15.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/16.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/17.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/18.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/19.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/20.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/21.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/22.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/23.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/24.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/25.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/26.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/27.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/28.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/29.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/30.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/31.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/32.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/33.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/34.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/35.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/36.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/37.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/38.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/39.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/40.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/41.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/42.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/43.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/44.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/45.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/46.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/47.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/48.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/49.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/50.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/51.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/52.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/53.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/54.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/55.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/56.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/57.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/58.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/59.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/60.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/61.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/62.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/63.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/64.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/65.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/66.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/67.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/68.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/69.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/70.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/71.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/72.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/73.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/74.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/75.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/76.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/77.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/78.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/79.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/80.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/81.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/82.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/83.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/84.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/85.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/86.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/87.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/88.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/89.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/90.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/91.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/92.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/93.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/94.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/95.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/96.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/97.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/98.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/99.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/100.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/101.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/102.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/103.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/104.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/105.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/106.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/107.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/108.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/109.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/110.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/111.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/112.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/113.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/114.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/115.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/116.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/117.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/118.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/119.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/120.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/121.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/122.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/123.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/124.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/125.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/126.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/127.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/128.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/129.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/130.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/131.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/132.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/133.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/134.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/135.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/136.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/137.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/138.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/139.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/140.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/141.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/142.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/143.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/144.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/145.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/146.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/147.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/148.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/149.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/150.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/151.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/152.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/153.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/154.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/155.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/156.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/157.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/158.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/159.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/160.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/161.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/162.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/163.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/164.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/165.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/166.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/167.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/168.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/169.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/170.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/171.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/172.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/173.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/174.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/175.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/176.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/177.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/178.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/179.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/180.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/181.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/182.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/183.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/184.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/185.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/186.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/187.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/188.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/189.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/190.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/191.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/192.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/193.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/194.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/195.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/196.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/197.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/198.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/199.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/200.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/201.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/202.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/203.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/204.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/205.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/206.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/207.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/208.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/209.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/210.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/211.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/212.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/213.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/214.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/215.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/216.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/217.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/218.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/219.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/220.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/221.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/222.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/223.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/224.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/225.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/226.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/227.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/228.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/229.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/230.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/231.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/232.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/233.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/234.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/235.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/236.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/237.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/238.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/239.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/240.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/241.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/242.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/243.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/244.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/245.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/246.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/247.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/248.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/249.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/250.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/251.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/252.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/253.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/254.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/255.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/256.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/257.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/258.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/259.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/260.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/261.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/262.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/263.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/264.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/265.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/266.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/267.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/268.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/269.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/270.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/271.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/272.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/273.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/274.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/275.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/276.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/277.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/278.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/279.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/280.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/281.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/282.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/283.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/284.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/285.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/286.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/287.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/288.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/289.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/290.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/291.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/292.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/293.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/294.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/295.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/296.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/297.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/298.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/299.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/300.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/301.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/302.jpg">
+<meta property="article:published_time" content="2020-02-17T05:28:39.000Z">
+<meta property="article:modified_time" content="2020-02-17T15:42:20.233Z">
+<meta property="article:author" content="iOSDevLog">
+<meta property="article:tag" content="PyTorch">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/02/17/pytorch/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Game 2020</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">https://2020.iosdevlog.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/2020">2020 Calendar</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://2020.iosdevlog.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-pytorch" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/17/pytorch/" class="article-date">
+  <time datetime="2020-02-17T05:28:39.000Z" itemprop="datePublished">2020-02-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《Python深度学习：基于PyTorch》 读书笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/1.jpg" alt="《Python深度学习：基于PyTorch》"></p>
+<p>书名：Python深度学习：基于PyTorch<br>作者：吴茂贵，郁明敏，杨本法，李涛，张粤磊<br>出版社：机械工业出版社<br>出版时间：2019-10<br>ISBN：9787111637172</p>
+<a id="more"></a>
+
+<p>建议初学者选择PyTorch的主要依据是：</p>
+<ol>
+<li>PyTorch是动态计算图，其用法更贴近Python，并且，PyTorch与Python共用了许多Numpy的命令，可以降低学习的门槛，比TensorFlow更容易上手。</li>
+<li>PyTorch需要定义网络层、参数更新等关键步骤，这非常有助于理解深度学习的核心；而Keras虽然也非常简单，且容易上手，但封装粒度很粗，隐藏了很多关键步骤。</li>
+<li>PyTorch的动态图机制在调试方面非常方便，如果计算图运行出错，马上可以跟踪问题。PyTorch的调试与Python的调试一样，通过断点检查就可以高效解决问题。</li>
+<li>PyTorch的流行度仅次于TensorFlow。而最近一年，在GitHub关注度和贡献者的增长方面，PyTorch跟TensorFlow基本持平。PyTorch的搜索热度持续上涨，加上FastAI的支持，PyTorch将受到越来越多机器学习从业者的青睐。</li>
+</ol>
+<p>本书特点</p>
+<ul>
+<li>内容选择<ul>
+<li>广泛涉猎</li>
+<li>精讲</li>
+<li>注重实战</li>
+</ul>
+</li>
+<li>内容安排<ul>
+<li>简单实例开始</li>
+<li>循序渐进</li>
+</ul>
+</li>
+<li>表达形式<ul>
+<li>让图说话</li>
+<li>一张好图胜过千言万语</li>
+</ul>
+</li>
+</ul>
+<p>本书内容</p>
+<ol>
+<li>PyTorch基础</li>
+<li>深度学习基本原理</li>
+<li>实战部分</li>
+</ol>
+<h2 id="基础篇"><a href="#基础篇" class="headerlink" title="基础篇"></a>基础篇</h2><h3 id="PyTorch基础"><a href="#PyTorch基础" class="headerlink" title="PyTorch基础"></a>PyTorch基础</h3><h3 id="第1章-Numpy（Numerical-Python）基础"><a href="#第1章-Numpy（Numerical-Python）基础" class="headerlink" title="第1章 Numpy（Numerical Python）基础"></a>第1章 Numpy（Numerical Python）基础</h3><p>基本的对像</p>
+<ol>
+<li>ndarray（N-dimensional Array Object）<ul>
+<li>单一数据类型的多维数组</li>
+</ul>
+</li>
+<li>ufunc（UniversalFunction Object）<ul>
+<li>对数组进行处理的函数</li>
+</ul>
+</li>
+</ol>
+<p>Numpy的主要特点：</p>
+<ol>
+<li>ndarray，快速节省空间的多维数组，提供数组化的算术运算和高级的广播功能。</li>
+<li>使用标准数学函数对整个数组的数据进行快速运算，且不需要编写循环。</li>
+<li>读取/写入磁盘上的阵列数据和操作存储器映像文件的工具。</li>
+<li>线性代数、随机数生成和傅里叶变换的能力。</li>
+<li>集成C、C++、Fortran代码的工具。</li>
+</ol>
+<h4 id="1-1-生成Numpy数组"><a href="#1-1-生成Numpy数组" class="headerlink" title="1.1 生成Numpy数组"></a>1.1 生成Numpy数组</h4><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/3.jpg" alt="Tab"></p>
+<h5 id="从已有数据中创建数组"><a href="#从已有数据中创建数组" class="headerlink" title="从已有数据中创建数组"></a>从已有数据中创建数组</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">np.array(l)</span><br></pre></td></tr></table></figure>
+
+<h5 id="利用random模块生成数组"><a href="#利用random模块生成数组" class="headerlink" title="利用random模块生成数组"></a>利用random模块生成数组</h5><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>np.random.random</td>
+<td>生成0到1之间的随机数</td>
+</tr>
+<tr>
+<td>np.random.uniform</td>
+<td>生成均匀分布的随机数</td>
+</tr>
+<tr>
+<td>np.random.randn</td>
+<td>生成标准正态的随机数</td>
+</tr>
+<tr>
+<td>np.random.randint</td>
+<td>生成随机的整数</td>
+</tr>
+<tr>
+<td>np.random.normal</td>
+<td>生成正态分布</td>
+</tr>
+<tr>
+<td>np.random.shuffle</td>
+<td>随机打乱顺序</td>
+</tr>
+<tr>
+<td>np.random.seed</td>
+<td>设置随机数种子</td>
+</tr>
+<tr>
+<td>random._sample</td>
+<td>生成随机的浮点数</td>
+</tr>
+</tbody></table>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/4.jpg" alt="np.random模块常用函数"></p>
+<h5 id="创建特定形状的多维数组"><a href="#创建特定形状的多维数组" class="headerlink" title="创建特定形状的多维数组"></a>创建特定形状的多维数组</h5><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>np.zeros((3, 4))</td>
+<td>创建3×4的元素全为0的数组</td>
+</tr>
+<tr>
+<td>np.ones((3, 4))</td>
+<td>创建3×4的元素全为1的数组</td>
+</tr>
+<tr>
+<td>np.empty( (2, 3))</td>
+<td>创建2×3的空数组,空数据中的值并不为0,而是未初始化的垃圾值</td>
+</tr>
+<tr>
+<td>np.zeros.like(darr)</td>
+<td>以 darr相同维度创建元素全为0数组</td>
+</tr>
+<tr>
+<td>np.ones.like(darr)</td>
+<td>以 narr相同维度创建元素全为1数组</td>
+</tr>
+<tr>
+<td>np.empty.like(ndarr)</td>
+<td>以 darr相同维度创建空数组</td>
+</tr>
+<tr>
+<td>np.eye(5)</td>
+<td>该函数用于创建一个5×5的矩阵,对角线为1,其余为0</td>
+</tr>
+<tr>
+<td>np.full((3, 5), 666)</td>
+<td>创建3×5的元素全为666的数组,666为指定值</td>
+</tr>
+</tbody></table>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/5.jpg" alt="Numpy数组创建函数"></p>
+<h5 id="利用arange、linspace函数生成数组"><a href="#利用arange、linspace函数生成数组" class="headerlink" title="利用arange、linspace函数生成数组`````"></a>利用arange、linspace函数生成数组`````</h5><p>arange是numpy模块中的函数，其格式为：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">help(np.arange)</span><br><span class="line">arange([start,] stop[, step,], dtype=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+
+<p>其中start与stop用来指定范围，step用来设定步长。在生成一个ndarray时，start默认为0，步长step可为小数。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">linspace(start, stop, num=<span class="number">50</span>, endpoint=<span class="literal">True</span>, retstep=<span class="literal">False</span>, dtype=<span class="literal">None</span>, axis=<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-2-获取元素"><a href="#1-2-获取元素" class="headerlink" title="1.2 获取元素"></a>1.2 获取元素</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">np.random.seed(<span class="number">2020</span>)</span><br><span class="line">nd11 = np.random.random([<span class="number">10</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取指定位置的数据,获取第4个元素</span></span><br><span class="line">nd11[<span class="number">3</span>]</span><br><span class="line"><span class="comment"># 截取一段数据</span></span><br><span class="line">nd11[<span class="number">3</span>:<span class="number">6</span>]</span><br><span class="line"><span class="comment"># 截取固定间隔数据</span></span><br><span class="line">nd11[<span class="number">1</span>:<span class="number">6</span>:<span class="number">2</span>]</span><br><span class="line"><span class="comment"># 倒序取数</span></span><br><span class="line">nd11[::<span class="number">-2</span>]</span><br><span class="line"><span class="comment"># 截取一个多维数组的一个区域内数据</span></span><br><span class="line">nd12 = np.arange(<span class="number">25</span>).reshape([<span class="number">5</span>, <span class="number">5</span>])</span><br><span class="line">nd12[<span class="number">1</span>:<span class="number">31</span>:<span class="number">3</span>]</span><br><span class="line"><span class="comment"># 截取一个多维数组中,数值在一个值域之內的数据</span></span><br><span class="line">nd12[(nd12 &gt; <span class="number">3</span>) &amp; (nd12 &lt; <span class="number">10</span>)]</span><br><span class="line"><span class="comment"># 截取多维数组中,指定的行,如读取第2,3行</span></span><br><span class="line">nd12[[<span class="number">1</span>, <span class="number">2</span>]]  <span class="comment"># 或nd12[1:3,:]</span></span><br><span class="line"><span class="comment"># 并截取多维数组中,指定的列,如读取第2,3列</span></span><br><span class="line">nd12[:, <span class="number">1</span>:<span class="number">3</span>]</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/6.jpg" alt="获取多维数组中的元素"></p>
+<p>随机抽取数据</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> random <span class="keyword">as</span> nr</span><br><span class="line"></span><br><span class="line">a = np.arange(<span class="number">1</span>, <span class="number">25</span>, dtype=float)</span><br><span class="line">c1 = nr.choice(a, size=(<span class="number">3</span>, <span class="number">4</span>))  <span class="comment"># size指定输出数组形状</span></span><br><span class="line">c2 = nr.choice(a, size=(<span class="number">3</span>, <span class="number">4</span>), replace=<span class="literal">False</span>)  <span class="comment"># replace缺省为True，即可重复抽取。</span></span><br><span class="line"><span class="comment"># 下式中参数p指定每个元素对应的抽取概率，缺省为每个元素被抽取的概率相同。</span></span><br><span class="line">c3 = nr.choice(a, size=(<span class="number">3</span>, <span class="number">4</span>), p=a / np.sum(a))</span><br><span class="line">print(<span class="string">"随机可重复抽取"</span>)</span><br><span class="line">print(c1)</span><br><span class="line">print(<span class="string">"随机但不重复抽取"</span>)</span><br><span class="line">print(c2)</span><br><span class="line">print(<span class="string">"随机但按制度概率抽取"</span>)</span><br><span class="line">print(c3)</span><br></pre></td></tr></table></figure>
+
+<h4 id="1-3-Numpy的算术运算"><a href="#1-3-Numpy的算术运算" class="headerlink" title="1.3 Numpy的算术运算"></a>1.3 Numpy的算术运算</h4><h5 id="1-3-1-对应元素相乘"><a href="#1-3-1-对应元素相乘" class="headerlink" title="1.3.1 对应元素相乘"></a>1.3.1 对应元素相乘</h5><p><code>np.info(np.multiply)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">multiply(x1, x2, /, out=<span class="literal">None</span>, *, where=<span class="literal">True</span>, casting=<span class="string">'same_kind'</span>, order=<span class="string">'K'</span>, dtype=<span class="literal">None</span>, subok=<span class="literal">True</span>[, signature, extobj])</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">A = np.array([[<span class="number">1</span>, <span class="number">2</span>], [<span class="number">-1</span>, <span class="number">4</span>]])</span><br><span class="line">B = np.array([[<span class="number">2</span>, <span class="number">0</span>], [<span class="number">3</span>, <span class="number">4</span>]])</span><br><span class="line">A*B</span><br><span class="line"><span class="comment"># 结果如下：</span></span><br><span class="line">array([[<span class="number">2</span>,  <span class="number">0</span>],</span><br><span class="line">       [<span class="number">-3</span>, <span class="number">16</span>]])</span><br><span class="line"><span class="comment"># 或另一种表示方法</span></span><br><span class="line">np.multiply(A, B)</span><br><span class="line"><span class="comment"># 运算结果也是</span></span><br><span class="line">array([[<span class="number">2</span>,  <span class="number">0</span>],</span><br><span class="line">       [<span class="number">-3</span>, <span class="number">16</span>]])</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/7.jpg" alt="对应元素相乘示意图"></p>
+<h5 id="1-3-2-点积运算"><a href="#1-3-2-点积运算" class="headerlink" title="1.3.2 点积运算"></a>1.3.2 点积运算</h5><p>点积运算（Dot Product）又称为内积</p>
+<p><code>np.info(np.dot)</code></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dot(a, b, out=<span class="literal">None</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X1=np.array([[<span class="number">1</span>,<span class="number">2</span>],[<span class="number">3</span>,<span class="number">4</span>]])</span><br><span class="line">X2=np.array([[<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>],[<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>]])</span><br><span class="line">X3=np.dot(X1,X2)</span><br><span class="line">print(X3)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/8.jpg" alt="矩阵的点积示意图，对应维度的元素个数需要保持一致"></p>
+<h4 id="1-4-数组变形"><a href="#1-4-数组变形" class="headerlink" title="1.4 数组变形"></a>1.4 数组变形</h4><h5 id="1-4-1-更改数组的形状"><a href="#1-4-1-更改数组的形状" class="headerlink" title="1.4.1 更改数组的形状"></a>1.4.1 更改数组的形状</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/9.jpg" alt="Numpy中改变向量形状的一些函数"></p>
+<h5 id="1-4-2-合并数组"><a href="#1-4-2-合并数组" class="headerlink" title="1.4.2 合并数组"></a>1.4.2 合并数组</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/10.jpg" alt="Numpy数组合并方法"></p>
+<ol>
+<li>append、concatenate以及stack都有一个axis参数，用于控制数组的合并方式是按行还是按列。</li>
+<li>对于append和concatenate，待合并的数组必须有相同的行数或列数（满足一个即可）。</li>
+<li>stack、hstack、dstack，要求待合并的数组必须具有相同的形状（shape）。</li>
+</ol>
+<h4 id="1-5-批量处理"><a href="#1-5-批量处理" class="headerlink" title="1.5 批量处理"></a>1.5 批量处理</h4><ol>
+<li>得到数据集</li>
+<li>随机打乱数据</li>
+<li>定义批大小</li>
+<li>批处理数据集</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="comment"># 生成10000个形状为2X3的矩阵</span></span><br><span class="line">data_train = np.random.randn(<span class="number">10000</span>, <span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment"># 这是一个3维矩阵，第1个维度为样本数，后两个是数据形状</span></span><br><span class="line">print(data_train.shape)</span><br><span class="line"><span class="comment"># (10000,2,3)</span></span><br><span class="line"><span class="comment"># 打乱这10000条数据</span></span><br><span class="line">np.random.shuffle(data_train)</span><br><span class="line"><span class="comment"># 定义批量大小</span></span><br><span class="line">batch_size = <span class="number">100</span></span><br><span class="line"><span class="comment"># 进行批处理</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>, len(data_train), batch_size):</span><br><span class="line">    x_batch_sum = np.sum(data_train[i:i+batch_size])</span><br><span class="line">    print(<span class="string">"第&#123;&#125;批次,该批次的数据之和:&#123;&#125;"</span>.format(i, x_batch_sum))</span><br></pre></td></tr></table></figure>
+
+<p>【说明】批次从0开始，所以最后一个批次是9900。</p>
+<h4 id="1-6-通用函数"><a href="#1-6-通用函数" class="headerlink" title="1.6 通用函数"></a>1.6 通用函数</h4><p>ufunc是universalfunction的缩写，它是一种能对数组的每个元素进行操作的函数。</p>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/11.jpg" alt="Numpy中的几个常用通用函数"></p>
+<h4 id="1-7-广播"><a href="#1-7-广播" class="headerlink" title="1.7 广播"></a>1.7 广播</h4><p>Numpy的Universal functions中要求输入的数组shape是一致的，当数组的shape不相等时，则会使用广播机制。不过，调整数组使得shape一样，需要满足一定的规则，否则将出错。</p>
+<p>这些规则可归纳为以下4条。</p>
+<ol>
+<li>让所有输入数组都向其中shape最长的数组看齐，不足的部分则通过在前面加1补齐，如：<ul>
+<li>a：2×3×2</li>
+<li>b：3×2</li>
+<li>则b向a看齐，在b的前面加1，变为：1×3×2</li>
+</ul>
+</li>
+<li>输出数组的shape是输入数组shape的各个轴上的最大值</li>
+<li>如果输入数组的某个轴和输出数组的对应轴的长度相同或者某个轴的长度为1时，这个数组能被用来计算，否则出错</li>
+<li>当输入数组的某个轴的长度为1时，沿着此轴运算时都用（或复制）此轴上的第一组值。</li>
+</ol>
+<p>广播在整个Numpy中用于决定如何处理形状迥异的数组，涉及的算术运算包括（+，-，*，/…）。</p>
+<p>这些规则说得很严谨，但不直观，下面我们结合图形与代码来进一步说明。</p>
+<p>目的：A+B，其中A为4×1矩阵，B为一维向量（3,）。</p>
+<p>要相加，需要做如下处理：</p>
+<ol>
+<li>根据规则1，B需要向看齐，把B变为（1,3）</li>
+<li>根据规则2，输出的结果为各个轴上的最大值，即输出结果应该为（4,3）矩阵，那么A如何由（4,1）变为（4,3）矩阵？B又如何由（1,3）变为（4,3）矩阵？</li>
+<li>根据规则4，用此轴上的第一组值（要主要区分是哪个轴），进行复制（但在实际处理中不是真正复制，否则太耗内存，而是采用其他对象如ogrid对象，进行网格处理）即可，详细处理过程如图所示。</li>
+</ol>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/12.jpg" alt="Numpy广播规则示意图"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line">A = np.arange(<span class="number">0</span>, <span class="number">40</span>, <span class="number">10</span>).reshape(<span class="number">4</span>, <span class="number">1</span>)</span><br><span class="line">B = np.arange(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line">print(<span class="string">"A矩阵的形状:&#123;&#125;,B矩阵的形状:&#123;&#125;"</span>.format(A.shape, B.shape))</span><br><span class="line">C = A+B</span><br><span class="line">print(<span class="string">"C矩阵的形状:&#123;&#125;"</span>.format(C.shape))</span><br><span class="line">print(C)</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">A矩阵的形状:(4, 1),B矩阵的形状:(3,)</span><br><span class="line">C矩阵的形状:(4, 3)</span><br><span class="line">[[ 0  1  2]</span><br><span class="line"> [10 11 12]</span><br><span class="line"> [20 21 22]</span><br><span class="line"> [30 31 32]]</span><br></pre></td></tr></table></figure>
+<h3 id="第2章-Pytorch基础"><a href="#第2章-Pytorch基础" class="headerlink" title="第2章 Pytorch基础"></a>第2章 Pytorch基础</h3><h4 id="2-1-为何选择Pytorch？"><a href="#2-1-为何选择Pytorch？" class="headerlink" title="2.1 为何选择Pytorch？"></a>2.1 为何选择Pytorch？</h4><p>PyTorch由4个主要的包组成：</p>
+<ol>
+<li><code>torch</code>：类似于Numpy的通用数组库，可将张量类型转换为torch.cuda.TensorFloat，并在GPU上进行计算。</li>
+<li><code>torch.autograd</code>：用于构建计算图形并自动获取梯度的包。</li>
+<li><code>torch.nn</code>：具有共享层和损失函数的神经网络库。</li>
+<li><code>torch.optim</code>：具有通用优化算法（如SGD、Adam等）的优化包。</li>
+</ol>
+<h4 id="2-2-安装配置"><a href="#2-2-安装配置" class="headerlink" title="2.2 安装配置"></a>2.2 安装配置</h4><p>参考 <a href="https://pytorch.org" target="_blank" rel="noopener">https://pytorch.org</a> 就可以了。</p>
+<h5 id="2-2-1-CPU版Pytorch"><a href="#2-2-1-CPU版Pytorch" class="headerlink" title="2.2.1 CPU版Pytorch"></a>2.2.1 CPU版Pytorch</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/13.jpg" alt="下载Anaconda界面"></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">curl -O https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh</span><br><span class="line">sh Miniconda3-latest-MacOSX-x86_64.sh</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/14.jpg" alt="PyTorch安装界面"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line">print(torch.__version__)</span><br></pre></td></tr></table></figure>
+
+<p>当前最新版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.4.0</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/15.jpg" alt="验证安装是否成功"></p>
+<h5 id="2-2-2-GPU版Pytorch"><a href="#2-2-2-GPU版Pytorch" class="headerlink" title="2.2.2 GPU版Pytorch"></a>2.2.2 GPU版Pytorch</h5><h6 id="安装NVIDIA驱动"><a href="#安装NVIDIA驱动" class="headerlink" title="安装NVIDIA驱动"></a>安装NVIDIA驱动</h6><p><a href="https://www.nvidia.cn/Download/index.aspx?lang=cn" target="_blank" rel="noopener">https://www.nvidia.cn/Download/index.aspx?lang=cn</a></p>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/16.jpg" alt="NVIDIA的下载界面"></p>
+<p>安装完成后，在命令行输入 <code>nvidia-smi</code>，用来显示GPU卡的基本信息</p>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/17.jpg" alt="显示GPU卡的基本信息"></p>
+<h6 id="安装CUDA"><a href="#安装CUDA" class="headerlink" title="安装CUDA"></a>安装CUDA</h6><p>CUDA（Compute Unified Device Architecture），是英伟达公司推出的一种基于新的并行编程模型和指令集架构的通用计算架构，它能利用英伟达GPU的并行计算引擎，比CPU更高效地解决许多复杂计算任务。安装CUDA Driver时，其版本需与NVIDIA GPU Driver的版本一致，这样CUDA才能找到显卡。</p>
+<h6 id="安装cuDNN"><a href="#安装cuDNN" class="headerlink" title="安装cuDNN"></a>安装cuDNN</h6><p>NVIDIA cuDNN是用于深度神经网络的GPU加速库。注册NVIDIA并下载cuDNN包，获取地址为<a href="https://developer.nvidia.com/rdp/cudnn-archive" target="_blank" rel="noopener">https://developer.nvidia.com/rdp/cudnn-archive</a>。</p>
+<h6 id="安装Python及PyTorch"><a href="#安装Python及PyTorch" class="headerlink" title="安装Python及PyTorch"></a>安装Python及PyTorch</h6><p>安装GPU版PyTorch相同，只是选择CUDA时，不是None，而是对应CUDA的版本号。</p>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/18.jpg" alt="安装GPU版PyTorch"></p>
+<h6 id="验证"><a href="#验证" class="headerlink" title="验证"></a>验证</h6><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># cat test_gpu.py</span></span><br><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    <span class="comment"># 测试 CUDA</span></span><br><span class="line">    print(<span class="string">"Support CUDA ?: "</span>, torch.cuda.is_available())</span><br><span class="line">    x = torch.tensor([<span class="number">10.0</span>])</span><br><span class="line">    x = x.cuda()</span><br><span class="line">    print(x)</span><br><span class="line">    y = torch.randn(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line">    y = y.cuda()</span><br><span class="line">    print(y)</span><br><span class="line">    z = x + y</span><br><span class="line">    print(z)</span><br><span class="line">   <span class="comment"># 测试 CUDNN</span></span><br><span class="line">    <span class="keyword">from</span> torch.backends <span class="keyword">import</span> cudnn</span><br><span class="line">    print(<span class="string">"Support cudnn ?: "</span>, cudnn.is_acceptable(x))</span><br></pre></td></tr></table></figure>
+
+<p><code>python torch</code></p>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/19.jpg" alt="运行test_gpu.py的结果"></p>
+<p>在命令行运行：<code>nvidia-smi</code></p>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/20.jpg" alt="含GPU进程的显卡信息"></p>
+<h4 id="2-3-Jupyter-Notebook环境配置"><a href="#2-3-Jupyter-Notebook环境配置" class="headerlink" title="2.3 Jupyter Notebook环境配置"></a>2.3 Jupyter Notebook环境配置</h4><ul>
+<li>编程时具有语法高亮、缩进、Tab补全的功能</li>
+<li>可直接通过浏览器运行代码，同时在代码块下方展示运行结果</li>
+<li>以富媒体格式展示计算结果。富媒体格式包括：HTML、LaTeX、PNG、SVG等</li>
+<li>对代码编写说明文档或语句时，支持Markdown语法</li>
+<li>支持使用LaTeX编写数学性说明。</li>
+</ul>
+<ol>
+<li>生成配置文件。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook --generate-config</span><br></pre></td></tr></table></figure>
+
+<p>执行上述代码，将在当前用户目录下生成文件：<code>.jupyter/jupyter_notebook_config.py</code></p>
+<ol>
+<li>生成当前用户登录Jupyter密码。打开Ipython，创建一个密文密码。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">In [1]: from notebook.auth import passwd</span><br><span class="line">In [2]: passwd()</span><br><span class="line">Enter password: </span><br><span class="line">Verify password:</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>修改配置文件。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.jupyter/jupyter_notebook_config.py</span><br></pre></td></tr></table></figure>
+
+<p>进行如下修改：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">c.NotebookApp.ip = <span class="string">'*'</span>  <span class="comment"># 就是设置所有ip皆可访问</span></span><br><span class="line">c.NotebookApp.password = u<span class="string">'sha:ce...刚才复制的那个密文'</span></span><br><span class="line">c.NotebookApp.open_browser = False  <span class="comment"># 禁止自动打开浏览器</span></span><br><span class="line">c.NotebookApp.port = 8888  <span class="comment"># 这是缺省端口，也可指定其他端口</span></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>启动Jupyter Notebook。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 后台启动jupyter：不记日志：</span></span><br><span class="line">nohup jupyter notebook &gt;/dev/null 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure>
+
+<p>在浏览器上，输入IP:port，即可看到与下图类似的界面。</p>
+<p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/21.jpg" alt="Jupyter Notebook网页界面"></p>
+<p>接下来就可以在浏览器进行开发调试PyTorch、Python等任务了。</p>
+<h4 id="2-4-Numpy与Tensor"><a href="#2-4-Numpy与Tensor" class="headerlink" title="2.4 Numpy与Tensor"></a>2.4 Numpy与Tensor</h4><p>Numpy存取数据非常方便，而且还拥有大量的函数，所以深得数据处理、机器学习者喜爱。</p>
+<p>Tensor，它可以是零维（又称为标量或一个数）、一维、二维及多维的数组。</p>
+<p>Tensor自称为神经网络界的Numpy，它与Numpy相似，二者可以共享内存，且之间的转换非常方便和高效。</p>
+<p>不过它们也有不同之处，最大的区别就是Numpy会把ndarray放在CPU中进行加速运算，而由Torch产生的Tensor会放在GPU中进行加速运算（假设当前环境有GPU）。</p>
+<h5 id="2-4-1-Tensor概述"><a href="#2-4-1-Tensor概述" class="headerlink" title="2.4.1 Tensor概述"></a>2.4.1 Tensor概述</h5><p>对Tensor的操作很多，从接口的角度来划分，可以分为两类：</p>
+<ol>
+<li>torch.function，如torch.sum、torch.add等</li>
+<li>tensor.function，如tensor.view、tensor.add等</li>
+</ol>
+<p>如果从修改方式的角度来划分，可以分为以下两类：</p>
+<ol>
+<li>不修改自身数据，如x.add(y)，x的数据不变，返回一个新的Tensor。</li>
+<li>修改自身数据，如x.add_(y)（运行符带下划线后缀），运算结果存在x中，x被修改。</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line">x = torch.tensor([<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">y = torch.tensor([<span class="number">3</span>, <span class="number">4</span>])</span><br><span class="line">z = x.add(y)</span><br><span class="line">print(z)</span><br><span class="line">print(x)</span><br><span class="line">x.add_(y)</span><br><span class="line">print(x)</span><br></pre></td></tr></table></figure>
+
+<p>结果</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tensor([<span class="number">4</span>, <span class="number">6</span>])</span><br><span class="line">tensor([<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">tensor([<span class="number">4</span>, <span class="number">6</span>])</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-4-2-创建Tensor"><a href="#2-4-2-创建Tensor" class="headerlink" title="2.4.2 创建Tensor"></a>2.4.2 创建Tensor</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/22.jpg" alt="常见的创建Tensor的方法"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="comment"># 根据list数据生成Tensor</span></span><br><span class="line">torch.Tensor([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>])</span><br><span class="line"><span class="comment"># 根据指定形状生成Tensor</span></span><br><span class="line">torch.Tensor(<span class="number">2</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment"># 根据给定的Tensor的形状</span></span><br><span class="line">t = torch.Tensor([[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>], [<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>]])</span><br><span class="line"><span class="comment"># 查看Tensor的形状</span></span><br><span class="line">t.size()</span><br><span class="line"><span class="comment"># shape与size()等价方式</span></span><br><span class="line">t.shape</span><br><span class="line"><span class="comment"># 根据已有形状创建Tensor</span></span><br><span class="line">torch.Tensor(t.size())</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-4-3-修改Tensor形状"><a href="#2-4-3-修改Tensor形状" class="headerlink" title="2.4.3 修改Tensor形状"></a>2.4.3 修改Tensor形状</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/23.jpg" alt="为tensor常用修改形状的函数"></p>
+<h5 id="2-4-4-索引操作"><a href="#2-4-4-索引操作" class="headerlink" title="2.4.4 索引操作"></a>2.4.4 索引操作</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/24.jpg" alt="常用选择操作函数"></p>
+<h5 id="2-4-5-广播机制"><a href="#2-4-5-广播机制" class="headerlink" title="2.4.5 广播机制"></a>2.4.5 广播机制</h5><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> torch</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">A = np.arange(<span class="number">0</span>, <span class="number">40</span>, <span class="number">10</span>).reshape(<span class="number">4</span>, <span class="number">1</span>)</span><br><span class="line">B = np.arange(<span class="number">0</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment"># 把ndarray转换为Tensor</span></span><br><span class="line">A1 = torch.from_numpy(A)  <span class="comment"># 形状为4x1</span></span><br><span class="line">B1 = torch.from_numpy(B)  <span class="comment"># 形状为3</span></span><br><span class="line"><span class="comment"># Tensor自动实现广播</span></span><br><span class="line">C = A1+B1</span><br><span class="line"><span class="comment"># 我们可以根据广播机制，手工进行配置</span></span><br><span class="line"><span class="comment"># 根据规则1，B1需要向A1看齐，把B变为（1,3）</span></span><br><span class="line">B2 = B1.unsqueeze(<span class="number">0</span>)  <span class="comment"># B2的形状为1x3</span></span><br><span class="line"><span class="comment"># 使用expand函数重复数组，分别的4x3的矩阵</span></span><br><span class="line">A2 = A1.expand(<span class="number">4</span>, <span class="number">3</span>)</span><br><span class="line">B3 = B2.expand(<span class="number">4</span>, <span class="number">3</span>)</span><br><span class="line"><span class="comment"># 然后进行相加,C1与C结果一致</span></span><br><span class="line">C1 = A2+B3</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-4-6-逐元素操作"><a href="#2-4-6-逐元素操作" class="headerlink" title="2.4.6 逐元素操作"></a>2.4.6 逐元素操作</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/25.jpg" alt="常见逐元素操作"></p>
+<h5 id="2-4-7-归并操作"><a href="#2-4-7-归并操作" class="headerlink" title="2.4.7 归并操作"></a>2.4.7 归并操作</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/26.jpg" alt="常见的归并操作"></p>
+<h5 id="2-4-8-比较操作"><a href="#2-4-8-比较操作" class="headerlink" title="2.4.8 比较操作"></a>2.4.8 比较操作</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/27.jpg" alt="常用的比较函数"></p>
+<h5 id="2-4-9-矩阵操作"><a href="#2-4-9-矩阵操作" class="headerlink" title="2.4.9 矩阵操作"></a>2.4.9 矩阵操作</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/28.jpg" alt="常用矩阵函数"></p>
+<h5 id="2-4-10-Pytorch与Numpy比较"><a href="#2-4-10-Pytorch与Numpy比较" class="headerlink" title="2.4.10 Pytorch与Numpy比较"></a>2.4.10 Pytorch与Numpy比较</h5><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/29.jpg" alt="PyTorch与Numpy函数对照表"></p>
+<h4 id="2-5-Tensor与Autograd"><a href="#2-5-Tensor与Autograd" class="headerlink" title="2.5 Tensor与Autograd"></a>2.5 Tensor与Autograd</h4><h5 id="2-5-1-自动求导要点"><a href="#2-5-1-自动求导要点" class="headerlink" title="2.5.1 自动求导要点"></a>2.5.1 自动求导要点</h5><h5 id="2-5-2计算图"><a href="#2-5-2计算图" class="headerlink" title="2.5.2计算图"></a>2.5.2计算图</h5><h5 id="2-5-3-标量反向传播"><a href="#2-5-3-标量反向传播" class="headerlink" title="2.5.3 标量反向传播"></a>2.5.3 标量反向传播</h5><h5 id="2-5-4-非标量反向传播"><a href="#2-5-4-非标量反向传播" class="headerlink" title="2.5.4 非标量反向传播"></a>2.5.4 非标量反向传播</h5><h4 id="2-6-使用Numpy实现机器学习"><a href="#2-6-使用Numpy实现机器学习" class="headerlink" title="2.6 使用Numpy实现机器学习"></a>2.6 使用Numpy实现机器学习</h4><h4 id="2-7-使用Tensor及antograd实现机器学习"><a href="#2-7-使用Tensor及antograd实现机器学习" class="headerlink" title="2.7 使用Tensor及antograd实现机器学习"></a>2.7 使用Tensor及antograd实现机器学习</h4><h4 id="2-8-使用TensorFlow架构"><a href="#2-8-使用TensorFlow架构" class="headerlink" title="2.8 使用TensorFlow架构"></a>2.8 使用TensorFlow架构</h4><h3 id="第3章-Pytorch实现神经网络工具箱"><a href="#第3章-Pytorch实现神经网络工具箱" class="headerlink" title="第3章 Pytorch实现神经网络工具箱"></a>第3章 Pytorch实现神经网络工具箱</h3><h4 id="3-1-神经网络核心组件"><a href="#3-1-神经网络核心组件" class="headerlink" title="3.1 神经网络核心组件"></a>3.1 神经网络核心组件</h4><h4 id="3-2实现神经网络实例"><a href="#3-2实现神经网络实例" class="headerlink" title="3.2实现神经网络实例"></a>3.2实现神经网络实例</h4><h5 id="3-2-1背景说明"><a href="#3-2-1背景说明" class="headerlink" title="3.2.1背景说明"></a>3.2.1背景说明</h5><h5 id="3-2-2准备数据"><a href="#3-2-2准备数据" class="headerlink" title="3.2.2准备数据"></a>3.2.2准备数据</h5><h5 id="3-2-3可视化源数据"><a href="#3-2-3可视化源数据" class="headerlink" title="3.2.3可视化源数据"></a>3.2.3可视化源数据</h5><h5 id="3-2-4-构建模型"><a href="#3-2-4-构建模型" class="headerlink" title="3.2.4 构建模型"></a>3.2.4 构建模型</h5><h5 id="3-2-5-训练模型"><a href="#3-2-5-训练模型" class="headerlink" title="3.2.5 训练模型"></a>3.2.5 训练模型</h5><h4 id="3-3-如何构建神经网络？"><a href="#3-3-如何构建神经网络？" class="headerlink" title="3.3 如何构建神经网络？"></a>3.3 如何构建神经网络？</h4><h5 id="3-3-1-构建网络层"><a href="#3-3-1-构建网络层" class="headerlink" title="3.3.1 构建网络层"></a>3.3.1 构建网络层</h5><h5 id="3-3-2-前向传播"><a href="#3-3-2-前向传播" class="headerlink" title="3.3.2 前向传播"></a>3.3.2 前向传播</h5><h5 id="3-3-3-反向传播"><a href="#3-3-3-反向传播" class="headerlink" title="3.3.3 反向传播"></a>3.3.3 反向传播</h5><h5 id="3-3-4-训练模型"><a href="#3-3-4-训练模型" class="headerlink" title="3.3.4 训练模型"></a>3.3.4 训练模型</h5><h4 id="3-4-nn-Module"><a href="#3-4-nn-Module" class="headerlink" title="3.4 nn.Module"></a>3.4 nn.Module</h4><h4 id="3-5-nn-functional"><a href="#3-5-nn-functional" class="headerlink" title="3.5 nn.functional"></a>3.5 nn.functional</h4><h4 id="3-6-优化器"><a href="#3-6-优化器" class="headerlink" title="3.6 优化器"></a>3.6 优化器</h4><h4 id="3-7-动态修改学习率参数"><a href="#3-7-动态修改学习率参数" class="headerlink" title="3.7 动态修改学习率参数"></a>3.7 动态修改学习率参数</h4><h4 id="3-8-优化器比较"><a href="#3-8-优化器比较" class="headerlink" title="3.8 优化器比较"></a>3.8 优化器比较</h4><h3 id="第4章-Pytorch数据处理工具箱"><a href="#第4章-Pytorch数据处理工具箱" class="headerlink" title="第4章 Pytorch数据处理工具箱"></a>第4章 Pytorch数据处理工具箱</h3><h4 id="4-1-数据处理工具箱概述"><a href="#4-1-数据处理工具箱概述" class="headerlink" title="4.1 数据处理工具箱概述"></a>4.1 数据处理工具箱概述</h4><h4 id="4-2-utils-data简介"><a href="#4-2-utils-data简介" class="headerlink" title="4.2 utils.data简介"></a>4.2 utils.data简介</h4><h4 id="4-3-torchvision简介"><a href="#4-3-torchvision简介" class="headerlink" title="4.3 torchvision简介"></a>4.3 torchvision简介</h4><h5 id="4-3-1-transforms"><a href="#4-3-1-transforms" class="headerlink" title="4.3.1 transforms"></a>4.3.1 transforms</h5><h5 id="4-3-2-ImageFolder"><a href="#4-3-2-ImageFolder" class="headerlink" title="4.3.2 ImageFolder"></a>4.3.2 ImageFolder</h5><h4 id="4-4-可视化工具"><a href="#4-4-可视化工具" class="headerlink" title="4.4 可视化工具"></a>4.4 可视化工具</h4><h5 id="4-4-1-tensorboardX简介"><a href="#4-4-1-tensorboardX简介" class="headerlink" title="4.4.1 tensorboardX简介"></a>4.4.1 tensorboardX简介</h5><h5 id="4-4-2用tensorboardX可视化神经网络"><a href="#4-4-2用tensorboardX可视化神经网络" class="headerlink" title="4.4.2用tensorboardX可视化神经网络"></a>4.4.2用tensorboardX可视化神经网络</h5><h5 id="4-4-3用tensorboardX可视化损失值"><a href="#4-4-3用tensorboardX可视化损失值" class="headerlink" title="4.4.3用tensorboardX可视化损失值"></a>4.4.3用tensorboardX可视化损失值</h5><h5 id="4-4-4用tensorboardX可视化特征图"><a href="#4-4-4用tensorboardX可视化特征图" class="headerlink" title="4.4.4用tensorboardX可视化特征图"></a>4.4.4用tensorboardX可视化特征图</h5><h2 id="深度学习基础"><a href="#深度学习基础" class="headerlink" title="深度学习基础"></a>深度学习基础</h2><h3 id="第5章-机器学习基础"><a href="#第5章-机器学习基础" class="headerlink" title="第5章 机器学习基础"></a>第5章 机器学习基础</h3><h4 id="5-1-机器学习的基本任务"><a href="#5-1-机器学习的基本任务" class="headerlink" title="5.1 机器学习的基本任务"></a>5.1 机器学习的基本任务</h4><h5 id="5-1-1监督学习"><a href="#5-1-1监督学习" class="headerlink" title="5.1.1监督学习"></a>5.1.1监督学习</h5><h5 id="5-1-2-无监督学习"><a href="#5-1-2-无监督学习" class="headerlink" title="5.1.2 无监督学习"></a>5.1.2 无监督学习</h5><h5 id="5-1-3-半监督学习"><a href="#5-1-3-半监督学习" class="headerlink" title="5.1.3 半监督学习"></a>5.1.3 半监督学习</h5><h5 id="5-1-4-强化学习"><a href="#5-1-4-强化学习" class="headerlink" title="5.1.4 强化学习"></a>5.1.4 强化学习</h5><h4 id="5-2-机器学习一般流程"><a href="#5-2-机器学习一般流程" class="headerlink" title="5.2 机器学习一般流程"></a>5.2 机器学习一般流程</h4><h5 id="5-2-1-明确目标"><a href="#5-2-1-明确目标" class="headerlink" title="5.2.1 明确目标"></a>5.2.1 明确目标</h5><h5 id="5-2-2收集数据"><a href="#5-2-2收集数据" class="headerlink" title="5.2.2收集数据"></a>5.2.2收集数据</h5><h5 id="5-2-3-数据探索与预处理"><a href="#5-2-3-数据探索与预处理" class="headerlink" title="5.2.3 数据探索与预处理"></a>5.2.3 数据探索与预处理</h5><h5 id="5-2-4-选择模型"><a href="#5-2-4-选择模型" class="headerlink" title="5.2.4 选择模型"></a>5.2.4 选择模型</h5><h5 id="5-2-5-评估及优化模型"><a href="#5-2-5-评估及优化模型" class="headerlink" title="5.2.5 评估及优化模型"></a>5.2.5 评估及优化模型</h5><h4 id="5-3-过拟合与欠拟合"><a href="#5-3-过拟合与欠拟合" class="headerlink" title="5.3 过拟合与欠拟合"></a>5.3 过拟合与欠拟合</h4><h5 id="5-3-1-权重正则化"><a href="#5-3-1-权重正则化" class="headerlink" title="5.3.1 权重正则化"></a>5.3.1 权重正则化</h5><h5 id="5-3-2-dropout正则化"><a href="#5-3-2-dropout正则化" class="headerlink" title="5.3.2 dropout正则化"></a>5.3.2 dropout正则化</h5><h5 id="5-3-3-批量正则化"><a href="#5-3-3-批量正则化" class="headerlink" title="5.3.3 批量正则化"></a>5.3.3 批量正则化</h5><h5 id="5-3-4权重初始化"><a href="#5-3-4权重初始化" class="headerlink" title="5.3.4权重初始化"></a>5.3.4权重初始化</h5><h4 id="5-4-选择合适激活函数"><a href="#5-4-选择合适激活函数" class="headerlink" title="5.4 选择合适激活函数"></a>5.4 选择合适激活函数</h4><h4 id="5-5-选择合适的损失函数"><a href="#5-5-选择合适的损失函数" class="headerlink" title="5.5 选择合适的损失函数"></a>5.5 选择合适的损失函数</h4><h4 id="5-6-选择合适优化器"><a href="#5-6-选择合适优化器" class="headerlink" title="5.6 选择合适优化器"></a>5.6 选择合适优化器</h4><h5 id="5-6-1传统梯度优化的不足"><a href="#5-6-1传统梯度优化的不足" class="headerlink" title="5.6.1传统梯度优化的不足"></a>5.6.1传统梯度优化的不足</h5><h5 id="5-6-2动量算法"><a href="#5-6-2动量算法" class="headerlink" title="5.6.2动量算法"></a>5.6.2动量算法</h5><h5 id="5-6-3-AdaGrad算法"><a href="#5-6-3-AdaGrad算法" class="headerlink" title="5.6.3 AdaGrad算法"></a>5.6.3 AdaGrad算法</h5><h5 id="5-6-4-RMSProp算法"><a href="#5-6-4-RMSProp算法" class="headerlink" title="5.6.4 RMSProp算法"></a>5.6.4 RMSProp算法</h5><h5 id="5-6-5-Adam算法"><a href="#5-6-5-Adam算法" class="headerlink" title="5.6.5 Adam算法"></a>5.6.5 Adam算法</h5><h4 id="5-7GPU加速"><a href="#5-7GPU加速" class="headerlink" title="5.7GPU加速"></a>5.7GPU加速</h4><h5 id="5-7-1-单GPU加速"><a href="#5-7-1-单GPU加速" class="headerlink" title="5.7.1 单GPU加速"></a>5.7.1 单GPU加速</h5><h5 id="5-7-2-多GPU加速"><a href="#5-7-2-多GPU加速" class="headerlink" title="5.7.2 多GPU加速"></a>5.7.2 多GPU加速</h5><h5 id="5-7-3使用GPU注意事项"><a href="#5-7-3使用GPU注意事项" class="headerlink" title="5.7.3使用GPU注意事项"></a>5.7.3使用GPU注意事项</h5><h3 id="第6章-视觉处理基础"><a href="#第6章-视觉处理基础" class="headerlink" title="第6章 视觉处理基础"></a>第6章 视觉处理基础</h3><h4 id="6-1卷积神经网络简介"><a href="#6-1卷积神经网络简介" class="headerlink" title="6.1卷积神经网络简介"></a>6.1卷积神经网络简介</h4><h4 id="6-2卷积层"><a href="#6-2卷积层" class="headerlink" title="6.2卷积层"></a>6.2卷积层</h4><h5 id="6-2-1-卷积核"><a href="#6-2-1-卷积核" class="headerlink" title="6.2.1 卷积核"></a>6.2.1 卷积核</h5><h5 id="6-2-2步幅"><a href="#6-2-2步幅" class="headerlink" title="6.2.2步幅"></a>6.2.2步幅</h5><h5 id="6-2-3-填充"><a href="#6-2-3-填充" class="headerlink" title="6.2.3 填充"></a>6.2.3 填充</h5><h5 id="6-2-4-多通道上的卷积"><a href="#6-2-4-多通道上的卷积" class="headerlink" title="6.2.4 多通道上的卷积"></a>6.2.4 多通道上的卷积</h5><h5 id="6-2-5激活函数"><a href="#6-2-5激活函数" class="headerlink" title="6.2.5激活函数"></a>6.2.5激活函数</h5><h5 id="6-2-6卷积函数"><a href="#6-2-6卷积函数" class="headerlink" title="6.2.6卷积函数"></a>6.2.6卷积函数</h5><h5 id="6-2-7转置卷积"><a href="#6-2-7转置卷积" class="headerlink" title="6.2.7转置卷积"></a>6.2.7转置卷积</h5><h4 id="6-3池化层"><a href="#6-3池化层" class="headerlink" title="6.3池化层"></a>6.3池化层</h4><h5 id="6-3-1局部池化"><a href="#6-3-1局部池化" class="headerlink" title="6.3.1局部池化"></a>6.3.1局部池化</h5><h5 id="6-3-2全局池化"><a href="#6-3-2全局池化" class="headerlink" title="6.3.2全局池化"></a>6.3.2全局池化</h5><h4 id="6-4现代经典网络"><a href="#6-4现代经典网络" class="headerlink" title="6.4现代经典网络"></a>6.4现代经典网络</h4><h5 id="6-4-1-LeNet-5模型"><a href="#6-4-1-LeNet-5模型" class="headerlink" title="6.4.1 LeNet-5模型"></a>6.4.1 LeNet-5模型</h5><h5 id="6-4-2-AlexNet模型"><a href="#6-4-2-AlexNet模型" class="headerlink" title="6.4.2 AlexNet模型"></a>6.4.2 AlexNet模型</h5><h5 id="6-4-3-VGG模型"><a href="#6-4-3-VGG模型" class="headerlink" title="6.4.3 VGG模型"></a>6.4.3 VGG模型</h5><h5 id="6-4-4-GoogleNet模型"><a href="#6-4-4-GoogleNet模型" class="headerlink" title="6.4.4 GoogleNet模型"></a>6.4.4 GoogleNet模型</h5><h5 id="6-4-5-ResNet模型"><a href="#6-4-5-ResNet模型" class="headerlink" title="6.4.5 ResNet模型"></a>6.4.5 ResNet模型</h5><h5 id="6-4-6-胶囊网络简介"><a href="#6-4-6-胶囊网络简介" class="headerlink" title="6.4.6 胶囊网络简介"></a>6.4.6 胶囊网络简介</h5><h4 id="6-5-Pytorch实现cifar10多分类"><a href="#6-5-Pytorch实现cifar10多分类" class="headerlink" title="6.5 Pytorch实现cifar10多分类"></a>6.5 Pytorch实现cifar10多分类</h4><h5 id="6-5-1-数据集说明"><a href="#6-5-1-数据集说明" class="headerlink" title="6.5.1 数据集说明"></a>6.5.1 数据集说明</h5><h5 id="6-5-2-加载数据"><a href="#6-5-2-加载数据" class="headerlink" title="6.5.2 加载数据"></a>6.5.2 加载数据</h5><h5 id="6-5-3-构建网络"><a href="#6-5-3-构建网络" class="headerlink" title="6.5.3 构建网络"></a>6.5.3 构建网络</h5><h5 id="6-5-4-训练模型"><a href="#6-5-4-训练模型" class="headerlink" title="6.5.4 训练模型"></a>6.5.4 训练模型</h5><h5 id="6-5-5-测试模型"><a href="#6-5-5-测试模型" class="headerlink" title="6.5.5 测试模型"></a>6.5.5 测试模型</h5><h5 id="6-5-6-采用全局平均池化"><a href="#6-5-6-采用全局平均池化" class="headerlink" title="6.5.6 采用全局平均池化"></a>6.5.6 采用全局平均池化</h5><h5 id="6-5-7像keras一样显示各层参数"><a href="#6-5-7像keras一样显示各层参数" class="headerlink" title="6.5.7像keras一样显示各层参数"></a>6.5.7像keras一样显示各层参数</h5><h4 id="6-6-模型集成提升性能"><a href="#6-6-模型集成提升性能" class="headerlink" title="6.6 模型集成提升性能"></a>6.6 模型集成提升性能</h4><h5 id="6-6-1-使用模型"><a href="#6-6-1-使用模型" class="headerlink" title="6.6.1 使用模型"></a>6.6.1 使用模型</h5><h5 id="6-6-2-集成方法"><a href="#6-6-2-集成方法" class="headerlink" title="6.6.2 集成方法"></a>6.6.2 集成方法</h5><h5 id="6-6-3-集成效果"><a href="#6-6-3-集成效果" class="headerlink" title="6.6.3 集成效果"></a>6.6.3 集成效果</h5><h4 id="6-7使用经典模型提升性能"><a href="#6-7使用经典模型提升性能" class="headerlink" title="6.7使用经典模型提升性能"></a>6.7使用经典模型提升性能</h4><h3 id="第7章-自然语言处理基础"><a href="#第7章-自然语言处理基础" class="headerlink" title="第7章 自然语言处理基础"></a>第7章 自然语言处理基础</h3><h4 id="7-1-循环神经网络基本结构"><a href="#7-1-循环神经网络基本结构" class="headerlink" title="7.1 循环神经网络基本结构"></a>7.1 循环神经网络基本结构</h4><h4 id="7-2前向传播与随时间反向传播"><a href="#7-2前向传播与随时间反向传播" class="headerlink" title="7.2前向传播与随时间反向传播"></a>7.2前向传播与随时间反向传播</h4><h4 id="7-3-循环神经网络变种"><a href="#7-3-循环神经网络变种" class="headerlink" title="7.3 循环神经网络变种"></a>7.3 循环神经网络变种</h4><h5 id="7-3-1-LSTM"><a href="#7-3-1-LSTM" class="headerlink" title="7.3.1 LSTM"></a>7.3.1 LSTM</h5><h5 id="7-3-2-GRU"><a href="#7-3-2-GRU" class="headerlink" title="7.3.2 GRU"></a>7.3.2 GRU</h5><h5 id="7-3-3-Bi-RNN"><a href="#7-3-3-Bi-RNN" class="headerlink" title="7.3.3 Bi-RNN"></a>7.3.3 Bi-RNN</h5><h4 id="7-4-循环神经网络的Pytorch实现"><a href="#7-4-循环神经网络的Pytorch实现" class="headerlink" title="7.4 循环神经网络的Pytorch实现"></a>7.4 循环神经网络的Pytorch实现</h4><h5 id="7-4-1-RNN实现"><a href="#7-4-1-RNN实现" class="headerlink" title="7.4.1 RNN实现"></a>7.4.1 RNN实现</h5><h5 id="7-4-2LSTM实现"><a href="#7-4-2LSTM实现" class="headerlink" title="7.4.2LSTM实现"></a>7.4.2LSTM实现</h5><h5 id="7-4-3GRU实现"><a href="#7-4-3GRU实现" class="headerlink" title="7.4.3GRU实现"></a>7.4.3GRU实现</h5><h4 id="7-5文本数据处理"><a href="#7-5文本数据处理" class="headerlink" title="7.5文本数据处理"></a>7.5文本数据处理</h4><h4 id="7-6词嵌入"><a href="#7-6词嵌入" class="headerlink" title="7.6词嵌入"></a>7.6词嵌入</h4><h5 id="7-6-1Word2Vec原理"><a href="#7-6-1Word2Vec原理" class="headerlink" title="7.6.1Word2Vec原理"></a>7.6.1Word2Vec原理</h5><h5 id="7-6-2-CBOW模型"><a href="#7-6-2-CBOW模型" class="headerlink" title="7.6.2 CBOW模型"></a>7.6.2 CBOW模型</h5><h5 id="7-6-3-Skim-gram模型"><a href="#7-6-3-Skim-gram模型" class="headerlink" title="7.6.3 Skim-gram模型"></a>7.6.3 Skim-gram模型</h5><h4 id="7-7-Pytorch实现词性判别"><a href="#7-7-Pytorch实现词性判别" class="headerlink" title="7.7 Pytorch实现词性判别"></a>7.7 Pytorch实现词性判别</h4><h5 id="7-7-1-词性判别主要步骤"><a href="#7-7-1-词性判别主要步骤" class="headerlink" title="7.7.1 词性判别主要步骤"></a>7.7.1 词性判别主要步骤</h5><h5 id="7-7-2-数据预处理"><a href="#7-7-2-数据预处理" class="headerlink" title="7.7.2 数据预处理"></a>7.7.2 数据预处理</h5><h5 id="7-7-3-构建网络"><a href="#7-7-3-构建网络" class="headerlink" title="7.7.3 构建网络"></a>7.7.3 构建网络</h5><h5 id="7-7-4-训练网络"><a href="#7-7-4-训练网络" class="headerlink" title="7.7.4 训练网络"></a>7.7.4 训练网络</h5><h5 id="7-7-5-测试模型"><a href="#7-7-5-测试模型" class="headerlink" title="7.7.5 测试模型"></a>7.7.5 测试模型</h5><h4 id="7-8循环神经网络应用场景"><a href="#7-8循环神经网络应用场景" class="headerlink" title="7.8循环神经网络应用场景"></a>7.8循环神经网络应用场景</h4><h3 id="第8章-生成式深度学习"><a href="#第8章-生成式深度学习" class="headerlink" title="第8章 生成式深度学习"></a>第8章 生成式深度学习</h3><h4 id="8-1-用变分自编码器生成图像"><a href="#8-1-用变分自编码器生成图像" class="headerlink" title="8.1 用变分自编码器生成图像"></a>8.1 用变分自编码器生成图像</h4><h5 id="8-1-1-自编码器"><a href="#8-1-1-自编码器" class="headerlink" title="8.1.1 自编码器"></a>8.1.1 自编码器</h5><h5 id="8-1-2变分自编码器"><a href="#8-1-2变分自编码器" class="headerlink" title="8.1.2变分自编码器"></a>8.1.2变分自编码器</h5><h5 id="8-1-3用变分自编码器生成图像"><a href="#8-1-3用变分自编码器生成图像" class="headerlink" title="8.1.3用变分自编码器生成图像"></a>8.1.3用变分自编码器生成图像</h5><h4 id="8-2-GAN简介"><a href="#8-2-GAN简介" class="headerlink" title="8.2 GAN简介"></a>8.2 GAN简介</h4><h5 id="8-2-1-GAN架构"><a href="#8-2-1-GAN架构" class="headerlink" title="8.2.1 GAN架构"></a>8.2.1 GAN架构</h5><h5 id="8-2-2-GAN的损失函数"><a href="#8-2-2-GAN的损失函数" class="headerlink" title="8.2.2 GAN的损失函数"></a>8.2.2 GAN的损失函数</h5><h4 id="8-3用GAN生成图像"><a href="#8-3用GAN生成图像" class="headerlink" title="8.3用GAN生成图像"></a>8.3用GAN生成图像</h4><h5 id="8-3-1判别器"><a href="#8-3-1判别器" class="headerlink" title="8.3.1判别器"></a>8.3.1判别器</h5><h5 id="8-3-2-生成器"><a href="#8-3-2-生成器" class="headerlink" title="8.3.2 生成器"></a>8.3.2 生成器</h5><h5 id="8-3-3-训练模型"><a href="#8-3-3-训练模型" class="headerlink" title="8.3.3 训练模型"></a>8.3.3 训练模型</h5><h5 id="8-3-4-可视化结果"><a href="#8-3-4-可视化结果" class="headerlink" title="8.3.4 可视化结果"></a>8.3.4 可视化结果</h5><h4 id="8-4-VAE与GAN的异同"><a href="#8-4-VAE与GAN的异同" class="headerlink" title="8.4 VAE与GAN的异同"></a>8.4 VAE与GAN的异同</h4><h4 id="8-5-Condition-GAN"><a href="#8-5-Condition-GAN" class="headerlink" title="8.5 Condition GAN"></a>8.5 Condition GAN</h4><h5 id="8-5-1-CGAN的架构"><a href="#8-5-1-CGAN的架构" class="headerlink" title="8.5.1 CGAN的架构"></a>8.5.1 CGAN的架构</h5><h5 id="8-5-2-CGAN-生成器"><a href="#8-5-2-CGAN-生成器" class="headerlink" title="8.5.2 CGAN 生成器"></a>8.5.2 CGAN 生成器</h5><h5 id="8-5-3-CGAN-判别器"><a href="#8-5-3-CGAN-判别器" class="headerlink" title="8.5.3 CGAN 判别器"></a>8.5.3 CGAN 判别器</h5><h5 id="8-5-4-CGAN-损失函数"><a href="#8-5-4-CGAN-损失函数" class="headerlink" title="8.5.4 CGAN 损失函数"></a>8.5.4 CGAN 损失函数</h5><h5 id="8-5-5-CGAN-可视化"><a href="#8-5-5-CGAN-可视化" class="headerlink" title="8.5.5 CGAN 可视化"></a>8.5.5 CGAN 可视化</h5><h5 id="8-5-6-查看指定标签的数据"><a href="#8-5-6-查看指定标签的数据" class="headerlink" title="8.5.6 查看指定标签的数据"></a>8.5.6 查看指定标签的数据</h5><h5 id="8-5-7-可视化损失值"><a href="#8-5-7-可视化损失值" class="headerlink" title="8.5.7 可视化损失值"></a>8.5.7 可视化损失值</h5><h4 id="8-6-DCGAN"><a href="#8-6-DCGAN" class="headerlink" title="8.6 DCGAN"></a>8.6 DCGAN</h4><h4 id="8-7-提升GAN训练效果的一些技巧"><a href="#8-7-提升GAN训练效果的一些技巧" class="headerlink" title="8.7 提升GAN训练效果的一些技巧"></a>8.7 提升GAN训练效果的一些技巧</h4><h2 id="深度学习实战"><a href="#深度学习实战" class="headerlink" title="深度学习实战"></a>深度学习实战</h2><h3 id="第9章-人脸检测与识别"><a href="#第9章-人脸检测与识别" class="headerlink" title="第9章 人脸检测与识别"></a>第9章 人脸检测与识别</h3><h4 id="9-1-人脸识别一般流程"><a href="#9-1-人脸识别一般流程" class="headerlink" title="9.1 人脸识别一般流程"></a>9.1 人脸识别一般流程</h4><h5 id="9-1-1图像采集"><a href="#9-1-1图像采集" class="headerlink" title="9.1.1图像采集"></a>9.1.1图像采集</h5><h5 id="9-1-2-人脸检测"><a href="#9-1-2-人脸检测" class="headerlink" title="9.1.2 人脸检测"></a>9.1.2 人脸检测</h5><h4 id="9-3特征提取"><a href="#9-3特征提取" class="headerlink" title="9.3特征提取"></a>9.3特征提取</h4><h4 id="9-4人脸识别"><a href="#9-4人脸识别" class="headerlink" title="9.4人脸识别"></a>9.4人脸识别</h4><h5 id="9-4-1-人脸识别主要原理"><a href="#9-4-1-人脸识别主要原理" class="headerlink" title="9.4.1 人脸识别主要原理"></a>9.4.1 人脸识别主要原理</h5><h5 id="9-4-2人脸识别发展"><a href="#9-4-2人脸识别发展" class="headerlink" title="9.4.2人脸识别发展"></a>9.4.2人脸识别发展</h5><h4 id="9-5-人脸检测与识别实例"><a href="#9-5-人脸检测与识别实例" class="headerlink" title="9.5 人脸检测与识别实例"></a>9.5 人脸检测与识别实例</h4><h5 id="9-5-1-验证检测代码"><a href="#9-5-1-验证检测代码" class="headerlink" title="9.5.1.验证检测代码"></a>9.5.1.验证检测代码</h5><h5 id="9-5-2-检测图像"><a href="#9-5-2-检测图像" class="headerlink" title="9.5.2.检测图像"></a>9.5.2.检测图像</h5><h5 id="9-5-3-检测后进行预处理"><a href="#9-5-3-检测后进行预处理" class="headerlink" title="9.5.3.检测后进行预处理"></a>9.5.3.检测后进行预处理</h5><h5 id="9-5-4-查看经检测后的图片"><a href="#9-5-4-查看经检测后的图片" class="headerlink" title="9.5.4.查看经检测后的图片"></a>9.5.4.查看经检测后的图片</h5><h5 id="9-5-5-人脸识别"><a href="#9-5-5-人脸识别" class="headerlink" title="9.5.5.人脸识别"></a>9.5.5.人脸识别</h5><h3 id="第10章-迁移学习实例"><a href="#第10章-迁移学习实例" class="headerlink" title="第10章 迁移学习实例"></a>第10章 迁移学习实例</h3><p>10.1 迁移学习简介<br>10.2 特征提取<br>10.2.1 Pytorch提供的预处理模块<br>10.2.2 特征提取实例<br>10.3 数据增强<br>10.3.1 按比例缩放<br>10.3.2 裁剪<br>10.3.3翻转<br>10.3.4改变颜色<br>10.3.5组合多种增强方法<br>10.4 微调实例<br>10.4.1 数据预处理<br>10.4.2 加载预训练模型<br>10.4.3 修改分类器<br>10.4.4 选择损失函数及优化器<br>10.4.5 训练及验证模型<br>10.5 用预训练模型清除图像中的雾霾<br>10.5.1 导入需要的模块<br>10.5.2 查看原来的图像<br>10.5.3 定义一个神经网络<br>10.5.4 训练模型<br>10.5.5 查看处理后的图像</p>
+<h3 id="第11章-神经网络机器翻译实例"><a href="#第11章-神经网络机器翻译实例" class="headerlink" title="第11章 神经网络机器翻译实例"></a>第11章 神经网络机器翻译实例</h3><p>11.1 Encode-Decoder模型原理<br>11.2 注意力框架<br>11.3 Pytorch实现注意力Decoder<br>11.3.1 构建Encoder<br>11.3.2 构建简单Decoder<br>11.3.3 构建注意力Decoder<br>11.4 用注意力机制实现中英文互译<br>11.4.1 导入需要的模块<br>11.4.2数据预处理<br>11.4.3构建模型<br>11.4.4训练模型<br>11.4.5随机采样，对模型进行测试<br>11.4.6可视化注意力</p>
+<h3 id="第12章-实战生成式模型"><a href="#第12章-实战生成式模型" class="headerlink" title="第12章 实战生成式模型"></a>第12章 实战生成式模型</h3><p>12.1 Deep Dream模型<br>12.1.1 Deep Dream原理<br>12.1.2 DeepDream算法流程<br>12.1.3 用Pytorch实现Deep Dream<br>12.2 风格迁移<br>12.2.1 内容损失<br>12.2.2 风格损失<br>12.2.3 用Pytorch实现神经网络风格迁移<br>12.3 Pytorch实现图像修复<br>12.3.1 网络结构<br>12.3.2 损失函数<br>12.3.3 图像修复实例<br>12.4 Pytorch实现DiscoGAN<br>12.4.1 DiscoGAN架构<br>12.4.2 损失函数<br>12.4.3 DiscoGAN实现<br>12.4.4 用Pytorch实现从边框生成鞋子</p>
+<h3 id="第13章-Caffe2模型迁移实例"><a href="#第13章-Caffe2模型迁移实例" class="headerlink" title="第13章 Caffe2模型迁移实例"></a>第13章 Caffe2模型迁移实例</h3><p>13.1 Caffe2简介<br>13.2 Caffe如何迁移到Caffe2<br>13.3 Pytorch如何迁移到caffe2</p>
+<h3 id="第14章-AI新方向：对抗攻击"><a href="#第14章-AI新方向：对抗攻击" class="headerlink" title="第14章 AI新方向：对抗攻击"></a>第14章 AI新方向：对抗攻击</h3><p>14.1对抗攻击简介<br>14.1.1白盒攻击与黑盒攻击<br>14.1.2无目标攻击与有目标攻击<br>14.2常见对抗样本生成方式<br>14.2.1快速梯度符号法<br>14.2.2快速梯度算法<br>14.3 Pytorch实现对抗攻击<br>14.3.1 实现无目标攻击<br>14.3.2 实现有目标攻击<br>14.4 对抗攻击和防御措施<br>14.4.1 对抗攻击<br>14.4.2 常见防御方法分类<br>14.5 总结</p>
+<h3 id="第15章-强化学习"><a href="#第15章-强化学习" class="headerlink" title="第15章 强化学习"></a>第15章 强化学习</h3><p>15.1 强化学习简介<br>15.2Q Learning 原理<br>15.2.1 Q Learning主要流程<br>15.2.2 Q函数<br>15.2.3 贪婪策略<br>15.3 用Pytorch实现Q Learning<br>15.3.1 定义Q-Learing主函数<br>15.3.2执行Q-Learing<br>15.4 SARSA 算法<br>15.4.1 SARSA算法主要步骤<br>15.4.2 用Pytorch实现SARSA算法</p>
+<p>第16章 深度强化学习<br>16.1 DSN算法原理<br>16.1.1 Q-Learning方法的局限性<br>16.1.2 用DL处理RL需要解决的问题<br>16.1.3 用DQN解决方法<br>16.1.4 定义损失函数<br>16.1.5 DQN的经验回放机制<br>16.1.6 目标网络<br>16.1.7 网络模型<br>16.1.8 DQN算法<br>16.2 用Pytorch实现 DQN算法</p>
+<h2 id="AI在各行业的最新应用"><a href="#AI在各行业的最新应用" class="headerlink" title="AI在各行业的最新应用"></a>AI在各行业的最新应用</h2><h3 id="AI-电商"><a href="#AI-电商" class="headerlink" title="AI+电商"></a>AI+电商</h3><h3 id="AI-金融"><a href="#AI-金融" class="headerlink" title="AI+金融"></a>AI+金融</h3><h3 id="AI-医疗"><a href="#AI-医疗" class="headerlink" title="AI+医疗"></a>AI+医疗</h3><h3 id="AI-零售"><a href="#AI-零售" class="headerlink" title="AI+零售"></a>AI+零售</h3><h3 id="AI-投行"><a href="#AI-投行" class="headerlink" title="AI+投行"></a>AI+投行</h3><h3 id="AI-制造"><a href="#AI-制造" class="headerlink" title="AI+制造"></a>AI+制造</h3><h3 id="AI-IT服务"><a href="#AI-IT服务" class="headerlink" title="AI+IT服务"></a>AI+IT服务</h3><h3 id="AI-汽车"><a href="#AI-汽车" class="headerlink" title="AI+汽车"></a>AI+汽车</h3><h3 id="AI-公共安全"><a href="#AI-公共安全" class="headerlink" title="AI+公共安全"></a>AI+公共安全</h3><p><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/30.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/31.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/32.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/33.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/34.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/35.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/36.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/37.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/38.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/39.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/40.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/41.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/42.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/43.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/44.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/45.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/46.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/47.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/48.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/49.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/50.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/51.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/52.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/53.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/54.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/55.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/56.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/57.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/58.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/59.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/60.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/61.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/62.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/63.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/64.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/65.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/66.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/67.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/68.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/69.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/70.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/71.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/72.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/73.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/74.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/75.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/76.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/77.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/78.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/79.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/80.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/81.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/82.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/83.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/84.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/85.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/86.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/87.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/88.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/89.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/90.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/91.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/92.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/93.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/94.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/95.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/96.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/97.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/98.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/99.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/100.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/101.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/102.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/103.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/104.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/105.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/106.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/107.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/108.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/109.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/110.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/111.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/112.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/113.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/114.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/115.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/116.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/117.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/118.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/119.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/120.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/121.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/122.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/123.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/124.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/125.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/126.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/127.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/128.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/129.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/130.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/131.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/132.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/133.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/134.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/135.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/136.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/137.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/138.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/139.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/140.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/141.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/142.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/143.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/144.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/145.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/146.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/147.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/148.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/149.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/150.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/151.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/152.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/153.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/154.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/155.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/156.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/157.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/158.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/159.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/160.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/161.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/162.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/163.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/164.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/165.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/166.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/167.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/168.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/169.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/170.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/171.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/172.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/173.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/174.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/175.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/176.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/177.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/178.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/179.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/180.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/181.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/182.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/183.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/184.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/185.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/186.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/187.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/188.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/189.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/190.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/191.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/192.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/193.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/194.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/195.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/196.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/197.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/198.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/199.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/200.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/201.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/202.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/203.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/204.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/205.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/206.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/207.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/208.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/209.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/210.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/211.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/212.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/213.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/214.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/215.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/216.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/217.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/218.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/219.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/220.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/221.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/222.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/223.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/224.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/225.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/226.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/227.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/228.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/229.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/230.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/231.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/232.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/233.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/234.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/235.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/236.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/237.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/238.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/239.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/240.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/241.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/242.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/243.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/244.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/245.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/246.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/247.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/248.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/249.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/250.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/251.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/252.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/253.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/254.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/255.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/256.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/257.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/258.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/259.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/260.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/261.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/262.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/263.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/264.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/265.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/266.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/267.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/268.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/269.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/270.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/271.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/272.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/273.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/274.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/275.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/276.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/277.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/278.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/279.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/280.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/281.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/282.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/283.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/284.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/285.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/286.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/287.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/288.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/289.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/290.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/291.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/292.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/293.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/294.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/295.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/296.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/297.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/298.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/299.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/300.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/301.jpg" alt=""><br><img src="https://2020.iosdevlog.com/2020/02/17/pytorch/302.jpg" alt=""></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/02/17/pytorch/" data-id="ck6qmz0ow008h7w2whxkw87n7" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+      
+        <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/16/android/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">智能安卓恶意软件检测系统</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ANN/" style="font-size: 11.67px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.67px;">Construction</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 16.67px;">Godot</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 18.33px;">ML</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.67px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 10px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 11.67px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/beginner/" style="font-size: 11.67px;">beginner</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/paper/" style="font-size: 13.33px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.67px;">plugin</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.67px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.67px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 15px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.67px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/17/pytorch/">《Python深度学习：基于PyTorch》 读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/16/android/">智能安卓恶意软件检测系统</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/16/9787544242516/">《白夜行》人物关系图</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/15/kindle/">Kindle 无 USB 传书</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/15/mining/">通过挖掘类比关系加速创新</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iOSDevLog<br>
+      Powered by © 2020 - <a href="https://www.iosdevlog.com" target="_blank">贾献华 2020 博客</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/2020" class="mobile-nav-link">2020 Calendar</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
