@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-17T15:42:20.233Z</updated>
+  <updated>2020-02-19T08:04:47.269Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,75 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《东野圭吾作品：11字谜案》人物关系图</title>
+    <link href="https://2020.iosdevlog.com/2020/02/19/9787020156047/"/>
+    <id>https://2020.iosdevlog.com/2020/02/19/9787020156047/</id>
+    <published>2020-02-19T03:34:10.000Z</published>
+    <updated>2020-02-19T08:04:47.269Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/19/9787020156047/1.svg" alt="《东野圭吾作品：11字谜案》人物关系图"></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/2.jpg" alt="《东野圭吾作品：11字谜案》"></p><p>东野圭吾作品：11字谜案<br>作者：[日]东野圭吾<br>译者：羊恩媺<br>出版社：人民文学出版社<br>出版时间：2020-01<br>ISBN：9787020156047</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/19/9787020156047/1.svg&quot; alt=&quot;《东野圭吾作品：11字谜案》人物关系图&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PyTorch iOS</title>
+    <link href="https://2020.iosdevlog.com/2020/02/18/PyTorch-iOS/"/>
+    <id>https://2020.iosdevlog.com/2020/02/18/PyTorch-iOS/</id>
+    <published>2020-02-18T14:30:04.000Z</published>
+    <updated>2020-02-18T14:32:43.935Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png" alt="2020/01/01"></p><a id="more"></a><h2 id="Xcode-Reset"><a href="#Xcode-Reset" class="headerlink" title="Xcode Reset"></a>Xcode Reset</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">default delete com.apple.Xcode</span><br></pre></td></tr></table></figure><h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><h2 id="CocoaPods"><a href="#CocoaPods" class="headerlink" title="CocoaPods"></a>CocoaPods</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pod init</span><br><span class="line">cat Podfile</span><br></pre></td></tr></table></figure><figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Uncomment the next line to define a global platform for your project</span></span><br><span class="line">platform <span class="symbol">:ios</span>, <span class="string">'9.0'</span></span><br><span class="line"></span><br><span class="line">target <span class="string">'PyTorch_iOS'</span> <span class="keyword">do</span></span><br><span class="line">  <span class="comment"># Comment the next line if you don't want to use dynamic frameworks</span></span><br><span class="line">  use_frameworks!</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Pods for PyTorch_iOS</span></span><br><span class="line">  pod <span class="string">'LibTorch'</span>, <span class="string">'~&gt; 1.4.0'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">end</span></span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png&quot; alt=&quot;2020/01/01&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
+    
+    
+      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《放学后》人物关系图</title>
+    <link href="https://2020.iosdevlog.com/2020/02/18/9787544291224/"/>
+    <id>https://2020.iosdevlog.com/2020/02/18/9787544291224/</id>
+    <published>2020-02-17T16:22:29.000Z</published>
+    <updated>2020-02-17T21:04:32.339Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/1.svg" alt="《放学后》人物关系图"></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/2.jpg" alt="《放学后》"></p><p>书名：放学后<br>作者：[日]东野圭吾<br>译者：赵峻<br>出版社：南海出版公司出版<br>时间：2017-09<br>ISBN：9787544291224</p><h2 id="更衣室"><a href="#更衣室" class="headerlink" title="更衣室"></a>更衣室</h2><p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/3.jpg" alt="更衣室简图"></p><p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/4.jpg" alt="门"></p><p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/5.jpg" alt="北条雅美 推理"></p><h2 id="体育节"><a href="#体育节" class="headerlink" title="体育节"></a>体育节</h2><table><thead><tr><th>时间</th><th>事件</th></tr></thead><tbody><tr><td>14:15</td><td>来宾、教职员趣味赛跑</td></tr><tr><td>14:30</td><td>三人拉力赛（一年级）</td></tr><tr><td>14:45</td><td>师生对抗障碍赛</td></tr><tr><td>15:00</td><td>创编舞（三年级）</td></tr><tr><td>15:20</td><td>化装游行（运动社团）</td></tr></tbody></table><h2 id="更衣室解迷"><a href="#更衣室解迷" class="headerlink" title="更衣室解迷"></a>更衣室解迷</h2><p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/6.jpg" alt="更衣室解迷"></p><p><img src="https://2020.iosdevlog.com/2020/02/18/9787544291224/7.jpg" alt="更衣室解迷"></p><h2 id="动机"><a href="#动机" class="headerlink" title="动机"></a>动机</h2><blockquote><p>“对她们来说，最重要的应该是美丽、纯粹、真实的东西，比如友情、爱情，也可能是自己的身体或容貌。很多时候，更抽象的回忆或梦想对她们来说也很重要。反过来说，她们最憎恨企图破坏或者从她们手中夺</p></blockquote><ol><li>自慰被看到的惠美<ul><li>惠美&amp;惠子：杀害看到学生自慰的老师</li></ul></li><li>“他根本不知道头发被剪得乱七八糟对我来说有多痛苦。”-阳子<ul><li>阳子：试图诬陷教导主任性骚扰</li></ul></li><li>“我没有给过她任何东西,甚至一直都是从她身上予取予求,更夺走了她的自由、快乐, 以及孩子。” 冷漠的丈夫和婚姻给她的精神带来的创痛。-裕美子<ul><li>裕美子&amp;情夫：杀害前岛的</li></ul></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/18/9787544291224/1.svg&quot; alt=&quot;《放学后》人物关系图&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="东野圭吾" scheme="https://2020.iosdevlog.com/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>《Python深度学习：基于PyTorch》 读书笔记</title>
@@ -422,78 +491,6 @@
     
     
       <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《明日歌》</title>
-    <link href="https://2020.iosdevlog.com/2020/02/05/tomorrow/"/>
-    <id>https://2020.iosdevlog.com/2020/02/05/tomorrow/</id>
-    <published>2020-02-05T13:54:07.000Z</published>
-    <updated>2020-02-05T14:16:32.286Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/05/tomorrow/1.png" alt="2020-02-05"></p><p>【作者】钱福 【朝代】明</p><p>明日复明日，明日何其多。<br>我生待明日，万事成蹉跎。<br>世人若被明日累，春去秋来老将至。<br>朝看水东流，暮看日西坠。<br>百年明日能几何？请君听我明日歌。<br>明日复明日，明日何其多！<br>日日待明日，万事成蹉跎。<br>世人皆被明日累，明日无穷老将至。<br>晨昏滚滚水东流，今古悠悠日西坠。<br>百年明日能几何？请君听我明日歌。</p><a id="more"></a><p>《今日歌》</p><p>【作者】文嘉 【朝代】明</p><p>今日复今日，今日何其少。<br>今日又不为，此事何时了。<br>人生百年几今日，今日不为真可惜。<br>若言姑待明朝至，明朝又有明朝事。<br>为君聊赋今日诗，努力请从今日始。</p><p>《杂诗》</p><p>【作者】陶渊明 【朝代】魏晋</p><p>人生无根蒂，飘如陌上尘。<br>分散逐风转，此已非常身。<br>落地为兄弟，何必骨肉亲！<br>得欢当作乐，斗酒聚比邻。</p><p><strong>盛年不重来，一日难再晨。<br>及时当勉励，岁月不待人。</strong></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/05/tomorrow/1.png&quot; alt=&quot;2020-02-05&quot;&gt;&lt;/p&gt;
-&lt;p&gt;【作者】钱福 【朝代】明&lt;/p&gt;
-&lt;p&gt;明日复明日，明日何其多。&lt;br&gt;我生待明日，万事成蹉跎。&lt;br&gt;世人若被明日累，春去秋来老将至。&lt;br&gt;朝看水东流，暮看日西坠。&lt;br&gt;百年明日能几何？请君听我明日歌。&lt;br&gt;明日复明日，明日何其多！&lt;br&gt;日日待明日，万事成蹉跎。&lt;br&gt;世人皆被明日累，明日无穷老将至。&lt;br&gt;晨昏滚滚水东流，今古悠悠日西坠。&lt;br&gt;百年明日能几何？请君听我明日歌。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
-    
-    
-      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《游戏剧本怎么写》</title>
-    <link href="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/"/>
-    <id>https://2020.iosdevlog.com/2020/02/04/Game-scenarios/</id>
-    <published>2020-02-04T14:23:37.000Z</published>
-    <updated>2020-02-16T07:03:36.367Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png" alt="游戏剧本怎么写"></p><p>作者: (日) 佐佐木智广<br>出版社: 人民邮电出版社<br>副标题: 游戏编剧新手的入门指南<br>原作名: ゲームシナリオの書き方 基礎から学ぶキャラクター・構成・テキストの秘訣<br>译者: 支鹏浩<br>出版年: 2018-8<br>页数: 277<br>定价: 59<br>装帧: 平装<br>ISBN: 9787115484338</p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E8%AE%BE%E5%AE%9A%E4%B8%BB%E9%A2%98.png" alt="设定主题"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E8%A7%92%E8%89%B2%E8%AE%BE%E5%AE%9A.png" alt="角色设定"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png" alt="结构"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png" alt="结构"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC.png" alt="游戏剧本"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%95%85%E4%BA%8B%E8%B5%B0%E5%90%91.png" alt="故事走向"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E5%85%B3%E7%B3%BB.png" alt="关系"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E4%B8%96%E7%95%8C%E8%AE%BE%E5%AE%9A%E8%A1%A8.png" alt="世界设定表"><br><img src="https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E9%80%89%E9%A1%B9.png" alt="选项"></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/04/Game-scenarios/%E6%B8%B8%E6%88%8F%E5%89%A7%E6%9C%AC%E6%80%8E%E4%B9%88%E5%86%99.png&quot; alt=&quot;游戏剧本怎么写&quot;&gt;&lt;/p&gt;
-&lt;p&gt;作者: (日) 佐佐木智广&lt;br&gt;出版社: 人民邮电出版社&lt;br&gt;副标题: 游戏编剧新手的入门指南&lt;br&gt;原作名: ゲームシナリオの書き方 基礎から学ぶキャラクター・構成・テキストの秘訣&lt;br&gt;译者: 支鹏浩&lt;br&gt;出版年: 2018-8&lt;br&gt;页数: 277&lt;br&gt;定价: 59&lt;br&gt;装帧: 平装&lt;br&gt;ISBN: 9787115484338&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="设计" scheme="https://2020.iosdevlog.com/tags/%E8%AE%BE%E8%AE%A1/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>英语学习</title>
-    <link href="https://2020.iosdevlog.com/2020/02/03/English/"/>
-    <id>https://2020.iosdevlog.com/2020/02/03/English/</id>
-    <published>2020-02-03T05:47:43.000Z</published>
-    <updated>2020-02-03T15:50:58.347Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/02/03/English/1.png" alt="English"></p><a id="more"></a><h2 id="发音"><a href="#发音" class="headerlink" title="发音"></a>发音</h2><ol><li>材料选择。学习材料的选择有四个“不要”：<ol><li>“不要太长”；一般 200 词的段落或者篇章节选即可，因为绝大多数的音和发音技巧应该均已涵盖。</li><li>“不要没范读”，也就是说材料需要配有可供模仿学习的音频，而且必须是母语人士朗读。</li><li>“不要有偏好”，特别是针对文本类型，大家要尽量选择不同体裁的文本进行演练。</li><li>“不要太难”，也就是不要练习过快或过慢、文本内容无法理解的文段。</li></ol></li><li>身心准备。放松发音器官和颈肩；调整情绪至平和自然状态；精神专注。</li><li>熟悉文稿。一定要了解朗读的文本内容，多多使用词典，不仅要确认发音，同时要确保对内容有深刻的理解。</li><li>样本对比。录制个人朗读的样本，然后和原声同时播放，进行对比、确定问题；必要的时候，可以通过（软件等技术手段）调整播放速度，进行精细对比。</li><li>问题修正。锁定问题，修正问题；解决问题之后，再次录制。</li><li>再次对比。重复第四步，寻找个人版本和原版的差异。如有必要，练习者可向有能力者请教、寻求帮助。</li><li>开始新篇。完成当前练习任务；慎重选择新材料，开始新的练习过程。</li><li>复习回顾。制订适当的学习、回顾周期。回顾的目的有两个：<ol><li>确定自己的练习效果，如果大家在回顾较长时间之前的练习的时候，认识到了个人版本的不足，这就说明个人发音有所进步。</li><li>不断进步的体验可以转化为学习动力，促进后续的学习。</li></ol></li></ol><p>由于学习者不了解将要开始的学习过程，摆脱学习困境也就成了一个难题。</p><h2 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h2><ol><li>选择一篇内容不太脱离生活的雅思阅读文章（可通过选购《剑桥雅思真题试题集》系列丛书获得），把其中某一段的句子分为 12 词以内、13～20 词、20 词以上三种类型。雅思阅读文章的语言没有时代感，而且文字质量有保证。因为句子词数和语法复杂程度直接相关，所以我们先研究词数少的句子，然后逐渐加大难度、研究长句。学习要循序渐进。</li><li>逐一确定句中的所有语法点，小到冠词、单复数，大到时态、从句。逐一列出后，向有能力的人确认表单是否完整。</li><li>使用工具书、网络查证所有语法点的名称及其真正含义。在这个步骤中一定要注意：我们要列出的是语法原理和语法名称的关系，不是语法点的举例。例如，动词不定式的结构是“to do”，但“不定”是什么意思？从句中的“从”怎么解释？和先行词中“先”对应的“后”又是什么呢？</li><li>利用已知的语法点造句，并让有能力的人指出句中的语法问题，重复 2、3 两个步骤，直到个人编写的句子没有语法问题为止。请大家注意：用英文表达任意想法当然比仿写例句困难，请大家根据个人情况和学习进度进行选择。</li></ol><h2 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h2><ol><li>背单词的意愿和态度</li><li>单词学习的专注度</li><li>单词学习的周期</li><li>外力辅助因素</li><li>单词学习的必要性</li><li>单词的掌握程度</li><li>单词使用强度</li></ol><h3 id="字典推荐"><a href="#字典推荐" class="headerlink" title="字典推荐"></a>字典推荐</h3><ol><li>发音字典<ul><li>《朗文发音字典第三版》，简称 <em>LPD3</em></li></ul></li><li>词汇字典<ul><li>Oxford Advanced Learner’s English-Chinese Dictionary /《牛津高阶英汉双解词典》</li><li>Longman Dictionary of Contemporary English /《朗文当代高级英语辞典》（双解注释或纯英文注释）</li></ul></li></ol><h3 id="词汇四部曲"><a href="#词汇四部曲" class="headerlink" title="词汇四部曲"></a>词汇四部曲</h3><ol><li>意<ul><li>释义</li></ul></li><li>形<ul><li>一个词群中所有的单词和相关用法</li></ul></li><li>连<ul><li>发挥自己的语言能动性，充分完成语言表情达意的功能</li></ul></li><li>用<ul><li>随学随用</li><li>以用代学</li></ul></li></ol><h2 id="听力"><a href="#听力" class="headerlink" title="听力"></a>听力</h2><ul><li>水平提升</li><li>效果考察</li><li>兴趣导向</li><li>类型选择</li><li>语言套用</li><li>剧集钻研</li><li>相关练习</li><li>文化吸收</li></ul><h2 id="阅读"><a href="#阅读" class="headerlink" title="阅读"></a>阅读</h2><ul><li>心理</li><li>字词</li><li>语法</li><li>背景</li><li>逻辑</li></ul><h3 id="书的类型"><a href="#书的类型" class="headerlink" title="书的类型"></a>书的类型</h3><ul><li>事实<ul><li>教科书</li><li>传记</li><li>字典</li></ul></li><li>理念</li><li>虚构<ul><li>小说</li></ul></li><li>综合<ul><li>前 3 种</li></ul></li></ul><p>多看 <strong>传世、获奖</strong> 的作品</p><ul><li>《牛津阅读树》系列丛书</li><li>《剑桥雅思真题试题集》中的阅读试题</li></ul><h2 id="口语"><a href="#口语" class="headerlink" title="口语"></a>口语</h2><p>口语评定标准</p><ul><li>内容至上</li><li>公认标准</li><li>母语内容储备</li><li>输入的有效性</li><li>理想的输出</li><li>环境与个人</li><li>英语角与群聊天</li></ul><h2 id="写作"><a href="#写作" class="headerlink" title="写作"></a>写作</h2><ul><li>难度与惰性</li><li>记叙文</li><li>议论文</li><li>说明文</li></ul><p>规则</p><ul><li>预设<ul><li>目的</li><li>文体</li><li>选题</li></ul></li><li>提纲</li><li>撰写<ul><li>开头</li><li>主体</li><li>结尾</li></ul></li><li>修改</li></ul><p>好的写作习惯</p><ul><li>素材积累<ul><li>素材的范围<br>  A.阐述权威观点或介绍事实的论文B.美文或范文C.模板D.句子E.相关词汇</li><li>素材的分类<ul><li>政治、经济、文化、科技、教育、体育、媒体、社会、环保、犯罪、工作、生活、娱乐</li></ul></li><li>素材的处理</li><li>素材积累的副作用</li></ul></li><li>逻辑提升</li><li>高效练习方法</li></ul><p>高效写作练习法</p><ol><li>确定文体和题目</li><li>完成提纲</li><li>完成标题句</li><li>计时完成段落</li><li>将文段交给有能力者进行批改</li></ol><h2 id="翻译"><a href="#翻译" class="headerlink" title="翻译"></a>翻译</h2><ul><li>翻译能力并不唾手可得</li><li>从水浅的地方摸着石头过河</li><li>如何当“第一个”翻译</li></ul><p>参考：《揭秘英语学习50“坑”》</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/03/English/1.png&quot; alt=&quot;English&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="English" scheme="https://2020.iosdevlog.com/tags/English/"/>
     
   </entry>
   
