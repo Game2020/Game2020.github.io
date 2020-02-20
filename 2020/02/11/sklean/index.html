@@ -7,10 +7,12 @@
   
   <title>Scikit-Learn Cheat Sheet：Python机器学习 | Game 2020</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="scikit-learn">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Scikit-Learn Cheat Sheet：Python机器学习">
 <meta property="og:url" content="https://2020.iosdevlog.com/2020/02/11/sklean/index.html">
 <meta property="og:site_name" content="Game 2020">
+<meta property="og:description" content="scikit-learn">
 <meta property="og:image" content="https://scikit-learn.org/stable/_static/ml_map.png">
 <meta property="og:image" content="http://upload-images.jianshu.io/upload_images/910914-166f8a6e1d1180b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="article:published_time" content="2020-02-11T15:29:44.000Z">
@@ -99,132 +101,117 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://scikit-learn.org/stable/_static/ml_map.png" alt="scikit-learn"></p>
+        <figure>
+<img src="https://scikit-learn.org/stable/_static/ml_map.png" alt="" /><figcaption>scikit-learn</figcaption>
+</figure>
 <a id="more"></a>
-
 <p>一个方便的 <code>scikit-learn</code> 备忘录，用于使用 <code>Python</code> 进行机器学习，包括代码示例。</p>
-<p>大多数使用 <code>Python</code> 学习数据科学的人肯定已经听说过 <code>scikit-learn</code>，开源 <code>Python</code> 库在统一界面的帮助下实现了各种机器学习，预处理，交叉验证和可视化算法。 </p>
-<p>如果你还是这个领域的新手，你应该意识到机器学习，以及这个 <code>Python</code> 库，都属于每个有抱负的数据科学家必须知道的。 </p>
-<p>这就是为什么 DataCamp 已经 <code>scikit-learn</code> 为那些已经开始学习 <code>Python</code> 包的人创建了一个备忘录，但仍然需要一个方便的参考表。或者，如果您仍然不知道如何 <code>scikit-learn</code> 工作，这台机器学习备忘录可能会派上用场，以便快速了解入门时需要了解的基础知识。 </p>
-<p>无论哪种方式，我们都确信您在解决机器学习问题时会发现它很有用！  </p>
-<p>这个 <code>scikit-learn</code>备忘录将向您介绍成功实现机器学习算法所需的基本步骤：您将看到如何加载数据，如何预处理它，如何创建自己的模型以适合您的模型您的数据和预测目标标签，如何验证您的模型以及如何进一步调整以提高其性能。 </p>
-<p><a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/910914-166f8a6e1d1180b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Scikit-Learn Cheat Sheet"></a></p>
-<p>简而言之，这个备忘录将启动您的数据科学项目：借助代码示例，您可以立即创建，验证和调整您的机器学习模型。  </p>
+<p>大多数使用 <code>Python</code> 学习数据科学的人肯定已经听说过 <code>scikit-learn</code>，开源 <code>Python</code> 库在统一界面的帮助下实现了各种机器学习，预处理，交叉验证和可视化算法。 </p>
+<p>如果你还是这个领域的新手，你应该意识到机器学习，以及这个 <code>Python</code> 库，都属于每个有抱负的数据科学家必须知道的。 </p>
+<p>这就是为什么 DataCamp 已经 <code>scikit-learn</code> 为那些已经开始学习 <code>Python</code> 包的人创建了一个备忘录，但仍然需要一个方便的参考表。或者，如果您仍然不知道如何 <code>scikit-learn</code> 工作，这台机器学习备忘录可能会派上用场，以便快速了解入门时需要了解的基础知识。 </p>
+<p>无论哪种方式，我们都确信您在解决机器学习问题时会发现它很有用！  </p>
+<p>这个 <code>scikit-learn</code>备忘录将向您介绍成功实现机器学习算法所需的基本步骤：您将看到如何加载数据，如何预处理它，如何创建自己的模型以适合您的模型您的数据和预测目标标签，如何验证您的模型以及如何进一步调整以提高其性能。 </p>
+<p><a href="https://s3.amazonaws.com/assets.datacamp.com/blog_assets/Scikit_Learn_Cheat_Sheet_Python.pdf" target="_blank" rel="noopener"><img src="http://upload-images.jianshu.io/upload_images/910914-166f8a6e1d1180b2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Scikit-Learn Cheat Sheet" /></a></p>
+<p>简而言之，这个备忘录将启动您的数据科学项目：借助代码示例，您可以立即创建，验证和调整您的机器学习模型。  </p>
 <p>你还在等什么？开始的时候了！</p>
-<p>*<em>（点击上方下载可打印版本或阅读以下在线版本。） *</em></p>
-<h2 id="Python-For-Data-Science备忘录：Scikit-learn"><a href="#Python-For-Data-Science备忘录：Scikit-learn" class="headerlink" title="Python For Data Science备忘录：Scikit-learn"></a>Python For Data Science备忘录：Scikit-learn</h2><p>Scikit-learn是一个开源Python库，使用统一的界面实现一系列机器学习，预处理，交叉验证和可视化算法。</p>
-<h3 id="一个基本的例子"><a href="#一个基本的例子" class="headerlink" title="一个基本的例子"></a>一个基本的例子</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn import neighbors, datasets, preprocessing</span><br><span class="line">&gt;&gt;&gt; from sklearn.model_selection import train_test_split</span><br><span class="line">&gt;&gt;&gt; from sklearn.metrics import accuracy_score</span><br><span class="line">&gt;&gt;&gt; iris &#x3D; datasets.load_iris()</span><br><span class="line">&gt;&gt;&gt; X, y &#x3D; iris.data[:, :2], iris.target</span><br><span class="line">&gt;&gt;&gt; X_train, X_test, y_train, y_test &#x3D; train_test_split(X, y, random_state&#x3D;33)</span><br><span class="line">&gt;&gt;&gt; scaler &#x3D; preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">&gt;&gt;&gt; X_train &#x3D; scaler.transform(X_train)</span><br><span class="line">&gt;&gt;&gt; X_test &#x3D; scaler.transform(X_test)</span><br><span class="line">&gt;&gt;&gt; knn &#x3D; neighbors.KNeighborsClassifier(n_neighbors&#x3D;5)</span><br><span class="line">&gt;&gt;&gt; knn.fit(X_train, y_train)</span><br><span class="line">&gt;&gt;&gt; y_pred &#x3D; knn.predict(X_test)</span><br><span class="line">&gt;&gt;&gt; accuracy_score(y_test, y_pred)</span><br></pre></td></tr></table></figure>
-
-<h3 id="加载数据"><a href="#加载数据" class="headerlink" title="加载数据"></a>加载数据</h3><p>您的数据需要是数字并存储为NumPy数组或SciPy稀疏矩阵。其他可转换为数字数组的类型（如Pandas DataFrame）也是可以接受的。</p>
+<p><strong>（点击上方下载可打印版本或阅读以下在线版本。） </strong></p>
+<h2 id="python-for-data-science备忘录scikit-learn">Python For Data Science备忘录：Scikit-learn</h2>
+<p>Scikit-learn是一个开源Python库，使用统一的界面实现一系列机器学习，预处理，交叉验证和可视化算法。</p>
+<h3 id="一个基本的例子">一个基本的例子</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn import neighbors, datasets, preprocessing</span><br><span class="line">&gt;&gt;&gt; from sklearn.model_selection import train_test_split</span><br><span class="line">&gt;&gt;&gt; from sklearn.metrics import accuracy_score</span><br><span class="line">&gt;&gt;&gt; iris &#x3D; datasets.load_iris()</span><br><span class="line">&gt;&gt;&gt; X, y &#x3D; iris.data[:, :2], iris.target</span><br><span class="line">&gt;&gt;&gt; X_train, X_test, y_train, y_test &#x3D; train_test_split(X, y, random_state&#x3D;33)</span><br><span class="line">&gt;&gt;&gt; scaler &#x3D; preprocessing.StandardScaler().fit(X_train)</span><br><span class="line">&gt;&gt;&gt; X_train &#x3D; scaler.transform(X_train)</span><br><span class="line">&gt;&gt;&gt; X_test &#x3D; scaler.transform(X_test)</span><br><span class="line">&gt;&gt;&gt; knn &#x3D; neighbors.KNeighborsClassifier(n_neighbors&#x3D;5)</span><br><span class="line">&gt;&gt;&gt; knn.fit(X_train, y_train)</span><br><span class="line">&gt;&gt;&gt; y_pred &#x3D; knn.predict(X_test)</span><br><span class="line">&gt;&gt;&gt; accuracy_score(y_test, y_pred)</span><br></pre></td></tr></table></figure>
+<h3 id="加载数据">加载数据</h3>
+<p>您的数据需要是数字并存储为NumPy数组或SciPy稀疏矩阵。其他可转换为数字数组的类型（如Pandas DataFrame）也是可以接受的。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; import numpy as np</span><br><span class="line">&gt;&gt;&gt; X &#x3D; np.random.random((10,5))</span><br><span class="line">&gt;&gt;&gt; y &#x3D; np.array([&#39;M&#39;,&#39;M&#39;,&#39;F&#39;,&#39;F&#39;,&#39;M&#39;,&#39;F&#39;,&#39;M&#39;,&#39;M&#39;,&#39;F&#39;,&#39;F&#39;,&#39;F&#39;])</span><br><span class="line">&gt;&gt;&gt; X[X &lt; 0.7] &#x3D; 0</span><br></pre></td></tr></table></figure>
-
-<h3 id="预处理数据"><a href="#预处理数据" class="headerlink" title="预处理数据"></a>预处理数据</h3><h4 id="标准化"><a href="#标准化" class="headerlink" title="标准化"></a>标准化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import StandardScaler</span><br><span class="line">&gt;&gt;&gt; scaler &#x3D; StandardScaler().fit(X_train)</span><br><span class="line">&gt;&gt;&gt; standardized_X &#x3D; scaler.transform(X_train)</span><br><span class="line">&gt;&gt;&gt; standardized_X_test &#x3D; scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
-
-<h4 id="正则化"><a href="#正则化" class="headerlink" title="正则化"></a>正则化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import Normalizer</span><br><span class="line">&gt;&gt;&gt; scaler &#x3D; Normalizer().fit(X_train)</span><br><span class="line">&gt;&gt;&gt; normalized_X &#x3D; scaler.transform(X_train)</span><br><span class="line">&gt;&gt;&gt; normalized_X_test &#x3D; scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
-
-<h4 id="二值化"><a href="#二值化" class="headerlink" title="二值化"></a>二值化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import Binarizer</span><br><span class="line">&gt;&gt;&gt; binarizer &#x3D; Binarizer(threshold&#x3D;0.0).fit(X)</span><br><span class="line">&gt;&gt;&gt; binary_X &#x3D; binarizer.transform(X)</span><br></pre></td></tr></table></figure>
-
-<h4 id="编码分类功能"><a href="#编码分类功能" class="headerlink" title="编码分类功能"></a>编码分类功能</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import LabelEncoder</span><br><span class="line">&gt;&gt;&gt; enc &#x3D; LabelEncoder()</span><br><span class="line">&gt;&gt;&gt; y &#x3D; enc.fit_transform(y)</span><br></pre></td></tr></table></figure>
-
-<h4 id="输入缺失值"><a href="#输入缺失值" class="headerlink" title="输入缺失值"></a>输入缺失值</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;from sklearn.preprocessing import Imputer</span><br><span class="line">&gt;&gt;&gt;imp &#x3D; Imputer(missing_values&#x3D;0, strategy&#x3D;&#39;mean&#39;, axis&#x3D;0)</span><br><span class="line">&gt;&gt;&gt;imp.fit_transform(X_train)</span><br></pre></td></tr></table></figure>
-
-<h4 id="生成多项式特征"><a href="#生成多项式特征" class="headerlink" title="生成多项式特征"></a>生成多项式特征</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import PolynomialFeatures</span><br><span class="line">&gt;&gt;&gt; poly &#x3D; PolynomialFeatures(5)</span><br><span class="line">&gt;&gt;&gt; oly.fit_transform(X)</span><br></pre></td></tr></table></figure>
-
-<h3 id="训练和测试数据"><a href="#训练和测试数据" class="headerlink" title="训练和测试数据"></a>训练和测试数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.model_selection import train_test_split</span><br><span class="line">&gt;&gt;&gt; X_train, X_test, y_train, y_test &#x3D; train_test_split(X,y,random_state&#x3D;0)</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建你的模型"><a href="#创建你的模型" class="headerlink" title="创建你的模型"></a>创建你的模型</h3><h4 id="监督学习估算"><a href="#监督学习估算" class="headerlink" title="监督学习估算"></a>监督学习估算</h4><p><strong>线性回归</strong></p>
+<h3 id="预处理数据">预处理数据</h3>
+<h4 id="标准化">标准化</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import StandardScaler</span><br><span class="line">&gt;&gt;&gt; scaler &#x3D; StandardScaler().fit(X_train)</span><br><span class="line">&gt;&gt;&gt; standardized_X &#x3D; scaler.transform(X_train)</span><br><span class="line">&gt;&gt;&gt; standardized_X_test &#x3D; scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
+<h4 id="正则化">正则化</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import Normalizer</span><br><span class="line">&gt;&gt;&gt; scaler &#x3D; Normalizer().fit(X_train)</span><br><span class="line">&gt;&gt;&gt; normalized_X &#x3D; scaler.transform(X_train)</span><br><span class="line">&gt;&gt;&gt; normalized_X_test &#x3D; scaler.transform(X_test)</span><br></pre></td></tr></table></figure>
+<h4 id="二值化">二值化</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import Binarizer</span><br><span class="line">&gt;&gt;&gt; binarizer &#x3D; Binarizer(threshold&#x3D;0.0).fit(X)</span><br><span class="line">&gt;&gt;&gt; binary_X &#x3D; binarizer.transform(X)</span><br></pre></td></tr></table></figure>
+<h4 id="编码分类功能">编码分类功能</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import LabelEncoder</span><br><span class="line">&gt;&gt;&gt; enc &#x3D; LabelEncoder()</span><br><span class="line">&gt;&gt;&gt; y &#x3D; enc.fit_transform(y)</span><br></pre></td></tr></table></figure>
+<h4 id="输入缺失值">输入缺失值</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt;from sklearn.preprocessing import Imputer</span><br><span class="line">&gt;&gt;&gt;imp &#x3D; Imputer(missing_values&#x3D;0, strategy&#x3D;&#39;mean&#39;, axis&#x3D;0)</span><br><span class="line">&gt;&gt;&gt;imp.fit_transform(X_train)</span><br></pre></td></tr></table></figure>
+<h4 id="生成多项式特征">生成多项式特征</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.preprocessing import PolynomialFeatures</span><br><span class="line">&gt;&gt;&gt; poly &#x3D; PolynomialFeatures(5)</span><br><span class="line">&gt;&gt;&gt; oly.fit_transform(X)</span><br></pre></td></tr></table></figure>
+<h3 id="训练和测试数据">训练和测试数据</h3>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.model_selection import train_test_split</span><br><span class="line">&gt;&gt;&gt; X_train, X_test, y_train, y_test &#x3D; train_test_split(X,y,random_state&#x3D;0)</span><br></pre></td></tr></table></figure>
+<h3 id="创建你的模型">创建你的模型</h3>
+<h4 id="监督学习估算">监督学习估算</h4>
+<p><strong>线性回归</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.linear_model import LinearRegression</span><br><span class="line">&gt;&gt;&gt; lr &#x3D; LinearRegression(normalize&#x3D;True)</span><br></pre></td></tr></table></figure>
-
 <p><strong>支持向量机（SVM）</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.svm import SVC</span><br><span class="line">&gt;&gt;&gt; svc &#x3D; SVC(kernel&#x3D;&#39;linear&#39;)</span><br></pre></td></tr></table></figure>
-
 <p><strong>朴素贝叶斯</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.naive_bayes import GaussianNB</span><br><span class="line">&gt;&gt;&gt; gnb &#x3D; GaussianNB()</span><br></pre></td></tr></table></figure>
-
 <p><strong>K-近邻算法（KNN）</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn import neighbors</span><br><span class="line">&gt;&gt;&gt; knn &#x3D; neighbors.KNeighborsClassifier(n_neighbors&#x3D;5)</span><br></pre></td></tr></table></figure>
-
 <p><strong>无监督学习估算器</strong></p>
 <p><strong>主成分分析（PCA）</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.decomposition import PCA</span><br><span class="line">&gt;&gt;&gt; pca &#x3D; PCA(n_components&#x3D;0.95)</span><br></pre></td></tr></table></figure>
-
 <p><strong>K均值聚类算法(K-Means)</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.cluster import KMeans</span><br><span class="line">&gt;&gt;&gt; k_means &#x3D; KMeans(n_clusters&#x3D;3, random_state&#x3D;0)</span><br></pre></td></tr></table></figure>
-
-<h3 id="模型拟合"><a href="#模型拟合" class="headerlink" title="模型拟合"></a>模型拟合</h3><h4 id="监督学习"><a href="#监督学习" class="headerlink" title="监督学习"></a>监督学习</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; lr.fit(X, y)</span><br><span class="line">&gt;&gt;&gt; knn.fit(X_train, y_train)</span><br><span class="line">&gt;&gt;&gt; svc.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
-
+<h3 id="模型拟合">模型拟合</h3>
+<h4 id="监督学习">监督学习</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; lr.fit(X, y)</span><br><span class="line">&gt;&gt;&gt; knn.fit(X_train, y_train)</span><br><span class="line">&gt;&gt;&gt; svc.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
 <p>无监督学习</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; k_means.fit(X_train)</span><br><span class="line">&gt;&gt;&gt; pca_model &#x3D; pca.fit_transform(X_train)</span><br></pre></td></tr></table></figure>
-
-<h3 id="预测"><a href="#预测" class="headerlink" title="预测"></a>预测</h3><p><strong>监督估算师</strong></p>
+<h3 id="预测">预测</h3>
+<p><strong>监督估算师</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; y_pred &#x3D; svc.predict(np.random.random((2,5)))</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; y_pred &#x3D; lr.predict(X_test)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; y_pred &#x3D; knn.predict_proba(X_test))</span><br></pre></td></tr></table></figure>
-
 <p><strong>无监督估计</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; y_pred &#x3D; k_means.predict(X_test)</span><br></pre></td></tr></table></figure>
-
-<h3 id="评估您的模型的性能"><a href="#评估您的模型的性能" class="headerlink" title="评估您的模型的性能"></a>评估您的模型的性能</h3><h4 id="分类指标"><a href="#分类指标" class="headerlink" title="分类指标"></a>分类指标</h4><p><strong>准确度分数</strong></p>
+<h3 id="评估您的模型的性能">评估您的模型的性能</h3>
+<h4 id="分类指标">分类指标</h4>
+<p><strong>准确度分数</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; knn.score(X_test, y_test)</span><br><span class="line">&gt;&gt;&gt; from sklearn.metrics import accuracy_score</span><br><span class="line">&gt;&gt;&gt; accuracy_score(y_test, y_pred)</span><br></pre></td></tr></table></figure>
-
 <p><strong>分类报告</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import classification_report</span><br><span class="line">&gt;&gt;&gt; print(classification_report(y_test, y_pred)))</span><br></pre></td></tr></table></figure>
-
 <p><strong>混淆矩阵</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import confusion_matrix</span><br><span class="line">&gt;&gt;&gt; print(confusion_matrix(y_test, y_pred)))</span><br></pre></td></tr></table></figure>
-
-<h4 id="回归指标"><a href="#回归指标" class="headerlink" title="回归指标"></a>回归指标</h4><p><strong>平均绝对误差</strong></p>
+<h4 id="回归指标">回归指标</h4>
+<p><strong>平均绝对误差</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import mean_absolute_error</span><br><span class="line">&gt;&gt;&gt; y_true &#x3D; [3, -0.5, 2])</span><br><span class="line">&gt;&gt;&gt; mean_absolute_error(y_true, y_pred))</span><br></pre></td></tr></table></figure>
-
 <p><strong>均方误差</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import mean_squared_error</span><br><span class="line">&gt;&gt;&gt; mean_squared_error(y_test, y_pred))</span><br></pre></td></tr></table></figure>
-
-<p><strong>R <sup>2</sup> score</strong></p>
+<p><strong>R <sup>2</sup> score</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import r2_score</span><br><span class="line">&gt;&gt;&gt; r2_score(y_true, y_pred))</span><br></pre></td></tr></table></figure>
-
-<h4 id="群集指标"><a href="#群集指标" class="headerlink" title="群集指标"></a>群集指标</h4><p><strong>调整后的兰德指数</strong></p>
+<h4 id="群集指标">群集指标</h4>
+<p><strong>调整后的兰德指数</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import adjusted_rand_score</span><br><span class="line">&gt;&gt;&gt; adjusted_rand_score(y_true, y_pred))</span><br></pre></td></tr></table></figure>
-
 <p><strong>同质性</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import homogeneity_score</span><br><span class="line">&gt;&gt;&gt; homogeneity_score(y_true, y_pred))</span><br></pre></td></tr></table></figure>
-
 <p><strong>V-措施</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.metrics import v_measure_score</span><br><span class="line">&gt;&gt;&gt; metrics.v_measure_score(y_true, y_pred))</span><br></pre></td></tr></table></figure>
-
-<h4 id="交叉验证"><a href="#交叉验证" class="headerlink" title="交叉验证"></a>交叉验证</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(cross_val_score(knn, X_train, y_train, cv&#x3D;4))</span><br><span class="line">&gt;&gt;&gt; print(cross_val_score(lr, X, y, cv&#x3D;2))</span><br></pre></td></tr></table></figure>
-
-<h3 id="调整你的模型"><a href="#调整你的模型" class="headerlink" title="调整你的模型"></a>调整你的模型</h3><h4 id="网格搜索"><a href="#网格搜索" class="headerlink" title="网格搜索"></a>网格搜索</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.grid_search import GridSearchCV</span><br></pre></td></tr></table></figure>
-
+<h4 id="交叉验证">交叉验证</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(cross_val_score(knn, X_train, y_train, cv&#x3D;4))</span><br><span class="line">&gt;&gt;&gt; print(cross_val_score(lr, X, y, cv&#x3D;2))</span><br></pre></td></tr></table></figure>
+<h3 id="调整你的模型">调整你的模型</h3>
+<h4 id="网格搜索">网格搜索</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.grid_search import GridSearchCV</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; params &#x3D; &#123;&quot;n_neighbors&quot;: np.arange(1,3), &quot;metric&quot;: [&quot;euclidean&quot;, &quot;cityblock&quot;]&#125;</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; grid &#x3D; GridSearchCV(estimator&#x3D;knn,param_grid&#x3D;params)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; grid.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(grid.best_score_)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(grid.best_estimator_.n_neighbors)</span><br></pre></td></tr></table></figure>
-
-<h4 id="随机参数优化"><a href="#随机参数优化" class="headerlink" title="随机参数优化"></a>随机参数优化</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.grid_search import RandomizedSearchCV</span><br></pre></td></tr></table></figure>
-
+<h4 id="随机参数优化">随机参数优化</h4>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; from sklearn.grid_search import RandomizedSearchCV</span><br></pre></td></tr></table></figure>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; params &#x3D; &#123;&quot;n_neighbors&quot;: range(1,5), &quot;weights&quot;: [&quot;uniform&quot;, &quot;distance&quot;]&#125;</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; rsearch &#x3D; RandomizedSearchCV(estimator&#x3D;knn,</span><br><span class="line">   param_distributions&#x3D;params,</span><br><span class="line">   cv&#x3D;4,</span><br><span class="line">   n_iter&#x3D;8,</span><br><span class="line">   random_state&#x3D;5)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; rsearch.fit(X_train, y_train)</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt;&gt;&gt; print(rsearch.best_score_)</span><br></pre></td></tr></table></figure>
-
-<h3 id="走得更远"><a href="#走得更远" class="headerlink" title="走得更远"></a>走得更远</h3><p>从<a href="https://www.datacamp.com/community/tutorials/machine-learning-python/" target="_blank" rel="noopener">我们为初学者学习scikit-learn教程</a>开始  ，您将以简单，循序渐进的方式学习如何探索手写数字数据，如何为其创建模型，如何使您的数据适合您的模型和如何预测目标值。此外，您将使用Python的数据可视化库matplotlib来可视化您的结果。</p>
-<p>&gt; PS：不要错过我们的<a href="https://www.datacamp.com/community/blog/bokeh-cheat-sheet-python/" target="_blank" rel="noopener">Bokeh备忘录</a>，  <a href="https://www.datacamp.com/community/blog/python-pandas-cheat-sheet/" target="_blank" rel="noopener">pandas备忘录</a>  或<a href="https://www.datacamp.com/community/tutorials/python-data-science-cheat-sheet-basics/" target="_blank" rel="noopener">数据科学</a>的  <a href="https://www.datacamp.com/community/tutorials/python-data-science-cheat-sheet-basics/" target="_blank" rel="noopener">Python备忘录</a>。</p>
-<p>原文： <a href="https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet" target="_blank" rel="noopener">https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet</a><br>作者： <a href="https://www.datacamp.com/profile/karlijn" target="_blank" rel="noopener">Karlijn Willems</a></p>
+<h3 id="走得更远">走得更远</h3>
+<p>从<a href="https://www.datacamp.com/community/tutorials/machine-learning-python/" target="_blank" rel="noopener">我们为初学者学习scikit-learn教程</a>开始  ，您将以简单，循序渐进的方式学习如何探索手写数字数据，如何为其创建模型，如何使您的数据适合您的模型和如何预测目标值。此外，您将使用Python的数据可视化库matplotlib来可视化您的结果。</p>
+<p>&gt; PS：不要错过我们的<a href="https://www.datacamp.com/community/blog/bokeh-cheat-sheet-python/" target="_blank" rel="noopener">Bokeh备忘录</a>，  <a href="https://www.datacamp.com/community/blog/python-pandas-cheat-sheet/" target="_blank" rel="noopener">pandas备忘录</a>  或<a href="https://www.datacamp.com/community/tutorials/python-data-science-cheat-sheet-basics/" target="_blank" rel="noopener">数据科学</a>的  <a href="https://www.datacamp.com/community/tutorials/python-data-science-cheat-sheet-basics/" target="_blank" rel="noopener">Python备忘录</a>。</p>
+<p>原文： <a href="https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet" target="_blank" rel="noopener" class="uri">https://www.datacamp.com/community/blog/scikit-learn-cheat-sheet</a><br />
+作者： <a href="https://www.datacamp.com/profile/karlijn" target="_blank" rel="noopener">Karlijn Willems</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/02/11/sklean/" data-id="ck6thkt060072d22whc4377ai" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/02/11/sklean/" data-id="ck6ut6354004n362w9efbds80" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li></ul>
@@ -270,7 +257,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul>
     </div>
   </div>
 
@@ -280,7 +267,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
     </div>
   </div>
 
@@ -290,7 +277,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ANN/" style="font-size: 11.67px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.67px;">Construction</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 16.67px;">Godot</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 18.33px;">ML</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.67px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 10px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 11.67px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/beginner/" style="font-size: 11.67px;">beginner</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/paper/" style="font-size: 13.33px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.67px;">plugin</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.67px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.67px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 15px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.67px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+      <a href="/tags/ANN/" style="font-size: 11.67px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.67px;">Construction</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 16.67px;">Godot</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 18.33px;">ML</a> <a href="/tags/Math/" style="font-size: 11.67px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.67px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 10px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 13.33px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/beginner/" style="font-size: 11.67px;">beginner</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/paper/" style="font-size: 13.33px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.67px;">plugin</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.67px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.67px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 15px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.67px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
     </div>
   </div>
 
@@ -312,23 +299,23 @@
       <ul>
         
           <li>
+            <a href="/2020/02/20/math/">hexo 数学公式 mathjax</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/20/9787220098970/">《大国崛起的新政治经济学》读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/20/algebra/">《线性代数的几何意义》读书笔记</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/19/9787020156047/">《东野圭吾作品：11字谜案》人物关系图</a>
           </li>
         
           <li>
             <a href="/2020/02/18/PyTorch-iOS/">PyTorch iOS</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/18/9787544291224/">《放学后》人物关系图</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/17/pytorch/">《Python深度学习：基于PyTorch》 读书笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/16/android/">智能安卓恶意软件检测系统</a>
           </li>
         
       </ul>
@@ -377,6 +364,21 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>

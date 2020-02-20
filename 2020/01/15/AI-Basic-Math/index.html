@@ -105,41 +105,65 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/0.jpg" alt=""></p>
+        <p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/0.jpg" /></p>
 <a id="more"></a>
-
-<h2 id="九层之台，起于累土：线性代数"><a href="#九层之台，起于累土：线性代数" class="headerlink" title="九层之台，起于累土：线性代数"></a>九层之台，起于累土：线性代数</h2><p>必备的数学知识是理解人工智能不可或缺的要素，今天的种种人工智能技术归根到底都建立在数学模型之上，而这些数学模型又都离不开线性代数（linear algebra）的理论框架。</p>
+<h2 id="九层之台起于累土线性代数">九层之台，起于累土：线性代数</h2>
+<p>必备的数学知识是理解人工智能不可或缺的要素，今天的种种人工智能技术归根到底都建立在数学模型之上，而这些数学模型又都离不开线性代数（linear algebra）的理论框架。</p>
 <p>在线性代数中，由单独的数 a 构成的元素被称为标量（scalar）：一个标量 a 可以是整数、实数或复数。如果多个标量按一定顺序组成一个序列，这样的元素就被称为向量（vector）。显然，向量可以看作标量的扩展。原始的一个数被替代为一组数，从而带来了维度的增加，给定表示索引的下标才能唯一地确定向量中的元素。</p>
 <p>相对于向量，矩阵同样代表了维度的增加，矩阵中的每个元素需要使用两个索引（而非一个）确定。同理，如果将矩阵中的每个标量元素再替换为向量的话，得到的就是张量（tensor）。直观地理解，张量就是高阶的矩阵。</p>
 <p>在计算机存储中，标量占据的是零维数组；向量占据的是一维数组，例如语音信号；矩阵占据的是二维数组，例如灰度图像；张量占据的是三维乃至更高维度的数组，例如 RGB 图像和视频。</p>
-<p>线性代数的本质在于将具体事物抽象为数学对象，并描述其静态和动态的特性；<br>向量的实质是 n 维线性空间中的静止点；<br>线性变换描述了向量或者作为参考系的坐标系的变化，可以用矩阵表示；<br>矩阵的特征值和特征向量描述了变化的速度与方向。</p>
-<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/1.jpg" alt=""></p>
-<h2 id="月有阴晴圆缺，此事古难全：概率论"><a href="#月有阴晴圆缺，此事古难全：概率论" class="headerlink" title="月有阴晴圆缺，此事古难全：概率论"></a>月有阴晴圆缺，此事古难全：概率论</h2><p>概率论是线性代数之外，人工智能的另一个理论基础，多数机器学习模型采用的都是基于概率论的方法。但由于实际任务中可供使用的训练数据有限，因而需要对概率分布的参数进行估计，这也是机器学习的核心任务。</p>
+<p>线性代数的本质在于将具体事物抽象为数学对象，并描述其静态和动态的特性；<br />
+向量的实质是 n 维线性空间中的静止点；<br />
+线性变换描述了向量或者作为参考系的坐标系的变化，可以用矩阵表示；<br />
+矩阵的特征值和特征向量描述了变化的速度与方向。</p>
+<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/1.jpg" /></p>
+<h2 id="月有阴晴圆缺此事古难全概率论">月有阴晴圆缺，此事古难全：概率论</h2>
+<p>概率论是线性代数之外，人工智能的另一个理论基础，多数机器学习模型采用的都是基于概率论的方法。但由于实际任务中可供使用的训练数据有限，因而需要对概率分布的参数进行估计，这也是机器学习的核心任务。</p>
 <p>概率的估计有两种方法：最大似然估计法（maximum likelihood estimation）和最大后验概率法（maximum a posteriori estimation），两者分别体现出频率学派和贝叶斯学派对概率的理解方式。</p>
 <p>概率论基础，着重于抽象概念的解释而非具体的数学公式，其要点如下：</p>
-<p>概率论关注的是生活中的不确定性或可能性；<br>频率学派认为先验分布是固定的，模型参数要靠最大似然估计计算；<br>贝叶斯学派认为先验分布是随机的，模型参数要靠后验概率最大化计算；<br>正态分布是最重要的一种随机变量的分布。</p>
-<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/2.jpg" alt=""></p>
-<h2 id="窥一斑而知全豹：数理统计"><a href="#窥一斑而知全豹：数理统计" class="headerlink" title="窥一斑而知全豹：数理统计"></a>窥一斑而知全豹：数理统计</h2><p>人工智能必备的数理统计基础，着重于抽象概念的解释而非具体的数学公式，其要点如下：</p>
-<p>数理统计的任务是根据可观察的样本反过来推断总体的性质；<br>推断的工具是统计量，统计量是样本的函数，是个随机变量；<br>参数估计通过随机抽取的样本来估计总体分布的未知参数，包括点估计和区间估计；<br>假设检验通过随机抽取的样本来接受或拒绝关于总体的某个判断，常用于估计机器学习模型的泛化错误率。</p>
-<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/3.jpg" alt=""></p>
-<h2 id="最优化方法"><a href="#最优化方法" class="headerlink" title="最优化方法"></a>最优化方法</h2><p>人工智能必备的最优化方法基础，着重于抽象概念的解释而非具体的数学公式，其要点如下：</p>
-<p>通常情况下，最优化问题是在无约束情况下求解给定目标函数的最小值；<br>在线性搜索中，确定寻找最小值时的搜索方向需要使用目标函数的一阶导数和二阶导数；<br>置信域算法的思想是先确定搜索步长，再确定搜索方向；<br>以人工神经网络为代表的启发式算法是另外一类重要的优化方法。</p>
-<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/4.jpg" alt=""></p>
-<h2 id="万物皆数，信息亦然：信息论"><a href="#万物皆数，信息亦然：信息论" class="headerlink" title="万物皆数，信息亦然：信息论"></a>万物皆数，信息亦然：信息论</h2><p>近年来的科学研究不断证实，不确定性才是客观世界的本质属性。换句话说，上帝还真就掷骰子。不确定性的世界只能使用概率模型来描述，正是对概率的刻画促成了信息论的诞生。</p>
+<p>概率论关注的是生活中的不确定性或可能性；<br />
+频率学派认为先验分布是固定的，模型参数要靠最大似然估计计算；<br />
+贝叶斯学派认为先验分布是随机的，模型参数要靠后验概率最大化计算；<br />
+正态分布是最重要的一种随机变量的分布。</p>
+<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/2.jpg" /></p>
+<h2 id="窥一斑而知全豹数理统计">窥一斑而知全豹：数理统计</h2>
+<p>人工智能必备的数理统计基础，着重于抽象概念的解释而非具体的数学公式，其要点如下：</p>
+<p>数理统计的任务是根据可观察的样本反过来推断总体的性质；<br />
+推断的工具是统计量，统计量是样本的函数，是个随机变量；<br />
+参数估计通过随机抽取的样本来估计总体分布的未知参数，包括点估计和区间估计；<br />
+假设检验通过随机抽取的样本来接受或拒绝关于总体的某个判断，常用于估计机器学习模型的泛化错误率。</p>
+<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/3.jpg" /></p>
+<h2 id="最优化方法">最优化方法</h2>
+<p>人工智能必备的最优化方法基础，着重于抽象概念的解释而非具体的数学公式，其要点如下：</p>
+<p>通常情况下，最优化问题是在无约束情况下求解给定目标函数的最小值；<br />
+在线性搜索中，确定寻找最小值时的搜索方向需要使用目标函数的一阶导数和二阶导数；<br />
+置信域算法的思想是先确定搜索步长，再确定搜索方向；<br />
+以人工神经网络为代表的启发式算法是另外一类重要的优化方法。</p>
+<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/4.jpg" /></p>
+<h2 id="万物皆数信息亦然信息论">万物皆数，信息亦然：信息论</h2>
+<p>近年来的科学研究不断证实，不确定性才是客观世界的本质属性。换句话说，上帝还真就掷骰子。不确定性的世界只能使用概率模型来描述，正是对概率的刻画促成了信息论的诞生。</p>
 <p>信息论使用“信息熵”的概念，对单个信源的信息量和通信中传递信息的数量与效率等问题做出了解释，并在世界的不确定性和信息的可测量性之间搭建起一座桥梁。</p>
 <p>人工智能必备的数理统计基础，着重于抽象概念的解释而非具体的数学公式，其要点如下：</p>
-<p>数理统计的任务是根据可观察的样本反过来推断总体的性质；<br>推断的工具是统计量，统计量是样本的函数，是个随机变量；<br>参数估计通过随机抽取的样本来估计总体分布的未知参数，包括点估计和区间估计；<br>假设检验通过随机抽取的样本来接受或拒绝关于总体的某个判断，常用于估计机器学习模型的泛化错误率。</p>
-<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/5.jpg" alt=""></p>
-<h2 id="明日黄花迹难寻：形式逻辑"><a href="#明日黄花迹难寻：形式逻辑" class="headerlink" title="明日黄花迹难寻：形式逻辑"></a>明日黄花迹难寻：形式逻辑</h2><p>人工智能必备的形式逻辑基础，以及采用形式逻辑进行自动推理的基本原理，其要点如下：</p>
-<p>如果将认知过程定义为对符号的逻辑运算，人工智能的基础就是形式逻辑；<br>谓词逻辑是知识表示的主要方法；<br>基于谓词逻辑系统可以实现具有自动推理能力的人工智能；<br>不完备性定理向“认知的本质是计算”这一人工智能的基本理念提出挑战。</p>
-<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/6.jpg" alt=""></p>
-<h2 id="拓展阅读参考书"><a href="#拓展阅读参考书" class="headerlink" title="拓展阅读参考书"></a>拓展阅读参考书</h2><p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/7.jpg" alt=""></p>
-<p>总结自：人工智能基础课: <a href="https://time.geekbang.org/column/62" target="_blank" rel="noopener">https://time.geekbang.org/column/62</a></p>
+<p>数理统计的任务是根据可观察的样本反过来推断总体的性质；<br />
+推断的工具是统计量，统计量是样本的函数，是个随机变量；<br />
+参数估计通过随机抽取的样本来估计总体分布的未知参数，包括点估计和区间估计；<br />
+假设检验通过随机抽取的样本来接受或拒绝关于总体的某个判断，常用于估计机器学习模型的泛化错误率。</p>
+<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/5.jpg" /></p>
+<h2 id="明日黄花迹难寻形式逻辑">明日黄花迹难寻：形式逻辑</h2>
+<p>人工智能必备的形式逻辑基础，以及采用形式逻辑进行自动推理的基本原理，其要点如下：</p>
+<p>如果将认知过程定义为对符号的逻辑运算，人工智能的基础就是形式逻辑；<br />
+谓词逻辑是知识表示的主要方法；<br />
+基于谓词逻辑系统可以实现具有自动推理能力的人工智能；<br />
+不完备性定理向“认知的本质是计算”这一人工智能的基本理念提出挑战。</p>
+<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/6.jpg" /></p>
+<h2 id="拓展阅读参考书">拓展阅读参考书</h2>
+<p><img src="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/7.jpg" /></p>
+<p>总结自：人工智能基础课: https://time.geekbang.org/column/62</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/" data-id="ck6thksq4001zd22w21lkdx3e" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/15/AI-Basic-Math/" data-id="ck6ut632m001z362w58qmgzr2" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
@@ -185,7 +209,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul>
     </div>
   </div>
 
@@ -195,7 +219,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
     </div>
   </div>
 
@@ -205,7 +229,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/ANN/" style="font-size: 11.67px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.67px;">Construction</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 16.67px;">Godot</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 18.33px;">ML</a> <a href="/tags/Math/" style="font-size: 10px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.67px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 10px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 11.67px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/beginner/" style="font-size: 11.67px;">beginner</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/paper/" style="font-size: 13.33px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.67px;">plugin</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.67px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.67px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 15px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.67px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+      <a href="/tags/ANN/" style="font-size: 11.67px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Compiler/" style="font-size: 11.67px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.67px;">Construction</a> <a href="/tags/DL/" style="font-size: 15px;">DL</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 16.67px;">Godot</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 18.33px;">ML</a> <a href="/tags/Math/" style="font-size: 11.67px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.67px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 10px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 13.33px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/beginner/" style="font-size: 11.67px;">beginner</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/paper/" style="font-size: 13.33px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.67px;">plugin</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.67px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.67px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 15px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.67px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
     </div>
   </div>
 
@@ -227,23 +251,23 @@
       <ul>
         
           <li>
+            <a href="/2020/02/20/math/">hexo 数学公式 mathjax</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/20/9787220098970/">《大国崛起的新政治经济学》读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/20/algebra/">《线性代数的几何意义》读书笔记</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/19/9787020156047/">《东野圭吾作品：11字谜案》人物关系图</a>
           </li>
         
           <li>
             <a href="/2020/02/18/PyTorch-iOS/">PyTorch iOS</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/18/9787544291224/">《放学后》人物关系图</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/17/pytorch/">《Python深度学习：基于PyTorch》 读书笔记</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/16/android/">智能安卓恶意软件检测系统</a>
           </li>
         
       </ul>
@@ -292,6 +316,21 @@
 
 
 
-  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
