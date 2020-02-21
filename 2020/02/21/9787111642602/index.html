@@ -191,7 +191,7 @@
 <meta property="og:image" content="https://2020.iosdevlog.com/2020/02/21/9787111642602/176.jpg">
 <meta property="og:image" content="https://2020.iosdevlog.com/2020/02/21/9787111642602/177.jpg">
 <meta property="article:published_time" content="2020-02-21T10:47:23.000Z">
-<meta property="article:modified_time" content="2020-02-21T11:01:37.872Z">
+<meta property="article:modified_time" content="2020-02-21T12:52:56.826Z">
 <meta property="article:author" content="iOSDevLog">
 <meta property="article:tag" content="Math">
 <meta property="article:tag" content="ML">
@@ -302,20 +302,314 @@ ISBN：9787111642602</p>
 <figure>
 <img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/2.jpg" alt="" /><figcaption>人工智能、机器学习和深度学习三者是包含关系</figcaption>
 </figure>
-<p><img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/3.jpg" alt="3" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/4.jpg" alt="4" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/5.jpg" alt="5" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/6.jpg" alt="6" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/7.jpg" alt="7" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/8.jpg" alt="8" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/9.jpg" alt="9" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/10.jpg" alt="10" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/11.jpg" alt="11" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/12.jpg" alt="12" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/13.jpg" alt="13" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/14.jpg" alt="14" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/15.jpg" alt="15" /><br />
-<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/16.jpg" alt="16" /><br />
+<h3 id="机器学习知识的三个需求层次">机器学习知识的三个需求层次</h3>
+<ol type="1">
+<li>设计需求层次
+<ul>
+<li>思想原理</li>
+</ul></li>
+<li>调用需求层次
+<ul>
+<li>运行流程</li>
+</ul></li>
+<li>数学需求层次
+<ul>
+<li>数学解析</li>
+</ul></li>
+</ol>
+<p>“训练模型”</p>
+<p>“训练” == “拟合”</p>
+<p>算法</p>
+<ul>
+<li>数据结构算法
+<ul>
+<li>算</li>
+</ul></li>
+<li>机器学习算法
+<ul>
+<li>猜
+<ul>
+<li>我猜是什么</li>
+<li>我猜中没有</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="猜数字游戏">“猜数字”游戏</h3>
+<p>裁判选定一个数字，接着参赛选手也报一个数字，裁判回答他猜大了或猜小了，不断重复这个过程，直到最后猜中。</p>
+<table>
+<thead>
+<tr class="header">
+<th>猜数字</th>
+<th>机器学习</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>参赛选手</td>
+<td>算法模型</td>
+</tr>
+<tr class="even">
+<td>裁判回答</td>
+<td>损失函数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="拟合">拟合</h3>
+<ul>
+<li>欠拟合
+<ul>
+<li>准确性不够</li>
+</ul></li>
+<li>过拟合
+<ul>
+<li>泛化性不好</li>
+</ul></li>
+</ul>
+<h3 id="机器学习的基本概念">机器学习的基本概念</h3>
+<h4 id="术语">术语</h4>
+<ul>
+<li><p><strong>模型</strong><br />
+模型（Model）是机器学习的核心概念。如果认为编程有两大组成部分，即算法和数据结构，那么机器学习的两大组成部分就是模型和数据集。如果之前没有接触过相关概念，想必你现在很希望直观地理解什么是模型，但对模型给出一个简洁又严谨的定义并不容易，你可以认为它是某种机器学习算法在设定参数后的产物，它的作用和编程时用到的函数一样，可以根据某些输入得到某些输出。既然叫机器学习算法，不妨将它想象成一台机器，其上有很多旋钮，这些旋钮就是参数。机器本身是有输入和输出功能的，根据不同的旋钮组合，同一种输入可以产生不同的输出，而机器学习的过程就是找到合适的那组旋钮组合，通过输入得到你所希望的输出。</p></li>
+<li><p><strong>数据集</strong><br />
+如果说机器学习的“机器”指的是模型，那么数据集就可以说是驱动着这台机器去“学习”的“燃料”。有些文献将数据集又分为训练集和测试集，其实它们的内容和形式并无差异，只是用在不同的地方：在训练模型阶段使用，就叫作训练集；在测试模型阶段使用，就叫作测试集。</p></li>
+<li><p><strong>数据</strong><br />
+我们刚才提到了数据集，数据集就是数据的集合。在机器学习中，我们称一条数据为一个样本（Sample），形式类似一维数组。样本通常包含多个特征（Feature），如果是用于分类问题的数据集，还会包含类别（Class Label）信息，如果是回归问题的数据集，则会包含一个连续型的数值。</p></li>
+<li><p><strong>特征</strong><br />
+这个术语又容易让你产生误解了。我们一般把可以作为人或事物特点的征象、标志等称作特征，譬如这个人鼻子很大，这就是特征，但在机器学习中，特征是某个对象的几个记录维度。我们都填写过个人信息表，特征就是这张表里的空格，如名字、性别、出生日期、籍贯等，一份个人信息表格可以看成一个样本，名字、籍贯这些信息就称作特征。前面说数据形式类似一维数组，那么特征就是数组的值。</p></li>
+<li><p><strong>向量</strong><br />
+向量为线性代数术语，机器学习模型算法的运算均基于线性代数法则，不妨认为向量就是该类算法所对应的“数据结构”。一条样本数据就是以一个向量的形式输入模型的。一条监督学习数据的向量形式如下：</p>
+<p>[特征X1值，特征X2值，…, Y1值]</p></li>
+<li><p><strong>矩阵</strong><br />
+矩阵为线性代数术语，可以将矩阵看成由向量组成的数组，形式上也非常接近二维数组。前面所说的数据集，通常就是以矩阵的形式输入模型的，常见的矩阵形式如下：</p>
+<p>[[特征X1值，特征X2值，…, Y1值]，<br />
+'[特征X1值，特征X2值，…, Y2值]，<br />
+…<br />
+[特征X1值，特征X2值，…, Yn值]]</p></li>
+</ul>
+<p>其实这个组织形式非常类似电子表格，不妨就以电子表格来对照理解。每一行就是一个样本，每一列就是一个特征维度，譬如某个数据集一共包括了7个样本，那就是有7行数据，每个样本又都有4个维度的特征，那就是每行数据有4列，用电子表格表示如图1-2所示，其中，A～D列为特征，E列为结果。</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/3.jpg" alt="" /><figcaption>用电子表格来表示机器学习的数据集矩阵</figcaption>
+</figure>
+<h4 id="常用函数">常用函数</h4>
+<ul>
+<li><strong>假设函数（Hypothesis Function）</strong></li>
+</ul>
+<p><span class="math display">\[
+H(x)
+\]</span></p>
+<p>这里的 <span class="math inline">\(x\)</span> 可以简单理解成矩阵形式的数据，我们把数据“喂”给假设函数，假设函数就会返回一个结果，而这个结果正是机器学习所得到的预测结果。</p>
+<ul>
+<li><strong>损失函数（Loss Function）/ 目标函数</strong></li>
+</ul>
+<p><span class="math display">\[
+L(x)
+\]</span></p>
+<p><span class="math inline">\(L\)</span> 代表 Loss，这里的 <span class="math inline">\(x\)</span> 是假设函数的预测结果。</p>
+<p>函数返回值越大，表示结果偏差越大。</p>
+<ul>
+<li><strong>成本函数（Cost Function）</strong></li>
+</ul>
+<p><span class="math display">\[
+J(x)
+\]</span></p>
+<p>这里的 <span class="math inline">\(x\)</span> 也是假设函数的预测结果。</p>
+<p>函数返回值越大，表示偏差越大。</p>
+<table>
+<thead>
+<tr class="header">
+<th>差别</th>
+<th style="text-align: center;">损失函数</th>
+<th style="text-align: center;">成本函数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>对象</td>
+<td style="text-align: center;">单个样本</td>
+<td style="text-align: center;">整个数据集</td>
+</tr>
+<tr class="even">
+<td>角度</td>
+<td style="text-align: center;">微观</td>
+<td style="text-align: center;">宏观</td>
+</tr>
+</tbody>
+</table>
+<p>成本函数是由损失函数计算得到的。</p>
+<p><span class="math inline">\(J(x) = Sum(L(x))\)</span></p>
+<p>或者</p>
+<p><span class="math inline">\(J(x) = Avg(L(x))\)</span></p>
+<h4 id="机器学习的基本模式">机器学习的基本模式</h4>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/4.jpg" alt="" /><figcaption>假设函数产生的偏差驱动着机器学习模型不断优化</figcaption>
+</figure>
+<ul>
+<li>数据</li>
+<li>假设函数</li>
+<li>损失函数</li>
+</ul>
+<h4 id="优化方法">优化方法</h4>
+<p><span class="math display">\[ min(L(x)) \]</span></p>
+<p><span class="math display">\[
+新参数值 = 旧参数值 - 损失值
+\]</span></p>
+<p>牛顿法、拟牛顿法、共轭梯度法</p>
+<p><strong>梯度下降（Gradient Descent）</strong>法是机器学习中常用的一种优化方法</p>
+<p>梯度下降（Gradient Descent）法是机器学习中常用的一种优化方法，梯度是微积分学的术语，某个函数在某点的梯度指向该函数取得最大值的方向，那么它的反方向自然就是取得最小值的方向。所以只要对损失函数采用梯度下降法，让假设函数朝着梯度的负方向更新权值，就能达到令损失值最小化的效果。</p>
+<p><strong>倒车</strong>:<br />
+1. 方向<br />
+1. 大小</p>
+<ul>
+<li>批量梯度下降（Batch Gradient Descent
+<ul>
+<li>每次迭代都使用全部样本</li>
+</ul></li>
+<li>随机梯度下降（Stochastic Gradient Descent
+<ul>
+<li>每次迭代只使用一个样本</li>
+</ul></li>
+</ul>
+<p>因为需要计算的样本小，随机梯度下降的迭代速度更快，但更容易陷入局部最优，而不能达到全局最优点。</p>
+<h3 id="机器学习问题分类">机器学习问题分类</h3>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/5.jpg" alt="" /><figcaption>机器学习问题具体类别的判断方法图</figcaption>
+</figure>
+<p>无监督学习（Unsupervised Learning）<br />
+有监督学习（Supervised Learning）</p>
+<h3 id="常用的机器学习算法">常用的机器学习算法</h3>
+<ol type="1">
+<li>线性回归算法
+<ul>
+<li>这是最基本的机器学习算法，但麻雀虽小，五脏俱全，该算法称得上是机器学习算法界的“Hello World”程序，是用线性方法解决回归问题。</li>
+</ul></li>
+<li>Logistic回归分类算法
+<ul>
+<li>这可谓是线性回归算法的“孪生兄弟”，其核心思想仍然是线性方法，但套了一件名为Logistic函数的“马甲”，使得其具有解决分类问题的能力。</li>
+</ul></li>
+<li>KNN分类算法
+<ul>
+<li>该算法是本书介绍的分类算法中唯一一个不依赖数学或统计模型，纯粹依靠“生活经验”的算法，它通过“找最近邻”的思想解决分类问题，其核心思想和区块链技术中的共识机制有着深远的关系。</li>
+</ul></li>
+<li>朴素贝叶斯分类算法
+<ul>
+<li>这是一套能够刷新你世界观的算法，它认为结果不是确定性的而是概率性的，你眼前所见的不过是概率最大的结果罢了。当然，算法是用来解决问题的，朴素贝叶斯分类算法解决的是分类问题。</li>
+</ul></li>
+<li>决策树分类算法
+<ul>
+<li>如果程序员的思维逻辑能够用if-else来概括的话，决策树分类算法应该就是最接近程序员逻辑的机器学习算法。</li>
+</ul></li>
+<li>支持向量机分类算法
+<ul>
+<li>如果说Logistic回归分类算法是最基本的线性分类算法，那么支持向量机则是线性分类算法的最高形式，同时也是最“数学”的一种机器学习算法。该算法使用一系列令人拍案叫绝的数学技巧，将线性不可分的数据点映射成线性可分，再用最简单的线性方法来解决问题。</li>
+</ul></li>
+<li>K-means聚类算法
+<ul>
+<li>有监督学习是当前机器学习的一种主流方式，但样本标记需要耗费大量人工成本，容易出现样本累积规模庞大，但标记不足的问题。无监督学习则是一种无须依赖标记样本的机器学习算法，聚类算法就是其中具有代表性的一种，而K-means是聚类算法中的典型代表。</li>
+</ul></li>
+<li>神经网络分类算法
+<ul>
+<li>神经网络就是由许多神经元连接所构成的网络，很多人认为该算法是一种仿生算法，模仿的对象正是我们的大脑。神经网络分类算法也是当下热门的深度学习算法的起点。</li>
+</ul></li>
+</ol>
+<h4 id="机器学习算法的性能衡量指标">机器学习算法的性能衡量指标</h4>
+<p>NFL定律（No Free Lunch Theorem，中文一般翻译为“没有免费午餐定律”）。</p>
+<ul>
+<li>TP:True Positive，预测结果为正类，且与事实相符，即事实为正类。</li>
+<li>TN:True Negative，预测结果为负类，且与事实相符，即事实为负类。</li>
+<li>FP:False Positive，预测结果为正类，但与事实不符，即事实为负类。</li>
+<li>FN:False Negative，预测结果为负类，但与事实不符，即事实为正类。</li>
+</ul>
+<p>常用的指标</p>
+<ul>
+<li>准确率（Accuracy）</li>
+</ul>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/6.jpg" alt="" /><figcaption>准确率</figcaption>
+</figure>
+<ul>
+<li>精确率（Precision），又叫查准率</li>
+</ul>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/7.jpg" alt="" /><figcaption>查准率</figcaption>
+</figure>
+<ul>
+<li>召回率（Recall），又叫查全率</li>
+</ul>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/8.jpg" alt="" /><figcaption>查全率</figcaption>
+</figure>
+<h3 id="数据对算法结果的影响">数据对算法结果的影响</h3>
+<h4 id="数据决定了算法的能力上限">数据决定了算法的能力上限</h4>
+<blockquote>
+<p>数据决定了模型能够达到的上限，而算法只是逼近这个上限。</p>
+</blockquote>
+<h4 id="特征工程">特征工程</h4>
+<p>机器学习模型正是从这些特征中进行学习，特征有多少价值，机器才能学多少价值。</p>
+<h2 id="第2章-机器学习所需的环境">第2章 机器学习所需的环境</h2>
+<h3 id="python-简介">Python 简介</h3>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/9.jpg" alt="" /><figcaption>Python官网首页</figcaption>
+</figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/10.jpg" alt="" /><figcaption>Python下载页面</figcaption>
+</figure>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip</span></span><br><span class="line">pip install library</span><br><span class="line"><span class="comment"># conda</span></span><br><span class="line">conda install library</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># library.a_class</span></span><br><span class="line"><span class="keyword">import</span> library</span><br><span class="line"><span class="comment"># lib.a_class</span></span><br><span class="line"><span class="keyword">import</span> libray <span class="keyword">as</span> lib</span><br><span class="line"><span class="comment"># a_class</span></span><br><span class="line"><span class="keyword">from</span> library <span class="keyword">import</span> a_class</span><br></pre></td></tr></table></figure>
+<h3 id="numpy-简介">Numpy 简介</h3>
+<p>Numpy是Python语言的科学计算支持库，提供了线性代数、傅里叶变换等非常有用的数学工具。Numpy是Python圈子里非常知名的基础库，即使你并不直接进行科学计算，但如图像处理等相关功能库，其底层实现仍需要数学工具进行支持，则需要首先安装Numpy库。</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/11.jpg" alt="" /><figcaption>Numpy官网首页</figcaption>
+</figure>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install -U numpy</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/12.jpg" alt="" /><figcaption>Numpy常用函数功能表</figcaption>
+</figure>
+<h3 id="scikit-learn-简介">Scikit-Learn 简介</h3>
+<p>正如机器学习中推荐使用Python语言，用Python语言使用机器学习算法时，推荐使用Scikit-Learn工具，或者应该反过来，现在机器学习推荐使用Python，正是因为Python拥有Scikit-Learn这样功能强大的支持包，它已经把底层的脏活、累活都默默完成了，让使用者能够将宝贵的注意力和精力集中在解决问题上，极大地提高了产出效率。</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/13.jpg" alt="" /><figcaption>Scikit-Learn官网首页</figcaption>
+</figure>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip</span></span><br><span class="line">pip install -U scikit-learn</span><br><span class="line"><span class="comment"># conda</span></span><br><span class="line">conda install scikit-learn</span><br></pre></td></tr></table></figure>
+<p>使用</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> sklearn</span><br></pre></td></tr></table></figure>
+<p>调用机器学习算法也非常简单，Scikit-Learn库已经将算法按模型分类，查找起来非常方便。如线性回归算法可以从线性模型中找到，用法如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn <span class="keyword">import</span> linear_model</span><br><span class="line">model = linear_model.LinearRegression()</span><br></pre></td></tr></table></figure>
+<p>Logistic回归算法也是依据线性模型</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LogisticRegression</span><br><span class="line">model =linear_model.LogisticRegression()</span><br></pre></td></tr></table></figure>
+<p>类似的还有基于近邻模型的KNN算法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> NearestNeighbors</span><br><span class="line">model =NearestNeighbors()</span><br></pre></td></tr></table></figure>
+<p>生成模型后，一般使用fit方法给模型“喂”数据及进行训练。完成训练的模型可以使用predict方法进行预测。<br />
+Scikit-Learn库对机器学习算法进行了高度封装，使用过程非常简单，只要根据格式填入数据即可，不涉及额外的数学运算操作，甚至可以说只要知道机器学习算法的名字和优劣，就能直接使用，非常便利。</p>
+<h3 id="pandas简介">Pandas简介</h3>
+<p>Pandas是Python语言中知名的数据处理库。数据是模型算法的燃料，也决定了算法能够达到的上限。一般在学习中接触的数据都十分规整，可以直接供模型使用。但实际上，从生产环境中采集得到的“野生”数据则需要首先进行数据清洗工作，最常见的如填充丢失字段值。数据清洗工作一般使用Pandas来完成，前文所提到的特征工程也可通过Pandas完成。</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/14.jpg" alt="" /><figcaption>Pandas官网首页</figcaption>
+</figure>
+<p>安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip</span></span><br><span class="line">pip install -U pandas</span><br><span class="line"><span class="comment"># conda</span></span><br><span class="line">conda install pandas</span><br></pre></td></tr></table></figure>
+<h4 id="pandas的基本用法">Pandas的基本用法</h4>
+<p>Pandas针对数据处理的常用功能而设计，具有从不同格式的文件中读写数据的功能，使用Pandas进行一些统计操作特别便利。与Numpy类似，Pandas也有两个核心的数据类型，即Series和DataFrame。</p>
+<ul>
+<li>Series：一维数据，可以认为是一个统计功能增强版的List类型。</li>
+<li>DataFrame：多维数据，由多个Series组成，不妨认为是电子表格里的Sheet。使用Pandas包很简单，只要import导入即可。业界习惯在导入时使用“pd”作为它的别名：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br></pre></td></tr></table></figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/15.jpg" alt="" /><figcaption>Pandas常用函数功能表</figcaption>
+</figure>
+<h2 id="第3章-线性回归算法">第3章 线性回归算法</h2>
+<p>机器学习涉及的知识面很广，但总的来说有两条主线，</p>
+<ul>
+<li><strong>问题</strong></li>
+<li><strong>模型</strong></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/16.jpg" alt="16" /><br />
 <img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/17.jpg" alt="17" /><br />
 <img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/18.jpg" alt="18" /><br />
 <img src="https://2020.iosdevlog.com/2020/02/21/9787111642602/19.jpg" alt="19" /><br />
@@ -481,7 +775,7 @@ ISBN：9787111642602</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/02/21/9787111642602/" data-id="ck6w2haos0062a62wb4u3auz2" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/02/21/9787111642602/" data-id="ck6w6e3fy0064ri2w06f3hua1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
