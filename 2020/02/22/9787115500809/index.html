@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>《极简算法史：从数学到机器的故事》读书笔记 | Game 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="《极简算法史：从数学到机器的故事》  书名：极简算法史：从数学到机器的故事 作者：[法]吕克·德·布拉班迪尔 译者：任轶 出版社：人民邮电出版社 出版时间：2018-12 ISBN：9787115500809 一位工程师、一位数学家、一位逻辑学家和一位哲学家一起在苏格兰旅行。他们走在一条路上，栖息在悬岩上的一只黑山羊看着他们路过。 “你们看到了吗？”工程师说，“在苏格兰，山羊都是黑色的！” 数学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《极简算法史：从数学到机器的故事》读书笔记">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/index.html">
+<meta property="og:site_name" content="Game 2020">
+<meta property="og:description" content="《极简算法史：从数学到机器的故事》  书名：极简算法史：从数学到机器的故事 作者：[法]吕克·德·布拉班迪尔 译者：任轶 出版社：人民邮电出版社 出版时间：2018-12 ISBN：9787115500809 一位工程师、一位数学家、一位逻辑学家和一位哲学家一起在苏格兰旅行。他们走在一条路上，栖息在悬岩上的一只黑山羊看着他们路过。 “你们看到了吗？”工程师说，“在苏格兰，山羊都是黑色的！” 数学">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/9.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/11.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/13.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/15.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/16.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/19.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/23.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/24.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/25.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/27.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/28.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/29.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/31.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/32.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/59.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/60.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/61.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/62.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/63.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/65.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/66.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/68.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/69.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/70.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/73.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/89.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/90.jpg">
+<meta property="article:published_time" content="2020-02-22T15:00:26.000Z">
+<meta property="article:modified_time" content="2020-02-22T17:44:16.115Z">
+<meta property="article:author" content="iOSDevLog">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="DL">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/02/22/9787115500809/1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Game 2020</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">https://2020.iosdevlog.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/2020">2020 Calendar</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://2020.iosdevlog.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-9787115500809" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/22/9787115500809/" class="article-date">
+  <time datetime="2020-02-22T15:00:26.000Z" itemprop="datePublished">2020-02-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《极简算法史：从数学到机器的故事》读书笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/1.jpg" alt="" /><figcaption>《极简算法史：从数学到机器的故事》</figcaption>
+</figure>
+<p>书名：极简算法史：从数学到机器的故事<br />
+作者：[法]吕克·德·布拉班迪尔<br />
+译者：任轶<br />
+出版社：人民邮电出版社<br />
+出版时间：2018-12<br />
+ISBN：9787115500809</p>
+<p>一位工程师、一位数学家、一位逻辑学家和一位哲学家一起在苏格兰旅行。他们走在一条路上，栖息在悬岩上的一只黑山羊看着他们路过。</p>
+<p>“你们看到了吗？”工程师说，“在苏格兰，山羊都是黑色的！”</p>
+<p>数学家反驳道：“可能你想说的是：有些苏格兰山羊是黑色的。”</p>
+<p>逻辑学家补充道：“先不要妄下结论。我们只能说：苏格兰至少有一只黑山羊！”</p>
+<p>最后，哲学家总结道：“我们唯一能真正确定的是：在这个地方的这只山羊是黑色的！”</p>
+<a id="more"></a>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/2.jpg" alt="" /><figcaption>序</figcaption>
+</figure>
+<p><img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/3.jpg" alt="柏拉图" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/4.jpg" alt="亚里士多德" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/6.jpg" alt="阿尔·花拉子米" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/9.jpg" alt="笛卡儿" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/11.jpg" alt="伽利略" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/13.jpg" alt="布莱士·帕斯卡" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/15.jpg" alt="托马斯·贝叶斯" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/16.jpg" alt="莱布尼茨" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/19.jpg" alt="欧拉" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/23.jpg" alt="康德" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/24.jpg" alt="乔治·布尔" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/25.jpg" alt="库尔特·哥德尔" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/27.jpg" alt="伯特兰·罗素" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/28.jpg" alt="路德维希·维特根斯坦" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/29.jpg" alt="克劳德·香农" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/31.jpg" alt="诺伯特·维纳" /><br />
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/32.jpg" alt="阿兰·图灵" /></p>
+<h2 id="第一部分-莱布尼茨之梦">第一部分 莱布尼茨之梦</h2>
+<p>三次“抽象运动”的硕果</p>
+<ul>
+<li>算术</li>
+<li>几何</li>
+<li>代数</li>
+</ul>
+<p>第四次抽象运动</p>
+<ul>
+<li>逻辑学
+<ul>
+<li>演绎法
+<ul>
+<li>这条街上的所有房子都很漂亮。</li>
+<li>这座房子在这条街上。</li>
+<li>这座房子很漂亮。</li>
+</ul></li>
+<li>归纳法
+<ul>
+<li>这座房子在这条街上。</li>
+<li>这座房子很漂亮。</li>
+<li>在这条街上所有的房子都很漂亮。</li>
+</ul></li>
+<li>溯因法
+<ul>
+<li>这座房子很漂亮。</li>
+<li>在这条街上所有的房子都很漂亮。</li>
+<li>这座房子在这条街上。</li>
+</ul></li>
+</ul></li>
+</ul>
+<blockquote>
+<p>数学与语言无关，逻辑却并非如此。</p>
+</blockquote>
+<h3 id="哥德尔证明罗素是在浪费时间">哥德尔证明，罗素是在浪费时间</h3>
+<ol type="1">
+<li>三角形内角和为180°；</li>
+<li>正方形的内角和为270°。</li>
+<li>1 是正确的。</li>
+<li>2 是错误的。</li>
+<li>在定理中无法对 5 加以证明。</li>
+</ol>
+<p>于是有两种可能的情况：</p>
+<ol type="1">
+<li>要么可以证明 5，但是，由于语句说明的情况与此相反，因而定理不具有逻辑的严密性；</li>
+<li>要么无法证明 5，因而语句为真，但这意味着，定理不具有完备性。</li>
+</ol>
+<p><strong>悖论</strong>：“所有克里特人都是骗子”的现代版——</p>
+<blockquote>
+<p>埃庇米尼得斯虽然这么宣布了，但他自己就是克里特人，如果他说的是真的，那么既然他也是克里特人，那说明他也是个骗子，他的话就不可信；而如果他说谎了，那么就印证了“所有克里特人都是骗子”这句话，那说明他所言为真……</p>
+</blockquote>
+<h2 id="第二部分-三座丰碑">第二部分 三座丰碑</h2>
+<h3 id="贝叶斯">贝叶斯</h3>
+<p>《关于如何在机会论的框架下解决问题》（Anessay towards solving a problem in thedoctrine of Chance</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/59.jpg" alt="" /><figcaption>罐子</figcaption>
+</figure>
+<p>每个罐子里装有40颗石子。1号罐子里装了30颗白色石子和10颗黑色石子，2号罐子里装有黑白石子各20颗。假设随机拿起一个罐子，并从这个罐子里随机取出一颗石子，且这颗石子是白色的，那么这颗白色石子来自1号罐子的概率是多少？</p>
+<ol type="1">
+<li>已知被选中的石子是白色的，用获得白色石子的概率乘以选择1号罐子的概率；</li>
+<li>已知白色石子来自1号罐子，用选择1号罐子的概率乘以获得白色石子的概率。</li>
+</ol>
+<p>A：1号罐子的假设<br />
+B：白色石子的假设</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/60.jpg" alt="" /><figcaption>相同的答案</figcaption>
+</figure>
+<p><span class="math display">\[
+p(\mathrm{B}). p(\mathrm{A} / 已知 \mathrm{B})=p(\mathrm{A}). p(\mathrm{B} / 已知 \mathrm{A})
+\]</span></p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/61.jpg" alt="" /><figcaption>贝叶斯公式</figcaption>
+</figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/62.jpg" alt="" /><figcaption>答案</figcaption>
+</figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/63.jpg" alt="" /><figcaption>贝叶斯网络</figcaption>
+</figure>
+<h3 id="香农证明如何计算11">香农证明，如何计算1+1</h3>
+<p>信息动力学，两个定理分别探讨的是 <strong>信息量</strong> 和信息的 <strong>质量</strong>。</p>
+<ul>
+<li>第一个定理涉及信息的压缩
+<ul>
+<li>编码一条信息所需的最少符号数量是多少？</li>
+</ul></li>
+<li>第二个定理涉及信息的传输
+<ul>
+<li>为了在终点处获取从起点处发出的准确信息，需要哪些必要条件？</li>
+</ul></li>
+</ul>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/65.jpg" alt="" /><figcaption>通信的环境进行建模</figcaption>
+</figure>
+<p>测量单位。就像卡路里可以量化热交换一样，香农提出的“比特”（bit，也叫位）的概念用于测量信息量。</p>
+<p>比特是一个二进制数字，可以取0或1的值。</p>
+<p>信息的测量应该满足一个苛刻的关系</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/66.jpg" alt="" /><figcaption>对数函数</figcaption>
+</figure>
+<p>其中，<span class="math inline">\(f\)</span> 只能是对数函数，因为根据定义，同一底数的两个正数的对数之和等于这两个数的积的对数。</p>
+<p>香农的公式能让我们借助经验计算出摩尔斯电码的效率为85%！我们不得不佩服公式发明者出色的直觉。</p>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/68.jpg" alt="" /><figcaption>形式逻辑</figcaption>
+</figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/69.jpg" alt="" /><figcaption>与或非门</figcaption>
+</figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/70.jpg" alt="" /><figcaption>逻辑电路</figcaption>
+</figure>
+<p>香农数：国际象棋棋局的理论数目，结果是 <span class="math inline">\(10^{120}\)</span></p>
+<h3 id="诺伯特维纳与控制论cybernetics">诺伯特·维纳与控制论（cybernetics）</h3>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/73.jpg" alt="" /><figcaption>控制</figcaption>
+</figure>
+<h2 id="第三部分-自动化理性批判">第三部分 自动化理性批判</h2>
+<blockquote>
+<p>科学是父亲教给儿子。<br />
+技术是儿子教给父亲。<br />
+——米歇尔·塞尔</p>
+</blockquote>
+<h3 id="算法algorithm">算法（algorithm）</h3>
+<p>三种不确定性</p>
+<ol type="1">
+<li>圣诞节是在什么时候？你不知道，我也不知道。</li>
+<li>谁将在2022年当选法国总统？你不知道，我也不知道。</li>
+<li>因为我们甚至不知道“我们不知道”。</li>
+</ol>
+<p>第三类不确定性涉及了“没人提出的问题”。在这种情况下，超级计算机也没有用了……因为没有什么可以计算的！</p>
+<p>这类事件通常被称为 <strong>“黑天鹅”</strong>。</p>
+<p>这一说法是用来纪念一位18世纪的英国探险家，这位探险家曾确信所有天鹅都是白色的，然而，他在澳大利亚逗留期间，惊讶地看到了一只黑天鹅——没有一个欧洲人曾对这类水禽的颜色提出过疑问。于是，黑天鹅成为第三类不确定性的象征。</p>
+<h3 id="全球化管理的重要性">全球化管理的重要性</h3>
+<ul>
+<li>互联网并非公共空间。</li>
+<li>互联网并非全球性的。</li>
+<li>互联网并非环保。</li>
+<li>互联网既不是虚拟的，也不是非物质的。</li>
+<li>互联网并非透明。（大数据）</li>
+<li>互联网并非中立。（算法）</li>
+<li>互联网在其运作过程中并没有完全被理解。</li>
+<li>互联网并非市场经济的保障。</li>
+<li>互联网并非民主的保障。</li>
+<li>互联网并非掌握真相。</li>
+<li>互联网积累的信息正在变得无用。</li>
+<li>互联网并非友善。（暴力）</li>
+<li>互联网是脆弱的。（Bug）</li>
+<li>互联网并非自动。（参数）</li>
+<li>互联网并非自由。（surf，原意是冲浪）</li>
+<li>互联网只有部分是可访问的。（暗网）</li>
+<li>互联网并非优质教育的保障。</li>
+<li>互联网并非公平。</li>
+<li>互联网并非免费。</li>
+<li>互联网是我们的工具，而我们也是互联网的工具。（测试）</li>
+<li>互联网不好也不坏。</li>
+<li>互联网，尤其对民主国家来说，是空前的挑战。</li>
+</ul>
+<h3 id="死亡电脑社">死亡电脑社</h3>
+<p>互联网上的预言大师名为 <strong>奇点</strong>。</p>
+<p>奇点指的是机器与人类彻底融合的时刻，这种情况注定会在某一天发生。</p>
+<h3 id="人工智能许多问题之一">人工智能：许多问题之一</h3>
+<p>智商（IQ）</p>
+<ul>
+<li>音乐智力，这种智力体现为对声音和节奏的感知度。它寻找音符的含义，并想象改编为其他乐曲的可能性。</li>
+<li>运动智力，这种智力能释放身体各个部位的潜能。它组织了用来解决特定问题的最佳动作序列。</li>
+<li>人际关系智力（或情感智力），这种智力能识别他人的感受和意图。它能感知到对于谈判、合作和互动等行为来说，什么是重要的因素。</li>
+<li>视觉智力，这种智力可以从三个维度进行思考。它能让我们在建模之前、在空间内移动物体之前、在看到被要求思考的东西之前，就先进行想象。</li>
+<li>语言智力，这种智力是利用语言反应的能力。如果有必要，这种智力甚至能够催生新的语言。</li>
+</ul>
+<h2 id="答案">答案</h2>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/89.jpg" alt="" /><figcaption>89</figcaption>
+</figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/02/22/9787115500809/90.jpg" alt="" /><figcaption>90</figcaption>
+</figure>
+<p>从古希腊哲学到数学，从逻辑推理到“无所不能”的计算机。柏拉图、莱布尼茨、罗素、香农、图灵……一个个伟大的思想家试图从数学公式中证明推理的合理性。</p>
+<p>他们是凭借天赋制胜，还是在鲁莽地大胆一搏？</p>
+<p>如何将逻辑赋予数学意义？</p>
+<p>如何从简单运算，走向复杂智慧？</p>
+<p>一场人类探索数学、算法与逻辑思维，并最终走向人工智能的梦想之旅，展现了哲学家、逻辑学家与数学家独特的思维方式，探讨了算法与人工智能对科学和社会的巨大影响。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/02/22/9787115500809/" data-id="ck6xw9k36006ds22wa33seuj8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
+
+      
+        <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/22/ds/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Machine Learning Concepts</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DS/" rel="tag">DS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/ANN/" style="font-size: 11.43px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Compiler/" style="font-size: 11.43px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.43px;">Construction</a> <a href="/tags/DL/" style="font-size: 15.71px;">DL</a> <a href="/tags/DS/" style="font-size: 10px;">DS</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 17.14px;">Godot</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 18.57px;">ML</a> <a href="/tags/Math/" style="font-size: 14.29px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.43px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 10px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 12.86px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 11.43px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/TensorFlow/" style="font-size: 10px;">TensorFlow</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/beginner/" style="font-size: 11.43px;">beginner</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/paper/" style="font-size: 12.86px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.43px;">plugin</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.43px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.43px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 14.29px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.43px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/22/9787115500809/">《极简算法史：从数学到机器的故事》读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/22/ds/">Machine Learning Concepts</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/21/9787111642602/">《机器学习算法的数学解析与Python实现》读书笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/20/math/">hexo 数学公式 mathjax</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/20/9787220098970/">《大国崛起的新政治经济学》读书笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iOSDevLog<br>
+      Powered by © 2020 - <a href="https://www.iosdevlog.com" target="_blank">贾献华 2020 博客</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/2020" class="mobile-nav-link">2020 Calendar</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
