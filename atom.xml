@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-02-23T12:14:47.699Z</updated>
+  <updated>2020-02-23T19:59:04.086Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Coursera 课程旁听与下载</title>
+    <link href="https://2020.iosdevlog.com/2020/02/24/coursera/"/>
+    <id>https://2020.iosdevlog.com/2020/02/24/coursera/</id>
+    <published>2020-02-23T18:36:14.000Z</published>
+    <updated>2020-02-23T19:59:04.086Z</updated>
+    
+    <content type="html"><![CDATA[<figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/4.png" alt="" /><figcaption>4</figcaption></figure><a id="more"></a><h2 id="旁听-coursera">旁听 Coursera</h2><h3 id="打开-coursera-上的课程-tensorflow-data-and-deployment-专项课程">打开 Coursera 上的课程 <a href="ttps://www.coursera.org/specializations/tensorflow-data-and-deployment">TensorFlow: Data and Deployment 专项课程</a></h3><p><a href="https://www.coursera.org/specializations/tensorflow-data-and-deployment" target="_blank" rel="noopener" class="uri">https://www.coursera.org/specializations/tensorflow-data-and-deployment</a></p><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/1.png" alt="" /><figcaption>课程</figcaption></figure><h3 id="点击里面的-课程-4-advanced-deployment-scenarios-with-tensorflow">点击里面的 <a href="https://www.coursera.org/learn/advanced-deployment-scenarios-tensorflow" target="_blank" rel="noopener">课程 4 Advanced Deployment Scenarios with TensorFlow</a></h3><p><a href="https://www.coursera.org/learn/advanced-deployment-scenarios-tensorflow" target="_blank" rel="noopener" class="uri">https://www.coursera.org/learn/advanced-deployment-scenarios-tensorflow</a></p><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/2.png" alt="" /><figcaption>免费注册</figcaption></figure><h3 id="点击-免费注册">点击 <strong>免费注册</strong></h3><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/3.png" alt="" /><figcaption>旁听</figcaption></figure><h3 id="点击-旁听">点击 <strong>旁听</strong></h3><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/4.png" alt="" /><figcaption>完成</figcaption></figure><h2 id="下载视频和字幕">下载视频和字幕</h2><p>dl-coursera 0.1.2</p><p><a href="https://pypi.org/project/dl-coursera/" target="_blank" rel="noopener" class="uri">https://pypi.org/project/dl-coursera/</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -U dl_coursera</span><br><span class="line">dl_coursera --version</span><br><span class="line">dl_coursera --cookies path/to/cookies.txt --slug advanced-deployment-scenarios-tensorflow --how <span class="built_in">builtin</span></span><br></pre></td></tr></table></figure><p><code>tree advanced-deployment-scenarios-tensorflow</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">advanced-deployment-scenarios-tensorflow&#x2F;</span><br><span class="line">├── 01@tensorflow-extended</span><br><span class="line">│   ├── 01@tf-serving-as-another-deployment-option-</span><br><span class="line">│   │   ├── 01@introduction-a-conversation-with-andrew-</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 02@introduction</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 03@downloading-the-coding-examples-and-exer</span><br><span class="line">│   │   │   ├── 01@downloading-the-coding-examples-and-exer.html</span><br><span class="line">│   │   │   ├── 1.png</span><br><span class="line">│   │   │   └── github_screenshot.png</span><br><span class="line">│   │   ├── 04@serving</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 05@installing-tf-serving</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 06@installation-link</span><br><span class="line">│   │   │   └── 01@installation-link.html</span><br><span class="line">│   │   └── 07@tensorflow-serving-summary</span><br><span class="line">│   │       ├── 01@.mp4</span><br></pre></td></tr></table></figure><h2 id="上传百度网盘">上传百度网盘</h2><p>BaiduPCS-Go</p><p><a href="https://github.com/iikira/BaiduPCS-Go" target="_blank" rel="noopener" class="uri">https://github.com/iikira/BaiduPCS-Go</a></p><p>后台上传</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohub /xxx/BaiduPCS-Go u XXX . &amp;</span><br></pre></td></tr></table></figure><p>查看进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep Baidu</span><br><span class="line">iosdevl+ 16986     1  0 14:46 ?        00:00:01 BaiduPCS-Go-v3.6.1-linux-amd64/BaiduPCS-Go u xx/ .</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure&gt;
+&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/24/coursera/4.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;4&lt;/figcaption&gt;
+&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="https://2020.iosdevlog.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Coursera" scheme="https://2020.iosdevlog.com/tags/Coursera/"/>
+    
+      <category term="download" scheme="https://2020.iosdevlog.com/tags/download/"/>
+    
+  </entry>
   
   <entry>
     <title>TensorFlow-Data-and-Deployment</title>
@@ -38,13 +65,13 @@
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="TensorFlow" scheme="https://2020.iosdevlog.com/tags/TensorFlow/"/>
-    
       <category term="Android" scheme="https://2020.iosdevlog.com/tags/Android/"/>
     
       <category term="iOS" scheme="https://2020.iosdevlog.com/tags/iOS/"/>
     
       <category term="Deployment" scheme="https://2020.iosdevlog.com/tags/Deployment/"/>
+    
+      <category term="TensorFlow" scheme="https://2020.iosdevlog.com/tags/TensorFlow/"/>
     
       <category term="js" scheme="https://2020.iosdevlog.com/tags/js/"/>
     
@@ -555,37 +582,6 @@ ISBN：9787111637172&lt;/p&gt;
     
     
       <category term="极客时间" scheme="https://2020.iosdevlog.com/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>移动深度学习</title>
-    <link href="https://2020.iosdevlog.com/2020/02/12/mobile-dl/"/>
-    <id>https://2020.iosdevlog.com/2020/02/12/mobile-dl/</id>
-    <published>2020-02-12T15:29:15.000Z</published>
-    <updated>2020-02-16T07:03:36.370Z</updated>
-    
-    <content type="html"><![CDATA[<figure><img src="https://pytorch.org/assets/images/pytorch-mobile.png" alt="" /><figcaption>PyTorch Mobile</figcaption></figure><a id="more"></a><h2 id="框架">框架</h2><h3 id="pytorch-mobile"><a href="https://pytorch.org/mobile/home/" target="_blank" rel="noopener">PyTorch Mobile</a></h3><p>随着应用程序继续要求更低的延迟，在边缘设备上运行ML的重要性越来越重要。它也是诸如联合学习之类的隐私保护技术的基础要素。从 <code>PyTorch 1.3</code> 开始，<code>PyTorch</code> 支持从 <code>Python</code> 到在 <code>iOS</code> 和 <code>Android</code> 上部署的端到端工作流。</p><p>这是一个早期的实验版本，我们将在接下来的几个月中在以下几个方面进行开发：</p><ul><li>提供 <code>API</code>，涵盖将ML集成到移动应用程序中所需的常见预处理和集成任务</li><li>支持 <code>QNNPACK</code> 量化内核库并支持 <code>ARM CPU</code></li><li>根据用户应用程序所需的运算符，进行构建级别的优化和选择性编译（即，仅为所需的运算符支付二进制大小）</li><li>进一步改善移动 <code>CPU</code> 和 <code>GPU</code> 的性能和覆盖范围</li></ul><p>了解更多信息或开始使用 <a href="https://pytorch.org/mobile/android" target="_blank" rel="noopener">Android</a> 或 <a href="https://pytorch.org/mobile/ios" target="_blank" rel="noopener">iOS</a>。</p><h3 id="tensorflow-lite"><a href="https://www.tensorflow.org/lite/" target="_blank" rel="noopener">TensorFlow Lite</a></h3><p>在移动设备和 IoT 设备上部署机器学习模型</p><p>TensorFlow Lite 是一种用于设备端推断的开源深度学习框架。</p><p><a href="https://www.tensorflow.org/lite/guide" target="_blank" rel="noopener">查看指南</a></p><p>指南介绍了 TensorFlow Lite 的概念和组件。</p><p><a href="https://www.tensorflow.org/lite/examples/" target="_blank" rel="noopener">查看示例</a></p><p>探索使用 TensorFlow Lite 的 Android 和 iOS 应用。</p><p><a href="https://www.tensorflow.org/lite/models/" target="_blank" rel="noopener">查看模型</a></p><p>轻松地部署预训练模型。</p><p><img src="https://www.tensorflow.org/site-assets/images/marketing/learn/learn-lite-hero.svg" /></p><p>工作原理</p><ul><li>选择模型</li></ul><p>选择新模型或重新训练现有模型。</p><ul><li>转换</li></ul><p>使用 TensorFlow Lite Converter 将 TensorFlow 模型转换为压缩的 FlatBuffer 文件。</p><ul><li>部署</li></ul><p>获取压缩的 .tflite 文件，并将其加载到移动设备或嵌入式设备中。</p><ul><li>优化</li></ul><p>通过将 32 位浮点数转换为更高效的 8 位整数进行量化，或者在 GPU 上运行。</p><h4 id="常见问题的解决方案">常见问题的解决方案</h4><p>探索帮助解决常见移动和边缘用例的优化模型。</p><p><a href="https://www.tensorflow.org/lite/models/" target="_blank" rel="noopener">查看所有用例</a></p><ul><li>图像分类</li></ul><p>识别数百个对象，包括人、活动、动物、植物和地点。</p><ul><li>对象检测</li></ul><p>使用边界框检测多个对象。是的，包括狗和猫。</p><ul><li>智能回复</li></ul><p>生成回复建议以输入对话聊天消息。</p><h2 id="案例">案例</h2><p>移动深度学习主要应用为物体检测和分类。</p><ul><li>主体检测（ObjectDetection）：物体的大小和位置</li><li>分类：种类 &amp; 概率</li></ul><p>部署</p><ul><li>云端服务器：性能和体验都会非常差，也会消耗大量的服务器资源，企业成本会骤增</li><li>移动端：提升用户体验</li></ul><p>案例</p><ul><li>物体识别</li><li>风格迁移</li><li>视频主体检测</li><li>语音识别</li><li>自然语言处理</li><li>听歌识曲</li><li>...</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure&gt;
-&lt;img src=&quot;https://pytorch.org/assets/images/pytorch-mobile.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;PyTorch Mobile&lt;/figcaption&gt;
-&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
-    
-      <category term="移动" scheme="https://2020.iosdevlog.com/tags/%E7%A7%BB%E5%8A%A8/"/>
-    
-      <category term="PyTorch" scheme="https://2020.iosdevlog.com/tags/PyTorch/"/>
-    
-      <category term="TensorFlow" scheme="https://2020.iosdevlog.com/tags/TensorFlow/"/>
     
   </entry>
   
