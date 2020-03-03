@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-03-03T15:08:08.776Z</updated>
+  <updated>2020-03-03T15:55:29.538Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我的微信公众号头像侵权</title>
+    <link href="https://2020.iosdevlog.com/2020/03/03/copyright/"/>
+    <id>https://2020.iosdevlog.com/2020/03/03/copyright/</id>
+    <published>2020-03-03T15:23:24.000Z</published>
+    <updated>2020-03-03T15:55:29.538Z</updated>
+    
+    <content type="html"><![CDATA[<figure><img src="https://2020.iosdevlog.com/2020/03/03/copyright/1.jpg" alt="" /><figcaption>侵权</figcaption></figure><a id="more"></a><p>今天需要上传 <code>ipa</code> 到 <code>App Store</code>，使用 <code>Apple</code> 最近推出的上传工具 <code>Transporter</code> 上传。</p><p>期间遇到卡住问题，于是更新了一篇 Blog，准备也发到我的公众号：iOSDevLog。</p><p>好长时间没有登录这个帐号群发消息，一进入就发现我公众号的头像侵权了。</p><p>你的帐号经查涉嫌头像侵权，违规内容已清空处理。</p><p>你可重新进行设置但请遵守规范。如果再有类似违规情况，将加重处罚甚至永久性屏蔽所有功能。</p><p>违反规范：《微信公众平台运营规范》4.1.1条规定</p><p>微信公众平台已依法进行侵权投诉处理，法定的平台义务已经履行完毕。若你对于投诉方的意见有异议，建议你另行通过行政投诉、诉讼等方式与投诉方解决。</p><table><colgroup><col style="width: 21%" /><col style="width: 21%" /><col style="width: 15%" /><col style="width: 21%" /><col style="width: 21%" /></colgroup><tbody><tr class="odd"><td style="text-align: left;">权利人</td><td style="text-align: left;">姓名/名称</td><td style="text-align: left;">苹果</td><td style="text-align: left;">有效证件（复印件附后）</td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">通讯地址</td><td style="text-align: left;">中国 - 上海 - 浦东新区 外高桥保税区马吉路88号C区6号楼全幢</td><td style="text-align: left;">邮编</td><td style="text-align: left;">200000</td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">联系人</td><td style="text-align: left;">O********</td><td style="text-align: left;">电话</td><td style="text-align: left;">182211*****</td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">E-mail</td><td style="text-align: left;">e******<span class="citation" data-cites="apple.com">@apple.com</span></td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">投诉帐号</td><td style="text-align: left;">iOS开发日志 （iOSDevLog）</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">投诉类型</td><td style="text-align: left;">头像侵权</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">被侵权内容</td><td style="text-align: left;">商标</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">投诉描述</td><td style="text-align: left;">以下内容非微信官方提供，由权利人投诉时填写，请谨慎操作。</td><td style="text-align: left;">被投诉公众号未经苹果公司授权注册或运营。其账号、名称、头像及内容等多处未经授权使用苹果公司注册商标，侵犯我公司商标权，严重误导消费者。权利人要求立即停止上述侵权行为。</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">证明资料</td><td style="text-align: left;">商标注册书</td><td style="text-align: left;">营业执照</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">保证声明</td><td style="text-align: left;">权利人及其代理人（统称为：声明人）诚意作如下声明</td><td style="text-align: left;">声明人在通知书中的陈述和提供的相关材料皆是真实、有效、合法的，并保证承担和赔偿腾讯因根据声明人的通知书对相关帐号的处理而给腾讯造成的任何损失，包括但不限于腾讯因向被投诉方或用户赔偿而产生的损失及腾讯名誉、商誉损害等。</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr></tbody></table><p>对此我的态度就是 <strong>认错</strong>，要改头像。一时间又没有想好想改成什么样，就直接用我 <code>AIDevLog</code> 的二维码好了。</p><h2 id="苹果不让坏人用-iphone-好莱坞导演透露电影业潜规则1">苹果不让坏人用 iPhone !好莱坞导演透露电影业潜规则<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2><p>瑞安·约翰逊（Rian Johnson），最受欢迎的电影制片人之一（布鲁克，布卢姆兄弟，洛珀（2012），《星球大战：最后的绝地武士》，《刀叉》）进行了有趣的采访 “名利场”。 他特别提到了安置协议 iPhone 在电影院里。 据约翰逊说， η 苹果公司 允许 使用 iPhone，但不允许坏人拥有它们 电影.</p><p>瑞安·约翰逊（Rian Johnson）具体说：</p><blockquote><p>“另外一件有趣的事，我不知道是否要说……不是因为它不好或什么，而是因为它会影响下一个 电影 我正在写一个谜..算了！ 我会说。 非常有趣</p><p>苹果…允许使用iPhone，但是-如果您正在观看一部神秘电影，这非常重要- 电影中的坏人无法拥有iPhone。</p><p>所以...哦，不！ 每一个 创造者 他的电影中有小人，他现在想杀了我！”</p></blockquote><p>众所周知 <strong>苹果公司</strong> 有 <strong>严格的规则</strong> 关于如何使用，显示和拍照iPhone和其他产品 家电 的。 例如，苹果公司报告说 该 制品 它应该只在“尽可能好的光线下”出现， 以便以最佳方式展示 iPhone。</p><p>过去许多人已经注意到，只有“好人”才能在电视节目和电影中使用Apple产品。 播放“ 24”时， 有线 写一个 理论 粉丝曾经说过 好孩子用 苹果电脑 而坏人会用它 个人电脑。 该理论似乎是正确的。</p><p>约翰逊发表声明后，观众肯定会更加专心，并观看 家电 演员用来了解坏人在电影中的适时出现。</p><p>看来 <strong>苹果公司</strong> 是非常注重它的品牌，以后对头像，图片，Code，数据等使用，最好选择无版权的或者是公开的，避免陷入不必要的麻烦（大公司让个人免费用盗版，等公司能交得起时...）。</p><section class="footnotes" role="doc-endnotes"><hr /><ol><li id="fn1" role="doc-endnote"><p>苹果不允许坏人在电影中使用iPhone！：<a href="https://zh-cn.secnews.gr/213337/iphone苹果酱kakoi/" target="_blank" rel="noopener" class="uri">https://zh-cn.secnews.gr/213337/iphone苹果酱kakoi/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li></ol></section>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure&gt;
+&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/03/copyright/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;侵权&lt;/figcaption&gt;
+&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="运营" scheme="https://2020.iosdevlog.com/categories/%E8%BF%90%E8%90%A5/"/>
+    
+    
+      <category term="公众号" scheme="https://2020.iosdevlog.com/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/"/>
+    
+      <category term="Apple" scheme="https://2020.iosdevlog.com/tags/Apple/"/>
+    
+      <category term="版权" scheme="https://2020.iosdevlog.com/tags/%E7%89%88%E6%9D%83/"/>
+    
+  </entry>
   
   <entry>
     <title>Transporter 上传慢解决方案</title>
@@ -63,36 +92,6 @@
     
     
       <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>copyright</title>
-    <link href="https://2020.iosdevlog.com/2020/03/03/copyright/"/>
-    <id>https://2020.iosdevlog.com/2020/03/03/copyright/</id>
-    <published>2020-03-02T16:00:00.000Z</published>
-    <updated>2020-03-03T15:52:02.921Z</updated>
-    
-    <content type="html"><![CDATA[<p>:---<br />title: 我的微信公众号头像侵权<br />categories: 运营<br />tags:<br />- 公众号<br />- Apple<br />- 版权<br />date: 2020-03-03 23:23:24<br />:---</p><figure><img src="https://2020.iosdevlog.com/2020/03/03/copyright/1.jpg" alt="" /><figcaption>侵权</figcaption></figure><a id="more"></a><p>今天需要上传 <code>ipa</code> 到 <code>App Store</code>，使用 <code>Apple</code> 最近推出的上传工具 <code>Transporter</code> 上传。</p><p>期间遇到卡住问题，于是更新了一篇 Blog，准备也发到我的公众号：iOSDevLog。</p><p>好长时间没有登录这个帐号群发消息，一进入就发现我公众号的头像侵权了。</p><p>你的帐号经查涉嫌头像侵权，违规内容已清空处理。</p><p>你可重新进行设置但请遵守规范。如果再有类似违规情况，将加重处罚甚至永久性屏蔽所有功能。</p><p>违反规范：《微信公众平台运营规范》4.1.1条规定</p><p>微信公众平台已依法进行侵权投诉处理，法定的平台义务已经履行完毕。若你对于投诉方的意见有异议，建议你另行通过行政投诉、诉讼等方式与投诉方解决。</p><table><colgroup><col style="width: 21%" /><col style="width: 21%" /><col style="width: 15%" /><col style="width: 21%" /><col style="width: 21%" /></colgroup><tbody><tr class="odd"><td style="text-align: left;">权利人</td><td style="text-align: left;">姓名/名称</td><td style="text-align: left;">苹果</td><td style="text-align: left;">有效证件（复印件附后）</td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">通讯地址</td><td style="text-align: left;">中国 - 上海 - 浦东新区 外高桥保税区马吉路88号C区6号楼全幢</td><td style="text-align: left;">邮编</td><td style="text-align: left;">200000</td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">联系人</td><td style="text-align: left;">O********</td><td style="text-align: left;">电话</td><td style="text-align: left;">182211*****</td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">E-mail</td><td style="text-align: left;">e******<span class="citation" data-cites="apple.com">@apple.com</span></td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">投诉帐号</td><td style="text-align: left;">iOS开发日志 （iOSDevLog）</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">投诉类型</td><td style="text-align: left;">头像侵权</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">被侵权内容</td><td style="text-align: left;">商标</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">投诉描述</td><td style="text-align: left;">以下内容非微信官方提供，由权利人投诉时填写，请谨慎操作。</td><td style="text-align: left;">被投诉公众号未经苹果公司授权注册或运营。其账号、名称、头像及内容等多处未经授权使用苹果公司注册商标，侵犯我公司商标权，严重误导消费者。权利人要求立即停止上述侵权行为。</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="odd"><td style="text-align: left;">证明资料</td><td style="text-align: left;">商标注册书</td><td style="text-align: left;">营业执照</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr><tr class="even"><td style="text-align: left;">保证声明</td><td style="text-align: left;">权利人及其代理人（统称为：声明人）诚意作如下声明</td><td style="text-align: left;">声明人在通知书中的陈述和提供的相关材料皆是真实、有效、合法的，并保证承担和赔偿腾讯因根据声明人的通知书对相关帐号的处理而给腾讯造成的任何损失，包括但不限于腾讯因向被投诉方或用户赔偿而产生的损失及腾讯名誉、商誉损害等。</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr></tbody></table><p>对此我的态度就是 <strong>认错</strong>，要改头像。一时间又没有想好想改成什么样，就直接用我 <code>AIDevLog</code> 的二维码好了。</p><h2 id="苹果不让坏人用-iphone-好莱坞导演透露电影业潜规则1">苹果不让坏人用 iPhone !好莱坞导演透露电影业潜规则[^1]</h2><p>瑞安·约翰逊（Rian Johnson），最受欢迎的电影制片人之一（布鲁克，布卢姆兄弟，洛珀（2012），《星球大战：最后的绝地武士》，《刀叉》）进行了有趣的采访 “名利场”。 他特别提到了安置协议 iPhone 在电影院里。 据约翰逊说， η 苹果公司 允许 使用 iPhone，但不允许坏人拥有它们 电影.</p><p>瑞安·约翰逊（Rian Johnson）具体说：</p><blockquote><p>“另外一件有趣的事，我不知道是否要说……不是因为它不好或什么，而是因为它会影响下一个 电影 我正在写一个谜..算了！ 我会说。 非常有趣</p><p>苹果…允许使用iPhone，但是-如果您正在观看一部神秘电影，这非常重要- 电影中的坏人无法拥有iPhone。</p><p>所以...哦，不！ 每一个 创造者 他的电影中有小人，他现在想杀了我！”</p></blockquote><p>众所周知 <strong>苹果公司</strong> 有 <strong>严格的规则</strong> 关于如何使用，显示和拍照iPhone和其他产品 家电 的。 例如，苹果公司报告说 该 制品 它应该只在“尽可能好的光线下”出现， 以便以最佳方式展示 iPhone。</p><p>过去许多人已经注意到，只有“好人”才能在电视节目和电影中使用Apple产品。 播放“ 24”时， 有线 写一个 理论 粉丝曾经说过 好孩子用 苹果电脑 而坏人会用它 个人电脑。 该理论似乎是正确的。</p><p>约翰逊发表声明后，观众肯定会更加专心，并观看 家电 演员用来了解坏人在电影中的适时出现。</p><p>看来 <strong>苹果公司</strong> 是非常注重它的品牌，以后对头像，图片，Code，数据等使用，最好选择无版权的或者是公开的，避免陷入不必要的麻烦（大公司让个人免费用盗版，等公司能交得起时...）。</p><p>[^1]苹果不允许坏人在电影中使用iPhone！：<a href="https://zh-cn.secnews.gr/213337/iphone苹果酱kakoi/" target="_blank" rel="noopener" class="uri">https://zh-cn.secnews.gr/213337/iphone苹果酱kakoi/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;:---&lt;br /&gt;
-title: 我的微信公众号头像侵权&lt;br /&gt;
-categories: 运营&lt;br /&gt;
-tags:&lt;br /&gt;
-- 公众号&lt;br /&gt;
-- Apple&lt;br /&gt;
-- 版权&lt;br /&gt;
-date: 2020-03-03 23:23:24&lt;br /&gt;
-:---&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/03/copyright/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;侵权&lt;/figcaption&gt;
-&lt;/figure&gt;
-    
-    </summary>
-    
-    
     
   </entry>
   
