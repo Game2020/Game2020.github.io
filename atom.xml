@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-03-03T15:55:29.538Z</updated>
+  <updated>2020-03-04T14:06:20.253Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>线性回归  Manim 演示</title>
+    <link href="https://2020.iosdevlog.com/2020/03/04/manim/"/>
+    <id>https://2020.iosdevlog.com/2020/03/04/manim/</id>
+    <published>2020-03-04T14:00:06.000Z</published>
+    <updated>2020-03-04T14:06:20.253Z</updated>
+    
+    <content type="html"><![CDATA[<figure><img src="https://2020.iosdevlog.com/2020/03/03/dl/0.jpg" alt="" /><figcaption>Linear Regression Overview</figcaption></figure><p><a href="https://youtube.com/watch?v=3vl17ymkODg" target="_blank" rel="noopener" class="uri">https://youtube.com/watch?v=3vl17ymkODg</a></p><p>机器学习算法如果能向 3B1B 一样展示，必能加深对算法的理解。</p><p>准备做一些视频展示，可以直接调用 sklearn，当然也可以自己写一套算法，为了了解原理，还是直接调用 sklearn等成熟的算法库好了（自己写有点慢，把代码看懂还是有必要的）。</p><p>Manim 非官方文档：<a href="https://elteoremadebeethoven.github.io/manim_3feb_docs.github.io/html/index.html" target="_blank" rel="noopener" class="uri">https://elteoremadebeethoven.github.io/manim_3feb_docs.github.io/html/index.html</a></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/03/03/dl/1.jpg" alt="1" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/2.jpg" alt="2" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/3.jpg" alt="3" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/4.jpg" alt="4" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/5.jpg" alt="5" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/6.jpg" alt="6" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/7.jpg" alt="7" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/8.jpg" alt="8" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/9.jpg" alt="9" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/10.jpg" alt="10" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/11.jpg" alt="11" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/12.jpg" alt="12" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/13.jpg" alt="13" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/14.jpg" alt="14" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/15.jpg" alt="15" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/16.jpg" alt="16" /><br /><img src="https://2020.iosdevlog.com/2020/03/03/dl/17.jpg" alt="17" /></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure&gt;
+&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/03/dl/0.jpg&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;Linear Regression Overview&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;&lt;a href=&quot;https://youtube.com/watch?v=3vl17ymkODg&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;uri&quot;&gt;https://youtube.com/watch?v=3vl17ymkODg&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;机器学习算法如果能向 3B1B 一样展示，必能加深对算法的理解。&lt;/p&gt;
+&lt;p&gt;准备做一些视频展示，可以直接调用 sklearn，当然也可以自己写一套算法，为了了解原理，还是直接调用 sklearn等成熟的算法库好了（自己写有点慢，把代码看懂还是有必要的）。&lt;/p&gt;
+&lt;p&gt;Manim 非官方文档：&lt;a href=&quot;https://elteoremadebeethoven.github.io/manim_3feb_docs.github.io/html/index.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;uri&quot;&gt;https://elteoremadebeethoven.github.io/manim_3feb_docs.github.io/html/index.html&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="dl" scheme="https://2020.iosdevlog.com/categories/dl/"/>
+    
+    
+      <category term="-lr -manim" scheme="https://2020.iosdevlog.com/tags/lr-manim/"/>
+    
+  </entry>
   
   <entry>
     <title>我的微信公众号头像侵权</title>
@@ -67,31 +96,6 @@
     
     
       <category term="iOS" scheme="https://2020.iosdevlog.com/tags/iOS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>manim</title>
-    <link href="https://2020.iosdevlog.com/2020/03/03/manim/"/>
-    <id>https://2020.iosdevlog.com/2020/03/03/manim/</id>
-    <published>2020-03-02T16:29:06.000Z</published>
-    <updated>2020-03-02T16:29:06.358Z</updated>
-    
-    <content type="html"><![CDATA[<figure><img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png" alt="" /><figcaption>2020/01/01</figcaption></figure><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure&gt;
-&lt;img src=&quot;https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;2020/01/01&lt;/figcaption&gt;
-&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
-    
-    
-      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
     
   </entry>
   
@@ -192,9 +196,9 @@ ISBN：9787115474810&lt;/p&gt;
       <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
     
     
-      <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
-    
       <category term="NN" scheme="https://2020.iosdevlog.com/tags/NN/"/>
+    
+      <category term="DL" scheme="https://2020.iosdevlog.com/tags/DL/"/>
     
       <category term="Python" scheme="https://2020.iosdevlog.com/tags/Python/"/>
     
