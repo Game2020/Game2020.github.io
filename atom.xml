@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-03-13T15:44:29.137Z</updated>
+  <updated>2020-03-14T13:28:44.786Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>tf2</title>
+    <title>仿抖音小游戏《潜水艇》-FlappyBird</title>
+    <link href="https://2020.iosdevlog.com/2020/03/14/FalppyBird/"/>
+    <id>https://2020.iosdevlog.com/2020/03/14/FalppyBird/</id>
+    <published>2020-03-14T13:01:39.000Z</published>
+    <updated>2020-03-14T13:28:44.786Z</updated>
+    
+    <content type="html"><![CDATA[<figure><img src="https://raw.githubusercontent.com/iOSDevLog/FlappySwift/master/FlappySwift.png" alt="" /><figcaption>FlappySwift</figcaption></figure><a id="more"></a><h2 id="flappyswift">FlappySwift</h2><p>An implementation of Flappy Bird and Face Detection in Swift for iOS 11.</p><p><a href="https://www.bilibili.com/video/av96310774/" target="_blank" rel="noopener">B站视频</a></p><h2 id="face-detection">Face Detection</h2><p><a href="https://www.raywenderlich.com/1163620-face-detection-tutorial-using-the-vision-framework-for-ios" target="_blank" rel="noopener">Face Detection Tutorial Using the Vision Framework for iOS</a></p><h2 id="flappybird">FlappyBird</h2><p><a href="https://github.com/fullstackio/FlappySwift" target="_blank" rel="noopener">FlappySwift</a></p><h2 id="github">GitHub</h2><p><a href="https://github.com/iOSDevLog/FlappySwift" target="_blank" rel="noopener" class="uri">https://github.com/iOSDevLog/FlappySwift</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;figure&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/iOSDevLog/FlappySwift/master/FlappySwift.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;FlappySwift&lt;/figcaption&gt;
+&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
+    
+    
+      <category term="iOS" scheme="https://2020.iosdevlog.com/tags/iOS/"/>
+    
+      <category term="Swift" scheme="https://2020.iosdevlog.com/tags/Swift/"/>
+    
+      <category term="cv" scheme="https://2020.iosdevlog.com/tags/cv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>tf2 CheekSheet</title>
     <link href="https://2020.iosdevlog.com/2020/03/13/tf2/"/>
     <id>https://2020.iosdevlog.com/2020/03/13/tf2/</id>
     <published>2020-03-13T15:34:37.000Z</published>
-    <updated>2020-03-13T15:44:29.137Z</updated>
+    <updated>2020-03-14T13:29:46.585Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/13/tf2/0.jpg" /></p><p><a href="https://www.aicheatsheets.com/" target="_blank" rel="noopener" class="uri">https://www.aicheatsheets.com/</a></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/03/13/tf2/1.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/13/tf2/2.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/13/tf2/3.jpg" /></p>]]></content>
     
@@ -588,33 +617,6 @@ ISBN：9787111624721&lt;/p&gt;
       <category term="nlp" scheme="https://2020.iosdevlog.com/tags/nlp/"/>
     
       <category term="geektime" scheme="https://2020.iosdevlog.com/tags/geektime/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Coursera 课程免费旁听与下载</title>
-    <link href="https://2020.iosdevlog.com/2020/02/24/coursera/"/>
-    <id>https://2020.iosdevlog.com/2020/02/24/coursera/</id>
-    <published>2020-02-23T18:36:14.000Z</published>
-    <updated>2020-02-24T13:58:22.812Z</updated>
-    
-    <content type="html"><![CDATA[<figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/4.png" alt="" /><figcaption>Coursera 课程</figcaption></figure><a id="more"></a><p>Coursera（/kɔːrsˈɛrə/）是由斯坦福大学的计算机科学教授吴恩达和达芙妮·科勒联合创建的一个营利性的教育科技公司。</p><p>Coursera 与多家大学合作，给大众带来一些在线免费课堂。在Knowledge@Wharton 座谈会上，Daphne Koller 在采访中说道，截至到 2012年11月，Coursera 上有来自 196 国家的超过 190万人。他们至少注册过一门课堂，尽管有数百万人注册过课堂，但完成率仅是 7-9%。</p><p>Coursera 成立于加州山景城，它的启动稍晚于由斯坦福大学教授 Sebastian Thrun 投资的盈利性在线教育网站 Udacity、但稍早于一个由麻省理工学院、哈佛大学和加州大学柏克莱分校所初创的非盈利性在线教育网站 edX。</p><p>更多信息请访问 <a href="https://zh.wikipedia.org/zh-cn/Coursera" target="_blank" rel="noopener">维基百科</a>。</p><h2 id="旁听-coursera">旁听 Coursera</h2><h3 id="打开-coursera-上的课程-tensorflow-data-and-deployment-专项课程">打开 Coursera 上的课程 <a href="ttps://www.coursera.org/specializations/tensorflow-data-and-deployment">TensorFlow: Data and Deployment 专项课程</a></h3><p><a href="https://www.coursera.org/specializations/tensorflow-data-and-deployment" target="_blank" rel="noopener" class="uri">https://www.coursera.org/specializations/tensorflow-data-and-deployment</a></p><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/1.png" alt="" /><figcaption>课程</figcaption></figure><h3 id="点击里面的-课程-4-advanced-deployment-scenarios-with-tensorflow">点击里面的 <a href="https://www.coursera.org/learn/advanced-deployment-scenarios-tensorflow" target="_blank" rel="noopener">课程 4 Advanced Deployment Scenarios with TensorFlow</a></h3><p><a href="https://www.coursera.org/learn/advanced-deployment-scenarios-tensorflow" target="_blank" rel="noopener" class="uri">https://www.coursera.org/learn/advanced-deployment-scenarios-tensorflow</a></p><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/2.png" alt="" /><figcaption>免费注册</figcaption></figure><h3 id="点击-免费注册">点击 <strong>免费注册</strong></h3><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/3.png" alt="" /><figcaption>旁听</figcaption></figure><h3 id="点击-旁听">点击 <strong>旁听</strong></h3><figure><img src="https://2020.iosdevlog.com/2020/02/24/coursera/4.png" alt="" /><figcaption>完成</figcaption></figure><h2 id="下载视频和字幕">下载视频和字幕</h2><p>dl-coursera 0.1.2</p><p><a href="https://pypi.org/project/dl-coursera/" target="_blank" rel="noopener" class="uri">https://pypi.org/project/dl-coursera/</a></p><p><code>Chrome</code> 导出 <code>cookies.txt</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip3 install -U dl_coursera</span><br><span class="line">dl_coursera --version</span><br><span class="line">dl_coursera --cookies path/to/cookies.txt --slug advanced-deployment-scenarios-tensorflow --how <span class="built_in">builtin</span></span><br></pre></td></tr></table></figure><p><code>tree advanced-deployment-scenarios-tensorflow</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">advanced-deployment-scenarios-tensorflow&#x2F;</span><br><span class="line">├── 01@tensorflow-extended</span><br><span class="line">│   ├── 01@tf-serving-as-another-deployment-option-</span><br><span class="line">│   │   ├── 01@introduction-a-conversation-with-andrew-</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 02@introduction</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 03@downloading-the-coding-examples-and-exer</span><br><span class="line">│   │   │   ├── 01@downloading-the-coding-examples-and-exer.html</span><br><span class="line">│   │   │   ├── 1.png</span><br><span class="line">│   │   │   └── github_screenshot.png</span><br><span class="line">│   │   ├── 04@serving</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 05@installing-tf-serving</span><br><span class="line">│   │   │   ├── 01@.mp4</span><br><span class="line">│   │   │   └── 01@.srt</span><br><span class="line">│   │   ├── 06@installation-link</span><br><span class="line">│   │   │   └── 01@installation-link.html</span><br><span class="line">│   │   └── 07@tensorflow-serving-summary</span><br><span class="line">│   │       ├── 01@.mp4</span><br></pre></td></tr></table></figure><h2 id="上传百度网盘">上传百度网盘</h2><p>BaiduPCS-Go</p><p><a href="https://github.com/iikira/BaiduPCS-Go" target="_blank" rel="noopener" class="uri">https://github.com/iikira/BaiduPCS-Go</a></p><p>后台上传</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohub /xxx/BaiduPCS-Go u XXX . &amp;</span><br></pre></td></tr></table></figure><p>查看进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ps -ef | grep Baidu</span><br><span class="line">iosdevl+ 16986     1  0 14:46 ?        00:00:01 BaiduPCS-Go-v3.6.1-linux-amd64/BaiduPCS-Go u xx/ .</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure&gt;
-&lt;img src=&quot;https://2020.iosdevlog.com/2020/02/24/coursera/4.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;Coursera 课程&lt;/figcaption&gt;
-&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="学习" scheme="https://2020.iosdevlog.com/categories/%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Coursera" scheme="https://2020.iosdevlog.com/tags/Coursera/"/>
-    
-      <category term="download" scheme="https://2020.iosdevlog.com/tags/download/"/>
     
   </entry>
   
