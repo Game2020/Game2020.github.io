@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-03-20T15:52:10.458Z</updated>
+  <updated>2020-03-21T15:52:24.999Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>最有效的 Python 项目源码阅读方式</title>
+    <link href="https://2020.iosdevlog.com/2020/03/21/pylint/"/>
+    <id>https://2020.iosdevlog.com/2020/03/21/pylint/</id>
+    <published>2020-03-21T14:54:29.000Z</published>
+    <updated>2020-03-21T15:52:24.999Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/03/21/pylint/pylint.png" /></p><p>Pylint - Star your Python code!</p><!-- more --><p>众所周知，目前（2020年）人工智能项目大部分代码是使用 <code>Python</code> 语言编写的。</p><p>在发 <code>Paper</code> 的学术界有 <code>Pytorch</code>；在工业界部署 <code>First</code> 的工业界，这两个框架已经占据了深度学习的中心地位。</p><p>在机器学习领域有包含几乎所有常用机器学习算法的开源库：<code>sklean</code>。</p><p>如果遇到问题，找开源代码是参考是最简捷的方案。</p><p>目前大部分的人工智能相关项目的源码都是合适 <code>Python</code> 编写的，如何快速阅读这些源码呢？</p><p>这里推荐一套最有效的阅读 <code>Python</code> 源码的方式。</p><ol type="1"><li>下载相关源码：推荐去 <code>GitHub</code> 上下载，也可以用 <code>Chrome</code> 插件看</li><li>查看 <code>README.md</code> 和相关说明文档</li><li>参考 <code>Tutorials</code> 将代码跑起来</li><li>利用 <a href="https://www.pylint.org" target="_blank" rel="noopener">Pyreverse 包含在 Pypylint</a> 生成项目框架图</li><li>找到需要参考的代码，修改</li></ol><p>下面介绍一下如何生成 <code>manim</code> 项目框架图</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pylint</span></span><br><span class="line">pip install pylint</span><br><span class="line"><span class="comment"># touch ....../__init__.py</span></span><br><span class="line">pyreverse -A -o png -p manimlib manim/manimlib</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/21/pylint/pylint.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Pylint - Star your Python code!&lt;/p&gt;
+&lt;!-- m
+      
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="https://2020.iosdevlog.com/categories/Python/"/>
+    
+    
+      <category term="Code" scheme="https://2020.iosdevlog.com/tags/Code/"/>
+    
+  </entry>
   
   <entry>
     <title>《统计学习方法》第 14 章 聚类方法 KMeans</title>
@@ -193,9 +222,9 @@
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
-    
       <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
+    
+      <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
     
       <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
     
@@ -436,9 +465,9 @@ ISBN：9787121331107&lt;/p&gt;
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
-    
       <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
+    
+      <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
     
   </entry>
   
@@ -551,31 +580,6 @@ ISBN：9787121331107&lt;/p&gt;
       <category term="Apple" scheme="https://2020.iosdevlog.com/tags/Apple/"/>
     
       <category term="版权" scheme="https://2020.iosdevlog.com/tags/%E7%89%88%E6%9D%83/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Transporter 上传慢解决方案</title>
-    <link href="https://2020.iosdevlog.com/2020/03/03/Transporter/"/>
-    <id>https://2020.iosdevlog.com/2020/03/03/Transporter/</id>
-    <published>2020-03-03T14:56:11.000Z</published>
-    <updated>2020-03-03T15:08:08.776Z</updated>
-    
-    <content type="html"><![CDATA[<figure><img src="https://2020.iosdevlog.com/2020/03/03/Transporter/1.jpg" alt="" /><figcaption>Transporter</figcaption></figure><a id="more"></a><p>解决使用 Transporter 上传 <strong>ipa</strong> 到 App Store 时，有时间会卡住或者非常慢。</p><h2 id="使用">使用</h2><ol type="1"><li>下载 <code>Release</code> 下面的 <code>zip</code> 包，或者 <code>git clone https://github.com/iOSDevLog/com.apple.amp.itmstransporter</code></li><li>替换<code>~/Library/Caches/com.apple.amp.itmstransporter</code></li></ol><h2 id="原因">原因</h2><p>Transporter 安装上第一次打开后，会在硬盘 <code>~/Library/Caches/com.apple.amp.itmstransporter</code> 目录下下载一些缓存文件，这些缓存文件没有下载完，或者下载失败没下载完时，使用Transporter去提交应用这个页面就会卡住或者这个页面很慢。</p><h2 id="解决方案">解决方案</h2><p>终端运行命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/Applications/Transporter.app/Contents/itms/bin/iTMSTransporter</span><br></pre></td></tr></table></figure><p>查看 <code>~/Library/Caches/com.apple.amp.itmstransporter</code> 变化</p><p>如果有报错信息 <code>https://...jar</code>，把 <code>jar</code> 文件下载下来，放入 <code>~/Library/Caches/com.apple.amp.itmstransporter/obr/2.2.0/</code></p><p>再次运行</p><p><code>/Applications/Transporter.app/Contents/itms/bin/iTMSTransporter</code></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">[2020-03-03 12:28:39 CST] &lt;main&gt;  INFO: Configuring logging...</span><br><span class="line">[2020-03-03 12:28:39 CST] &lt;main&gt;  INFO: Logging level <span class="built_in">set</span> to eXtreme</span><br><span class="line">[2020-03-03 12:28:39 CST] &lt;main&gt;  INFO: Transporter is searching <span class="keyword">for</span> new software components.</span><br><span class="line">[2020-03-03 12:28:39 CST] &lt;main&gt;  INFO: INFO: using cached repository.xml file.</span><br><span class="line">[2020-03-03 12:28:40 CST] &lt;main&gt;  INFO: Update check complete.</span><br><span class="line">[2020-03-03 12:28:41 CST] &lt;main&gt; DEBUG: Attempting refresh of configuration data from https://contentdelivery.itunes.apple.com/transporter/Defaults.properties</span><br><span class="line">[2020-03-03 12:28:41 CST] &lt;main&gt; DEBUG: Configuration refresh successful.</span><br><span class="line">[2020-03-03 12:28:41 CST] &lt;main&gt; DEBUG: Saving configuration to <span class="built_in">local</span> path: /Users/iosdevlog/Library/Caches/com.apple.amp.itmstransporter/Defaults.properties</span><br><span class="line">usage: iTMSTransporter [-<span class="built_in">help</span> &lt;arg&gt; | -info | -m &lt;arg&gt; | -version]   [-o &lt;arg&gt;] [-v</span><br><span class="line">       &lt;arg&gt;]  [-WONoPause &lt;arg&gt;] [-Xmx4096m]</span><br><span class="line">iTMSTransporter : iTunes Store Transporter 2.0.0</span><br><span class="line"> -<span class="built_in">help</span> &lt;arg&gt;        Show this <span class="built_in">help</span>.  If a mode value is specified, show <span class="built_in">help</span> specific</span><br><span class="line">                    to that mode.</span><br><span class="line"> -info              The -info option should be used by itself and returns the</span><br><span class="line">                    copyright notice and acknowledgements.</span><br><span class="line"> -m &lt;arg&gt;           The -m option specifies the tool<span class="string">'s mode.  The valid values are:</span></span><br><span class="line"><span class="string">                    verify, upload, provider, diagnostic, lookupMetadata,</span></span><br><span class="line"><span class="string">                    createArtist, lookupArtist, status, statusAll,</span></span><br><span class="line"><span class="string">                    createMetadataTicket, queryTickets, generateSchema, transferTest,</span></span><br><span class="line"><span class="string">                    downloadMetadataGuides, listReports, requestReport</span></span><br><span class="line"><span class="string"> -o &lt;arg&gt;           The -o option specifies the directory and filename you want to use</span></span><br><span class="line"><span class="string">                    to log output information.  By default, Transporter logs output</span></span><br><span class="line"><span class="string">                    information to standard out. If you specify a filename,</span></span><br><span class="line"><span class="string">                    Transporter logs the output to the specified file, as well as to</span></span><br><span class="line"><span class="string">                    standard out.</span></span><br><span class="line"><span class="string"> -v &lt;arg&gt;           The -v option specifies the level of logging.  The five values</span></span><br><span class="line"><span class="string">                    are: off, detailed, informational, critical, eXtreme.</span></span><br><span class="line"><span class="string"> -version           The -version option should be used by itself and returns the</span></span><br><span class="line"><span class="string">                    version of the tool.</span></span><br><span class="line"><span class="string"> -WONoPause &lt;arg&gt;   The -WONoPause option is only valid on Windows and its value can</span></span><br><span class="line"><span class="string">                    be '</span><span class="literal">true</span><span class="string">' or '</span><span class="literal">false</span><span class="string">'.  If an error occurs during script execution,</span></span><br><span class="line"><span class="string">                    the process idles because the message '</span>Press any key...<span class="string">' is</span></span><br><span class="line"><span class="string">                    displayed on the console and the system awaits a keypress. To</span></span><br><span class="line"><span class="string">                    avoid this behavior, set this property to true</span></span><br><span class="line"><span class="string"> -Xmx4096m          Specifies that you want to change the Java Virtual Machine'</span>s (JVM)</span><br><span class="line">                    allocated memory by increasing the JVM heap size.  By default,</span><br><span class="line">                    Transporter uses a 2048MB heap size. You can use the -Xmx4096m</span><br><span class="line">                    option to specify a 4-gigabyte (GB) heap size. Apple recommends,</span><br><span class="line">                    <span class="keyword">if</span> needed, increasing the heap size to 4096MB by specifying the</span><br><span class="line">                    -Xmx4096m (or -Xmx4g) option and adjusting as needed.</span><br><span class="line">[2020-03-03 12:28:41 CST] &lt;main&gt; DBG-X: Returning 0</span><br></pre></td></tr></table></figure><p>出现以上结果说明正常。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure&gt;
-&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/03/Transporter/1.jpg&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;Transporter&lt;/figcaption&gt;
-&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="Tool" scheme="https://2020.iosdevlog.com/categories/Tool/"/>
-    
-    
-      <category term="iOS" scheme="https://2020.iosdevlog.com/tags/iOS/"/>
     
   </entry>
   
