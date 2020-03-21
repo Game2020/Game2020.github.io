@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-03-21T15:52:24.999Z</updated>
+  <updated>2020-03-21T15:56:32.036Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -21,19 +21,14 @@
     <link href="https://2020.iosdevlog.com/2020/03/21/pylint/"/>
     <id>https://2020.iosdevlog.com/2020/03/21/pylint/</id>
     <published>2020-03-21T14:54:29.000Z</published>
-    <updated>2020-03-21T15:52:24.999Z</updated>
+    <updated>2020-03-21T15:56:32.036Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/03/21/pylint/pylint.png" /></p><p>Pylint - Star your Python code!</p><!-- more --><p>众所周知，目前（2020年）人工智能项目大部分代码是使用 <code>Python</code> 语言编写的。</p><p>在发 <code>Paper</code> 的学术界有 <code>Pytorch</code>；在工业界部署 <code>First</code> 的工业界，这两个框架已经占据了深度学习的中心地位。</p><p>在机器学习领域有包含几乎所有常用机器学习算法的开源库：<code>sklean</code>。</p><p>如果遇到问题，找开源代码是参考是最简捷的方案。</p><p>目前大部分的人工智能相关项目的源码都是合适 <code>Python</code> 编写的，如何快速阅读这些源码呢？</p><p>这里推荐一套最有效的阅读 <code>Python</code> 源码的方式。</p><ol type="1"><li>下载相关源码：推荐去 <code>GitHub</code> 上下载，也可以用 <code>Chrome</code> 插件看</li><li>查看 <code>README.md</code> 和相关说明文档</li><li>参考 <code>Tutorials</code> 将代码跑起来</li><li>利用 <a href="https://www.pylint.org" target="_blank" rel="noopener">Pyreverse 包含在 Pypylint</a> 生成项目框架图</li><li>找到需要参考的代码，修改</li></ol><p>下面介绍一下如何生成 <code>manim</code> 项目框架图</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pylint</span></span><br><span class="line">pip install pylint</span><br><span class="line"><span class="comment"># touch ....../__init__.py</span></span><br><span class="line">pyreverse -A -o png -p manimlib manim/manimlib</span><br></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/21/pylint/pylint.png" /></p><p>Pylint - Star your Python code!</p><a id="more"></a><p>众所周知，目前（2020年）人工智能项目大部分代码是使用 <code>Python</code> 语言编写的。</p><p>在发 <code>Paper</code> 的学术界有 <code>Pytorch</code>；在工业界部署 <code>First</code> 的工业界，这两个框架已经占据了深度学习的中心地位。</p><p>在机器学习领域有包含几乎所有常用机器学习算法的开源库：<code>sklean</code>。</p><p>如果遇到问题，找开源代码是参考是最简捷的方案。</p><p>目前大部分的人工智能相关项目的源码都是合适 <code>Python</code> 编写的，如何快速阅读这些源码呢？</p><p>这里推荐一套最有效的阅读 <code>Python</code> 源码的方式。</p><ol type="1"><li>下载相关源码：推荐去 <code>GitHub</code> 上下载，也可以用 <code>Chrome</code> 插件看</li><li>查看 <code>README.md</code> 和相关说明文档</li><li>参考 <code>Tutorials</code> 将代码跑起来</li><li>利用 <a href="https://www.pylint.org" target="_blank" rel="noopener">Pyreverse 包含在 Pypylint</a> 生成项目框架图</li><li>找到需要参考的代码，修改</li></ol><p>下面介绍一下如何生成 <code>manim</code> 项目框架图</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pylint</span></span><br><span class="line">pip install pylint</span><br><span class="line"><span class="comment"># touch ....../__init__.py</span></span><br><span class="line">pyreverse -A -o png -p manimlib manim/manimlib</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/21/pylint/pylint.png&quot; /&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/21/pylint/pylint.png&quot; /&gt;&lt;/p&gt;
 &lt;p&gt;Pylint - Star your Python code!&lt;/p&gt;
-&lt;!-- m
-      
     
     </summary>
     
@@ -141,9 +136,9 @@
     
       <category term="manim" scheme="https://2020.iosdevlog.com/tags/manim/"/>
     
-      <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
-    
       <category term="calculus" scheme="https://2020.iosdevlog.com/tags/calculus/"/>
+    
+      <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
     
   </entry>
   
@@ -168,9 +163,9 @@
     
       <category term="manim" scheme="https://2020.iosdevlog.com/tags/manim/"/>
     
-      <category term="linear" scheme="https://2020.iosdevlog.com/tags/linear/"/>
-    
       <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
+    
+      <category term="linear" scheme="https://2020.iosdevlog.com/tags/linear/"/>
     
   </entry>
   
@@ -222,9 +217,9 @@
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
-    
       <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
+    
+      <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
     
       <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
     
@@ -465,9 +460,9 @@ ISBN：9787121331107&lt;/p&gt;
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
-    
       <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
+    
+      <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
     
   </entry>
   
