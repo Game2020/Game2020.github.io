@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>[译] 如何将开源 Python 软件包发布到 PyPI | Game 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本教程有一个由 Real Python 团队创建的相关视频课程。与书面教程一起观看，以加深您的理解：如何将自己的 Python 包发布到 PyPI 。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[译] 如何将开源 Python 软件包发布到 PyPI">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/03/22/pip/index.html">
+<meta property="og:site_name" content="Game 2020">
+<meta property="og:description" content="本教程有一个由 Real Python 团队创建的相关视频课程。与书面教程一起观看，以加深您的理解：如何将自己的 Python 包发布到 PyPI 。">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/22/pip/How-to-publish-an-open-source-Python-package-to-PyPI_Watermark.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/22/pip/pypi_realpython-reader.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/22/pip/How-to-publish-an-open-source-Python-package-to-PyPI_Watermark.png">
+<meta property="article:published_time" content="2020-03-22T14:33:29.000Z">
+<meta property="article:modified_time" content="2020-03-22T16:03:47.108Z">
+<meta property="article:author" content="iOSDevLog">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/03/22/pip/How-to-publish-an-open-source-Python-package-to-PyPI_Watermark.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Game 2020</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">https://2020.iosdevlog.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/2020">2020 Calendar</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://2020.iosdevlog.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-pip" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/22/pip/" class="article-date">
+  <time datetime="2020-03-22T14:33:29.000Z" itemprop="datePublished">2020-03-22</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/code/">code</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      [译] 如何将开源 Python 软件包发布到 PyPI
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://2020.iosdevlog.com/2020/03/22/pip/How-to-publish-an-open-source-Python-package-to-PyPI_Watermark.png" /></p>
+<p>本教程有一个由 Real Python 团队创建的相关视频课程。与书面教程一起观看，以加深您的理解：如何将自己的 Python 包发布到 PyPI 。</p>
+<a id="more"></a>
+<p>Python因附带<a href="https://docs.python.org/tutorial/stdlib.html#batteries-included" target="_blank" rel="noopener">电池</a>而闻名。标准库中提供了复杂的功能。您可以找到用于处理 <a href="https://realpython.com/python-sockets/" target="_blank" rel="noopener">套接字</a>，解析 <a href="https://realpython.com/python-csv/" target="_blank" rel="noopener">CSV</a>，<a href="https://realpython.com/python-json/" target="_blank" rel="noopener">JSON</a> 和 <a href="https://docs.python.org/library/xml.html" target="_blank" rel="noopener">XML</a>文件以及处理 <a href="https://docs.python.org/library/shutil.html" target="_blank" rel="noopener">文件</a>和 <a href="https://realpython.com/python-pathlib/" target="_blank" rel="noopener">文件路径的模块</a>。</p>
+<p>尽管Python附带的软件包很棒，但标准库之外还有许多出色的项目可用。这些通常是在<a href="https://pypi.org/" target="_blank" rel="noopener">Python打包索引</a>（PyPI）（历史上被称为<a href="https://www.youtube.com/watch?v=B3KBuQHHKx0" target="_blank" rel="noopener">Cheese Shop</a>）上托管的。在PyPI，您可以找到从<a href="https://pypi.org/search/?q=helloworld" target="_blank" rel="noopener">Hello World</a>到高级<a href="https://pypi.org/project/Keras/" target="_blank" rel="noopener">深度学习库的所有内容</a>。</p>
+<p>在本教程中，您将介绍如何 <strong>将自己的包上传到PyPI</strong>。尽管发布项目比以前要容易，但仍涉及一些步骤。</p>
+<p><strong>您将学习如何：</strong></p>
+<ul>
+<li>准备要发布的Python包</li>
+<li>考虑版本控制</li>
+<li>将您的包上传到PyPI</li>
+</ul>
+<p>在整个教程中，我们将使用一个简单的示例项目：一个<code>reader</code>可用于阅读<em>Real Python</em>教程的软件包。第一部分介绍此项目。</p>
+<p>可以在 PyPI 上和导入时为包使用不同的名称。但是，如果您使用相同或非常相似的名称，则对您的用户而言将更加容易。</p>
+<h2 id="配置程序包">配置程序包</h2>
+<p>为了将您的包上传到PyPI，您需要提供有关它的一些基本信息。该信息通常以 <code>setup.py</code> 文件的形式提供。有一些举措试图简化这种信息收集。目前，这 <code>setup.py</code> 是提供有关包装信息的唯一完全受支持的方法。</p>
+<h2 id="一个小的python包">一个小的Python包</h2>
+<p>本节将描述一个小的 Python 包，我们将使用它作为示例来发布到 PyPI。如果您已经有要发布的软件包，请随意浏览本节，然后在<a href="https://realpython.com/pypi-publish-python-package/#preparing-your-package-for-publication" target="_blank" rel="noopener">下一节</a>的<a href="https://realpython.com/pypi-publish-python-package/#preparing-your-package-for-publication" target="_blank" rel="noopener">开头</a>再次加入。</p>
+<p>我们将使用该软件包，该软件包 <code>reader</code> 是一个可用于下载和阅读<em>Real Python</em>文章的应用程序。如果要继续学习，可以从<a href="https://github.com/realpython/reader" target="_blank" rel="noopener">我们的GitHub存储库中</a>获取完整的源代码。</p>
+<p><strong>注意</strong>：如下所示和说明的源代码是<em>Real Python</em>供稿阅读器的简化版本，但功能齐全。与在<a href="https://pypi.org/project/realpython-reader/" target="_blank" rel="noopener">PyPI</a>和<a href="https://github.com/realpython/reader" target="_blank" rel="noopener">GitHub上</a>发布的软件包相比，此版本缺少一些错误处理和其他选项。</p>
+<p>首先，查看的目录结构<code>reader</code>。该软件包完全位于一个目录中，该目录也名为<code>reader</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">reader/</span><br><span class="line">│</span><br><span class="line">├── reader/</span><br><span class="line">│   ├── config.txt</span><br><span class="line">│   ├── feed.py</span><br><span class="line">│   ├── __init__.py</span><br><span class="line">│   ├── __main__.py</span><br><span class="line">│   └── viewer.py</span><br><span class="line">│</span><br><span class="line">├── tests/</span><br><span class="line">│   ├── test_feed.py</span><br><span class="line">│   └── test_viewer.py</span><br><span class="line">│</span><br><span class="line">├── MANIFEST.<span class="keyword">in</span></span><br><span class="line">├── README.md</span><br><span class="line">└── setup.py</span><br></pre></td></tr></table></figure>
+<p>软件包的源代码和<code>reader</code>配置文件位于子目录中。在单独的子目录中有一些测试。这些测试不在此处讨论，但是您可以在<a href="https://github.com/realpython/reader" target="_blank" rel="noopener">GitHub存储库中</a>找到它们。要了解有关测试的更多信息，请参见Anthony Shaw的精彩教程<a href="https://realpython.com/python-testing/" target="_blank" rel="noopener">《 Python测试入门》</a>。</p>
+<p>如果您使用自己的软件包，则可以使用其他结构或在软件​​包目录中包含其他文件。我们的<a href="https://realpython.com/python-application-layouts/" target="_blank" rel="noopener">Python应用程序布局</a>参考讨论了几个不同的选项。本指南中的说明将独立于您使用的布局工作。</p>
+<p>在本节的其余部分，您将看到该 <code>reader</code> 程序包如何工作。在<a href="https://realpython.com/pypi-publish-python-package/#preparing-your-package-for-publication" target="_blank" rel="noopener">接下来的部分</a>，你会得到的特殊文件，其中包括仔细一看<code>setup.py</code>，<code>README.md</code>和<code>MANIFEST.in</code>，这需要发布你的包。</p>
+<h3 id="使用real-python-reader">使用Real Python Reader</h3>
+<p><code>reader</code> 是一个非常基本的 <a href="https://en.wikipedia.org/wiki/Web_feed" target="_blank" rel="noopener">Web提要</a>阅读器，可以从 <a href="https://realpython.com/contact/#rss-atom-feed" target="_blank" rel="noopener">Real Python提要中</a>下载最新的Real Python文章。</p>
+<p>这是一个使用阅读器获取最新文章列表的示例：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">$ python -m reader</span><br><span class="line">The latest tutorials from Real Python (https://realpython.com/)</span><br><span class="line"> 0 How to Publish an Open-Source Python Package to PyPI</span><br><span class="line"> 1 Python <span class="string">"while"</span> Loops (Indefinite Iteration)</span><br><span class="line"> 2 Writing Comments <span class="keyword">in</span> Python (Guide)</span><br><span class="line"> 3 Setting Up Python <span class="keyword">for</span> Machine Learning on Windows</span><br><span class="line"> 4 Python Community Interview With Michael Kennedy</span><br><span class="line"> 5 Practical Text Classification With Python and Keras</span><br><span class="line"> 6 Getting Started With Testing <span class="keyword">in</span> Python</span><br><span class="line"> 7 Python, Boto3, and AWS S3: Demystified</span><br><span class="line"> 8 Python<span class="string">'s range() Function (Guide)</span></span><br><span class="line"><span class="string"> 9 Python Community Interview With Mike Grouchy</span></span><br><span class="line"><span class="string"> 10 How to Round Numbers in Python</span></span><br><span class="line"><span class="string"> 11 Building and Documenting Python REST APIs With Flask and Connexion – Part 2</span></span><br><span class="line"><span class="string"> 12 Splitting, Concatenating, and Joining Strings in Python</span></span><br><span class="line"><span class="string"> 13 Image Segmentation Using Color Spaces in OpenCV + Python</span></span><br><span class="line"><span class="string"> 14 Python Community Interview With Mahdi Yusuf</span></span><br><span class="line"><span class="string"> 15 Absolute vs Relative Imports in Python</span></span><br><span class="line"><span class="string"> 16 Top 10 Must-Watch PyCon Talks</span></span><br><span class="line"><span class="string"> 17 Logging in Python</span></span><br><span class="line"><span class="string"> 18 The Best Python Books</span></span><br><span class="line"><span class="string"> 19 Conditional Statements in Python</span></span><br></pre></td></tr></table></figure>
+<p>请注意，每篇文章都有编号。要阅读一篇特定的文章，请使用相同的命令，但也要包括文章的编号。例如，要阅读<a href="https://realpython.com/pypi-publish-python-package/" target="_blank" rel="noopener">如何将开源Python程序包发布到PyPI</a>，您可以添加<code>0</code>以下命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ python -m reader <span class="number">0</span></span><br><span class="line"><span class="comment"># How to Publish an Open-Source Python Package to PyPI</span></span><br><span class="line"></span><br><span class="line">Python <span class="keyword">is</span> famous <span class="keyword">for</span> coming <span class="keyword">with</span> batteries included. Sophisticated</span><br><span class="line">capabilities are available <span class="keyword">in</span> the standard library. You can find modules</span><br><span class="line"><span class="keyword">for</span> working <span class="keyword">with</span> sockets, parsing CSV, JSON, <span class="keyword">and</span> XML files, <span class="keyword">and</span></span><br><span class="line">working <span class="keyword">with</span> files <span class="keyword">and</span> file paths.</span><br><span class="line"></span><br><span class="line">However great the packages included <span class="keyword">with</span> Python are, there are many</span><br><span class="line">fantastic projects available outside the standard library. These are</span><br><span class="line">most often hosted at the Python Packaging Index (PyPI), historically</span><br><span class="line">known <span class="keyword">as</span> the Cheese Shop. At PyPI, you can find everything <span class="keyword">from</span> Hello</span><br><span class="line">World to advanced deep learning libraries.</span><br><span class="line"></span><br><span class="line">[... The full text of the article ...]</span><br></pre></td></tr></table></figure>
+<p>这将使用 <a href="https://www.markdownguide.org/basic-syntax" target="_blank" rel="noopener">Markdown</a>文本格式将完整的文章打印到控制台。</p>
+<p><strong>注意：</strong> <code>python -m</code> 用于运行<a href="https://docs.python.org/library/__main__.html" target="_blank" rel="noopener">库模块或软件包而不是脚本</a>。如果运行程序包，<code>__main__.py</code> 则将执行文件的内容。有关更多信息，请参见 <a href="https://realpython.com/pypi-publish-python-package/#different-ways-of-calling-a-package" target="_blank" rel="noopener">调用包的不同方式</a>。</p>
+<p>通过更改文章编号，您可以阅读任何可用的文章。</p>
+<h3 id="快速查看代码">快速查看代码</h3>
+<p><code>reader</code> 对于本教程而言，如何工作的细节并不重要。但是，如果您对实现有兴趣，可以展开以下部分。该软件包包含五个文件：</p>
+<h4 id="config.txt"><code>config.txt</code></h4>
+<p>config.txt是一个配置文件，用于指定Real Python教程的feed的URL 。这是一个文本文件，可由configparser标准库读取：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># config.txt</span></span><br><span class="line"></span><br><span class="line">[feed]</span><br><span class="line">url = https://realpython.com/atom.xml</span><br></pre></td></tr></table></figure>
+<p>通常，这样的配置文件包含分成部分的键/值对。该特定文件仅包含一个部分（feed）和一个键（url）。</p>
+<p>注意：对于这个简单的程序包，配置文件可能是多余的。我们将其包含在此处用于演示目的。</p>
+<h4 id="main__.py"><code>__main__.py</code></h4>
+<p>我们将看的第一个源代码文件是__main__.py。双下划线表示该文件在Python中具有特殊含义。确实，当使用上述方法将程序包作为脚本运行时-m，Python会执行__main__.py文件的内容。</p>
+<p>换句话说，它__main__.py充当程序的切入点并负责主流程，并根据需要调用其他部分：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># __main__.py</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> configparser <span class="keyword">import</span> ConfigParser</span><br><span class="line"><span class="keyword">from</span> importlib <span class="keyword">import</span> resources  <span class="comment"># Python 3.7+</span></span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> reader <span class="keyword">import</span> feed</span><br><span class="line"><span class="keyword">from</span> reader <span class="keyword">import</span> viewer</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""Read the Real Python article feed"""</span></span><br><span class="line">    <span class="comment"># Read URL of the Real Python feed from config file</span></span><br><span class="line">    cfg = ConfigParser()</span><br><span class="line">    cfg.read_string(resources.read_text(<span class="string">"reader"</span>, <span class="string">"config.txt"</span>))</span><br><span class="line">    url = cfg.get(<span class="string">"feed"</span>, <span class="string">"url"</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># If an article ID is given, show the article</span></span><br><span class="line">    <span class="keyword">if</span> len(sys.argv) &gt; <span class="number">1</span>:</span><br><span class="line">        article = feed.get_article(url, sys.argv[<span class="number">1</span>])</span><br><span class="line">        viewer.show(article)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># If no ID is given, show a list of all articles</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        site = feed.get_site(url)</span><br><span class="line">        titles = feed.get_titles(url)</span><br><span class="line">        viewer.show_list(site, titles)</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">"__main__"</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
+<p>注意，main()在最后一行调用了该命令。如果我们不调用main()，那么我们的程序将什么也不做。如您先前所见，该程序可以列出所有文章或打印一篇特定文章。这是由if-else内部处理的main()。</p>
+<p>要从配置文件读取提要的URL，我们使用configparser和importlib.resources。后者用于从包中导入非代码（或资源）文件，而不必担心完整的文件路径。在将程序包发布到PyPI时特别有用，因为资源文件可能最终存储在二进制存档中。</p>
+<p>importlib.resources成为Python 3.7中标准库的一部分。如果您使用的是旧版本的Python，则可以importlib_resources改用。这是与Python 2.7和3.4及更高版本兼容的反向端口。importlib_resources可以从PyPI安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install importlib_resources</span><br></pre></td></tr></table></figure>
+<p>有关更多信息，请参见Barry Warzaw在PyCon 2018上的演讲。</p>
+<h4 id="init__.py"><code>__init__.py</code></h4>
+<p>下一个文件是__init__.py。同样，文件名中的双下划线告诉我们这是一个特殊文件。<strong>init</strong>.py表示包的根。它通常应该保持非常简单，但这是放置包常量，文档等的好地方：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># __init__.py</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Version of the realpython-reader package</span></span><br><span class="line">__version__ = <span class="string">"1.0.0"</span></span><br></pre></td></tr></table></figure>
+<p>特殊变量__version__是Python中的约定，用于将版本号添加到包中。它是在PEP 396中引入的。稍后我们将详细讨论版本控制。</p>
+<p>中定义的__init__.py变量在包名称空间中可用作变量：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> reader</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>reader.__version__</span><br><span class="line"><span class="string">'1.0.0'</span></span><br></pre></td></tr></table></figure>
+<p>您还应该__version__在自己的包中定义变量。</p>
+<h4 id="feed.py"><code>feed.py</code></h4>
+<p>查看__main__.py，您将看到导入了两个模块feed和viewer，并用于从Feed中读取内容并显示结果。这些模块完成大部分实际工作。</p>
+<p>首先考虑一下feed.py。该文件包含用于从Web订阅源读取和解析结果的功能。幸运的是，已经有很棒的库可以做到这一点。feed.py取决于PyPI上已有的两个模块：feedparser和html2text。</p>
+<p>feed.py包含几个功能。我们将一次讨论一次。</p>
+<p>为了避免从Web提要中读取过多信息，我们首先创建一个函数，以在第一次读取提要时记住该提要：</p>
+<h1 id="feed.py-1">feed.py</h1>
+<p>import feedparser<br />
+import html2text</p>
+<p>_CACHED_FEEDS = dict()</p>
+<p>def _feed(url):<br />
+"""Only read a feed once, by caching its contents"""<br />
+if url not in _CACHED_FEEDS:<br />
+_CACHED_FEEDS[url] = feedparser.parse(url)<br />
+return _CACHED_FEEDS[url]<br />
+feedparser.parse()从网络读取提要并以类似于字典的结构返回它。为了避免多次下载该供稿，将其存储在其中_CACHED_FEEDS并在以后调用时重复使用_feed()。两者_CACHED_FEEDS和_feed()均以下划线作为前缀，以表明它们是不打算直接使用的支持对象。</p>
+<p>通过查看.feed元数据，我们可以获得有关提要的一些基本信息。以下功能挑选标题并链接到包含提要的网站：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_site</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="string">"""Get name and link to web site of the feed"""</span></span><br><span class="line">    info = _feed(url).feed</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f"<span class="subst">&#123;info.title&#125;</span> (<span class="subst">&#123;info.link&#125;</span>)"</span></span><br><span class="line">除了.title和.link，属性一样.subtitle，.updated和.id是也可以。</span><br><span class="line"></span><br><span class="line">供稿中可用的文章可以在.entries列表内找到。可以通过列表理解找到文章标题：</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_titles</span><span class="params">(url)</span>:</span></span><br><span class="line">    <span class="string">"""List titles in feed"""</span></span><br><span class="line">    articles = _feed(url).entries</span><br><span class="line">    <span class="keyword">return</span> [a.title <span class="keyword">for</span> a <span class="keyword">in</span> articles]</span><br><span class="line">.entries列出了Feed中按时间顺序排序的文章，因此最新的文章是.entries[<span class="number">0</span>]。</span><br><span class="line"></span><br><span class="line">为了获取一篇文章的内容，我们将其在.entries列表中的索引用作文章ID：</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_article</span><span class="params">(url, article_id)</span>:</span></span><br><span class="line">    <span class="string">"""Get article from feed with the given ID"""</span></span><br><span class="line">    articles = _feed(url).entries</span><br><span class="line">    article = articles[int(article_id)]</span><br><span class="line">    html = article.content[<span class="number">0</span>].value</span><br><span class="line">    text = html2text.html2text(html)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">f"# <span class="subst">&#123;article.title&#125;</span>\n\n<span class="subst">&#123;text&#125;</span>"</span></span><br></pre></td></tr></table></figure>
+<p>从.entries列表中选择正确的文章后，我们在第28行找到该文章的文本为HTML。接下来，html2text做了一个体面的工作，将HTML转换为可读性更高的文本。由于HTML不包含文章标题，因此标题会在返回之前添加。</p>
+<h4 id="viewer.py"><code>viewer.py</code></h4>
+<p>最后一个模块是viewer.py。目前，它包含两个非常简单的功能。实际上，我们可以print()直接使用in <strong>main</strong>.py而不是调用viewer函数。但是，将功能拆分开可以使以后更轻松地用更高级的功能替换它。也许我们可以在更高版本中添加GUI界面？</p>
+<p>viewer.py 包含两个功能：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"># viewer.py</span><br><span class="line"></span><br><span class="line">def show(article):</span><br><span class="line">    &quot;&quot;&quot;Show one article&quot;&quot;&quot;</span><br><span class="line">    print(article)</span><br><span class="line"></span><br><span class="line">def show_list(site, titles):</span><br><span class="line">    &quot;&quot;&quot;Show list of articles&quot;&quot;&quot;</span><br><span class="line">    print(f&quot;The latest tutorials from &#123;site&#125;&quot;)</span><br><span class="line">    for article_id, title in enumerate(titles):</span><br><span class="line">        print(f&quot;&#123;article_id:&gt;3&#125; &#123;title&#125;&quot;)</span><br></pre></td></tr></table></figure>
+<p>show()只需将一篇文章打印到控制台，同时show_list()打印标题列表。后者还会创建在选择阅读一篇特定文章时使用的文章ID。</p>
+<h3 id="调用包裹的不同方式">调用包裹的不同方式</h3>
+<p>当您的项目变得越来越复杂时，挑战之一就是与用户交流如何使用您的项目。由于该软件包包含四个不同的源代码文件，因此用户如何知道要调用哪个文件来运行 <code>reader</code>？</p>
+<p>该 <code>python</code> 解释程序有一个 <code>-m</code> 选项，允许你指定一个模块名称而不是文件名。例如，如果您有一个名为的脚本 <code>hello.py</code>，则以下两个命令是等效的：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ python hello.py</span><br><span class="line">Hi there!</span><br><span class="line"></span><br><span class="line">$ python -m hello</span><br><span class="line">Hi there!</span><br></pre></td></tr></table></figure>
+<p>后者的优点之一是它还允许您调用Python内置的模块。一个例子是调用<a href="http://python-history.blogspot.com/2010/06/import-antigravity.html" target="_blank" rel="noopener"><code>antigravity</code></a>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ python -m antigravity</span><br><span class="line">Created new window <span class="keyword">in</span> existing browser session.</span><br></pre></td></tr></table></figure>
+<p>使用的另一个优点 <code>-m</code> 是它既适用于包又适用于模块。如前所述，您可以通过以下方式调用 <code>reader</code> 软件包 <code>-m</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ python -m reader</span><br><span class="line">[...]</span><br></pre></td></tr></table></figure>
+<p>由于 <code>reader</code> 是软件包，因此名称仅指目录。Python如何确定该目录中要运行的代码？它查找名为的文件 <code>__main__.py</code> 。如果存在这样的文件，则将其执行。如果 <code>__main__.py</code> 不存在，则会显示一条错误消息：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ python -m math</span><br><span class="line">python: No code object available <span class="keyword">for</span> math</span><br></pre></td></tr></table></figure>
+<p>在此示例中，您看到 <code>math</code> 标准库尚未定义 <code>__main__.py</code> 文件。</p>
+<p>如果要创建应该执行的程序包，则应包括一个 <code>__main__.py</code> 文件。<a href="https://realpython.com/pypi-publish-python-package/#configuring-your-package" target="_blank" rel="noopener">稍后</a>，您将看到如何还可以为程序包创建入口点，其行为类似于常规程序。</p>
+<h2 id="准备打包发布">准备打包发布</h2>
+<p>现在，您已经有了要发布的软件包，或者您已经<a href="https://github.com/realpython/reader" target="_blank" rel="noopener">复制了我们的软件包</a>。将包上传到PyPI之前，需要执行哪些步骤？</p>
+<h3 id="命名包裹">命名包裹</h3>
+<p>第一步（可能也是最困难的一步）是为您的包装命名。PyPI上的所有软件包都必须具有唯一的名称。在PyPI上已经有超过150,000个软件包，很可能已经采用了您喜欢的名称。</p>
+<p>您可能需要集思广益，并做一些研究才能找到完美的名字。使用<a href="https://pypi.org/search/" target="_blank" rel="noopener">PyPI搜索</a>来检查名称是否已被使用。您想出的名称将在PyPI上可见。</p>
+<p>为了使该<code>reader</code>包更易于在PyPI上找到，我们给它起了更具描述性的名称，并命名为<code>realpython-reader</code>。使用以下名称来安装软件包<code>pip</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install realpython-reader</span><br></pre></td></tr></table></figure>
+<p>即使我们使用<code>realpython-reader</code>PyPI名称，<code>reader</code>但在导入时仍会调用该包：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> reader</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>help(reader)</span><br><span class="line"></span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">from</span> reader <span class="keyword">import</span> feed</span><br><span class="line"><span class="meta">&gt;&gt;&gt; </span>feed.get_titles()</span><br><span class="line">[<span class="string">'How to Publish an Open-Source Python Package to PyPI'</span>, ...]</span><br></pre></td></tr></table></figure>
+<p>如您所见，您可以在PyPI上和导入时为包使用不同的名称。但是，如果您使用相同或非常相似的名称，则对您的用户而言将更加容易。</p>
+<h3 id="配置程序包-1">配置程序包</h3>
+<p>为了将您的包上传到PyPI，您需要提供有关它的一些基本信息。该信息通常以 <code>setup.py</code> 文件的形式提供。有一些<a href="https://www.python.org/dev/peps/pep-0518/" target="_blank" rel="noopener">举措</a>试图简化这种信息收集。目前，这 <code>setup.py</code> 是提供有关包装信息的唯一完全受支持的方法。</p>
+<p>该 <code>setup.py</code> 文件应放在包的顶部文件夹中。一个相当最小 <code>setup.py</code> 的 <code>reader</code> 看起来像这样：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pathlib</span><br><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> setup</span><br><span class="line"></span><br><span class="line"><span class="comment"># The directory containing this file</span></span><br><span class="line">HERE = pathlib.Path(__file__).parent</span><br><span class="line"></span><br><span class="line"><span class="comment"># The text of the README file</span></span><br><span class="line">README = (HERE / <span class="string">"README.md"</span>).read_text()</span><br><span class="line"></span><br><span class="line"><span class="comment"># This call to setup() does all the work</span></span><br><span class="line">setup(</span><br><span class="line">    name=<span class="string">"realpython-reader"</span>,</span><br><span class="line">    version=<span class="string">"1.0.0"</span>,</span><br><span class="line">    description=<span class="string">"Read the latest Real Python tutorials"</span>,</span><br><span class="line">    long_description=README,</span><br><span class="line">    long_description_content_type=<span class="string">"text/markdown"</span>,</span><br><span class="line">    url=<span class="string">"https://github.com/realpython/reader"</span>,</span><br><span class="line">    author=<span class="string">"Real Python"</span>,</span><br><span class="line">    author_email=<span class="string">"office@realpython.com"</span>,</span><br><span class="line">    license=<span class="string">"MIT"</span>,</span><br><span class="line">    classifiers=[</span><br><span class="line">        <span class="string">"License :: OSI Approved :: MIT License"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3"</span>,</span><br><span class="line">        <span class="string">"Programming Language :: Python :: 3.7"</span>,</span><br><span class="line">    ],</span><br><span class="line">    packages=[<span class="string">"reader"</span>],</span><br><span class="line">    include_package_data=<span class="literal">True</span>,</span><br><span class="line">    install_requires=[<span class="string">"feedparser"</span>, <span class="string">"html2text"</span>],</span><br><span class="line">    entry_points=&#123;</span><br><span class="line">        <span class="string">"console_scripts"</span>: [</span><br><span class="line">            <span class="string">"realpython=reader.__main__:main"</span>,</span><br><span class="line">        ]</span><br><span class="line">    &#125;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>我们将仅涵盖 <code>setuptools</code> 此处提供的一些选项。该<a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#basic-use" target="_blank" rel="noopener">文档</a>很好地完成了所有细节。</p>
+<p>调用中100％必需的参数 <code>setup()</code> 如下：</p>
+<ul>
+<li><strong><code>name</code>：</strong>将在PyPI上显示的软件包名称</li>
+<li><strong><code>version</code>：</strong>您软件包的当前版本</li>
+<li><strong><code>packages</code>：</strong>包含您的源代码的软件包和子软件包</li>
+</ul>
+<p>稍后我们将<a href="https://realpython.com/pypi-publish-python-package/#versioning-your-package" target="_blank" rel="noopener">详细讨论版本</a>。该<code>packages</code>参数获取软件包列表。在我们的示例中，只有一个包：<code>reader</code>。</p>
+<p>您还需要指定任何子包。在更复杂的项目中，可能会列出许多软件包。为了简化此工作，<code>setuptools</code>包括include <a href="https://setuptools.readthedocs.io/en/latest/setuptools.html#using-find-packages" target="_blank" rel="noopener"><code>find_packages()</code></a>可以很好地发现所有子包。您可以按以下方式<code>find_packages()</code>在<code>reader</code>项目中使用：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> setuptools <span class="keyword">import</span> find_packages, setup</span><br><span class="line"></span><br><span class="line">setup(</span><br><span class="line">    ...</span><br><span class="line">    packages=find_packages(exclude=(<span class="string">"tests"</span>,)),</span><br><span class="line">    ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>虽然只是<code>name</code>，<code>version</code>和<code>packages</code>需要，你的包变得更容易找到PyPI上如果添加一些更多的信息。看一下<a href="https://pypi.org/project/realpython-reader/" target="_blank" rel="noopener"><code>realpython-reader</code>PyPI</a>上的<a href="https://pypi.org/project/realpython-reader/" target="_blank" rel="noopener">页面</a>，并将信息与<code>setup.py</code>上面的内容进行比较。所有信息都来自<code>setup.py</code>和<code>README.md</code>。</p>
+<p><img src="https://2020.iosdevlog.com/2020/03/22/pip/pypi_realpython-reader.png" /></p>
+<p>最后两个参数<code>setup()</code>值得特别提及：</p>
+<ul>
+<li><p><strong><code>install_requires</code></strong>用于列出您的软件包对第三方库的任何依赖关系。在<code>reader</code>依赖于<code>feedparser</code>和<code>html2text</code>，因此他们应该在这里列出。</p></li>
+<li><p><strong><code>entry_points</code></strong>用于创建调用程序包中的函数的脚本。在我们的示例中，我们创建了一个在文件内<code>realpython</code>调用的新脚本 <code>reader/__main__.py</code>。</p></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/03/22/pip/How-to-publish-an-open-source-Python-package-to-PyPI_Watermark.png" /></p>
+<p>有关典型安装文件的另一个示例，请参阅<a href="https://github.com/kennethreitz/setup.py" target="_blank" rel="noopener"><code>setup.py</code>GitHub上的</a> Kenneth Reitz的<a href="https://github.com/kennethreitz/setup.py" target="_blank" rel="noopener">存储库</a>。</p>
+<h3 id="记录包裹">记录包裹</h3>
+<p>在向外界发布您的软件包之前，您应该<a href="https://realpython.com/documenting-python-code/" target="_blank" rel="noopener">添加一些文档</a>。根据您的软件包，文档可以小到一个简单的<code>README</code>文件，也可以大到包括教程，示例库和API参考的完整网页。</p>
+<p>至少，您应该<code>README</code>在项目中包含一个文件。<a href="https://dbader.org/blog/write-a-great-readme-for-your-github-project" target="_blank" rel="noopener">一个好的人<code>README</code></a>应该快速描述您的项目，并告诉您的用户如何安装和使用您的软件包。通常，您希望将包括在内<code>README</code>作为<code>long_description</code>参数<code>setup()</code>。这将<code>README</code>在PyPI上显示您。</p>
+<p>传统上，PyPI使用<a href="http://docutils.sourceforge.net/rst.html" target="_blank" rel="noopener">reStructuredText</a>来包装文档。然而，由于2018三月<a href="https://www.markdownguide.org/basic-syntax" target="_blank" rel="noopener">降价</a>已经<a href="https://dustingram.com/articles/2018/03/16/markdown-descriptions-on-pypi" target="_blank" rel="noopener">也被支持</a>。</p>
+<p>在PyPI之外，Markdown比reStructuredText更受支持。如果您不需要reStructuredText的任何特殊功能，最好将其保留<code>README</code>在Markdown中。请注意，您应该使用<code>setup()</code>参数<code>long_description_content_type</code>来<a href="https://packaging.python.org/guides/making-a-pypi-friendly-readme/?highlight=long_description_content_type" target="_blank" rel="noopener">告诉您使用哪种格式的PyPI</a>。有效值是<code>text/markdown</code>，<code>text/x-rst</code>和<code>text/plain</code>。</p>
+<p>对于较大的项目，您可能想提供比合理地容纳在单个文件中更多的文档。在这种情况下，您可以使用<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>或<a href="https://readthedocs.org/" target="_blank" rel="noopener">Read Docs之</a>类的网站，并使用<code>url</code>参数链接到文档。在<code>setup.py</code>上面的示例中，<code>url</code>用于链接到<a href="https://github.com/realpython/reader" target="_blank" rel="noopener"><code>reader</code>GitHub存储库</a>。</p>
+<h3 id="打包版本">打包版本</h3>
+<p>您的软件包需要有一个版本，而PyPI仅允许您为软件包上传一个特定版本。换句话说，如果要在PyPI上更新软件包，则需要先增加版本号。这是一件好事，因为它保证了可重复性：具有相同版本软件包的两个系统应具有相同的行为。</p>
+<p>有<a href="https://en.wikipedia.org/wiki/Software_versioning" target="_blank" rel="noopener">许多不同的方案</a>，可用于您的版本号。对于Python项目，<a href="https://www.python.org/dev/peps/pep-0440/" target="_blank" rel="noopener">PEP 440</a>提供了一些建议。但是，为了灵活起见，PEP很复杂。对于简单的项目，请坚持使用简单的版本控制方案。</p>
+<p><a href="https://semver.org/" target="_blank" rel="noopener">语义版本控制</a>是一个很好的默认方案。版本号由三个数字部分给出，例如<code>0.1.2</code>。这些组件称为MAJOR，MINOR和PATCH，并且有关于何时增加每个组件的简单规则：</p>
+<blockquote>
+<ul>
+<li>当您更改不兼容的API时，请增加MAJOR版本。</li>
+<li>当您以向后兼容的方式添加功能时，请增加MINOR版本。</li>
+<li>进行向后兼容的错误修复时，请增加PATCH版本。（<a href="https://semver.org/" target="_blank" rel="noopener">来源</a>）</li>
+</ul>
+</blockquote>
+<p>您可能需要在项目内的其他文件中指定版本。在<code>reader</code>项目中，我们在<code>setup.py</code>和中都指定了版本<code>reader/__init__.py</code>。为了确保版本号保持一致，可以使用一个名为<a href="https://pypi.org/project/bumpversion/" target="_blank" rel="noopener">Bumpversion</a>的工具。</p>
+<p>您可以从PyPI安装Bumpversion：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install bumpversion</span><br></pre></td></tr></table></figure>
+<p>要增加MINOR版本<code>reader</code>，您可以执行以下操作：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ bumpversion --current-version <span class="number">1.0</span><span class="number">.0</span> minor setup.py reader/__init__.py</span><br></pre></td></tr></table></figure>
+<p>这将更改从版本号<code>1.0.0</code>以<code>1.1.0</code>两个<code>setup.py</code>和<code>reader/__init__.py</code>。为了简化命令，您还可以在配置文件中提供大多数信息。有关详细信息，请参见<a href="https://pypi.org/project/bumpversion/" target="_blank" rel="noopener">Bumpversion文档</a>。</p>
+<h3 id="将文件添加到包中">将文件添加到包中</h3>
+<p>有时，您的程序包中会包含不是源代码文件的文件。示例包括数据文件，二进制文件，文档以及（如我们在本项目中一样）配置文件。</p>
+<p>要告知<code>setup()</code>要包含此类文件，请使用清单文件。对于许多项目，您无需担心清单，因为它<code>setup()</code>创建了一个清单，其中包括所有代码文件以及<code>README</code>文件。</p>
+<p>如果需要更改清单，请创建一个清单模板，该模板必须命名为<code>MANIFEST.in</code>。该文件为要包含和排除的内容指定了规则：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">include reader/*.txt</span><br></pre></td></tr></table></figure>
+<p>此示例将包括<code>.txt</code>目录中的所有文件，该文件<code>reader</code>实际上是配置文件。请参阅<a href="https://docs.python.org/distutils/commandref.html#creating-a-source-distribution-the-sdist-command" target="_blank" rel="noopener">文档</a>以获取可用规则列表。</p>
+<p>除了创建之外<code>MANIFEST.in</code>，还需要告诉<code>setup()</code>您<a href="https://python-packaging.readthedocs.io/en/latest/non-code-files.html" target="_blank" rel="noopener">复制这些非代码文件</a>。这是通过将<code>include_package_data</code>参数设置为来完成的<code>True</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setup(</span><br><span class="line">    ...</span><br><span class="line">    include_package_data=<span class="literal">True</span>,</span><br><span class="line">    ...</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>该<code>include_package_data</code>参数控制在安装软件包时是否复制非代码文件。</p>
+<h2 id="发布到pypi">发布到PyPI</h2>
+<p>您的包裹终于准备就绪，可以与您的计算机外部世界见面！在本节中，您将看到如何实际将软件包上传到PyPI。</p>
+<p>如果您尚未在PyPI上拥有帐户，那么现在该创建一个<a href="https://pypi.org/account/register/" target="_blank" rel="noopener">帐户了：在PyPI上注册您的帐户</a>。在使用它时，还应该<a href="https://test.pypi.org/manage/projects/" target="_blank" rel="noopener">在TestPyPI上注册一个帐户</a>。TestPyPI非常有用，因为如果您搞砸了，可以尝试发布软件包的所有步骤，而不会造成任何后果。</p>
+<p>要将软件包上传到PyPI，您将使用一个名为<a href="https://twine.readthedocs.io/" target="_blank" rel="noopener">Twine</a>的工具。您可以照常使用Pip安装Twine：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install twine</span><br></pre></td></tr></table></figure>
+<p>使用Twine非常简单，您将很快看到如何使用它来检查和发布您的软件包。</p>
+<h3 id="建立你的包裹">建立你的包裹</h3>
+<p>PyPI上的软件包不作为纯源代码分发。而是将它们包装到分发包中。分发程序包最常见的格式是源档案和<a href="https://wheel.readthedocs.io/en/stable/" target="_blank" rel="noopener">Python wheel</a>。</p>
+<p>源归档文件由您的源代码和包装在一个<a href="https://en.wikipedia.org/wiki/Tar_%28computing%29" target="_blank" rel="noopener"><code>tar</code>文件中的</a>所有支持文件组成。同样，轮子实际上是包含您的代码的zip存档。与源归档文件相反，该转轮包括任何可以使用的扩展名。</p>
+<p>要为您的包裹创建一个源档案和一个转轮，您可以运行以下命令：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ python setup.py sdist bdist_wheel</span><br></pre></td></tr></table></figure>
+<p>这将在一个新创建的<code>dist</code>目录中创建两个文件，一个源档案和一个转轮：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">reader/</span><br><span class="line">│</span><br><span class="line">└── dist/</span><br><span class="line">    ├── realpython_reader<span class="number">-1.0</span><span class="number">.0</span>-py3-none-any.whl</span><br><span class="line">    └── realpython-reader<span class="number">-1.0</span><span class="number">.0</span>.tar.gz</span><br></pre></td></tr></table></figure>
+<p><strong>注意：</strong>在Windows上，<code>.zip</code>默认情况下，源归档文件将是一个文件。您可以<a href="https://python.readthedocs.io/en/stable/distutils/sourcedist.html" target="_blank" rel="noopener">使用<code>--format</code>命令行选项选择</a>源归档的格式。</p>
+<p>您可能想知道如何<code>setup.py</code>知道如何处理<code>sdist</code>and <code>bdist_wheel</code>参数。如果你<a href="https://realpython.com/pypi-publish-python-package/#configuring-your-package" target="_blank" rel="noopener">回头看看</a>如何<code>setup.py</code>被实现的，有没有提及<code>sdist</code>，<code>bdist_wheel</code>或任何其他命令行参数。</p>
+<p>相反，所有命令行参数都在上游<a href="https://github.com/python/cpython/tree/master/Lib/distutils/command" target="_blank" rel="noopener"><code>distutils</code>标准库中实现</a>。您可以通过添加<code>--help-commands</code>选项列出所有可用的参数：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ python setup.py --help-commands</span><br><span class="line">Standard commands:</span><br><span class="line"> build             build everything needed to install</span><br><span class="line"> build_py          <span class="string">"build"</span> pure Python modules (copy to build directory)</span><br><span class="line"> build_ext         build C/C++ <span class="keyword">and</span> Cython extensions (compile/link to build directory)</span><br><span class="line">&lt; ... many more commands ...&gt;</span><br></pre></td></tr></table></figure>
+<p>有关一个特定命令的信息，您可以执行类似的操作<code>python setup.py sdist --help</code>。</p>
+<h3 id="测试您的包裹">测试您的包裹</h3>
+<p>首先，您应检查新建的分发程序包是否包含所需的文件。在Linux和macOS上，您应该能够<code>tar</code>如下列出源档案的内容：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">$ tar tzf realpython-reader<span class="number">-1.0</span><span class="number">.0</span>.tar.gz</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/setup.cfg</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/README.md</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/reader/</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/reader/feed.py</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/reader/__init__.py</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/reader/viewer.py</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/reader/__main__.py</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/reader/config.txt</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/PKG-INFO</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/setup.py</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/MANIFEST.<span class="keyword">in</span></span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/realpython_reader.egg-info/</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/realpython_reader.egg-info/SOURCES.txt</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/realpython_reader.egg-info/requires.txt</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/realpython_reader.egg-info/dependency_links.txt</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/realpython_reader.egg-info/PKG-INFO</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/realpython_reader.egg-info/entry_points.txt</span><br><span class="line">realpython-reader<span class="number">-1.0</span><span class="number">.0</span>/realpython_reader.egg-info/top_level.txt</span><br></pre></td></tr></table></figure>
+<p>在Windows上，您可以使用<a href="https://www.7-zip.org/" target="_blank" rel="noopener">7-zip之</a>类的实用程序来查看相应<code>zip</code>文件的内部。</p>
+<p>您应该看到列出了所有源代码，以及已经创建的一些新文件，其中包含您在中提供的信息<code>setup.py</code>。特别是，请确保包括所有子包和支持文件。</p>
+<p>您也可以通过解压缩轮子来查看轮子内部，就好像它是一个zip文件一样。但是，如果您的源归档文件包含您期望的文件，则转轮也应该很好。</p>
+<p>较新版本的Twine（<code>1.12.0</code>及更高版本）还可以检查您的包装说明可在PyPI上正确呈现。您可以<code>twine check</code>在中创建的文件上运行<code>dist</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ twine check dist/*</span><br><span class="line">Checking distribution dist/realpython_reader<span class="number">-1.0</span><span class="number">.0</span>-py3-none-any.whl: Passed</span><br><span class="line">Checking distribution dist/realpython-reader<span class="number">-1.0</span><span class="number">.0</span>.tar.gz: Passed</span><br></pre></td></tr></table></figure>
+<p>虽然它不能解决您可能遇到的所有问题，但是例如，它将使您知道使用的内容类型是否错误。</p>
+<h3 id="上载您的包裹">上载您的包裹</h3>
+<p>现在，您可以将包实际上传到PyPI了。为此，您将再次使用“ Twine”工具，告诉它上载已构建的分发程序包。首先，您应该上传到<a href="https://packaging.python.org/guides/using-testpypi/" target="_blank" rel="noopener">TestPyPI</a>以确保一切正常。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ twine upload --repository-url https://test.pypi.org/legacy/ dist/*</span><br></pre></td></tr></table></figure>
+<p>Twine会询问您您的用户名和密码。</p>
+<p><strong>注意：</strong>如果您以<code>reader</code>软件包为例按照本教程进行操作，则先前的命令可能会失败，并显示一条消息，提示您不允许上载到<code>realpython-reader</code>项目。</p>
+<p>您可以将<code>name</code>in 更改为<code>setup.py</code>唯一的内容，例如<code>test-your-username</code>。然后再次构建项目，并将新建的文件上传到TestPyPI。</p>
+<p>如果上传成功，您可以快速转到<a href="https://test.pypi.org/" target="_blank" rel="noopener">TestPyPI</a>，向下滚动并查看在新版本中自豪地显示的项目！单击您的包裹，并确保一切正常。</p>
+<p>如果您一直在使用该<code>reader</code>软件包，那么教程将在此处结束！尽管您可以随意使用TestPyPI，但不应将虚拟包上传到PyPI进行测试。</p>
+<p>但是，如果您要发布自己的软件包，那么此刻终于来临！完成所有准备工作后，最后一步很短：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ twine upload dist/*</span><br></pre></td></tr></table></figure>
+<p>根据要求提供您的用户名和密码。而已！</p>
+<p>前往<a href="https://pypi.org/" target="_blank" rel="noopener">PyPI</a>并查找您的包裹。您可以通过<a href="https://pypi.org/search/" target="_blank" rel="noopener">搜索</a>，查看“ <a href="https://pypi.org/manage/projects/" target="_blank" rel="noopener"><em>您的项目”</em>页面</a>或直接转到项目的URL：<a href="https://pypi.org/project/realpython-reader/" target="_blank" rel="noopener">pypi.org/project/your-package-name/</a>来找到它。</p>
+<p>恭喜你！您的软件包已在PyPI上发布！</p>
+<h3 id="pip-install-您的包裹"><code>pip install</code> 您的包裹</h3>
+<p>花一点时间沐浴在PyPI网页的蓝色光芒中，（当然）向您的朋友吹牛。</p>
+<p>然后再次打开一个终端。还有一个更大的回报！</p>
+<p>将您的软件包上传到PyPI后，您还可以通过以下方式进行安装<code>pip</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install your-package-name</span><br></pre></td></tr></table></figure>
+<p>替换<code>your-package-name</code>为您为软件包选择的名称。例如，要安装<code>reader</code>软件包，您可以执行以下操作：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install realpython-reader</span><br></pre></td></tr></table></figure>
+<p>看到自己安装的代码<code>pip</code>是一种美妙的感觉！</p>
+<h2 id="其他有用的工具">其他有用的工具</h2>
+<p>在总结之前，还有一些其他的工具对于创建和发布Python软件包非常有用。</p>
+<h3 id="虚拟环境">虚拟环境</h3>
+<p>在本指南中，我们没有讨论虚拟环境。当使用不同的项目时，虚拟环境非常有用，每个项目都有各自不同的要求和依赖性。</p>
+<p>有关更多信息，请参见以下指南：</p>
+<ul>
+<li><a href="https://realpython.com/python-virtual-environments-a-primer" target="_blank" rel="noopener">Python虚拟环境：入门</a></li>
+<li><a href="https://realpython.com/pipenv-guide" target="_blank" rel="noopener">Pipenv：新Python打包工具指南</a></li>
+<li><a href="https://realpython.com/products/managing-python-dependencies/" target="_blank" rel="noopener">使用Pip和虚拟环境管理Python依赖关系</a></li>
+</ul>
+<p>特别是，在最小的虚拟环境中测试软件包很有用，以确保在<code>setup.py</code>文件中包含所有必需的依赖项。</p>
+<h3 id="切碎机">切碎机</h3>
+<p>开始使用项目的一种好方法是使用<a href="https://cookiecutter.readthedocs.io/" target="_blank" rel="noopener">Cookiecutter</a>。它通过基于模板询问几个问题来设置您的项目。<a href="https://cookiecutter.readthedocs.io/en/latest/README.html#a-pantry-full-of-cookiecutters" target="_blank" rel="noopener">可以使用许多不同的模板</a>。</p>
+<p>首先，请确保您的系统上安装了Cookiecutter。您可以从PyPI安装它：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install cookiecutter</span><br></pre></td></tr></table></figure>
+<p>作为示例，我们将使用<a href="https://github.com/kragniz/cookiecutter-pypackage-minimal" target="_blank" rel="noopener">pypackage-minimal</a>模板。要使用模板，请给Cookiecutter指向模板的链接：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ cookiecutter https://github.com/kragniz/cookiecutter-pypackage-minimal</span><br><span class="line">author_name [Louis Taylor]: Real Python</span><br><span class="line">author_email [louis@kragniz.eu]: office@realpython.com</span><br><span class="line">package_name [cookiecutter_pypackage_minimal]: realpython-reader</span><br><span class="line">package_version [<span class="number">0.1</span><span class="number">.0</span>]:</span><br><span class="line">package_description [...]: Read Real Python tutorials</span><br><span class="line">package_url [...]: https://github.com/realpython/reader</span><br><span class="line">readme_pypi_badge [<span class="literal">True</span>]:</span><br><span class="line">readme_travis_badge [<span class="literal">True</span>]: <span class="literal">False</span></span><br><span class="line">readme_travis_url [...]:</span><br></pre></td></tr></table></figure>
+<p>在回答了一系列问题之后，Cookiecutter设置您的项目。在此示例中，模板创建了以下文件和目录：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">realpython-reader/</span><br><span class="line">│</span><br><span class="line">├── realpython-reader/</span><br><span class="line">│   └── __init__.py</span><br><span class="line">│</span><br><span class="line">├── tests/</span><br><span class="line">│   ├── __init__.py</span><br><span class="line">│   └── test_sample.py</span><br><span class="line">│</span><br><span class="line">├── README.rst</span><br><span class="line">├── setup.py</span><br><span class="line">└── tox.ini</span><br></pre></td></tr></table></figure>
+<p><a href="https://cookiecutter.readthedocs.io/" target="_blank" rel="noopener">Cookiecutter的文档</a>内容广泛，包括一长串可用的cookiecutter，以及有关如何创建自己的模板的教程。</p>
+<h3 id="掠过">掠过</h3>
+<p><a href="https://www.pypa.io/en/latest/history/" target="_blank" rel="noopener">Python打包的历史</a>非常混乱。一种<a href="https://www.python.org/dev/peps/pep-0518/#rationale" target="_blank" rel="noopener">普遍的批评</a>是，使用可执行文件之类<code>setup.py</code>的配置信息并不理想。</p>
+<p><a href="https://www.python.org/dev/peps/pep-0518/" target="_blank" rel="noopener">PEP 518</a>定义了一个替代方案：使用一个名为的文件<code>pyproject.toml</code>代替。该<a href="https://github.com/toml-lang/toml" target="_blank" rel="noopener">TOML格式</a>是一个简单的配置文件格式：</p>
+<blockquote>
+<p>[…] it is human-usable (unlike JSON), it is flexible enough (unlike configparser), stems from a standard (also unlike configparser), and it is not overly complex (unlike YAML). (<a href="https://www.python.org/dev/peps/pep-0518/#file-format" target="_blank" rel="noopener">Source</a>)</p>
+</blockquote>
+<p>虽然PEP 518已经使用了几年，但 <code>pyproject.toml</code> 标准工具尚未完全支持该配置文件。</p>
+<p>但是，有一些基于的新工具可以发布到PyPI <code>pyproject.toml</code>。这样的工具就是<a href="https://flit.readthedocs.io/" target="_blank" rel="noopener">Flit</a>，这是一个很棒的小项目，可轻松发布简单的Python包。Flit不支持高级软件包，例如创建C扩展的软件包。</p>
+<p>您可以<code>pip install flit</code>，然后按如下所示开始使用它：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ flit init</span><br><span class="line">Module name [reader]:</span><br><span class="line">Author []: Real Python</span><br><span class="line">Author email []: office@realpython.com</span><br><span class="line">Home page []: https://github.com/realpython/reader</span><br><span class="line">Choose a license (see http://choosealicense.com/ <span class="keyword">for</span> more info)</span><br><span class="line"><span class="number">1</span>\. MIT - simple <span class="keyword">and</span> permissive</span><br><span class="line"><span class="number">2</span>\. Apache - explicitly grants patent rights</span><br><span class="line"><span class="number">3</span>\. GPL - ensures that code based on this <span class="keyword">is</span> shared <span class="keyword">with</span> the same terms</span><br><span class="line"><span class="number">4</span>\. Skip - choose a license later</span><br><span class="line">Enter <span class="number">1</span><span class="number">-4</span> [<span class="number">1</span>]:</span><br><span class="line"></span><br><span class="line">Written pyproject.toml; edit that file to add optional extra info.</span><br></pre></td></tr></table></figure>
+<p>该<code>flit init</code>命令将<code>pyproject.toml</code>根据您对几个问题的答案创建文件。使用该文件之前，您可能需要稍微对其进行编辑。对于该<code>reader</code>项目，<code>pyproject.toml</code>Flit文件最终看起来如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[build-system]</span><br><span class="line">requires = [<span class="string">"flit"</span>]</span><br><span class="line">build-backend = <span class="string">"flit.buildapi"</span></span><br><span class="line"></span><br><span class="line">[tool.flit.metadata]</span><br><span class="line">module = <span class="string">"reader"</span></span><br><span class="line">dist-name = <span class="string">"realpython-reader"</span></span><br><span class="line">description-file = <span class="string">"README.md"</span></span><br><span class="line">author = <span class="string">"Real Python"</span></span><br><span class="line">author-email = <span class="string">"office@realpython.com"</span></span><br><span class="line">home-page = <span class="string">"https://github.com/realpython/reader"</span></span><br><span class="line">classifiers = [</span><br><span class="line"> <span class="string">"License :: OSI Approved :: MIT License"</span>,</span><br><span class="line"> <span class="string">"Programming Language :: Python :: 3"</span>,</span><br><span class="line"> <span class="string">"Programming Language :: Python :: 3.7"</span>,</span><br><span class="line">]</span><br><span class="line">requires-python = <span class="string">"&gt;=3.7"</span></span><br><span class="line">requires = [<span class="string">"feedparser"</span>, <span class="string">"html2text"</span>]</span><br><span class="line"></span><br><span class="line">[tool.flit.scripts]</span><br><span class="line">realpython = <span class="string">"reader.__main__:main"</span></span><br></pre></td></tr></table></figure>
+<p>您应该从我们的原始物品中识别出大多数物品<code>setup.py</code>。但是要注意的一件事是，<code>version</code>并且<code>description</code>缺少。这不是一个错误。Flit实际上通过使用<code>__version__</code>和<code>__init__.py</code>文件中定义的docstring 自己找出了这些。<a href="https://flit.readthedocs.io/" target="_blank" rel="noopener">Flit的文档</a>解释了有关<code>pyproject.toml</code>文件的所有内容。</p>
+<p>Flit可以构建您的包，甚至将其发布到PyPI。要构建您的软件包，只需执行以下操作：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flit build</span><br></pre></td></tr></table></figure>
+<p>就像<code>python setup.py sdist bdist_wheel</code>之前一样，这将创建一个源存档和一个转盘。要将软件包上传到PyPI，您可以像以前一样使用Twine。但是，您也可以直接使用Flit：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ flit publish</span><br></pre></td></tr></table></figure>
+<p>如果需要 <code>publish</code>，该命令将构建您的软件包，然后将文件上传到PyPI，并在必要时提示您输入用户名和密码。</p>
+<p>要了解Flit的实际应用，请查看EuroSciPy 2017 的<a href="https://www.youtube.com/watch?v=qTgk2DUM6G0&amp;t=11m50s" target="_blank" rel="noopener">2分钟闪电演讲</a>。Flit <a href="https://flit.readthedocs.io/" target="_blank" rel="noopener">文档</a>是获取更多信息的重要资源。Brett Cannon的<a href="https://snarky.ca/a-tutorial-on-python-package-building/" target="_blank" rel="noopener">打包PyPI的Python代码</a>的<a href="https://snarky.ca/a-tutorial-on-python-package-building/" target="_blank" rel="noopener">教程</a>包括有关Flit的部分。</p>
+<h3 id="诗歌poetry">诗歌（poetry）</h3>
+<p><a href="https://poetry.eustace.io/" target="_blank" rel="noopener">诗歌（poetry）</a>是可以用来构建和上传软件包的另一种工具。它与Flit非常相似，尤其是对于我们在这里要看的东西。</p>
+<p>使用诗歌之前，需要先安装它。也有可能<code>pip install poetry</code>。但是，<a href="https://poetry.eustace.io/docs/#installation" target="_blank" rel="noopener">作者建议</a>您使用自定义安装脚本来避免潜在的依赖冲突。请参阅<a href="https://poetry.eustace.io/docs/#installation" target="_blank" rel="noopener">文档</a>以获取安装说明。</p>
+<p>安装了Poetry之后，您可以通过以下<code>init</code>命令开始使用它：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">$ poetry init</span><br><span class="line"></span><br><span class="line">This command will guide you through creating your pyproject.toml config.</span><br><span class="line"></span><br><span class="line">Package name [code]: realpython-reader</span><br><span class="line">Version [<span class="number">0.1</span><span class="number">.0</span>]: <span class="number">1.0</span><span class="number">.0</span></span><br><span class="line">Description []: Read the latest Real Python tutorials</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p>这将<code>pyproject.toml</code>根据您对包裹问题的回答创建一个文件。不幸的是，《<code>pyproject.toml</code>弗里特》和《诗歌》中的实际规范有所不同。对于诗歌，<code>pyproject.toml</code>文件最终看起来如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[tool.poetry]</span><br><span class="line">name = <span class="string">"realpython-reader"</span></span><br><span class="line">version = <span class="string">"1.0.0"</span></span><br><span class="line">description = <span class="string">"Read the latest Real Python tutorials"</span></span><br><span class="line">readme = <span class="string">"README.md"</span></span><br><span class="line">homepage = <span class="string">"https://github.com/realpython/reader"</span></span><br><span class="line">authors = [<span class="string">"Real Python &lt;office@realpython.com&gt;"</span>]</span><br><span class="line">license = <span class="string">"MIT"</span></span><br><span class="line">packages = [&#123;include = <span class="string">"reader"</span>&#125;]</span><br><span class="line">include = [<span class="string">"reader/*.txt"</span>]</span><br><span class="line"></span><br><span class="line">[tool.poetry.dependencies]</span><br><span class="line">python = <span class="string">"&gt;=3.7"</span></span><br><span class="line">feedparser = <span class="string">"&gt;=5.2"</span></span><br><span class="line">html2text = <span class="string">"&gt;=2018.1"</span></span><br><span class="line"></span><br><span class="line">[tool.poetry.scripts]</span><br><span class="line">realpython = <span class="string">"reader.__main__:main"</span></span><br><span class="line"></span><br><span class="line">[build-system]</span><br><span class="line">requires = [<span class="string">"poetry&gt;=0.12"</span>]</span><br><span class="line">build-backend = <span class="string">"poetry.masonry.api"</span></span><br></pre></td></tr></table></figure>
+<p>同样，您应该从的早期讨论中认识到所有这些项目<code>setup.py</code>。需要注意的一件事是，Poetry会根据许可证和您指定的Python版本自动添加分类器。诗歌还要求您明确说明依赖项的版本。实际上，依赖性管理是诗歌的长处之一。</p>
+<p>就像Flit一样，Poetry可以构建软件包并将其上传到PyPI。该<code>build</code>命令创建一个源档案和一个轮子：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ poetry build</span><br></pre></td></tr></table></figure>
+<p>这将在<code>dist</code>子目录中创建两个常用文件，您可以像以前一样使用Twine上载这些文件。您还可以使用“诗歌”发布到PyPI：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ poetry publish</span><br></pre></td></tr></table></figure>
+<p>这会将您的包上传到PyPI。除了构建和发布外，Poetry还可以在此过程的早期帮助您。类似于Cookiecutter，Poetry可以帮助您使用该<code>new</code>命令启动新项目。它还支持使用虚拟环境。有关所有详细信息，请参见<a href="https://poetry.eustace.io/docs/" target="_blank" rel="noopener">诗歌的文档</a>。</p>
+<p>除了略有不同的配置文件外，Flit和Poetry的工作原理非常相似。诗歌的范围更广，因为它还旨在帮助进行依属关系管理，而弗利特（Flit）的历史已经更长了。安德鲁·平克汉姆（Andrew Pinkham）的文章《<a href="http://andrewsforge.com/article/python-new-package-landscape/" target="_blank" rel="noopener">Python的新包装</a>格局》涵盖了Flit和Poetry。诗歌是<a href="https://pythonbytes.fm/episodes/show/100/the-big-100-with-special-guests" target="_blank" rel="noopener">Python Bytes播客第100集</a>的特别主题之一。</p>
+<h2 id="结论">结论</h2>
+<p>您现在知道了如何准备项目并将其上传到PyPI，以便其他人可以安装和使用它。尽管您需要完成一些步骤，但是在PyPI上看到自己的软件包是很有意义的。让其他人发现您的项目很有用！</p>
+<p>在本教程中，您已经看到发布自己的程序包所必需的步骤：</p>
+<ul>
+<li>为您的包裹找一个好名字</li>
+<li>使用以下方式配置您的软件包 <code>setup.py</code></li>
+<li>建立你的包裹</li>
+<li>将您的包上传到PyPI</li>
+</ul>
+<p>此外，您还看到了一些用于发布程序包的新工具，这些工具使用新的<code>pyproject.toml</code>配置文件来简化过程。</p>
+<p>如果您仍有疑问，请随时在下面的评论部分中提出。另外，<a href="https://packaging.python.org/" target="_blank" rel="noopener">Python打包机构</a>拥有比我们此处介绍的更多的信息。</p>
+<p>原文：<a href="https://realpython.com/pypi-publish-python-package/" target="_blank" rel="noopener">How to Publish an Open-Source Python Package to PyPI</a><br />
+作者：<a href="https://realpython.com/team/gahjelle/" target="_blank" rel="noopener">About Geir Arne Hjelle</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/03/22/pip/" data-id="ck838f6uh009fr42wbm9tfkis" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+      
+        <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/21/pylint/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">最有效的 Python 项目源码阅读方式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code/">code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%90%E8%90%A5/">运营</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3b1b/" rel="tag">3b1b</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/" rel="tag">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/" rel="tag">CV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Code/" rel="tag">Code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DS/" rel="tag">DS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deployment/" rel="tag">Deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/calculus/" rel="tag">calculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheeksheet/" rel="tag">cheeksheet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dl/" rel="tag">dl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/download/" rel="tag">download</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geektime/" rel="tag">geektime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linear/" rel="tag">linear</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lr/" rel="tag">lr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manim/" rel="tag">manim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml/" rel="tag">ml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nlp/" rel="tag">nlp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nn/" rel="tag">nn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf2/" rel="tag">tf2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9D%83/" rel="tag">版权</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3b1b/" style="font-size: 11.43px;">3b1b</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/ANN/" style="font-size: 11.43px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 11.43px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/CV/" style="font-size: 14.29px;">CV</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/Compiler/" style="font-size: 11.43px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.43px;">Construction</a> <a href="/tags/Coursera/" style="font-size: 10px;">Coursera</a> <a href="/tags/DL/" style="font-size: 17.14px;">DL</a> <a href="/tags/DS/" style="font-size: 11.43px;">DS</a> <a href="/tags/Deployment/" style="font-size: 10px;">Deployment</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 18.57px;">Godot</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Math/" style="font-size: 14.29px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.43px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 11.43px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 12.86px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 15.71px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TensorFlow/" style="font-size: 11.43px;">TensorFlow</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/algorithm/" style="font-size: 11.43px;">algorithm</a> <a href="/tags/beginner/" style="font-size: 11.43px;">beginner</a> <a href="/tags/book/" style="font-size: 10px;">book</a> <a href="/tags/calculus/" style="font-size: 10px;">calculus</a> <a href="/tags/cheeksheet/" style="font-size: 10px;">cheeksheet</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/dl/" style="font-size: 12.86px;">dl</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/geektime/" style="font-size: 10px;">geektime</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 14.29px;">iOS</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/linear/" style="font-size: 10px;">linear</a> <a href="/tags/lr/" style="font-size: 10px;">lr</a> <a href="/tags/manim/" style="font-size: 15.71px;">manim</a> <a href="/tags/ml/" style="font-size: 12.86px;">ml</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/nlp/" style="font-size: 10px;">nlp</a> <a href="/tags/nn/" style="font-size: 11.43px;">nn</a> <a href="/tags/paper/" style="font-size: 12.86px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.43px;">plugin</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/tf2/" style="font-size: 10px;">tf2</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.43px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.43px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 14.29px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9D%83/" style="font-size: 10px;">版权</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">统计学习方法</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.43px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/03/22/pip/">[译] 如何将开源 Python 软件包发布到 PyPI</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/21/pylint/">最有效的 Python 项目源码阅读方式</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/20/kmeans/">《统计学习方法》第 14 章 聚类方法 KMeans</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/19/slm/">《统计学习方法》导论 anim</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/18/AIDevLog/">AI开发日志 代码资源等</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iOSDevLog<br>
+      Powered by © 2020 - <a href="https://www.iosdevlog.com" target="_blank">贾献华 2020 博客</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/2020" class="mobile-nav-link">2020 Calendar</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
