@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-03-23T04:14:30.908Z</updated>
+  <updated>2020-03-24T14:42:03.645Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>《10x程序员工作法》思维导图</title>
+    <link href="https://2020.iosdevlog.com/2020/03/24/10x/"/>
+    <id>https://2020.iosdevlog.com/2020/03/24/10x/</id>
+    <published>2020-03-24T13:44:30.000Z</published>
+    <updated>2020-03-24T14:42:03.645Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/24/10x/10x.svg" /></p><a id="more"></a><h2 id="以终为始">以终为始</h2><h3 id="重点">重点</h3><ul><li><p>DoD，确定好完成的定义，减少团队内部的理解不一致。</p></li><li><p>用户故事，细化出有价值的需求。</p></li><li><p>持续集成，通过尽早集成，减少改动量，降低集成的难度。</p></li><li><p>精益创业，减少过度开发不确定性产品带来的浪费。</p></li><li><p>迭代 0，在项目开始之前，做好一些基础准备。</p></li></ul><h3 id="思维转变">思维转变</h3><ul><li><p>任何事物都要经过两次创造：</p><ul><li><p>头脑中的创造，也就是智力上的或者第一次创造（Mental/First Creation）</p></li><li><p>付诸实践，也就是实际的构建或第二次创造（Physical/Second Creation）</p></li></ul></li><li><p>在更大的上下文内发现自己的“终”</p></li><li><p>通过推演，找到通往“终”的路径</p></li><li><p>用可度量的“数字”定义自己的“终”</p></li></ul><h3 id="实战指南">实战指南</h3><ul><li><p>遇到事情，倒着想</p></li><li><p>在做任何事之前，先定义完成的标准</p></li><li><p>在做任何需求或任务之前，先定好验收标准</p></li><li><p>尽早提交代码去集成</p></li><li><p>默认所有需求都不做，直到弄清楚为什么要做这件事</p></li><li><p>扩大自己工作的上下文，别把自己局限在一个“程序员”的角色上</p></li><li><p>在动手做一件事之前，先推演一番</p></li><li><p>问一下自己，我的工作是不是可以用数字衡量</p></li><li><p>设计你的迭代 0 清单，给自己的项目做体检</p></li></ul><h2 id="任务分解">任务分解</h2><h3 id="重点-1">重点</h3><ul><li><p>测试金字塔</p><ul><li><p>行业中测试组合的最佳实践</p></li><li><p>多写单元测试是关键</p></li></ul></li><li><p>测试驱动开发</p><ul><li><p>测试驱动开发的节奏</p><ul><li><p>红——绿——重构</p></li><li><p>重构是测试驱动开发区别于测试先行的关键</p></li></ul></li><li><p>测试驱动设计</p></li><li><p>编写可测的代码</p></li></ul></li><li><p>艾森豪威尔矩阵（Eisenhower Matrix）</p><ul><li><p>将事情按照重要和紧急进行划分</p></li><li><p>重要且紧急的事情要立即做</p></li><li><p>重要但不紧急的事情应该是我们重点投入精力的地方</p></li><li><p>紧急但不重要的事情，可以委托别人做</p></li><li><p>不重要不紧急的事情，尽量少做</p></li></ul></li><li><p>最小可行产品</p><ul><li><p>“刚刚好”满足客户需求的产品</p></li><li><p>在实践中，要用最小的代价找到一条可行的路径</p></li></ul></li></ul><h3 id="实战指南-1">实战指南</h3><ul><li><p>动手做一个工作之前，请先对它进行任务分解</p></li><li><p>多写单元测试</p></li><li><p>我们应该编写可测的代码</p></li><li><p>将任务拆小，越小越好</p></li><li><p>按照完整实现一个需求的顺序去安排分解出来的任务</p></li><li><p>要想写好测试，就要写简单的测试</p></li><li><p>想要管理好需求，先把需求拆小</p></li><li><p>尽量做最重要的事</p></li><li><p>做好产品开发，最可行的方式是采用 MVP</p></li></ul><h3 id="评判标准">评判标准</h3><ul><li><p>尽量不写 static 方法</p></li><li><p>主分支开发模型是一种更好的开发分支模型</p></li><li><p>好的用户故事应该符合 INVEST 原则</p></li><li><p>估算是一个加深对需求理解的过程，好的估算是以任务分解为基础的</p></li><li><p>好的测试应该符合 A-TRIP</p></li></ul><h3 id="改善">改善</h3><ul><li><p>分而治之，是人类解决问题的基本手段</p></li><li><p>软件变更成本，它会随着时间和开发阶段逐步增加</p></li><li><p>测试框架把自动化测试作为一种最佳实践引入到开发过程中<br />使得测试动作可以通过标准化的手段固定下来</p></li><li><p>极限编程之所以叫“极限”，它背后的理念就是把好的实践推向极限</p></li><li><p>大师级程序员的工作秘笈是任务分解，分解到可以进行的微操作</p></li><li><p>按照完整实现一个需求的顺序安排开发任务</p></li></ul><h3 id="额外">额外</h3><ul><li><p>对不了解技术的任务，先要去了解技术，然后再做任务分解</p></li><li><p>通过一次技术 Spike ，学习新技术</p></li><li><p>丢弃掉在 Spike 过程中开发的原型代码</p></li><li><p>分清目标与现状，用目标作为方向，指导现状的改变</p></li><li><p>多个功能并行开发可以考虑使用 Feature Toggle</p></li><li><p>在遗留系统上做改造可以考虑使用 Branch by Abstraction</p></li></ul><h2 id="任务分解-1">任务分解</h2><h3 id="重点-2">重点</h3><ul><li><p>看板</p><ul><li><p>一种来自精益生产的可视化实践</p></li><li><p>按阶段将任务放置其中</p></li><li><p>可以帮助我们发现问题</p></li></ul></li><li><p>持续集成</p><ul><li><p>做好持续集成的关键是，快速反馈</p></li><li><p>本地检查通过之后再提交</p></li><li><p>找到有效的反馈方式，比如：CI 监视器</p></li><li><p>持续集成的纪律</p></li><li><p>只有 CI 服务器处于绿色的状态才能提交代码</p></li><li><p>CI 服务器一旦检查出错，要立即修复</p></li></ul></li><li><p>回顾会议</p><ul><li><p>软件团队复盘的一种实践</p></li><li><p>枚举关注点，选出重点，深入讨论，列出行动项，找到负责人</p></li></ul></li><li><p>5 个为什么</p><ul><li><p>又一个来自丰田的实践</p></li><li><p>沿着一条主线追问多个问题</p></li></ul></li></ul><h3 id="实战指南-2">实战指南</h3><ul><li><p>通过沟通反馈，不断升级自己的编解码能力</p></li><li><p>用业务的语言写代码</p></li><li><p>多面对面沟通，少开会</p></li><li><p>多尝试用可视化的方式进行沟通</p></li><li><p>做好持续集成的关键在于，快速反馈</p></li><li><p>定期复盘，找准问题根因，不断改善</p></li><li><p>多走近用户</p></li><li><p>事情往前做，有问题尽早暴露</p></li><li><p>多输出，让知识更有结构</p></li></ul><h3 id="思路">思路</h3><ul><li><p>用信息论理解沟通反馈</p></li><li><p>写代码的进阶路径编写可以运行的代码</p><ul><li><p>编写符合代码规范的代码</p></li><li><p>编写人可以理解的代码</p></li><li><p>用业务语言写代码</p></li></ul></li><li><p>会议是一种重量级的沟通方式</p><ul><li><p>减少参会人数</p></li><li><p>找人面对面沟通</p></li></ul></li><li><p>聆听用户声音</p><ul><li><p>能做自己用户，做自己的用户</p></li><li><p>能接近用户，接近用户</p></li><li><p>没有用户，创造用户</p></li></ul></li><li><p>Fail Fast</p><ul><li><p>一种编写代码的原则</p></li><li><p>出现问题尽早报错</p></li></ul></li><li><p>金字塔原理</p><ul><li>从中心论点，到分论点，再到论据</li></ul></li></ul><h3 id="额外-1">额外</h3><ul><li><p>持续集成是一条主线，可以将诸多实践贯穿起来</p><ul><li><p>从持续集成到稳定的开发分支，到频繁提交，足够小的任务，到任务分解</p></li><li><p>从持续集成到可检查</p></li><li><p>到测试防护网</p></li><li><p>到测试覆盖率</p></li><li><p>到单元测试</p></li><li><p>到可测试代码</p></li><li><p>到软件设计</p></li></ul></li><li><p>安全性检查，是回顾会议的前提条件</p></li><li><p>在信息获取上，国内外程序员差别不大，开拓视野，改善工作习惯，是国内程序员亟需提高的</p></li></ul><h2 id="自动化">自动化</h2><h3 id="重点-3">重点</h3><ul><li><p>持续交付</p><ul><li><p>将生产部署纳入了开发的考量</p></li><li><p>持续交付的基础设施通常包含持续集成环境、测试环境、预生产环境和生产环境</p></li><li><p>构建流水线保证到了下游的交付物一定是通过上游验证的</p></li><li><p>随着 Docker 的诞生，交付由发布包变成了 Docker 镜像</p></li></ul></li><li><p>DevOps</p><ul><li><p>将开发和运维结合到一起</p></li><li><p>环境配置工具上的进步，让基础设施即代码成了行业共识</p></li></ul></li><li><p>验收测试</p><ul><li><p>站在业务的角度编写</p></li><li><p>BDD 是一种编写验收测试的方式</p></li><li><p>Given…When…Then… 的描述给了一个描述业务的统一方式</p></li><li><p>写好验收测试，需要构建测试模型</p></li></ul></li><li><p>SOLID 原则</p><ul><li><p>设计模式背后的道理</p></li><li><p>单一职责原则（Single responsibility principle，SRP）</p></li><li><p>开放封闭原则（Open–closed principle，OCP）</p></li><li><p>Liskov 替换原则（Liskov substitution principle，LSP）</p></li><li><p>接口隔离原则（Interface segregation principle，ISP）</p></li><li><p>依赖倒置原则（Dependency inversion principle，DIP）</p></li><li><p>用好单一职责原则，前提条件是看待问题颗粒度要小</p></li></ul></li><li><p>DDD</p><ul><li><p>它将思考的起点拉到了业务上</p></li><li><p>DDD 分为战略设计和战术设计</p></li></ul></li><li><p>微服务</p><ul><li><p>做好微服务的前提是划分好限界上下文</p></li><li><p>微服务的第一步，不要划分微服务</p></li></ul></li></ul><h3 id="实战指南-3">实战指南</h3><ul><li><p>请谨慎地将工作自动化</p></li><li><p>将你的工作过程自动化</p></li><li><p>有体系地学习运维知识</p></li><li><p>将部署纳入开发的考量</p></li><li><p>将验收测试自动化</p></li><li><p>把函数写短</p></li><li><p>构建好你的领域模型</p></li><li><p>用简单技术解决问题，直到问题变复杂</p></li><li><p>学习领域驱动设计</p></li></ul><h3 id="改善-1">改善</h3><ul><li><p>程序员的三大美德</p><ul><li><p>懒惰（Laziness）</p></li><li><p>急躁（Impatience）</p></li><li><p>懒惰（hubris）</p></li></ul></li><li><p>小心 NIH 综合症（Not Invented Here Syndrome）</p></li><li><p>写好构建脚本，做好项目自动化</p></li><li><p>参照 Java 知识体系，学习运维知识</p></li><li><p>软件设计最基础的原则是“高内聚、低耦合”</p></li><li><p>分层架构是一种设计上的分解</p></li><li><p>不同业务量的系统本质上不是一个系统</p></li><li><p>采用简单技术解决问题，直到问题变复杂</p></li></ul><h3 id="额外-2">额外</h3><ul><li><p>持续集成的延伸</p><ul><li><p>持续集成完成系统集成</p></li><li><p>持续交付完成可部署上线</p></li><li><p>“持续验证”完成产品想法验证</p></li></ul></li><li><p>AB 测试，用一个软件的多个版本验证想法</p></li><li><p>Selenium 用以完成浏览器的自动化</p></li><li><p>熟练使用快捷键</p></li></ul><p><a href="https://www.douban.com/doulist/113366760/" target="_blank" rel="noopener">推荐书</a></p><p>总结自：<a href="https://time.geekbang.org/column/intro/148" target="_blank" rel="noopener">《10x程序员工作法》</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/24/10x/10x.svg&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="geek" scheme="https://2020.iosdevlog.com/categories/geek/"/>
+    
+    
+      <category term="效率" scheme="https://2020.iosdevlog.com/tags/%E6%95%88%E7%8E%87/"/>
+    
+      <category term="mindmap" scheme="https://2020.iosdevlog.com/tags/mindmap/"/>
+    
+  </entry>
   
   <entry>
     <title>[译] Python 测试入门</title>
@@ -183,9 +208,9 @@
     
       <category term="manim" scheme="https://2020.iosdevlog.com/tags/manim/"/>
     
-      <category term="calculus" scheme="https://2020.iosdevlog.com/tags/calculus/"/>
-    
       <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
+    
+      <category term="calculus" scheme="https://2020.iosdevlog.com/tags/calculus/"/>
     
   </entry>
   
@@ -210,9 +235,9 @@
     
       <category term="manim" scheme="https://2020.iosdevlog.com/tags/manim/"/>
     
-      <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
-    
       <category term="linear" scheme="https://2020.iosdevlog.com/tags/linear/"/>
+    
+      <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
     
   </entry>
   
@@ -535,33 +560,6 @@ ISBN：9787121331107&lt;/p&gt;
     
     
       <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>反向图灵测试 Reverse Turing test</title>
-    <link href="https://2020.iosdevlog.com/2020/03/05/Reverse-Turing-test/"/>
-    <id>https://2020.iosdevlog.com/2020/03/05/Reverse-Turing-test/</id>
-    <published>2020-03-05T13:27:58.000Z</published>
-    <updated>2020-03-05T13:54:26.717Z</updated>
-    
-    <content type="html"><![CDATA[<p>如果漫画家手冢治虫还活着，会在漫画中描绘出什么样的未来？AI 是否能够帮他呈现？</p><figure><img src="https://2020.iosdevlog.com/2020/03/05/Reverse-Turing-test/1.gif" alt="" /><figcaption>AI复活已故漫画家手冢治虫</figcaption></figure><p>通过分析其作品，人工智能产生了角色设计和基本故事情节。据悉，新漫画的主人公是 AI 学习了 6000 张角色图像之后生成的。之后由专业创作者添加诸如服装和对话之类的元素以完善作品。</p><a id="more"></a><h2 id="验证码-captcha">验证码 / CAPTCHA</h2><p>全自动区分计算机和人类的公开图灵测试（英语：Completely Automated Public Turing test to tell Computers and Humans Apart，简称CAPTCHA），俗称验证码，是一种区分用户是计算机或人的公共全自动程序。在 CAPTCHA 测试中，作为服务器的计算机会自动生成一个问题由用户来解答。这个问题可以由计算机生成并评判，但是必须只有人类才能解答。由于计算机无法解答 CAPTCHA 的问题，所以回答出问题的用户就可以被认为是人类。</p><p>一种常用的 CAPTCHA 测试是让用户输入一个扭曲变形的图片上所显示的文字或数字，扭曲变形是为了避免被 <code>光学字符识别</code>（<strong>OCR</strong>, Optical Character Recognition）之类的计算机程序自动识别出图片上的文数字而失去效果。由于这个测试是由计算机来考人类，而不是标准图灵测试中那样由人类来考计算机，人们有时称 CAPTCHA 是一种 <em>反向图灵测试</em>。</p><h2 id="图灵测试">图灵测试</h2><p>图灵测试（英语：Turing test，又译图灵试验）是图灵于1950年提出的一个关于判断机器是否能够思考的著名思想实验，测试某机器是否能表现出与人等价或无法区分的智能。测试的谈话仅限于使用唯一的文本管道，例如计算机键盘和屏幕，这样的结果不依赖于计算机把单词转换为音频的能力。</p><h3 id="测试内容">测试内容</h3><blockquote><p>如果一个人（代号C）使用测试对象皆理解的语言去询问两个他不能看见的对象任意一串问题。对象为：一个是正常思维的人（代号B）、一个是机器（代号A）。如果经过若干询问以后，C不能得出实质的区别来分辨A与B的不同，则此机器A通过图灵测试。</p></blockquote><h3 id="完成图灵测试涉及的技术课题">完成图灵测试涉及的技术课题</h3><p>根据人们的大体判断，达成能够通过图灵测试的技术涉及以下课题</p><ul><li>自然语言处理</li><li>知识表示</li><li>自动推理</li><li>机器学习</li></ul><p>但是为了通过完全图灵测试，还需要另外两项额外技术课题：</p><ul><li>计算机视觉</li><li>机器人学</li></ul><h3 id="反向图灵测试和验证码">反向图灵测试和验证码</h3><p>验证码（CAPTCHA）是一种反向图灵测试。在网站上运行一些动作之前，用户被给予一个扭曲的图形，并要求用户输入图中的字母或数字。这是为了防止网站被自动化系统用来滥用。理由是能够精细地阅读和准确地重现扭曲的形象的系统并不存在（或不提供给普通用户），所以能够做到这一点的任何系统可能是一个人类。</p><p>可以破解验证码的软件正在被积极开发，软件拥有一个有一定的准确性的验证码分析模式生成引擎。而在破解验证码软件被积极开发的同时，另一种通过反向图灵测试的准则也被提出来。其认为即使破解验证码软件被成功研发，也只是具有智能的人类透过编程对验证码所作出的破解手段而已，并非真正通过反向图灵测试或图灵测试。而如果一台机器能够规划出如同验证码一类的防止自动化系统的规避程序，此台机器才算是真正通过了反向图灵测试。</p><h3 id="完全图灵测试">完全图灵测试</h3><p>普通的图灵测试一般避免审问者与被测试计算机发生物理上的互动，因为物理上模拟人（比如像模拟人的外表）并不是人工智能的研究范畴。然而一些人工智能可能涉及一些人机在物理上的交互，所以人们又拓展出了“完全图灵测试”。在完全图灵测试中，可以包含必要的人机在物理层面上的交互。但是为了通过完全图灵测试，还需要在普通图灵测试之外另外两项额外技术课题。询问者还可以测试的受试者感知能力（需要计算机视觉），和受试者操纵物体的能力（需要机器人学）。</p><h2 id="反向图灵测试-reverse-turing-test">反向图灵测试 Reverse Turing test</h2><p>可以说，反向图灵测试的标准形式是受试者试图表现为计算机而非人类的形式。</p><p>在反向图灵测试中表现最佳的人员是最了解计算机的人员，因此知道计算机在对话中可能会犯的错误的类型。</p><p>在计算机编程尤其是调试过程中，反向图灵测试的技巧与思维上模拟程序操作的技巧之间有着很多共识。结果，<code>程序员（尤其是黑客）</code> 有时会沉迷于非正式的反向图灵测试中以进行娱乐。</p><p>参考：<a href="https://www.wikipedia.org" target="_blank" rel="noopener" class="uri">https://www.wikipedia.org</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;如果漫画家手冢治虫还活着，会在漫画中描绘出什么样的未来？AI 是否能够帮他呈现？&lt;/p&gt;
-&lt;figure&gt;
-&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/05/Reverse-Turing-test/1.gif&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;AI复活已故漫画家手冢治虫&lt;/figcaption&gt;
-&lt;/figure&gt;
-&lt;p&gt;通过分析其作品，人工智能产生了角色设计和基本故事情节。据悉，新漫画的主人公是 AI 学习了 6000 张角色图像之后生成的。之后由专业创作者添加诸如服装和对话之类的元素以完善作品。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="game" scheme="https://2020.iosdevlog.com/categories/game/"/>
-    
-    
-      <category term="Godot" scheme="https://2020.iosdevlog.com/tags/Godot/"/>
     
   </entry>
   
