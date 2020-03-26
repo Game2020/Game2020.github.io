@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-03-24T14:42:03.645Z</updated>
+  <updated>2020-03-26T16:25:05.143Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,64 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI Cheatsheets</title>
+    <link href="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/"/>
+    <id>https://2020.iosdevlog.com/2020/03/26/aicheatsheets/</id>
+    <published>2020-03-26T15:45:13.000Z</published>
+    <updated>2020-03-26T16:25:05.143Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Scipy.png" /></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Numpy.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Pandas-1.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Pandas-2.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Pandas-3.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/matplotlib-cheatsheet.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Matplotlib.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Scikit_learn.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Neural_network_cells.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Neural_network_graphs.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Neural_networks_zoo.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/tensorflow_v_2.0-1.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/tensorflow_v_2.0-2.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/tensorflow_v_2.0-3.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Keras.jpg" /></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Scipy.png&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="cheatsheets" scheme="https://2020.iosdevlog.com/tags/cheatsheets/"/>
+    
+      <category term="numpy" scheme="https://2020.iosdevlog.com/tags/numpy/"/>
+    
+      <category term="scipy" scheme="https://2020.iosdevlog.com/tags/scipy/"/>
+    
+      <category term="matplotlib" scheme="https://2020.iosdevlog.com/tags/matplotlib/"/>
+    
+      <category term="pandas" scheme="https://2020.iosdevlog.com/tags/pandas/"/>
+    
+      <category term="tf" scheme="https://2020.iosdevlog.com/tags/tf/"/>
+    
+      <category term="keras" scheme="https://2020.iosdevlog.com/tags/keras/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>表格化数据挖掘</title>
+    <link href="https://2020.iosdevlog.com/2020/03/25/table/"/>
+    <id>https://2020.iosdevlog.com/2020/03/25/table/</id>
+    <published>2020-03-25T10:06:00.000Z</published>
+    <updated>2020-03-25T13:52:39.686Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/25/table/0.png" /></p><a id="more"></a><h2 id="经典的结构化数据挖掘方法">经典的结构化数据挖掘方法</h2><h3 id="什么是结构化数据">什么是结构化数据</h3><ul><li><p>结构化数据指的主要是表格数据(Tabular Data)</p></li><li><p>最简单的想象:可以记载在 Excel 表格中的均是表格数据</p><ul><li><p>每列数据一般称之为一个变量(字段)</p></li><li><p>变量可以分为离散型变量和连续型变量</p></li></ul></li><li><p>绝大多数的数据都是表格数据(或可以转化为表格数据)</p></li></ul><h3 id="结构化数据的传统建模流程">结构化数据的传统建模流程</h3><ul><li><p>传统来说(在某种意义上仍是如此)，结构化数据常常要求大量的业务理解</p></li><li><p>探索性数据分析往往占很大成分</p></li><li><p>90% 时间花在清洗数据和探索性分析上</p></li></ul><h3 id="传统建模流程的问题">传统建模流程的问题</h3><ul><li><p>最核心的悖论:业务理解从哪里来?</p></li><li><p>一些实际的问题</p><ul><li><p>高维稀疏变量</p></li><li><p>较差的变量质量</p></li><li><p>类似的业务理解能力</p></li><li><p>业务的多变性</p></li></ul></li></ul><h2 id="表格化数据挖掘基本流程">表格化数据挖掘基本流程</h2><h3 id="数据挖掘竞赛和新的建模流程">数据挖掘竞赛和新的建模流程</h3><ul><li><p>竞赛基本流程</p></li><li><p>挑战</p><ul><li><p>无业务理解</p></li><li><p>少数提交机会</p></li><li><p>测试集和训练集可能不一样-&gt; 建模结果必须稳定</p></li><li><p>时间短暂，必须充分利用时间</p></li></ul></li><li><p>数据挖掘竞赛和实际业务中的建模有类似挑战，但有一点重要不同</p><ul><li>实际业务建模必须要逐步引入更多变量，而竞赛中变量已经给定</li></ul></li></ul><h3 id="新的流程">新的流程</h3><ul><li><p>数据清理和EDA</p></li><li><p>半自动的变量构建+手动构建</p></li><li><p>一类模型主要提高准确率，另一些模型做集成备选</p><ul><li><p>传统来说主要用于提高准确率的是靠集成树的方法</p></li><li><p>近年来神经网络为基础的建模越来越多</p></li></ul></li><li><p>集成学习</p><ul><li><p>被集成的模型必须有一定准确性</p></li><li><p>被集成的模型必须有一定的多样性</p></li></ul></li></ul><p><img src="https://2020.iosdevlog.com/2020/03/25/table/1.png" /></p><p><img src="https://2020.iosdevlog.com/2020/03/25/table/2.png" /></p><h3 id="关于新的流程的一些说明">关于新的流程的一些说明</h3><ul><li><p>前三个环节经常需要反复进行</p></li><li><p>基本原则:尽可能利用算力和时间</p></li><li><p>不同人对于 EDA 重要性说法不同，个人建议初学者以实验为主</p></li><li><p>非常重要的原则:结合全局和局部信息</p></li></ul><h2 id="半自动特征构建">半自动特征构建</h2><h3 id="target-mean-encoding">Target Mean Encoding</h3><ul><li><p>Target Mean Encoding 简介</p><ul><li><p>对于离散变量最有效编码方法之一</p></li><li><p>对于维度较高的离散性变量效果很好</p></li><li><p>重点在于防止过拟合</p></li></ul></li><li><p>其他的 Groupby 函数应用</p><ul><li><p>实现 Target Mean Encoding 可以使用 df.groupby([A,B])[C].agg(func)</p></li><li><p>Groupby 函数可以应用于任何其他变量，在某种程度上捕捉了多变量之间的交叉效应</p></li><li><p>Func 可以是多种函数，如 mean，std，kurtosis，min，max 等等</p></li><li><p>可以对残差进行以上操作</p></li></ul></li></ul><h3 id="categorical-encoders">Categorical Encoders</h3><ul><li><p>One-hot Encoder</p></li><li><p>Ordinal Encoder</p></li><li><p>其他 Encoder</p><ul><li><p>Count Encoder</p></li><li><p>HashMap</p></li></ul></li></ul><h3 id="连续变量的离散化方法">连续变量的离散化方法</h3><ul><li><p>为什么要对连续变量进行离散化</p><ul><li><p>捕捉非线性效应</p></li><li><p>捕捉交叉效应</p></li></ul></li><li><p>常见的离散化方法</p><ul><li><p>Uniform</p></li><li><p>基于 Quantile</p></li><li><p>基于聚类</p></li><li><p>基于树</p></li></ul></li><li><p>树模型</p></li></ul><h3 id="entity-embedding">Entity Embedding</h3><ul><li><p>Entity Embedding 基础</p></li><li><p>如何加入 Vincinal Information</p></li></ul><h3 id="连续变量的转换">连续变量的转换</h3><ul><li><p>常见的数据转换方法</p></li><li><p>基于 ECDF 的方法</p></li><li><p>Box-Cox 变换和 Yeo-Johnson Transform</p></li></ul><h3 id="缺失值和异常值的处理">缺失值和异常值的处理</h3><ul><li><p>概述</p><ul><li><p>异常值和缺失值的定义常常是难以确定的</p></li><li><p>异常值的检验最可靠的方法</p><ul><li><p>EDA 加上业务逻辑</p></li><li><p>可以根据分位数或其他方法(其他方法未必靠谱)</p></li><li><p>如果异常值是由于输入失误造成的，则可以将之作为缺失值处理</p></li></ul></li><li><p>缺失值的填充往往可以根据业务决定</p><ul><li><p>其他可以采用平均值、中位数或众数进行填充</p></li><li><p>也可以单独构建模型进行预测</p></li></ul></li></ul></li><li><p>常见处理方法</p><ul><li><p>缺失值的填充往往可以根据业务决定</p></li><li><p>缺失和异常本身可能是有信息量的，可以构造哑变量进行处理</p><ul><li>成租的缺失值和异常值本身可能是有信息的</li></ul></li><li><p>对于部分异常值，还需要进行截断处理</p></li><li><p>对于重要的缺失变量，很有可能需要进行预测</p></li><li><p>R 中的一些包，如 MICE，可以帮助进行缺失值和异常值的处理</p></li></ul></li></ul><h2 id="自动特征构建方法">自动特征构建方法</h2><h3 id="自动特征挖掘">自动特征挖掘</h3><ul><li><p>应用</p></li><li><p>难点:组合优化问题</p></li></ul><h3 id="遗传算法简介">遗传算法简介</h3><h3 id="symbolic-learning-简介">Symbolic Learning 简介</h3><ul><li><p>采用遗传算法找寻如何构造衍生变量</p></li><li><p>在 gplearn 库当中已经实现</p></li></ul><h3 id="autocross-简介">AutoCross 简介</h3><ul><li><p>第四范式开发(未开源)</p></li><li><p>主要目的:寻找交叉效应</p></li><li><p>创新</p><ul><li><p>Beam Search</p></li><li><p>简化的逻辑回归求解方式</p></li></ul></li><li><p>可以进行提升</p><ul><li><p>Meta Feature</p></li><li><p>更好的优化方法</p></li></ul></li></ul><h2 id="降维方法">降维方法</h2><h3 id="pcanmf-和-tsne">PCA，NMF 和 tSNE</h3><ul><li><p>为什么要降维</p><ul><li><p>找到宏观信息</p></li><li><p>找到交叉效应</p></li><li><p>不建议先降维再拟合模型</p></li></ul></li><li><p>PCA和NMF简介</p></li><li><p>tSNE 简介</p></li><li><p>实现</p><ul><li><p>在 sklearn 当中均有实现</p><ul><li><p>PCA</p></li><li><p>NMF</p></li><li><p>tSNE</p></li></ul></li></ul></li><li><p>应用</p><ul><li><p>隐藏维度的选择取决于数据</p></li><li><p>数据需要进行预处理</p></li><li><p>标准化</p></li><li><p>选取重要变量</p></li><li><p>去掉过于稀疏的个别变量</p></li><li><p>可构建2折和3折交叉效应</p></li><li><p>降维方法的参数并不十分重要，一般来说如果有时间，选取所有参数并拟合模型进行测试</p></li></ul></li></ul><h3 id="denoising-autoencoder">Denoising AutoEncoder</h3><ul><li><p>Denoising AutoEncoder 简介</p></li><li><p>实践中的注意事项</p><ul><li><p>DAE 一般对多模态有很好效果</p></li><li><p>一般的噪声范畴:5%-20%</p></li><li><p>其他降维方法的 trick 也适用于 DAE</p></li><li><p>注意将中间层均拿出来进行预测</p></li></ul></li></ul><p><img src="https://2020.iosdevlog.com/2020/03/25/table/3.png" /></p><h3 id="variational-autoencoder">Variational AutoEncoder</h3><ul><li><p>Variational AutoEncoder 的数学形式</p></li><li><p>实践中的注意事项</p><ul><li><p>VAE 的实现可见</p></li><li><p>VAE 是很火的研究领域</p></li><li><p>训练常常难以收敛</p></li><li><p>在实际应用中较罕见</p></li></ul></li></ul><h2 id="变量选择方法">变量选择方法</h2><h3 id="概述">概述</h3><ul><li><p>变量重要 = 哲学问题</p></li><li><p>优化角度 = 组合优化问题</p></li><li><p>初步选择可根据数据特点</p><ul><li>最重要的指标为缺失值和变化率</li></ul></li><li><p>其他的一些选择方法</p><ul><li><p>“去一”的选择方法(主要方法)</p></li><li><p>模型相关的方法-&gt;和模型高度相关，不可靠</p></li><li><p>其他优化方法-&gt;不成熟</p></li></ul></li></ul><h3 id="去一选择法">“去一”选择法</h3><ul><li><p>整体流程</p></li><li><p>问题</p></li></ul><h2 id="集成树模型">集成树模型</h2><h3 id="概述-1">概述</h3><ul><li><p>树模型的缺点和优点</p><ul><li><p>优点</p><ul><li><p>非线性效应</p></li><li><p>交叉效应</p></li><li><p>稀疏</p></li></ul></li><li><p>缺点</p><ul><li><p>不稳定</p></li><li><p>表现力差</p></li><li><p>精度差</p></li></ul></li></ul></li><li><p>集成树模型分类</p><ul><li><p>基本思路</p><ul><li>将多个树模型构成进行平均</li></ul></li><li><p>方法</p><ul><li><p>随机森林类</p></li><li><p>随机森林</p></li><li><p>ExtraTrees</p></li><li><p>梯度提升树</p><ul><li><p>GBDT</p></li><li><p>XGBoost</p></li><li><p>LightGBM</p></li><li><p>CatBoost</p></li></ul></li></ul></li></ul></li></ul><h3 id="gbdt-和-xgboost">GBDT 和 XgBoost</h3><ul><li><p>GBDT 的数学</p></li><li><p>XgBoost 的数学</p></li><li><p>XgBoost 的实现</p></li><li><p>XgBoost 的重要参数</p><ul><li><p>最重要的参数</p><ul><li>树的深度</li></ul></li><li><p>其他参数</p><ul><li><p>Eta:一般选取为 0.01-0.2</p></li><li><p>min_child_weight:建议进行 CV finetune</p></li><li><p>Gamma:建议进行 CV finetune</p></li></ul></li></ul></li></ul><p>整理自：<a href="https://github.com/geektime-geekbang/NLP" target="_blank" rel="noopener">《NLP实战高手课》</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/25/table/0.png&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="DataMining" scheme="https://2020.iosdevlog.com/tags/DataMining/"/>
+    
+  </entry>
   
   <entry>
     <title>《10x程序员工作法》思维导图</title>
@@ -508,58 +566,6 @@ ISBN：9787121331107&lt;/p&gt;
     
     
       <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《神经网络与深度学习》读书笔记</title>
-    <link href="https://2020.iosdevlog.com/2020/03/07/nn/"/>
-    <id>https://2020.iosdevlog.com/2020/03/07/nn/</id>
-    <published>2020-03-07T11:53:40.000Z</published>
-    <updated>2020-03-08T15:02:17.574Z</updated>
-    
-    <content type="html"><![CDATA[<figure><img src="https://2020.iosdevlog.com/2020/03/07/nn/1.png" alt="" /><figcaption>神经网络与深度学习</figcaption></figure><a id="more"></a><h2 id="使用神经网络识别手写数字">使用神经网络识别手写数字</h2><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/001014.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000774.jpg" /></p><h3 id="感知机">感知机</h3><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/001124.jpg" /></p><ul><li>输入</li><li>输出</li><li>权重（weight）</li><li>阈值（threshold value）</li></ul><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000011.jpg" /></p><ul><li><p>偏置（bias）</p></li><li><p>与非门 (NAND gate)</p></li></ul><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000155.jpg" /></p><p>感知机网络计算任何逻辑函数</p><figure><img src="https://2020.iosdevlog.com/2020/03/07/nn/000495.jpg" alt="" /><figcaption>NAND</figcaption></figure><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000706.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000303.jpg" /></p><p>一个没有输入的感知机，那么加权和恒为 0。</p><p>所以，我们最好不要将输入感知机当做感知机，而是理解为一个特殊的单元，它能够输出我们想要的值。</p><figure><img src="https://2020.iosdevlog.com/2020/03/07/nn/000617.jpg" alt="" /><figcaption>输入感知机</figcaption></figure><h3 id="sigmoid神经元">sigmoid神经元</h3><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000110.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000277.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000127.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000625.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000586.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000463.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/001018.jpg" /></p><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000626.jpg" /></p><h3 id="神经网络的结构">神经网络的结构</h3><h3 id="用简单的网络结构解决手写数字识别">用简单的网络结构解决手写数字识别</h3><h3 id="通过梯度下降法学习参数">通过梯度下降法学习参数</h3><h3 id="实现我们的神经网络来分类数字">实现我们的神经网络来分类数字</h3><h3 id="迈向深度学习">迈向深度学习</h3><h2 id="反向传播算法是如何工作的">反向传播算法是如何工作的</h2><h3 id="热身一个基于矩阵的快速计算神经网络输出的方法">热身：一个基于矩阵的快速计算神经网络输出的方法</h3><h3 id="关于代价函数的两个假设">关于代价函数的两个假设</h3><h3 id="hadamard积st">Hadamard积，s⨀t</h3><h3 id="反向传播背后的四个基本等式">反向传播背后的四个基本等式</h3><h3 id="四个基本方程的证明自选">四个基本方程的证明（自选）</h3><h3 id="反向传播算法">反向传播算法</h3><h3 id="反向传播算法代码">反向传播算法代码</h3><h3 id="为什么说反向传播算法很高效">为什么说反向传播算法很高效</h3><h3 id="反向传播整体描述">反向传播：整体描述</h3><h2 id="改进神经网络的学习方法">改进神经网络的学习方法</h2><h3 id="交叉熵代价函数">交叉熵代价函数</h3><h3 id="用交叉熵解决手写数字识别问题">用交叉熵解决手写数字识别问题</h3><h3 id="交叉熵的意义是什么它又是怎么来的">交叉熵的意义是什么？它又是怎么来的？</h3><h3 id="softmax">Softmax</h3><h3 id="过拟合和正则化">过拟合和正则化</h3><ul><li><p>正则化</p></li><li><p>为什么正则化能够降低过拟合</p></li></ul><h3 id="其它正则化技术">其它正则化技术</h3><h3 id="参数初始化">参数初始化</h3><h3 id="重温手写数字识别代码">重温手写数字识别：代码</h3><h3 id="如何选择神经网络的超参数">如何选择神经网络的超参数</h3><h3 id="其它技术">其它技术</h3><h2 id="神经网络可以计算任何函数的可视化证明">神经网络可以计算任何函数的可视化证明</h2><h3 id="两个预先声明">两个预先声明</h3><h3 id="一个输入和一个输出的普遍性">一个输入和一个输出的普遍性</h3><h3 id="多个输入变量">多个输入变量</h3><h3 id="s型神经元的延伸">S型神经元的延伸</h3><h3 id="修补阶跃函数">修补阶跃函数</h3><h3 id="结论">结论</h3><h2 id="为什么深度神经网络的训练是困难的">为什么深度神经网络的训练是困难的</h2><h3 id="梯度消失问题">梯度消失问题</h3><h3 id="什么导致了消失的梯度问题深度神经网络中的梯度不稳定性">什么导致了消失的梯度问题？深度神经网络中的梯度不稳定性</h3><h3 id="在更加复杂网络中的不稳定梯度">在更加复杂网络中的不稳定梯度</h3><h3 id="其他深度学习的障碍">其他深度学习的障碍</h3><h2 id="深度学习">深度学习</h2><h3 id="介绍卷积网络">介绍卷积网络</h3><h3 id="卷积神经网络在实际中的应用">卷积神经网络在实际中的应用</h3><h3 id="卷积网络的代码">卷积网络的代码</h3><h3 id="图像识别领域中的近期进展">图像识别领域中的近期进展</h3><h3 id="其他的深度学习模型">其他的深度学习模型</h3><h3 id="神经网络的未来">神经网络的未来</h3><p><img src="https://2020.iosdevlog.com/2020/03/07/nn/000058.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000073.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000077.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000085.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000217.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000264.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000275.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000280.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000294.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000296.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000476.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000508.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000543.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000546.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000570.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000610.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000657.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000700.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000729.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000742.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000771.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000805.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000817.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000883.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000894.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000906.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000911.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/000916.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001008.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001035.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001047.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001059.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001070.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001089.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001110.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001119.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001120.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/001145.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/07/nn/.jpg" /></p><p>源码：<a href="https://github.com/mnielsen/neural-networks-and-deep-learning" target="_blank" rel="noopener" class="uri">https://github.com/mnielsen/neural-networks-and-deep-learning</a></p><p>英文：<a href="http://neuralnetworksanddeeplearning.com/" target="_blank" rel="noopener" class="uri">http://neuralnetworksanddeeplearning.com/</a></p><p>中文：<a href="https://hit-scir.gitbooks.io/neural-networks-and-deep-learning-zh_cn/content/" target="_blank" rel="noopener" class="uri">https://hit-scir.gitbooks.io/neural-networks-and-deep-learning-zh_cn/content/</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure&gt;
-&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/07/nn/1.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;神经网络与深度学习&lt;/figcaption&gt;
-&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
-    
-      <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>深度学习简介</title>
-    <link href="https://2020.iosdevlog.com/2020/03/06/dl/"/>
-    <id>https://2020.iosdevlog.com/2020/03/06/dl/</id>
-    <published>2020-03-06T14:23:02.000Z</published>
-    <updated>2020-03-06T14:27:19.310Z</updated>
-    
-    <content type="html"><![CDATA[<figure><img src="https://2020.iosdevlog.com/2020/03/06/dl/1.png" alt="" /><figcaption>深度学习简介</figcaption></figure><a id="more"></a><h2 id="统计学基础随机性是如何改变数据拟合的本质的">统计学基础：随机性是如何改变数据拟合的本质的？</h2><h3 id="出发点">出发点</h3><ul><li><p>数学定理表明，任何一个函数都可以用多项式无限接近的拟合。</p></li><li><p>为什么我们不用多项式呢？</p></li></ul><h3 id="随机性是如何改变数据拟合本质的">随机性是如何改变数据拟合本质的</h3><ul><li><p>数据的拟合有两种随机性：</p><ul><li><p>噪声-&gt;无法消除</p></li><li><p>函数拟合的随机性-&gt;可以提升</p></li></ul></li><li><p>过拟合和欠拟合</p></li><li><p>引入其他信息的必要性</p></li><li><p>多角度考虑问题</p></li></ul><h3 id="随机性对算法工程师意味着什么">随机性对算法工程师意味着什么</h3><ul><li><p>过拟合和欠拟合是对神经网络设计和训练很重要的一点，但不是全部</p></li><li><p>能否解决问题在很大程度上取决于数据是否有足够信息</p><ul><li><p>引入结构化数据的必要性</p></li><li><p>为什么人解决不了的问题机器也解决不了</p></li></ul></li><li><p>算法除了考虑数学之外，还需要考虑实际数据的情况</p></li><li><p>训练集和测试集不同是机器学习算法最大的坑</p></li></ul><h2 id="神经网络基础神经网络还是复合函数">神经网络基础：神经网络还是复合函数</h2><h3 id="关于神经网络错误的说法">关于神经网络错误的说法</h3><ul><li>神经网络是大家根据神经科学得到的最伟大的发明</li></ul><h3 id="神经网络的数学本质">神经网络的数学本质</h3><ul><li><p>由于神经网络复合函数的本质，使得神经网络可以很方便地组合出很多复杂的函数</p></li><li><p>由于复合函数求导法则，所以大部分神经网络的训练过程可以自动化（反向梯度传递）</p></li></ul><h3 id="一些神经网络术语">一些神经网络术语</h3><ul><li><p>神经网络的训练</p></li><li><p>神经层</p></li><li><p>激活函数</p></li><li><p>隐含层</p></li></ul><h2 id="神经网络基础训练神经网络">神经网络基础：训练神经网络</h2><h3 id="传统优化求解方法的问题">传统优化求解方法的问题</h3><ul><li><p>传统的求解方法：</p><ul><li><p>拟牛顿法等</p></li><li><p>Proximal Methods</p></li></ul></li><li><p>传统求解方法的问题</p><ul><li>传统方法需要根据全部样本计算梯度（导数），这导致对于非常复杂的网络，求解计算上根本不可行</li></ul></li></ul><h3 id="基础的梯度下降算法">基础的梯度下降算法</h3><ul><li><p>经典的优化算法</p><ul><li><p>SGD</p></li><li><p>SGD with Momentum</p></li><li><p>Adagrad</p></li><li><p>Adam</p></li></ul></li></ul><h3 id="梯度消失和梯度爆炸">梯度消失和梯度爆炸</h3><ul><li><p>由于求解过程的复杂性，这使得神经网络的求解并不一定会收敛到最优解</p></li><li><p>对于神经网络训练最大的敌人是梯度消失和梯度爆炸</p></li><li><p>解决梯度消失和梯度爆炸往往是网络设计和优化算法需要考虑的问题</p></li></ul><h2 id="神经网络基础神经网络的基础构成">神经网络基础：神经网络的基础构成</h2><h3 id="全连接层">全连接层</h3><h3 id="激活函数">激活函数</h3><h3 id="dropout">Dropout</h3><h3 id="batch-normalization">Batch Normalization</h3><h2 id="embedding-简介">Embedding 简介</h2><h3 id="什么是-embedding">什么是 Embedding</h3><h3 id="为什么我们需要-embedding">为什么我们需要 Embedding</h3><h3 id="embedding-是怎么训练的">Embedding 是怎么训练的</h3><h2 id="rnn-简介">RNN 简介</h2><h3 id="rnn">RNN</h3><h3 id="lstm">LSTM</h3><h3 id="马尔科夫过程">马尔科夫过程</h3><h3 id="隐马尔科夫过程">隐马尔科夫过程</h3><h2 id="cnn-简介">CNN 简介</h2><h3 id="cnn">CNN</h3><h3 id="cnn-如何应用在文本当中">CNN 如何应用在文本当中</h3><ul><li><p>传统来说，NLP 当中的 CNN 一般较浅，但有证据表明更深的 CNN 更有效。</p></li><li><p>在传统文本分类模型当中，CNN 效果往往要比 LSTM 分类效果好（但不一定）。</p></li></ul><p>参考：<a href="https://github.com/geektime-geekbang/NLP" target="_blank" rel="noopener" class="uri">https://github.com/geektime-geekbang/NLP</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;figure&gt;
-&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/06/dl/1.png&quot; alt=&quot;&quot; /&gt;&lt;figcaption&gt;深度学习简介&lt;/figcaption&gt;
-&lt;/figure&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
     
   </entry>
   
