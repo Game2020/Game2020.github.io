@@ -7,19 +7,26 @@
   
   <title>Docker 实践 | Game 2020</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="2020&#x2F;01&#x2F;01   Image: 系统镜像 centos.iso Container: 虚拟机 vm Docker Hub: 镜像中心 github  查看 container ID &#x2F; Get the ID of the container by using the docker ps command. 1docker ps 停止 container &#x2F; Use the docker s">
+  <meta name="description" content="Image&#x2F;镜像: 系统镜像 CentOS.iso Container&#x2F;容器: 虚拟机 VM Docker Hub: 镜像中心 GitHub">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Docker 实践">
 <meta property="og:url" content="https://2020.iosdevlog.com/2020/03/27/docker/index.html">
 <meta property="og:site_name" content="Game 2020">
-<meta property="og:description" content="2020&#x2F;01&#x2F;01   Image: 系统镜像 centos.iso Container: 虚拟机 vm Docker Hub: 镜像中心 github  查看 container ID &#x2F; Get the ID of the container by using the docker ps command. 1docker ps 停止 container &#x2F; Use the docker s">
-<meta property="og:image" content="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png">
+<meta property="og:description" content="Image&#x2F;镜像: 系统镜像 CentOS.iso Container&#x2F;容器: 虚拟机 VM Docker Hub: 镜像中心 GitHub">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/docker-cheat-sheet.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/diff.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/docker_hub.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/Play_with_Docker.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/data.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/add.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/multi-app-architecture.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/03/27/docker/MySQL.png">
 <meta property="article:published_time" content="2020-03-27T10:55:24.000Z">
-<meta property="article:modified_time" content="2020-03-27T13:13:21.848Z">
+<meta property="article:modified_time" content="2020-03-27T17:12:44.021Z">
 <meta property="article:author" content="iOSDevLog">
 <meta property="article:tag" content="devops">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/03/27/docker/docker-cheat-sheet.png">
   
     <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
   
@@ -100,21 +107,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure>
-<img src="https://raw.githubusercontent.com/GameDevLog/2020/master/2020/01/2020-01-01.png" alt="" /><figcaption>2020/01/01</figcaption>
-</figure>
+        <p><img src="https://2020.iosdevlog.com/2020/03/27/docker/docker-cheat-sheet.png" /></p>
 <ul>
-<li>Image: 系统镜像 centos.iso</li>
-<li>Container: 虚拟机 vm</li>
-<li>Docker Hub: 镜像中心 github</li>
+<li>Image/镜像: 系统镜像 CentOS.iso</li>
+<li>Container/容器: 虚拟机 VM</li>
+<li>Docker Hub: 镜像中心 GitHub</li>
 </ul>
+<a id="more"></a>
 <p>查看 container ID / Get the ID of the container by using the docker ps command.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps</span><br></pre></td></tr></table></figure>
 <p>停止 container / Use the docker stop command to stop the container.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Swap out &lt;the-container-id&gt; with the ID from docker ps</span></span><br><span class="line">docker stop &lt;the-container-id&gt;</span><br></pre></td></tr></table></figure>
 <p>删除 container，<code>-f</code> 强删 / Once the container has stopped, you can remove it by using the docker rm command.</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm &lt;the-container-id&gt;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
 <h2 id="centos-8-新用户">CentOS 8 新用户</h2>
 <p><code>root</code> 帐号添加新用户</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser iosdevlog</span><br><span class="line">visudo</span><br></pre></td></tr></table></figure>
@@ -155,30 +160,147 @@
 <p>运行刚才创建的 <code>getting-started</code></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dp 3000:3000 getting-started</span><br></pre></td></tr></table></figure>
 <figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-                &lt;p className="text-center"&gt;No items yet! Add one above!&lt;/p&gt;</span></span><br><span class="line"><span class="addition">+                &lt;p className="text-center"&gt;You have no todo items yet! Add one above!&lt;/p&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/03/27/docker/diff.png" /></p>
 <h2 id="docker-hub"><a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub</a></h2>
+<p><img src="https://2020.iosdevlog.com/2020/03/27/docker/docker_hub.png" /></p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">docker login -u iosdevlog</span><br><span class="line">docker tag getting-started iosdevlog/getting-started</span><br><span class="line">docker push iosdevlog/getting-started</span><br></pre></td></tr></table></figure>
 <h2 id="play-with-docker"><a href="http://play-with-docker.com/" target="_blank" rel="noopener">Play with Docker</a></h2>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -dp 3000:3000 iosdevlog/getting-started</span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/03/27/docker/Play_with_Docker.png" /></p>
 <p>打开 3000 按钮</p>
 <h3 id="持久化-persisting-our-todo-data">持久化 Persisting our Todo Data¶</h3>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker volume create todo-db</span><br><span class="line">docker run -dp 3000:3000 -v todo-db:&#x2F;etc&#x2F;todos iosdevlog&#x2F;getting-started</span><br></pre></td></tr></table></figure>
 <p>数据保存位置</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">docker volume inspect todo-db</span><br><span class="line">[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="string">"CreatedAt"</span>: <span class="string">"2020-03-27T12:28:25Z"</span>,</span><br><span class="line">        <span class="string">"Driver"</span>: <span class="string">"local"</span>,</span><br><span class="line">        <span class="string">"Labels"</span>: &#123;&#125;,</span><br><span class="line">        <span class="string">"Mountpoint"</span>: <span class="string">"/var/lib/docker/volumes/todo-db/_data"</span>,</span><br><span class="line">        <span class="string">"Name"</span>: <span class="string">"todo-db"</span>,</span><br><span class="line">        <span class="string">"Options"</span>: &#123;&#125;,</span><br><span class="line">        <span class="string">"Scope"</span>: <span class="string">"local"</span></span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/03/27/docker/data.png" /></p>
 <h3 id="绑定挂载-using-bind-mounts">绑定挂载 Using Bind Mounts</h3>
+<ul>
+<li><table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Named Volumes</th>
+<th>Bind Mounts</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Host Location</td>
+<td>Docker chooses</td>
+<td>You control</td>
+</tr>
+<tr class="even">
+<td>Mount Example (using -v)</td>
+<td>my-volume:/usr/local/data</td>
+<td>/path/to/data:/usr/local/data</td>
+</tr>
+<tr class="odd">
+<td>Populates new volume with container contents</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+<tr class="even">
+<td>Supports Volume Drivers</td>
+<td>Yes</td>
+<td>No</td>
+</tr>
+</tbody>
+</table></li>
+</ul>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">docker run -dp 3000:3000 \</span><br><span class="line">    -w /app -v <span class="variable">$PWD</span>:/app \</span><br><span class="line">    node:12-alpine \</span><br><span class="line">    sh -c <span class="string">"yarn install &amp;&amp; yarn run dev"</span></span><br></pre></td></tr></table></figure>
 <p>查看 logs</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">docker logs -f &lt;container-id&gt;</span><br><span class="line">$ nodemon src/index.js</span><br><span class="line">[nodemon] 1.19.2</span><br><span class="line">[nodemon] to restart at any time, enter `rs`</span><br><span class="line">[nodemon] watching dir(s): *.*</span><br><span class="line">[nodemon] starting `node src/index.js`</span><br><span class="line">Using sqlite database at /etc/todos/todo.db</span><br><span class="line">Listening on port 3000</span><br></pre></td></tr></table></figure>
 <p><code>src/static/js/app.js</code></p>
 <figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-                         &#123;submitting ? 'Adding...' : 'Add Item'&#125;</span></span><br><span class="line"><span class="addition">+                         &#123;submitting ? 'Adding...' : 'Add'&#125;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/03/27/docker/add.png" /></p>
 <p>Using bind mounts is very common for local development setups.</p>
 <p>在本地开发设置中，使用绑定挂载很常见。</p>
 <p>开发完成后就可以创建自己的 <code>image</code>。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t getting-started .</span><br></pre></td></tr></table></figure>
+<h2 id="多个容器-multi-container-apps">多个容器 Multi-Container Apps</h2>
+<p><img src="https://2020.iosdevlog.com/2020/03/27/docker/multi-app-architecture.png" /></p>
+<h3 id="create-the-network.">Create the network.</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker network create todo-app</span><br></pre></td></tr></table></figure>
+<p>Start a MySQL container and attach it the network.</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">    --network todo-app --network-alias mysql \</span><br><span class="line">    -v todo-mysql-data:/var/lib/mysql \</span><br><span class="line">    -e MYSQL_ROOT_PASSWORD=secret \</span><br><span class="line">    -e MYSQL_DATABASE=todos \</span><br><span class="line">    mysql:5.7</span><br></pre></td></tr></table></figure>
+<p>connect to the database</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it &lt;mysql-container-id&gt; mysql -p</span><br><span class="line">Enter password: secret</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SHOW DATABASES;</span><br><span class="line">+--------------------+</span><br><span class="line">| Database           |</span><br><span class="line">+--------------------+</span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| sys                |</span><br><span class="line">| todos              |</span><br><span class="line">+--------------------+</span><br><span class="line">5 rows <span class="keyword">in</span> <span class="built_in">set</span> (0.05 sec)</span><br></pre></td></tr></table></figure>
+<h3 id="connecting-to-mysql">Connecting to MySQL</h3>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">docker run -it --network todo-app nicolaka/netshoot</span><br><span class="line">Status: Downloaded newer image <span class="keyword">for</span> nicolaka/netshoot:latest</span><br><span class="line">                    dP            dP                           dP   </span><br><span class="line">                    88            88                           88   </span><br><span class="line">88d888b. .d8888b. d8888P .d8888b. 88d888b. .d8888b. .d8888b. d8888P </span><br><span class="line">88<span class="string">'  `88 88ooood8   88   Y8ooooo. 88'</span>  `88 88<span class="string">'  `88 88'</span>  `88   88   </span><br><span class="line">88    88 88.  ...   88         88 88    88 88.  .88 88.  .88   88   </span><br><span class="line">dP    dP `88888P<span class="string">'   dP   `88888P'</span> dP    dP `88888P<span class="string">' `88888P'</span>   dP   </span><br><span class="line">                                                                    </span><br><span class="line">Welcome to Netshoot! (github.com/nicolaka/netshoot)</span><br></pre></td></tr></table></figure>
+<p><code>dig</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dig mysql</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<figure class="highlight vb"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">; &lt;&lt;&gt;&gt; DiG <span class="number">9.14</span><span class="number">.8</span> &lt;&lt;&gt;&gt; mysql</span><br><span class="line">;; <span class="keyword">global</span> options: +cmd</span><br><span class="line">;; Got answer:</span><br><span class="line">;; -&gt;&gt;HEADER&lt;&lt;- opcode: QUERY, status: NOERROR, id: <span class="number">61687</span></span><br><span class="line">;; flags: qr rd ra; QUERY: <span class="number">1</span>, ANSWER: <span class="number">1</span>, AUTHORITY: <span class="number">0</span>, ADDITIONAL: <span class="number">0</span></span><br><span class="line"></span><br><span class="line">;; QUESTION SECTION:</span><br><span class="line">;mysql.				<span class="keyword">IN</span>	A</span><br><span class="line"></span><br><span class="line">;; ANSWER SECTION:</span><br><span class="line">mysql.			<span class="number">600</span>	<span class="keyword">IN</span>	A	<span class="number">172.18</span><span class="number">.0</span><span class="number">.2</span></span><br><span class="line"></span><br><span class="line">;; Query time: <span class="number">7</span> msec</span><br><span class="line">;; SERVER: <span class="number">127.0</span><span class="number">.0</span><span class="number">.11</span><span class="meta">#53(127.0.0.11)</span></span><br><span class="line">;; <span class="keyword">WHEN</span>: Fri Mar <span class="number">27</span> <span class="number">16</span>:<span class="number">00</span>:<span class="number">31</span> UTC <span class="number">2020</span></span><br><span class="line">;; MSG SIZE  rcvd: <span class="number">44</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>MYSQL_HOST - the hostname for the running MySQL server</li>
+<li>MYSQL_USER - the username to use for the connection</li>
+<li>MYSQL_PASSWORD - the password to use for the connection</li>
+<li>MYSQL_DB - the database to use once connected</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">docker run -dp 3000:3000 \</span><br><span class="line">  -w /app -v <span class="variable">$PWD</span>:/app \</span><br><span class="line">  --network todo-app \</span><br><span class="line">  -e MYSQL_HOST=mysql \</span><br><span class="line">  -e MYSQL_USER=root \</span><br><span class="line">  -e MYSQL_PASSWORD=secret \</span><br><span class="line">  -e MYSQL_DB=todos \</span><br><span class="line">  node:12-alpine \</span><br><span class="line">  sh -c <span class="string">"yarn install &amp;&amp; yarn run dev"</span></span><br></pre></td></tr></table></figure>
+<p><code>docker logs &lt;container-id&gt;</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yarn install v1.22.0</span><br><span class="line">[1/4] Resolving packages...</span><br><span class="line">success Already up-to-date.</span><br><span class="line">Done <span class="keyword">in</span> 0.54s.</span><br><span class="line">yarn run v1.22.0</span><br><span class="line">$ nodemon src/index.js</span><br><span class="line">[nodemon] 1.19.2</span><br><span class="line">[nodemon] to restart at any time, enter `rs`</span><br><span class="line">[nodemon] watching dir(s): *.*</span><br><span class="line">[nodemon] starting `node src/index.js`</span><br><span class="line">Waiting <span class="keyword">for</span> mysql:3306.</span><br><span class="line">Connected!</span><br><span class="line">Connected to mysql db at host mysql</span><br><span class="line">Listening on port 3000</span><br></pre></td></tr></table></figure>
+<p><code>docker exec -ti &lt;mysql-container-id&gt; mysql -p todos</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt;  select * from todo_items;</span><br><span class="line">+--------------------------------------+---------------------------------------+-----------+</span><br><span class="line">| id                                   | name                                  | completed |</span><br><span class="line">+--------------------------------------+---------------------------------------+-----------+</span><br><span class="line">| 9b3dc86c-2ec9-4413-8a71-28b3c3515358 | DevOps                                |         0 |</span><br><span class="line">| 9428c285-e5e1-4f50-bf11-ee854cc8554f | Hello, I<span class="string">'m AIDevLog. Welcome to 2020! |         0 |</span></span><br><span class="line"><span class="string">+--------------------------------------+---------------------------------------+-----------+</span></span><br><span class="line"><span class="string">2 rows in set (0.00 sec)</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/03/27/docker/MySQL.png" /></p>
+<h2 id="docker-compose">docker-compose</h2>
+<p><a href="https://docs.docker.com/compose/install/" target="_blank" rel="noopener" class="uri">https://docs.docker.com/compose/install/</a></p>
+<p>Compose 使用的三个步骤：</p>
+<ol type="1">
+<li>使用 Dockerfile 定义应用程序的环境。</li>
+<li>使用 docker-compose.yml 定义构成应用程序的服务，这样它们可以在隔离环境中一起运行。</li>
+<li>最后，执行 docker-compose up 命令来启动并运行整个应用程序。</li>
+</ol>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo curl -L <span class="string">"https://github.com/docker/compose/releases/download/1.25.4/docker-compose-<span class="variable">$(uname -s)</span>-<span class="variable">$(uname -m)</span>"</span> -o /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">sudo chmod +x /usr/<span class="built_in">local</span>/bin/docker-compose</span><br><span class="line">docker-compose --version</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<blockquote>
+<p>docker-compose version 1.25.4, build 8d51620a</p>
+</blockquote>
+<p>Creating our Compose File</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># pwd: app</span><br><span class="line">cat docker-compose.yml</span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">"3.7"</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">app:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">node:12-alpine</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">sh</span> <span class="string">-c</span> <span class="string">"yarn install &amp;&amp; yarn run dev"</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">3000</span><span class="string">:3000</span></span><br><span class="line">    <span class="attr">working_dir:</span> <span class="string">/app</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./:/app</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_HOST:</span> <span class="string">mysql</span></span><br><span class="line">      <span class="attr">MYSQL_USER:</span> <span class="string">root</span></span><br><span class="line">      <span class="attr">MYSQL_PASSWORD:</span> <span class="string">secret</span></span><br><span class="line">      <span class="attr">MYSQL_DB:</span> <span class="string">todos</span></span><br></pre></td></tr></table></figure>
+<p>Running our Application Stack</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rm -f &lt;container-id&gt;</span><br></pre></td></tr></table></figure>
+<p>docker-compose up</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose up -d</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<blockquote>
+<p>Creating network "app_default" with the default driver<br />
+<br />
+Creating volume "app_todo-mysql-data" with default driver<br />
+<br />
+Creating app_mysql_1 ... done<br />
+<br />
+Creating app_app_1 ... done</p>
+</blockquote>
+<p><code>log</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose logs -f</span><br></pre></td></tr></table></figure>
+<p>output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Attaching to app_mysql_1, app_app_1</span><br><span class="line">app_1    | yarn install v1.22.0</span><br><span class="line">app_1    | [1&#x2F;4] Resolving packages...</span><br><span class="line">...</span><br><span class="line">app_1    | Waiting for mysql:3306...............</span><br><span class="line">app_1    | Connected!</span><br><span class="line">app_1    | Connected to mysql db at host mysql</span><br><span class="line">app_1    | Listening on port 3000</span><br><span class="line">mysql_1  | 2020-03-27 16:37:47+00:00 [Note] [Entrypoint]: Entrypoint script for MySQL Server 5.7.29-1debian10 started.</span><br><span class="line">...</span><br><span class="line">mysql_1  | 2020-03-27T16:38:06.309134Z 0 [Note] Event Scheduler: Loaded 0 events</span><br><span class="line">mysql_1  | 2020-03-27T16:38:06.309309Z 0 [Note] mysqld: ready for connections.</span><br><span class="line">mysql_1  | Version: &#39;5.7.29&#39;  socket: &#39;&#x2F;var&#x2F;run&#x2F;mysqld&#x2F;mysqld.sock&#39;  port: 3306  MySQL Community Server (GPL)</span><br><span class="line">mysql_1  | 2020-03-27T16:38:06.365195Z 2 [Note] Got an error reading communication packets</span><br></pre></td></tr></table></figure>
+<p>Tearing it All Down</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker-compose down</span><br></pre></td></tr></table></figure>
+<h2 id="image-building-best-practices">Image Building Best Practices</h2>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">$ docker image <span class="built_in">history</span> getting-started</span><br><span class="line">IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT</span><br><span class="line">7e58c32dc1b5        5 hours ago         /bin/sh -c <span class="comment">#(nop)  CMD ["node" "/app/src/ind…   0B                  </span></span><br><span class="line">ebe4a0dcca7e        5 hours ago         /bin/sh -c yarn install --production            83.2MB              </span><br><span class="line">3fd0eef12d70        5 hours ago         /bin/sh -c <span class="comment">#(nop) COPY dir:2f31be1c05e031e42…   6.65MB              </span></span><br><span class="line">c164b9c205a1        5 hours ago         /bin/sh -c <span class="comment">#(nop) WORKDIR /app                  0B                  </span></span><br><span class="line">f77abbe89ac1        3 days ago          /bin/sh -c <span class="comment">#(nop)  CMD ["node"]                 0B                  </span></span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c <span class="comment">#(nop)  ENTRYPOINT ["docker-entry…   0B                  </span></span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c <span class="comment">#(nop) COPY file:238737301d473041…   116B                </span></span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c apk add --no-cache --virtual .bui…   7.62MB              </span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c <span class="comment">#(nop)  ENV YARN_VERSION=1.22.0      0B                  </span></span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c addgroup -g 1000 node     &amp;&amp; addu…   74.9MB              </span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c <span class="comment">#(nop)  ENV NODE_VERSION=12.16.1     0B                  </span></span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c <span class="comment">#(nop)  CMD ["/bin/sh"]              0B                  </span></span><br><span class="line">&lt;missing&gt;           3 days ago          /bin/sh -c <span class="comment">#(nop) ADD file:0c4555f363c2672e3…   5.6MB</span></span><br></pre></td></tr></table></figure>
+<h3 id="layer-caching">Layer Caching¶</h3>
+<p>Update the Dockerfile to copy in the <code>package.json</code></p>
+<figure class="highlight dockerfile"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">FROM</span> node:<span class="number">12</span>-alpine</span><br><span class="line"><span class="keyword">WORKDIR</span><span class="bash"> /app</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> package.json yarn.lock ./</span></span><br><span class="line"><span class="keyword">RUN</span><span class="bash"> yarn install --production</span></span><br><span class="line"><span class="keyword">COPY</span><span class="bash"> . .</span></span><br><span class="line"><span class="keyword">CMD</span><span class="bash"> [<span class="string">"node"</span>, <span class="string">"/app/src/index.js"</span>]</span></span><br></pre></td></tr></table></figure>
+<p>Build a new image using docker build</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker build -t getting-started .</span><br></pre></td></tr></table></figure>
+<p>更改 <code>src/static/index.html</code></p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">diff --git a/src/static/index.html b/src/static/index.html</span><br><span class="line">index a606bf1..19cfb57 100644</span><br><span class="line"><span class="comment">--- a/src/static/index.html</span></span><br><span class="line"><span class="comment">+++ b/src/static/index.html</span></span><br><span class="line"><span class="meta">@@ -8,7 +8,7 @@</span></span><br><span class="line">     &lt;link rel="stylesheet" href="css/font-awesome/all.min.css" crossorigin="anonymous" /&gt;</span><br><span class="line">     &lt;link href="https://fonts.googleapis.com/css?family=Lato&amp;display=swap" rel="stylesheet" /&gt;</span><br><span class="line">     &lt;link rel="stylesheet" href="css/styles.css" /&gt;</span><br><span class="line"><span class="deletion">-    &lt;title&gt;Todo App&lt;/title&gt;</span></span><br><span class="line"><span class="addition">+    &lt;title&gt;AIDevLog Todo App&lt;/title&gt;</span></span><br><span class="line"> &lt;/head&gt;</span><br><span class="line"> &lt;body&gt;</span><br><span class="line">     &lt;div id="root"&gt;&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p><code>docker build</code></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">$ docker build -t getting-started .</span><br><span class="line">Sending build context to Docker daemon  65.73MB</span><br><span class="line">Step 1/6 : FROM node:12-alpine</span><br><span class="line"> ---&gt; f77abbe89ac1</span><br><span class="line">Step 2/6 : WORKDIR /app</span><br><span class="line"> ---&gt; Using cache</span><br><span class="line"> ---&gt; c164b9c205a1</span><br><span class="line">Step 3/6 : COPY package.json yarn.lock ./</span><br><span class="line"> ---&gt; Using cache</span><br><span class="line"> ---&gt; 77446d8145bc</span><br><span class="line">Step 4/6 : RUN yarn install --production</span><br><span class="line"> ---&gt; Using cache</span><br><span class="line"> ---&gt; f0323073e6ce</span><br><span class="line">Step 5/6 : COPY . .</span><br><span class="line"> ---&gt; 0e1288f88991</span><br><span class="line">Step 6/6 : CMD [<span class="string">"node"</span>, <span class="string">"/app/src/index.js"</span>]</span><br><span class="line"> ---&gt; Running <span class="keyword">in</span> f3a0bd941311</span><br><span class="line">Removing intermediate container f3a0bd941311</span><br><span class="line"> ---&gt; 2abff2421550</span><br><span class="line">Successfully built 2abff2421550</span><br><span class="line">Successfully tagged getting-started:latest</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/03/27/docker/" data-id="ck8aa41ca00a7hx2w4neqdyxb" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/03/27/docker/" data-id="ck8ag3p05009zfr2w7m3qhc7a" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/devops/" rel="tag">devops</a></li></ul>
