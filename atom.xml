@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-04-01T08:43:01.983Z</updated>
+  <updated>2020-04-01T15:22:09.605Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,68 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>理解机器学习的24本书（免费）</title>
+    <link href="https://2020.iosdevlog.com/2020/04/01/ml/"/>
+    <id>https://2020.iosdevlog.com/2020/04/01/ml/</id>
+    <published>2020-04-01T14:53:31.000Z</published>
+    <updated>2020-04-01T15:22:09.605Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/04/01/ml/1.jpg" /></p><a id="more"></a><blockquote><p><em>我们想要的是一台能从经验中学习的机器</em></p></blockquote><p>——艾伦·图灵</p><p>毫无疑问，机器学习已成为当今最受欢迎的主题之一。根据一项<a href="http://blog.indeed.com/2019/03/14/best-jobs-2019/" target="_blank" rel="noopener">研究</a>，机器学习工程师被评为 2019年 美国最佳工作之一。</p><p>展望这一趋势，我们整理了一些最佳（免费）机器学习书籍的清单，这些书籍将证明对有志于在该领域发展职业的每个人都有帮助。</p><h2 id="islr">1. <a href="http://faculty.marshall.usc.edu/gareth-james/ISL/" target="_blank" rel="noopener">ISLR</a></h2><p><img src="https://2020.iosdevlog.com/2020/04/01/ml/2.jpg" /></p><p>机器学习理论的最佳入门书。甚至付费书籍也不比它好。很好地介绍了数学知识，并在 <code>R</code> 中有练习材料。</p><h2 id="神经网络与深度学习">2. <strong><a href="http://neuralnetworksanddeeplearning.com/" target="_blank" rel="noopener">神经网络与深度学习</a></strong></h2><p>这本免费的在线书是其中最好的和最快的关于深度学习的介绍。阅读只需几天，即可为您提供有关深度学习的所有基础知识。</p><h2 id="模式识别与机器学习">3. <a href="https://www.microsoft.com/en-us/research/publication/pattern-recognition-machine-learning/" target="_blank" rel="noopener">模式识别与机器学习</a></h2><p>它是最著名的理论性机器学习书籍之一，因此无需撰写过多的介绍。</p><h2 id="深度学习花书">4. <strong><a href="https://www.deeplearningbook.org/" target="_blank" rel="noopener">深度学习/花书</a></strong></h2><p>这本书是《深度学习》的圣经，是对深度学习算法和方法的介绍，对初学者和从业者都非常有用。</p><h2 id="了解机器学习从理论到算法">5. <a href="https://www.cse.huji.ac.il/~shais/UnderstandingMachineLearning/understanding-machine-learning-theory-algorithms.pdf" target="_blank" rel="noopener">了解机器学习：从理论<strong>到算法</strong></a></h2><p>关于机器学习理论的文章确实很棒。</p><h2 id="成功的七个步骤实践中的机器学习">6. <strong><a href="https://daoudclarke.github.io/guide.pdf" target="_blank" rel="noopener">成功的七个步骤：实践中的机器学习</a></strong></h2><p>进入该领域的非技术产品经理和非机器学习软件工程师都不应错过本教程。写得很好（略旧，不涉及深度学习，但可以用于所有实际目的）。</p><h2 id="机器学习规则机器学习工程的最佳实践">7. <strong><a href="http://martin.zinkevich.org/rules_of_ml/rules_of_ml.pdf" target="_blank" rel="noopener">机器学习规则：机器学习工程的最佳实践</a></strong></h2><p>想知道 <code>Google</code> 如何看待其机器学习产品吗？这是一个非常好的机器学习产品管理教程。</p><h2 id="面向工程师的机器学习简介">8. <strong><a href="https://arxiv.org/abs/1709.02840" target="_blank" rel="noopener">面向工程师的机器学习简介</a></strong></h2><p>涵盖几乎所有机器学习技术的独白。易于理解数学（对于害怕数学符号表示难以理解的人）。</p><h2 id="无需深度学习的机器学习简介">9. <strong><a href="https://docs.google.com/document/d/1Rp6sf129T0j1isIQByyUeby4fwKgwTyiVleNwX7JGmg/edit" target="_blank" rel="noopener">无需深度学习的机器学习简介</a></strong></h2><p>涵盖几乎所有机器学习技术的独白。易于理解数学（对于害怕数学符号表示难以理解的人）。</p><h2 id="机器学习入门笔记">10. <strong><a href="http://lcsl.mit.edu/courses/ml/1718/MLNotes.pdf" target="_blank" rel="noopener">机器学习入门笔记</a></strong></h2><p>面向绝对初学者的机器学习指南。</p><h2 id="机器学习基础">11. <strong><a href="https://cs.nyu.edu/~mohri/mlbook/" target="_blank" rel="noopener">机器学习基础</a></strong></h2><p><img src="https://2020.iosdevlog.com/2020/04/01/ml/3.jpg" /></p><p>关于机器学习数学概念的详细论述。</p><h2 id="变量和特征选择简介">12. <strong><a href="https://dl.acm.org/doi/10.5555/944919.944968" target="_blank" rel="noopener">变量和特征选择简介</a></strong></h2><p>特征工程和变量选择可能是传统机器学习算法中最重要的人工输入。（在深度学习方法中不那么重要，但是深度学习并不能解决所有问题）。本教程介绍了不同的要素工程方法。</p><h2 id="automl-frank-hutterlars-kotthoffjoaquin-vanschoren">13. <strong><a href="https://www.automl.org/book/" target="_blank" rel="noopener">AutoML– Frank Hutter，Lars Kotthoff，Joaquin Vanschoren</a></strong></h2><p>在完成功能工程后，近来的传统机器学习实际上已经减少到运行 <code>AutoML</code> 模型（h2o，auto sklearn或tpot，这是ParallelDots的最爱）。（实际上，也有几种方法可以进行自动化的非特定于域的自动要素工程）。本书介绍了AutoML中使用的方法。</p><h2 id="用pytorch进行深度学习">14. <strong><a href="https://pytorch.org/deep-learning-with-pytorch" target="_blank" rel="noopener">用Pytorch进行深度学习</a></strong></h2><p>一本免费的书，可帮助您使用 <code>PyTorch</code> 学习深度学习。<code>PyTorch</code> 是ParallelDots 上我们最喜欢的深度学习库，我们建议所有人进行深度学习的应用研究/开发。</p><h2 id="深度学习">15. <strong><a href="http://d2l.ai/" target="_blank" rel="noopener">深度学习</a></strong></h2><p><img src="https://2020.iosdevlog.com/2020/04/01/ml/4.png" /></p><p>另一本有关深度学习的详细书，该书使用亚马逊的 <code>MXN​​et</code> 库教授深度学习。</p><h2 id="kerasbook-github-笔记本">16. <strong><a href="https://github.com/fchollet/deep-learning-with-python-notebooks" target="_blank" rel="noopener">Kerasbook Github 笔记本</a></strong></h2><p>Francois Chollet 是 <code>Keras</code> 库的负责人。他撰写的《用Python进行深度学习》一书在Keras教授《深度学习》，获得了很好的评价。这本书 <strong>不是</strong> 免费提供的，但是它的所有代码都可以在 <code>Github</code> 上以笔记本的形式获得（用深度学习示例构成一本书），并且是很好的资源。几年前我在学习 <code>Keras</code> 时就读了它，这是非常好的资源。</p><h2 id="基于模型的机器学习">17. <strong><a href="http://mbmlbook.com/" target="_blank" rel="noopener">基于模型的机器学习</a></strong></h2><p><img src="https://2020.iosdevlog.com/2020/04/01/ml/5.png" /></p><p>贝叶斯机器学习的绝佳资源。使用 <code>Microsoft</code> 的 <code>Infer.Net</code> 库进行教学，因此您可能必须安装 <code>IronPython</code> 才能阅读/实现本书的示例。</p><h2 id="机器学习的贝叶斯模型">18. <strong><a href="http://www.columbia.edu/~jwp2128/Teaching/E6720/BayesianModelsMachineLearning2016.pdf" target="_blank" rel="noopener">机器学习的贝叶斯模型</a></strong></h2><p>另一本书详细介绍了机器学习中的各种贝叶斯方法。</p><h2 id="爱森斯坦自然语言处理笔记">19. <strong><a href="https://github.com/jacobeisenstein/gt-nlp-class/blob/master/notes/eisenstein-nlp-notes.pdf" target="_blank" rel="noopener">爱森斯坦自然语言处理笔记</a></strong></h2><p>自然语言处理是机器学习中最流行的用途。GATech课程中的这些注释很好地概述了如何使用机器学习来解释人类语言。</p><h2 id="强化学习-sutton和barto">20. <strong><a href="http://www.incompleteideas.net/book/the-book-2nd.html" target="_blank" rel="noopener">强化学习– Sutton和Barto</a></strong></h2><p>强化学习的圣经。这是进入强化学习领域的任何人都必须阅读的。</p><h2 id="机器学习的高斯过程">21. <a href="http://www.gaussianprocess.org/gpml/" target="_blank" rel="noopener">机器学习的高斯过程</a></h2><p><img src="https://2020.iosdevlog.com/2020/04/01/ml/6.gif" /></p><p>使用贝叶斯优化和高斯过程进行机器学习。借助基于变分推理的库（例如Edward / GpyTorch / BOTorch等），此方法正在卷土重来。</p><h2 id="机器学习访谈机器学习系统设计chip-huyen">22. <strong><a href="https://github.com/chiphuyen/machine-learning-systems-design" target="_blank" rel="noopener">机器学习访谈机器学习系统设计Chip Huyen</a></strong></h2><p>要参加机器学习工作的面试吗？这些问题可能有助于在回答机器学习系统问题时找出策略。</p><h2 id="机器学习的算法方面">23. <strong><a href="https://people.csail.mit.edu/moitra/docs/bookex.pdf" target="_blank" rel="noopener">机器学习的算法方面</a></strong></h2><p>本书涉及机器学习的各个部分，其中涉及计算算法和数值方法，以解决诸如分解模型，字典学习和高斯模型之类的问题。</p><h2 id="机器学习的因果关系">24. <strong><a href="https://arxiv.org/abs/1911.10500" target="_blank" rel="noopener">机器学习的因果关系</a></strong></h2><p>随着因果关系进入数据科学领域，机器学习也摆脱了讨论。尽管没有详细的资料可解决，但是这里是一个简短的教程，试图解释机器学习因果关系的关键概念。</p><p>原文：<a href="https://blog.paralleldots.com/data-science/24-best-and-free-books-to-understand-machine-learning/" target="_blank" rel="noopener">24 Best (and Free) Books To Understand Machine Learning</a></p><p>作者：<a href="https://blog.paralleldots.com/author/reashikaa/" target="_blank" rel="noopener">Reashikaa Verma</a></p><p>时间：2020/03/12</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/04/01/ml/1.jpg&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
+    
+    
+      <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
+    
+      <category term="book" scheme="https://2020.iosdevlog.com/tags/book/"/>
+    
+      <category term="free" scheme="https://2020.iosdevlog.com/tags/free/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>《程序员的数学基础课》</title>
+    <link href="https://2020.iosdevlog.com/2020/04/01/math/"/>
+    <id>https://2020.iosdevlog.com/2020/04/01/math/</id>
+    <published>2020-04-01T09:19:25.000Z</published>
+    <updated>2020-04-01T15:21:42.917Z</updated>
+    
+    <content type="html"><![CDATA[<p>数学它其实是一种思维模式，考验的是一个 人归纳、总结和抽象的能力。</p><p>如何学习新技术</p><ol type="1"><li>第一阶段：怎么使用</li><li>第二阶段：如何实现，原理是什么</li><li>第三阶段：为什么这样实现</li></ol><ul><li>明确需求</li><li>用多少学多少</li><li>理解数学的本质</li><li>数学思想与数学逻辑。</li></ul><a id="more"></a><h2 id="二进制">二进制</h2><h2 id="余数">余数</h2><h2 id="迭代法">迭代法</h2><h2 id="数学归纳法">数学归纳法</h2><h2 id="递归">递归</h2><h2 id="排列">排列</h2><h2 id="组合">组合</h2><h2 id="动态规划">动态规划</h2><h2 id="树的深度优先搜索">树的深度优先搜索</h2><h2 id="树的广度优先搜索">树的广度优先搜索</h2><h2 id="从树到图">从树到图</h2><h2 id="时间和空间复杂度">时间和空间复杂度</h2><h2 id="总结课">总结课</h2><h2 id="概率和统计">概率和统计</h2><h2 id="概率基础">概率基础</h2><h2 id="朴素贝叶斯">朴素贝叶斯</h2><h2 id="文本分类">文本分类</h2><h2 id="语言模型">语言模型</h2><h2 id="马尔科夫模型">马尔科夫模型</h2><h2 id="信息熵">信息熵</h2><h2 id="决策树">决策树</h2><h2 id="熵信息增益和卡方">熵、信息增益和卡方</h2><h2 id="归一化和标准化">归一化和标准化</h2><h2 id="统计意义">统计意义</h2><h2 id="概率统计篇答疑和总结">概率统计篇答疑和总结</h2><h2 id="线性代数">线性代数</h2><h2 id="向量空间模型">向量空间模型</h2><h2 id="文本检索">文本检索</h2><h2 id="文本聚类">文本聚类</h2><h2 id="矩阵">矩阵</h2><h2 id="线性回归">线性回归</h2><h2 id="线性回归-1">线性回归</h2><h2 id="pca主成分分析">PCA主成分分析</h2><h2 id="奇异值分解">奇异值分解</h2><h2 id="缓存系统">缓存系统</h2><h2 id="搜索引擎">搜索引擎</h2><h2 id="推荐系统">推荐系统</h2>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;数学它其实是一种思维模式，考验的是一个 人归纳、总结和抽象的能力。&lt;/p&gt;
+&lt;p&gt;如何学习新技术&lt;/p&gt;
+&lt;ol type=&quot;1&quot;&gt;
+&lt;li&gt;第一阶段：怎么使用&lt;/li&gt;
+&lt;li&gt;第二阶段：如何实现，原理是什么&lt;/li&gt;
+&lt;li&gt;第三阶段：为什么这样实现&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ul&gt;
+&lt;li&gt;明确需求&lt;/li&gt;
+&lt;li&gt;用多少学多少&lt;/li&gt;
+&lt;li&gt;理解数学的本质&lt;/li&gt;
+&lt;li&gt;数学思想与数学逻辑。&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="math" scheme="https://2020.iosdevlog.com/categories/math/"/>
+    
+    
+      <category term="basic" scheme="https://2020.iosdevlog.com/tags/basic/"/>
+    
+  </entry>
   
   <entry>
     <title>《艰难的制造》读书笔记</title>
@@ -515,66 +577,6 @@ ISBN: 9787550298637&lt;/p&gt;
       <category term="linear" scheme="https://2020.iosdevlog.com/tags/linear/"/>
     
       <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习算法之旅</title>
-    <link href="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/"/>
-    <id>https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/</id>
-    <published>2020-03-15T13:49:49.000Z</published>
-    <updated>2020-03-15T15:20:59.941Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/ensemble.png" /></p><p>最合适的线条组合的一个很好的例子。弱预测成员为灰色，组合预测为红色。</p><p>绘图来自Wikipedia，在公共领域获得许可。</p><a id="more"></a><p>在本文中，我们将浏览<strong><em>最流行的机器学习算法</em></strong>。</p><p>考察该领域的主要算法对了解可用的方法很有用。</p><p>有太多算法，当抛出算法名称时会感到不知所措，并且您应该只知道它们是什么以及它们适合什么位置。</p><p>我想给您提供两种方式来考虑和分类您在该领域可能遇到的算法。</p><ul><li>首先是按照<strong>学习风格</strong>对算法进行分组。</li><li>第二个是按形式或功能上的<strong>相似性</strong>将算法分组（例如将相似的动物分组在一起）。</li></ul><p>两种方法都是有用的，但是我们将着重于通过相似性进行算法分组，并浏览各种不同的算法类型。</p><p>阅读这篇文章后，您将对用于监督学习的最受欢迎的机器学习算法以及它们之间的关系有更好的了解。</p><p><a href="https://machinelearningmastery.com/master-machine-learning-algorithms/" target="_blank" rel="noopener">在我的新书中</a>（包括22个excel教程和示例），了解机器学习算法如何工作，包括kNN，决策树，朴素贝叶斯，SVM，集成等。</p><p>让我们开始吧。</p><h2 id="按学习风格分组的算法">按学习风格分组的算法</h2><p>算法可以根据其与经验或环境的交互作用或我们要调用输入数据的方式，以不同的方式对问题建模。</p><p>首先要考虑算法可以采用的学习方式，这在机器学习和人工智能教科书中很普遍。</p><p>一个算法只能有几种主要的学习方式或学习模型，我们将在此通过一些适合他们的算法和问题类型的示例进行介绍。</p><p>这种分类法或组织机器学习算法的方法很有用，因为它迫使您考虑输入数据的角色和模型准备过程，并选择最适合您问题的模型，以获得最佳结果。</p><h3 id="让我们看一下机器学习算法中的三种不同的学习风格">让我们看一下机器学习算法中的三种不同的学习风格：</h3><h4 id="监督学习"><strong>1.监督学习</strong></h4><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Supervised-Learning-Algorithms.png" /></p><p>输入数据称为训练数据，并且一次具有已知标签或结果，例如垃圾邮件/非垃圾邮件或股票价格。</p><p>通过训练过程来准备模型，其中需要进行预测，并在这些预测错误时进行校正。训练过程将继续进行，直到模型在训练数据上达到所需的准确性水平为止。</p><p>示例问题是 <strong>分类</strong> 和 <strong>回归</strong>。</p><p>示例算法包括：<strong>逻辑回归</strong> 和 <strong>反向传播神经网络</strong>。</p><h4 id="无监督学习"><strong>2.无监督学习</strong></h4><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Unsupervised-Learning-Algorithms.png" /></p><p>输入数据未标记，结果未知。</p><p>通过推导输入数据中存在的结构来准备模型。这可能是提取一般规则。可以通过数学过程来系统地减少冗余，也可以通过相似性组织数据。</p><p>示例问题包括 <strong>聚类</strong>，<strong>降维</strong> 和 <strong>关联规则学习</strong>。</p><p>示例算法包括：<strong>Apriori算法</strong> 和 <strong>K-Means</strong>。</p><h4 id="半监督学习"><strong>3.半监督学习</strong></h4><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Semi-supervised-Learning-Algorithms.png" /></p><p>输入数据是带标签和未带标签的示例的混合。</p><p>存在一个期望的预测问题，但是模型必须学习用于组织数据以及进行预测的结构。</p><p>示例问题是 <strong>分类</strong> 和 <strong>回归</strong>。</p><p>示例算法是对其他灵活方法的扩展，这些方法对如何建模未标记数据进行了假设。</p><h3 id="机器学习算法概述">机器学习算法概述</h3><p>处理数据以对业务决策进行建模时，最典型的情况是您使用有监督和无监督的学习方法。</p><p>目前最热门的话题是 <strong>图像分类</strong> 等领域的 <code>半监督</code> 学习方法，在这些领域中，大型数据集的示例很少。</p><h2 id="相似度分组算法">相似度分组算法</h2><p>算法通常在功能（工作方式）方面按相似性分组。例如，基于树的方法和基于神经网络的方法。</p><p>我认为这是对算法进行分组的最有用的方法，也是我们将在此处使用的方法。</p><p>这是一种有用的分组方法，但并不完美。仍然有一些算法可以很容易地适合多个类别，例如“学习矢量量化”既是神经网络启发性方法又是基于实例的方法。也有描述问题的同名类别和算法类别，例如回归和聚类。</p><p>我们可以通过两次列出算法或选择主观上 <em>最</em> 适合的组来处理这些情况。我喜欢后一种方法，即不重复算法以保持简单。</p><p>在本节中，我们列出了许多流行的机器学习算法，这些算法按照我们认为最直观的方式进行了分组。该列表在组或算法中都不是详尽无遗的，但我认为它是具有代表性的，对您了解土地状况将很有用。</p><blockquote><p><strong>请注意</strong>：用于分类和回归的算法有很大的偏见，这是您将遇到的两个最普遍的监督式机器学习问题。</p></blockquote><p>如果您知道某个算法或一组未列出的算法，请在注释中添加并与我们分享。让我们潜入。</p><h3 id="回归算法">回归算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Regression-Algorithms.png" /></p><p>回归模型涉及对变量之间的关系进行建模，这些变量之间的关系使用模型进行的预测中的误差度量进行了迭代完善。</p><p>回归方法是统计工作的主力军，已被选入统计机器学习中。这可能会造成混淆，因为我们可以使用回归来指代问题的类别和算法的类别。确实，回归是一个过程。</p><p>最受欢迎的回归算法是：</p><ul><li>普通最小二乘回归（OLSR）</li><li>线性回归</li><li>逻辑回归</li><li>逐步回归</li><li>多元自适应回归样条（MARS）</li><li>局部估计的散点图平滑（LOESS）</li></ul><h3 id="基于实例的算法">基于实例的算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Instance-based-Algorithms.png" /></p><p>基于实例的学习模型是一个决策问题，其中包含训练数据的实例或示例，这些实例或示例被认为对该模型很重要或需要。</p><p>这样的方法通常建立示例数据的数据库，并使用相似性度量将新数据与数据库进行比较，以便找到最佳匹配并做出预测。因此，基于实例的方法也称为获胜者通吃方法和基于内存的学习。重点放在存储实例的表示以及实例之间使用的相似性度量上。</p><p>最受欢迎的基于实例的算法是：</p><ul><li>k最近邻居（kNN）</li><li>学习矢量量化（LVQ）</li><li>自组织图（SOM）</li><li>本地加权学习（LWL）</li><li>支持向量机（SVM）</li></ul><h3 id="正则化算法">正则化算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Regularization-Algorithms.png" /></p><p>对另一种方法（通常是回归方法）的扩展，该方法根据模型的复杂性对模型进行惩罚，而倾向于更易于泛化的简单模型。</p><p>我在这里单独列出了正则化算法，因为它们是对其他方法的流行，功能强大且通常简单的修改。</p><p>最受欢迎的正则化算法是：</p><ul><li>岭回归</li><li>最小绝对收缩和选择算子（LASSO）</li><li>弹性网</li><li>最小角度回归（LARS）</li></ul><h3 id="决策树算法">决策树算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Decision-Tree-Algorithms.png" /></p><p>决策树方法构建了一个基于数据中属性的实际值制定的决策模型。</p><p>决策派生到树结构中，直到为给定记录做出预测决策为止。对决策树进行有关分类和回归问题的数据训练。决策树通常快速，准确，并且在机器学习中大受欢迎。</p><p>最受欢迎的决策树算法是：</p><ul><li>分类和回归树（CART）</li><li>迭代二叉树 3 代（ID3）</li><li>C4.5和C5.0（功能强大的方法的不同版本）</li><li>卡方自动互动检测（CHAID）</li><li>决策树桩</li><li>M5</li><li>条件决策树</li></ul><h3 id="贝叶斯算法">贝叶斯算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Bayesian-Algorithms.png" /></p><p>贝叶斯方法是将贝叶斯定理明确应用于分类和回归等问题的方法。</p><p>最受欢迎的贝叶斯算法是：</p><ul><li>朴素贝叶斯</li><li>高斯朴素贝叶斯</li><li>多项式朴素贝叶斯</li><li>平均一依赖估计量（AODE）</li><li>贝叶斯信仰网络（BBN）</li><li>贝叶斯网络（BN）</li></ul><h3 id="聚类算法">聚类算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Clustering-Algorithms.png" /></p><p>像回归一样，聚类描述问题的类别和方法的类别。</p><p>聚类方法通常通过建模方法（例如基于质心和层次的方法）进行组织。所有方法都涉及使用数据中的固有结构来最好地将数据组织成具有最大共性的组。</p><p>最受欢迎的聚类算法是：</p><ul><li>k均值 k-Means</li><li>k中位数 k-Medians</li><li>期望最大化（EM）</li><li>层次聚类</li></ul><h3 id="关联规则学习算法">关联规则学习算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Assoication-Rule-Learning-Algorithms.png" /></p><p>关联规则学习方法提取的规则可以最好地解释数据中变量之间观察到的关系。</p><p>这些规则可以在组织可以利用的大型多维数据集中发现重要的商业上有用的关联。</p><p>最受欢迎的关联规则学习算法是：</p><ul><li>Apriori 算法</li><li>Eclat 算法</li></ul><h3 id="人工神经网络算法">人工神经网络算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Artificial-Neural-Network-Algorithms.png" /></p><p>人工神经网络是受生物神经网络的结构和/或功能启发的模型。</p><p>它们是一类模式匹配，通常用于回归和分类问题，但实际上是一个巨大的子领域，由数百种算法和各种问题类型的变体组成。</p><p>请注意，由于该领域的迅速发展和普及，我将深度学习与神经网络分开了。在这里，我们关注更经典的方法。</p><p>最受欢迎的人工神经网络算法是：</p><ul><li>感知器</li><li>多层感知器（MLP）</li><li>反向传播</li><li>随机梯度下降</li><li>霍普菲尔德网络</li><li>径向基函数网络（RBFN）</li></ul><h3 id="深度学习算法">深度学习算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Deep-Learning-Algorithms.png" /></p><p><a href="https://machinelearningmastery.com/what-is-deep-learning/" target="_blank" rel="noopener">深度学习</a>方法是对利用大量廉价计算的人工神经网络的一种现代更新。</p><p>他们关注的是构建更大，更复杂的神经网络，并且如上所述，许多方法都涉及标记的模拟数据（例如图像，文本）的超大型数据集。音频和视频。</p><p>最受欢迎的深度学习算法是：</p><ul><li>卷积神经网络（CNN）</li><li>递归神经网络（RNN）</li><li>长短期记忆网络（LSTM）</li><li>堆叠式自动编码器</li><li>深玻尔兹曼机（DBM）</li><li>深度信仰网络（DBN）</li></ul><h3 id="降维算法">降维算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Dimensional-Reduction-Algorithms.png" /></p><p>像聚类方法一样，降维会寻找和利用数据中的固有结构，但是在这种情况下，将以无监督的方式或顺序使用较少的信息来汇总或描述数据。</p><p>这对于可视化尺寸数据或简化可以在监督学习方法中使用的数据很有用。这些方法中的许多方法都可以用于分类和回归。</p><ul><li>主成分分析（PCA）</li><li>主成分回归（PCR）</li><li>偏最小二乘回归（PLSR）</li><li>萨蒙地图</li><li>多维缩放（MDS）</li><li>投影追踪</li><li>线性判别分析（LDA）</li><li>混合判别分析（MDA）</li><li>二次判别分析（QDA）</li><li>弹性判别分析（FDA）</li></ul><h3 id="集成学习算法">集成学习算法</h3><p><img src="https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/Ensemble-Algorithms.png" /></p><p>集合方法是由多个较弱的模型组成的模型，这些模型经过独立训练，其预测以某种方式组合在一起以进行总体预测。</p><p>对于要组合哪些类型的弱学习者以及如何将它们组合在一起，需要付出很多努力。这是一类非常强大的技术，因此非常受欢迎。</p><ul><li>Boosting</li><li>Bootstrapped Aggregation (Bagging)</li><li>AdaBoost</li><li>加权平均值（混合）</li><li>堆叠泛化（堆叠）Stacked Generalization (Stacking)</li><li>梯度提升机（GBM）Gradient Boosting Machines (GBM)</li><li>梯度增强回归树（GBRT）Gradient Boosting Machines (GBM)</li><li>随机森林</li></ul><h3 id="其他机器学习算法">其他机器学习算法</h3><p>许多算法没有涵盖。</p><p>在机器学习过程中，我没有涉及特殊任务的算法，例如：</p><ul><li>特征选择算法</li><li>算法精度评估</li><li>绩效指标</li><li>优化算法</li></ul><p>我也没有涵盖来自机器学习专业子领域的算法，例如：</p><ul><li>计算智能（进化算法等）</li><li>计算机视觉（CV）</li><li>自然语言处理（NLP）</li><li>推荐系统</li><li>强化学习</li><li>图形模型</li><li>更多…</li></ul><p>这些可能会在以后的帖子中出现。</p><h2 id="机器学习算法的进一步阅读">机器学习算法的进一步阅读</h2><p>这次机器学习算法之旅旨在为您提供概述，以及有关如何将算法相互关联的一些想法。</p><p>我已经收集了一些资源，供您继续阅读算法。如果您有特定问题，请发表评论。</p><h3 id="机器学习算法的其他列表">机器学习算法的其他列表</h3><p>如果您有兴趣，还有很多其他的算法列表。以下是一些精选示例。</p><ul><li><a href="http://en.wikipedia.org/wiki/List_of_machine_learning_algorithms" target="_blank" rel="noopener">机器学习算法列表</a>：在Wikipedia上。尽管内容广泛，但我认为此列表或算法的组织并没有特别有用。</li><li><a href="http://en.wikipedia.org/wiki/Category:Machine_learning_algorithms" target="_blank" rel="noopener">机器学习算法类别</a>：也在Wikipedia上，比上面的Wikipedia很棒的列表稍微有用。它按字母顺序组织算法。</li><li><a href="http://cran.r-project.org/web/views/MachineLearning.html" target="_blank" rel="noopener">CRAN任务视图：机器学习和统计学习</a>：R中每个机器学习软件包所支持的所有软件包和所有算法的列表。它使您对现有内容以及人们日常使用的分析有扎实的感觉。</li><li><a href="http://www.cs.uvm.edu/~icdm/algorithms/index.shtml" target="_blank" rel="noopener">数据挖掘中的十大算法</a>：已<a href="http://link.springer.com/article/10.1007/s10115-007-0114-2" target="_blank" rel="noopener">发表的文章</a>，现在是一<a href="http://www.amazon.com/dp/1420089641?tag=inspiredalgor-20" target="_blank" rel="noopener">本有关最流行的数据挖掘算法的书</a>（会员链接）。另一种扎根但不太压倒性的方法可以让您深入学习。</li></ul><h3 id="如何学习机器学习算法">如何学习机器学习算法</h3><p>算法是机器学习的重要组成部分。这是我热衷的话题，并在此博客上写了很多。以下是一些可能会吸引您进一步阅读的精选帖子。</p><ul><li><a href="http://machinelearningmastery.com/how-to-learn-a-machine-learning-algorithm/" target="_blank" rel="noopener">如何学习任何机器学习算法</a>：一种可以使用“算法描述模板”来学习和理解任何机器学习算法的系统方法（我用这种方法写了<a href="http://cleveralgorithms.com/nature-inspired/index.html" target="_blank" rel="noopener">第一本书</a>）。</li><li><a href="http://machinelearningmastery.com/create-lists-of-machine-learning-algorithms/" target="_blank" rel="noopener">如何创建机器学习算法的目标列表</a>：如何创建自己的机器学习算法的系统列表，以开始处理下一个机器学习问题。</li><li><a href="http://machinelearningmastery.com/how-to-research-a-machine-learning-algorithm/" target="_blank" rel="noopener">如何研究机器学习算法</a>：您可以用来研究机器学习算法的系统方法（与上面列出的模板方法协同工作非常有效）。</li><li><a href="http://machinelearningmastery.com/how-to-investigate-machine-learning-algorithm-behavior/" target="_blank" rel="noopener">如何研究机器学习算法的行为</a>：可以通过对行为进行很小的研究并对其进行研究，从而了解机器学习算法如何工作的方法。研究不仅针对学者！</li><li><a href="http://machinelearningmastery.com/how-to-implement-a-machine-learning-algorithm/" target="_blank" rel="noopener">如何实施机器学习算法</a>：从头开始实施机器学习算法的过程，技巧和窍门。</li></ul><h3 id="如何运行机器学习算法">如何运行机器学习算法</h3><p>有时，您只想深入研究代码。以下是一些链接，您可以使用这些链接来运行机器学习算法，使用标准库对其进行编码或从头开始实施它们。</p><ul><li><a href="http://machinelearningmastery.com/how-to-get-started-with-machine-learning-algorithms-in-r/" target="_blank" rel="noopener">如何开始使用R中的机器学习算法</a>：链接到此站点上的大量代码示例，这些示例演示了R中的机器学习算法。</li><li><a href="http://machinelearningmastery.com/get-your-hands-dirty-with-scikit-learn-now/" target="_blank" rel="noopener">scikit-learn中的机器学习算法食谱</a>：一系列Python代码示例，展示了如何使用scikit-learn创建预测模型。</li><li><a href="http://machinelearningmastery.com/how-to-run-your-first-classifier-in-weka/" target="_blank" rel="noopener">如何在Weka中运行您的第一个分类器如何在Weka</a>：中运行第一个分类器的教程（<strong>无需任何代码！</strong>）。</li></ul><p>原文：<a href="https://machinelearningmastery.com/a-tour-of-machine-learning-algorithms/" target="_blank" rel="noopener">A Tour of Machine Learning Algorithms</a></p><p>作者：<a href="https://machinelearningmastery.com/author/jasonb/" target="_blank" rel="noopener" title="Posts by Jason Brownlee">Jason Brownlee</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/15/A-Tour-of-Machine-Learning-Algorithms/ensemble.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;最合适的线条组合的一个很好的例子。弱预测成员为灰色，组合预测为红色。&lt;/p&gt;
-&lt;p&gt;绘图来自Wikipedia，在公共领域获得许可。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
-    
-      <category term="algorithm" scheme="https://2020.iosdevlog.com/tags/algorithm/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>机器学习算法实现的简洁示例：MLAlgorithms</title>
-    <link href="https://2020.iosdevlog.com/2020/03/15/MLAlgorithms/"/>
-    <id>https://2020.iosdevlog.com/2020/03/15/MLAlgorithms/</id>
-    <published>2020-03-15T13:03:07.000Z</published>
-    <updated>2020-03-15T13:42:39.639Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/15/MLAlgorithms/1.jpg" /></p><p>Minimal and clean examples of machine learning algorithms implementations</p><p>介绍一个常用的机器学习算法的最小和简洁实现的集合：机器学习算法库 <a href="https://github.com/rushter/MLAlgorithms" target="_blank" rel="noopener" class="uri">https://github.com/rushter/MLAlgorithms</a>。</p><a id="more"></a><h2 id="为什么"><a href="https://github.com/rushter/MLAlgorithms#why" target="_blank" rel="noopener">为什么</a>？</h2><p>该项目面向想要学习ml算法的内部知识或从头开始实现它们的人们。</p><p>与优化的库相比，该代码更易于遵循和使用。</p><p>所有算法均使用 <code>numpy</code>，<code>scipy</code> 和 <code>autograd</code> 在 <code>Python</code> 中实现。</p><h2 id="实现"><a href="https://github.com/rushter/MLAlgorithms#implemented" target="_blank" rel="noopener">实现</a> ：</h2><ul><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/neuralnet" target="_blank" rel="noopener">深度学习（MLP，CNN，RNN，LSTM）</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/linear_models.py" target="_blank" rel="noopener">线性回归，逻辑回归</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/ensemble/random_forest.py" target="_blank" rel="noopener">随机森林</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/svm" target="_blank" rel="noopener">支持向量机（SVM），带有内核（线性，多项式，RBF）</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/kmeans.py" target="_blank" rel="noopener">K均值</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/gaussian_mixture.py" target="_blank" rel="noopener">高斯混合模型</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/knn.py" target="_blank" rel="noopener">K近邻</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/naive_bayes.py" target="_blank" rel="noopener">朴素贝叶斯</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/pca.py" target="_blank" rel="noopener">主成分分析（PCA）</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/fm.py" target="_blank" rel="noopener">分解机</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/rbm.py" target="_blank" rel="noopener">受限玻尔兹曼机（RBM）</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/tsne.py" target="_blank" rel="noopener">t分布随机邻居嵌入（t-SNE）</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/ensemble/gbm.py" target="_blank" rel="noopener">梯度增强树（也称为GBDT，GBRT，GBM，XGBoost）</a></li><li><a href="https://github.com/rushter/MLAlgorithms/blob/master/mla/rl" target="_blank" rel="noopener">强化学习（深度Q学习）</a></li></ul><h2 id="安装"><a href="https://github.com/rushter/MLAlgorithms#installation" target="_blank" rel="noopener">安装</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git clone https:&#x2F;&#x2F;github.com&#x2F;rushter&#x2F;MLAlgorithms</span><br><span class="line"> cd MLAlgorithms </span><br><span class="line">pip install scipy numpy </span><br><span class="line">python setup.py开发</span><br></pre></td></tr></table></figure><h2 id="如何在不安装的情况下运行示例"><a href="https://github.com/rushter/MLAlgorithms#how-to-run-examples-without-installation" target="_blank" rel="noopener">如何在不安装的情况下运行示例</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd MLAlgorithms </span><br><span class="line">python -m examples.linear_models</span><br></pre></td></tr></table></figure><h2 id="如何在docker中运行示例"><a href="https://github.com/rushter/MLAlgorithms#how-to-run-examples-within-docker" target="_blank" rel="noopener">如何在Docker中运行示例</a></h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">cd MLAlgorithms docker </span><br><span class="line">build -t mlalgorithms 。</span><br><span class="line">docker run --rm -it mlalgorithms bash </span><br><span class="line">python -m examples.linear_models</span><br></pre></td></tr></table></figure><h2 id="贡献"><a href="https://github.com/rushter/MLAlgorithms#contributing" target="_blank" rel="noopener">贡献</a></h2><p>永远欢迎您的贡献！<br />随时改进现有代码，文档或实施新算法。<br />如果您的更改足够大，请提出一个建议。</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/15/MLAlgorithms/1.jpg&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;Minimal and clean examples of machine learning algorithms implementations&lt;/p&gt;
-&lt;p&gt;介绍一个常用的机器学习算法的最小和简洁实现的集合：机器学习算法库 &lt;a href=&quot;https://github.com/rushter/MLAlgorithms&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot; class=&quot;uri&quot;&gt;https://github.com/rushter/MLAlgorithms&lt;/a&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="nn" scheme="https://2020.iosdevlog.com/tags/nn/"/>
-    
-      <category term="dl" scheme="https://2020.iosdevlog.com/tags/dl/"/>
-    
-      <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
-    
-      <category term="algorithm" scheme="https://2020.iosdevlog.com/tags/algorithm/"/>
-    
-      <category term="python" scheme="https://2020.iosdevlog.com/tags/python/"/>
     
   </entry>
   
