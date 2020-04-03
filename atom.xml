@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-04-03T14:46:11.241Z</updated>
+  <updated>2020-04-03T16:24:14.306Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>InfoQ 写作平台</title>
+    <link href="https://2020.iosdevlog.com/2020/04/03/infoq/"/>
+    <id>https://2020.iosdevlog.com/2020/04/03/infoq/</id>
+    <published>2020-04-03T15:47:28.000Z</published>
+    <updated>2020-04-03T16:24:14.306Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/04/03/infoq/1.png" /></p><a id="more"></a><p>前几天收到 InfoQ 的邮件。</p><p>您已通过审核。</p><p>感谢您的内测申请，很高兴邀请您加入 InfoQ 写作平台。<br />以下是关于入驻平台的相关信息，还请仔细阅读：<br />...<br />（具体操作路径及注意事项将在群中通知，请您务必添加小助手微信）</p><h2 id="infoq-是什么">InfoQ 是什么？</h2><p>去 Google 一下。</p><p><a href="www.infoq.com">www.infoq.com</a><br />InfoQ: Software Development News, Videos &amp; Books<br />Curated and peer-reviewed content covering innovation in professional software development, read by over 1 million developers worldwide.</p><p><a href="www.infoq.cn">www.infoq.cn</a><br />InfoQ - 促进软件开发领域知识与创新的传播-极客邦<br />InfoQ是一个实践驱动的社区资讯站点，致力于促进软件开发领域知识与创新的传播。提供架构，云计算，AI，前端，大数据，Java，软件开发，编程等技术资讯及技术 ...</p><p>baike.baidu.com › item › InfoQ<br />InfoQ_百度百科<br />软件正在改变世界！InfoQ（Information Queue）是一个在线新闻/社区网站，旨在通过促进软件开发领域知识与创新的传播，为软件开发者提供帮助。...</p><h2 id="程序员评价">程序员评价</h2><p>知乎上有一个关于 InfoQ 的提问：<a href="https://www.zhihu.com/question/353239355/answer/883885600" target="_blank" rel="noopener">为什么InfoQ新加的话题模块没什么人讨论？</a></p><p>有且仅有一条回答：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">infoq 难道不是一个给</span><br><span class="line"></span><br><span class="line">产品经理</span><br><span class="line">不写代码的CTO</span><br><span class="line">大小会议上不断强调自己是“技术出身”的CEO</span><br><span class="line">...</span><br><span class="line">看的，并且在看完网站内容，回头就使用它来指导程序员做设计甚至开发的地方吗？</span><br><span class="line"></span><br><span class="line">那些人和程序员不同，他们不爱和同行讨论。</span><br></pre></td></tr></table></figure><p>——庄严《白话C++》作者</p><h2 id="群公告">群公告</h2><p>今天下午 3 点多终于开始加群了。</p><p>以下群公告：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">哈喽，1号创作者们。</span><br><span class="line"></span><br><span class="line">为了方便平台内测信息的同步&amp;交流，请大家把群中备注改为【姓名 &#x2F; 笔名 - 行业领域】，谢谢配合！</span><br><span class="line"></span><br><span class="line">写作平台预计将于【清明假期后】正式向本群的创作者们开放，请大家提前备好【3 篇以上】文章作品，届时大家将首批体验 InfoQ 写作平台编辑器，并自行发布文章。如有任何疑问，可查看 InfoQ 写作平台为大家准备的：《给内容创作者的一封信》：&lt;https:&#x2F;&#x2F;shimo.im&#x2F;docs&#x2F;T9vxKx8qXd688RRX&#x2F;&gt;</span><br><span class="line"></span><br><span class="line">当然，也可以随时艾特或私戳文字君哟~</span><br></pre></td></tr></table></figure><p><img src="https://2020.iosdevlog.com/2020/04/03/infoq/infoq.png" /></p><h2 id="写作经历">写作经历</h2><p>之前在 <a href="https://www.csdn.net" target="_blank" rel="noopener">csdn</a>, <a href="http://www.chinaunix.net" target="_blank" rel="noopener">unixchina</a> 的技术论坛活动。</p><p>2014 年开始自己的博客：<a href="https://www.iosdevlog.com" target="_blank" rel="noopener" class="uri">https://www.iosdevlog.com</a> jekyll。</p><p><img src="https://2020.iosdevlog.com/2020/04/03/infoq/iosdevlog.png" /></p><p>后来开通了 <strong>简书</strong>： <a href="https://www.jianshu.com/u/1577b98c62f4" target="_blank" rel="noopener">iOSDevLog</a>，掘金，知乎，微信公众号：iOSDevLog 和 AIDevLog。</p><p><span class="math inline">\(云^{+}\)</span> 社区是转 <strong>简书</strong> 的。</p><p>小武小久记录: <a href="https://1519.iosdevlog.com" target="_blank" rel="noopener" class="uri">https://1519.iosdevlog.com</a> jekyll<br />游戏开发博客：<a href="https://game.iosdevlog.com" target="_blank" rel="noopener" class="uri">https://game.iosdevlog.com</a> hexo+next<br />2019 年博客：<a href="https://2019.iosdevlog.com" target="_blank" rel="noopener" class="uri">https://2019.iosdevlog.com</a> hexo+next<br />2020 年博客：<a href="https://2020.iosdevlog.com" class="uri">https://2020.iosdevlog.com</a> hexo</p><p><img src="https://2020.iosdevlog.com/2020/04/03/infoq/gamedevlog.png" /></p><p>其中简书参加过几个日更的活动，最近也不怎么在上面更新了。</p><p>最近只在 2020 年博客 和 微信公众号：<em>AI开发日志</em> 上更新。</p><p>现在要准备 InfoQ 上的文章，先写着，再去之前的文章里面找点能用的。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/04/03/infoq/1.png&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="写作" scheme="https://2020.iosdevlog.com/categories/%E5%86%99%E4%BD%9C/"/>
+    
+    
+      <category term="infoq" scheme="https://2020.iosdevlog.com/tags/infoq/"/>
+    
+      <category term="geek" scheme="https://2020.iosdevlog.com/tags/geek/"/>
+    
+  </entry>
   
   <entry>
     <title>《程序员的数学基础课》</title>
@@ -554,33 +579,6 @@ ISBN: 9787550298637&lt;/p&gt;
       <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
     
       <category term="calculus" scheme="https://2020.iosdevlog.com/tags/calculus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>线性代数的本质（Essence of linear algebra）</title>
-    <link href="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/"/>
-    <id>https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/</id>
-    <published>2020-03-16T14:24:25.000Z</published>
-    <updated>2020-03-17T08:31:41.862Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/1.png" /></p><a id="more"></a><h2 id="向量">向量</h2><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Vector.png" /></p><p>空间的一组基的严格定义是这样的:</p><blockquote><p>张成该空间的一个线性无关向量的集合</p></blockquote><ul><li>单个向量：箭头表示</li><li>多个向量：点表示</li></ul><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Vector3.png" /></p><h2 id="变换">变换</h2><p><span class="math display">\[变换 == 函数\]</span></p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Linear_transformation.png" /></p><p><span class="math display">\[y = f(x)\]</span></p><ul><li>IN: 向量(x)</li><li>OUT： 向量(y)</li></ul><h3 id="为什么叫-变换">为什么叫 <code>变换</code></h3><blockquote><p>因为使用“变换”是在暗示以特定方式来可视化这一输入-输出关系</p></blockquote><p>运动 =&gt; 向量的函数</p><h3 id="线性变换">线性变换</h3><ol type="1"><li>直线在变换后仍然保持为直线,不能有所弯曲</li><li>原点必须保持固定</li></ol><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/base.png" /></p><p>基向量</p><figure><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Matrix_multiplication.png" alt="" /><figcaption>直观</figcaption></figure><p>矩阵乘法</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Composition.png" /></p><p>复合变换 -&gt; 复合函数</p><h2 id="行列式">行列式</h2><blockquote><p>线性变换改变面积的比例。</p></blockquote><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Determinant.png" /></p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Det0.png" /></p><ul><li>行列式为 <span class="math inline">\(0\)</span> =&gt; 空间压缩到更小的维度</li><li>当空间定向改变的情况发生时,行列式为 <code>负</code></li></ul><h3 id="计算行列式">计算行列式</h3><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Det1.png" /></p><ul><li><span class="math inline">\(a\)</span>： <span class="math inline">\(x\)</span> 轴伸缩比例</li><li><span class="math inline">\(b\)</span>： 对角方向 拉伸/压缩 比例</li><li><span class="math inline">\(c\)</span>： 对角方向 拉伸/压缩 比例</li><li><span class="math inline">\(d\)</span>： <span class="math inline">\(y\)</span> 轴伸缩比例</li></ul><h3 id="二阶行列式">二阶行列式</h3><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Det2.png" /></p><h3 id="三阶行列式">三阶行列式</h3><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Det3.png" /></p><p>平行六面体的体积</p><h2 id="矩阵">矩阵</h2><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Matrix.png" /></p><p><span class="math inline">\(A\)</span> 代表变换矩阵</p><h3 id="逆矩阵">逆矩阵</h3><p>恒等变换：单位矩阵</p><p><span class="math display">\[A^{-1}A = I\]</span></p><p>逆乘以 <span class="math inline">\(A\)</span></p><ul><li><code>列空间</code>：矩阵的列所张成的空间</li><li><code>秩</code>：列空间的维数（变换后空间的维数）</li></ul><h3 id="矩阵乘法">矩阵乘法</h3><p>变换矩阵</p><ul><li><code>行</code>：变换后的独立坐标</li><li><code>列</code>：变换前的基向量</li><li><code>零空间/核</code>：变换后落在 <code>原点</code> 的向量的集合</li></ul><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/2to3.png" /></p><p>2 列 -&gt; 3 行<br />=&gt;<br />2 维 -&gt; 3 维</p><h2 id="点积数量积标量积">点积（数量积/标量积）</h2><blockquote><p>一种接受两个等长的数字序列（通常是坐标向量）、返回单个数字的代数运算</p></blockquote><ul><li>内积：两个笛卡尔坐标向量的点积常称为内积</li></ul><p>代数定义</p><p><span class="math display">\[\vec{a} \cdot \vec{b} = \sum_{i=1}^n a_ib_i = a_1b_1 + a_2b_2 + \cdots + a_nb_n\]</span></p><p><span class="math display">\[\vec{a} \cdot \vec{b} = \vec{a}\vec{b}^T\]</span></p><p>几何定义</p><p><span class="math display">\[\vec{a} \cdot \vec{b} = |\vec{a}| \, |\vec{b}| \cos \theta \;\]</span></p><ul><li><span class="math inline">\(|\vec{a}|\)</span>：模长</li><li><span class="math inline">\(\theta\)</span>：夹角</li></ul><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Dot_product_1.png" /></p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Dot_product_2.png" /></p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Dot_product.png" /></p><h2 id="叉积">叉积</h2><p>面积</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Cross_product.png" /></p><p>求行列式</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Det.png" /></p><p>方向（右手定则）</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Cross_product_direction.png" /></p><h2 id="特征向量-和-特征值-eigenvectors-and-eigenvalues">特征向量 和 特征值 Eigenvectors and eigenvalues</h2><ul><li>特征向量：线性变换[a]之后，得到的新向量仍然与原来的向量保持在同一条直线上</li></ul><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Eigenvectors.png" /></p><ul><li>特征值：特征向量的长度在该线性变换下 <strong>缩放</strong> 的比例</li></ul><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Eigenvalue.png" /></p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Eigenvectors_formula.png" /></p><ul><li>特征基：一组基向量（也是特征向量）构成的集合</li></ul><h2 id="抽象向量空间">抽象向量空间</h2><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Coordinate.png" /></p><p><code>函数</code> =&gt; 向量特性</p><figure><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Function_addition.png" alt="" /><figcaption>Addtion</figcaption></figure><figure><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Function_product.png" alt="" /><figcaption>Scaling</figcaption></figure><p>向量</p><figure><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Vector_Operation.png" alt="" /><figcaption>Vector_Operation</figcaption></figure><p>函数</p><figure><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Function_Operation.png" alt="" /><figcaption>Function_Operation</figcaption></figure><p>导数：函灵敏的线性变换</p><figure><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Derivative.png" alt="" /><figcaption>Derivative</figcaption></figure><p>线性</p><blockquote><p>线性变换保持向量 <em>加法</em> 运算和 <em>数乘</em> 运算</p></blockquote><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Linear.png" /></p><p>求导是线性的</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Derivative_addition.png" /></p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Derivative_multiplication.png" /></p><p>基函数</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Base_function.png" /></p><p>矩阵求导</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Matrix_derivative.png" /></p><p>线性代数 vs 函数</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Linear_function.png" /></p><p>向量空间</p><p>类似向量的事物</p><ul><li>箭头 （物理）</li><li>一组数 （计算机）</li><li>函数</li><li>...</li></ul><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Vector_Spaces.png" /></p><p>公理</p><p><img src="https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/Axioms.png" /></p><p>在这里观看完整的“线性代数的本质”播放列表：<a href="https://goo.gl/R1kBdb" target="_blank" rel="noopener" class="uri">https://goo.gl/R1kBdb</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/16/Essence-of-linear-algebra/1.png&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="math" scheme="https://2020.iosdevlog.com/categories/math/"/>
-    
-    
-      <category term="manim" scheme="https://2020.iosdevlog.com/tags/manim/"/>
-    
-      <category term="linear" scheme="https://2020.iosdevlog.com/tags/linear/"/>
-    
-      <category term="3b1b" scheme="https://2020.iosdevlog.com/tags/3b1b/"/>
     
   </entry>
   
