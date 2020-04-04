@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>《数据结构与算法之美》 | Game 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="掌握数据结构和算法，不管对于阅读框架源码，还是理解其背后的设计思想，都是非常有用的。1 基础架构研发工程师，写出达到开源水平的框架才是你的目标！ 性能好坏起码是其中一个非常重要的评判标准。 数据结构是为算法服务的，算法要作用在特定的数据结构之上。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《数据结构与算法之美》">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/04/04/algorithm/index.html">
+<meta property="og:site_name" content="Game 2020">
+<meta property="og:description" content="掌握数据结构和算法，不管对于阅读框架源码，还是理解其背后的设计思想，都是非常有用的。1 基础架构研发工程师，写出达到开源水平的框架才是你的目标！ 性能好坏起码是其中一个非常重要的评判标准。 数据结构是为算法服务的，算法要作用在特定的数据结构之上。">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/algorithm.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/3.1.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/3.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/3.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/5.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/5.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/5.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/5.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/5.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/6.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/6.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/6.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/6.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/6.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/6.6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/7.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/7.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/7.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.7.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.8.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/8.9.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.7.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.8.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.9.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/9.10.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.en.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.zh.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.7.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.8.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.9.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.10.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/11.10.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/12.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/12.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/12.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/12.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/12.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/13.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/13.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/13.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/13.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/13.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/13.6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/14.jpg">
+<meta property="article:published_time" content="2020-04-04T01:06:12.000Z">
+<meta property="article:modified_time" content="2020-04-04T14:11:36.727Z">
+<meta property="article:author" content="iOSDevLog">
+<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="data">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/04/04/algorithm/algorithm.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Game 2020</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">https://2020.iosdevlog.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/2020">2020 Calendar</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://2020.iosdevlog.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-algorithm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/04/algorithm/" class="article-date">
+  <time datetime="2020-04-04T01:06:12.000Z" itemprop="datePublished">2020-04-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/geek/">geek</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《数据结构与算法之美》
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/algorithm.jpg" /></p>
+<p>掌握数据结构和算法，不管对于阅读框架源码，还是理解其背后的设计思想，都是非常有用的。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<p>基础架构研发工程师，写出达到开源水平的框架才是你的目标！</p>
+<p>性能好坏起码是其中一个非常重要的评判标准。</p>
+<p>数据结构是为算法服务的，算法要作用在特定的数据结构之上。</p>
+<a id="more"></a>
+<p>重点：</p>
+<ol type="1">
+<li>首先要掌握一个数据结构与算法中最重要的概念——复杂度分析</li>
+<li>10个数据结构
+<ol type="1">
+<li>数组</li>
+<li>链表</li>
+<li>栈</li>
+<li>队列</li>
+<li>散列表</li>
+<li>二叉树</li>
+<li>堆</li>
+<li>跳表</li>
+<li>图</li>
+<li>Trie树</li>
+</ol></li>
+<li>10个算法
+<ol type="1">
+<li>递归</li>
+<li>排序</li>
+<li>二分查找</li>
+<li>搜索</li>
+<li>哈希算法</li>
+<li>贪心算法</li>
+<li>分治算法</li>
+<li>回溯算法</li>
+<li>动态规划</li>
+<li>字符串匹配算法</li>
+</ol></li>
+<li>技巧
+<ol type="1">
+<li>边学边练，适度刷题</li>
+<li>多问、多思考、多互动</li>
+<li>打怪升级学习法</li>
+<li>知识需要沉淀，不要想试图一下子掌握所有</li>
+</ol></li>
+</ol>
+<h2 id="复杂度分析">复杂度分析</h2>
+<ol type="1">
+<li>测试结果非常依赖测试环境</li>
+<li>测试结果受数据规模的影响很大</li>
+</ol>
+<p>不用具体的测试数据来测试，就可以粗略地估计算法的执行效率的方法。</p>
+<p>大O复杂度表示法</p>
+<p>在采用大O标记复杂度的时候，可以忽略系数</p>
+<ul>
+<li>大O时间复杂度表示法
+<ul>
+<li>表示代码执行时间随数据规模增长的变化趋势</li>
+<li>也叫作 <strong>渐进时间复杂度（asymptotic time complexity）</strong></li>
+<li>简称 <strong>时间复杂度</strong></li>
+</ul></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/3.1.png" /></p>
+<p><span class="math display">\[
+T(n)=O(f(n))
+\]</span></p>
+<ol type="1">
+<li><code>n</code>：数据规模的大小</li>
+<li><code>T(n)</code>：代码执行时间</li>
+<li><code>f(n)</code>：每行代码执行的次数总和</li>
+<li>公式中的 <code>O</code>，表示代码的执行时间 <code>T(n)</code> 与 <code>f(n)</code> 表达式成正比</li>
+</ol>
+<p>记录一个最大量级</p>
+<p>时间复杂度分析</p>
+<ol type="1">
+<li>只关注循环执行次数最多的一段代码</li>
+<li>加法法则：总复杂度等于量级最大的那段代码的复杂度</li>
+<li>乘法法则：嵌套代码的复杂度等于嵌套内外代码复杂度的乘积</li>
+</ol>
+<p>几种常见时间复杂度实例分析</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/3.2.jpg" /></p>
+<ol type="1">
+<li>多项式量级
+<ol type="1">
+<li>常量阶：<span class="math inline">\(O(1)\)</span>
+<ol type="1">
+<li>不存在循环语句、递归语句</li>
+</ol></li>
+<li>对数阶：<span class="math inline">\(O(\log n)\)</span>
+<ol type="1">
+<li>忽略对数的“底”</li>
+</ol></li>
+<li>线性阶：<span class="math inline">\(O(n)\)</span>
+<ol type="1">
+<li><span class="math inline">\(O(m+n)\)</span></li>
+</ol></li>
+<li>线性对数阶： <span class="math inline">\(O(n \log n)\)</span>
+<ol type="1">
+<li>归并排序</li>
+<li>快速排序</li>
+</ol></li>
+<li>方阶：
+<ol type="1">
+<li>平方阶： <span class="math inline">\(O(n^2)\)</span></li>
+<li>立方阶： <span class="math inline">\(O(n^3)\)</span></li>
+<li><span class="math inline">\(k\)</span> 次方阶： <span class="math inline">\(O(n^{k})\)</span></li>
+</ol></li>
+</ol></li>
+<li>非多项式量级（低效）
+<ol type="1">
+<li>指数阶：<span class="math inline">\(O(2^{n})\)</span></li>
+<li>阶乘阶：<span class="math inline">\(O(n!)\)</span></li>
+</ol></li>
+</ol>
+<p>空间复杂度分析</p>
+<ul>
+<li>大O时间复杂度表示法
+<ul>
+<li>算法的存储空间与数据规模之间的增长关系</li>
+<li>也叫作 <strong>渐进空间复杂度（asymptotic space complexity）</strong></li>
+<li>简称 <strong>空间复杂度</strong></li>
+</ul></li>
+</ul>
+<ol type="1">
+<li><span class="math inline">\(O(1)\)</span></li>
+<li><span class="math inline">\(O(n)\)</span></li>
+<li><span class="math inline">\(O(n^{2})\)</span></li>
+</ol>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/3.3.jpg" /></p>
+<p>四个复杂度分析</p>
+<ol type="1">
+<li>最好情况时间复杂度（best case time complexity）
+<ol type="1">
+<li>最理想的情况</li>
+</ol></li>
+<li>最坏情况时间复杂度（worst case time complexity）
+<ol type="1">
+<li>最糟糕的情况</li>
+</ol></li>
+<li>平均情况时间复杂度（average case time complexity）
+<ol type="1">
+<li>加权平均值</li>
+<li>全称：<strong>加权平均时间复杂度</strong></li>
+<li>期望值</li>
+<li>全称：<strong>期望时间复杂度</strong></li>
+</ol></li>
+<li>均摊时间复杂度（amortized time complexity）
+<ol type="1">
+<li>摊还分析 / 平摊分析</li>
+<li><strong>均摊时间复杂度</strong> 就是一种 <code>特殊</code> 的 <strong>平均时间复杂度</strong></li>
+</ol></li>
+</ol>
+<h2 id="基础">基础</h2>
+<h3 id="数组array">数组（Array）</h3>
+<p>数组（Array）是一种 <code>线性表</code> 数据结构。它用一组连续的内存空间，来存储一组具有相同类型的数据。</p>
+<ul>
+<li>线性表（Linear List）
+<ul>
+<li>线性表就是数据排成像一条线一样的结构</li>
+<li>每个线性表上的数据最多只有前和后两个方向</li>
+<li>类型
+<ol type="1">
+<li><strong>数组</strong></li>
+<li>链表</li>
+<li>队列</li>
+<li>栈</li>
+</ol></li>
+</ul></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/5.1.jpg" /></p>
+<ul>
+<li>非线性表
+<ol type="1">
+<li>二叉树</li>
+<li>堆</li>
+<li>图</li>
+</ol></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/5.2.jpg" /></p>
+<ul>
+<li>连续的内存空间和相同类型的数据
+<ul>
+<li>随机访问</li>
+</ul></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/5.3.jpg" /></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[i]_address = base_address + i * data_type_size</span><br></pre></td></tr></table></figure>
+<p>低效的“插入”和“删除”</p>
+<ul>
+<li>插入操作
+<ul>
+<li>交换最后</li>
+<li>快排</li>
+</ul></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/5.4.jpg" /></p>
+<ul>
+<li>删除操作
+<ul>
+<li>记录下已经删除的数据</li>
+</ul></li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/5.5.jpg" /></p>
+<h4 id="警惕数组的访问越界问题">警惕数组的访问越界问题</h4>
+<h4 id="容器能否完全替代数组">容器能否完全替代数组？</h4>
+<p><code>Java</code> ： <code>ArrayList</code><br />
+<code>C++ STL</code>： <code>vector</code></p>
+<ul>
+<li>将很多数组操作的细节封装起来</li>
+<li>支持动态扩容</li>
+</ul>
+<p>数组 vs 容器：</p>
+<ol type="1">
+<li>数组
+<ol type="1">
+<li>底层开发</li>
+<li>关注性能 / 基本类型</li>
+<li>数据大小事先已知 / 操作简单</li>
+<li>多维数组直观</li>
+</ol></li>
+<li>容器
+<ol type="1">
+<li>业务开发</li>
+</ol></li>
+</ol>
+<h4 id="数组要从0开始编号">数组要从0开始编号</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[k]_address = base_address + k * type_size</span><br></pre></td></tr></table></figure>
+<ol type="1">
+<li>“偏移（offset）”</li>
+<li>习惯：C语言设计者用 <span class="math inline">\(0\)</span> 开始计数数组下标，</li>
+</ol>
+<h4 id="小结">小结</h4>
+<p>数组用一块连续的内存空间，来存储相同类型的一组数据，最大的特点就是支持随机访问，但插入、删除操作也因此变得比较低效，平均情况时间复杂度为O(n)。在平时的业务开发中，我们可以直接使用编程语言提供的容器类，但是，如果是特别底层的开发，直接使用数组可能会更合适。</p>
+<h3 id="链表linked-list">链表（Linked list）</h3>
+<p>缓存</p>
+<ol type="1">
+<li>CPU缓存</li>
+<li>数据库缓存</li>
+<li>浏览器缓存</li>
+</ol>
+<p>缓存淘汰策略</p>
+<ol type="1">
+<li>先进先出策略 FIFO（First In，First Out）</li>
+<li>最少使用策略 LFU（Least Frequently Used）</li>
+<li>最近最少使用策略 LRU（Least Recently Used）</li>
+</ol>
+<p>底层的存储结构</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/6.1.jpg" /></p>
+<ol type="1">
+<li>单链表</li>
+<li>循环链表</li>
+<li>双向链表</li>
+</ol>
+<h4 id="单链表">单链表</h4>
+<p>结点： 内存块<br />
+后继指针 next</p>
+<ol type="1">
+<li><strong>头结点</strong>：第一个结点</li>
+<li><strong>尾结点</strong>：最后个结点
+<ul>
+<li>指向一个空地址 <code>NULL</code></li>
+</ul></li>
+</ol>
+<p>查找、插入和删除操作</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/6.2.jpg" /></p>
+<h4 id="循环链表">循环链表</h4>
+<p>循环链表是一种特殊的单链表</p>
+<p>约瑟夫问题</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/6.3.jpg" /></p>
+<h4 id="双向链表">双向链表</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/6.4.jpg" /></p>
+<p>删除操作</p>
+<ul>
+<li>删除结点中“值等于某个给定值”的结点
+<ul>
+<li><span class="math inline">\(O(n)\)</span></li>
+</ul></li>
+<li>删除给定指针指向的结点
+<ul>
+<li><span class="math inline">\(O(1)\)</span></li>
+</ul></li>
+</ul>
+<p><strong>用空间换时间</strong> 的 <code>设计思想</code></p>
+<ol type="1">
+<li>缓存</li>
+<li>双向链表</li>
+</ol>
+<h4 id="双向循环链表">双向循环链表</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/6.5.jpg" /></p>
+<h4 id="链表-vs-数组性能">链表 VS 数组性能</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/6.6.jpg" /></p>
+<h4 id="lruleast-recently-used缓存">LRU（Least Recently Used）缓存</h4>
+<ol type="1">
+<li>如果此数据之前已经被缓存在链表中了，我们遍历得到这个数据对应的结点，并将其从原来的位置删除，然后再插入到链表的头部。</li>
+<li>如果此数据没有在缓存链表中，又可以分为两种情况：
+<ol type="1">
+<li>如果此时缓存未满，则将此结点直接插入到链表的头部；</li>
+<li>如果此时缓存已满，则链表尾结点删除，将新的数据结点插入链表的头部。</li>
+</ol></li>
+</ol>
+<h4 id="代码技巧">代码技巧</h4>
+<ol type="1">
+<li>理解指针或引用的含义</li>
+<li>警惕指针丢失和内存泄漏
+<ol type="1">
+<li>插入结点时，一定要注意操作的顺序</li>
+<li>删除链表结点时，也一定要记得手动释放内存空间</li>
+</ol></li>
+<li>利用哨兵简化实现难度
+<ol type="1">
+<li>针对链表的插入、删除操作，需要对插入第一个结点和删除最后一个结点的情况进行特殊处理</li>
+</ol></li>
+<li>重点留意边界条件处理
+<ol type="1">
+<li>如果链表为空时，代码是否能正常工作？</li>
+<li>如果链表只包含一个结点时，代码是否能正常工作？</li>
+<li>如果链表只包含两个结点时，代码是否能正常工作？</li>
+<li>代码逻辑在处理头结点和尾结点的时候，是否能正常工作？</li>
+</ol></li>
+<li>举例画图，辅助思考</li>
+<li>多写多练，没有捷径
+<ol type="1">
+<li>单链表反转</li>
+<li>链表中环的检测</li>
+<li>两个有序的链表合并</li>
+<li>删除链表倒数第n个结点</li>
+<li>求链表的中间结点</li>
+</ol></li>
+</ol>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/7.1.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/7.2.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/7.3.jpg" /></p>
+<h4 id="内容小结">内容小结</h4>
+<p>链表跟数组一样，也是非常基础、非常常用的数据结构。不过链表要比数组稍微复杂，从普通的单链表衍生出来好几种链表结构，比如双向链表、循环链表、双向循环链表。</p>
+<p>和数组相比，链表更适合插入、删除操作频繁的场景，查询的时间复杂度较高。不过，在具体软件开发中，要对数组和链表的各种性能进行对比，综合来选择使用两者中的哪一个。</p>
+<h3 id="栈2">栈<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></h3>
+<p>后进先出</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.1.jpg" /></p>
+<p>栈是一种“操作受限”的线性表</p>
+<p>操作</p>
+<ul>
+<li>插入：<strong>入栈 push()</strong></li>
+<li>删除：<strong>出栈 pop()</strong></li>
+</ul>
+<p>栈顶指针</p>
+<p>支持动态扩容的顺序栈</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.2.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.3.jpg" /></p>
+<p>栈在函数调用中的应用</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span> a = <span class="number">1</span>; </span><br><span class="line">   <span class="keyword">int</span> ret = <span class="number">0</span>;</span><br><span class="line">   <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">   ret = add(<span class="number">3</span>, <span class="number">5</span>);</span><br><span class="line">   res = a + ret;</span><br><span class="line">   <span class="built_in">printf</span>(<span class="string">"%d"</span>, res);</span><br><span class="line">   reuturn <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">   <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">   sum = x + y;</span><br><span class="line">   <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.4.jpg" /></p>
+<p>栈在表达式求值中的应用</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.5.jpg" /></p>
+<p>栈在括号匹配中的应用</p>
+<p><span class="math display">\[
+{[()]}
+\]</span></p>
+<p>浏览器的前进和后退</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.6.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.7.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.8.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/8.9.jpg" /></p>
+<h3 id="队列">队列</h3>
+<p>操作受限的线性表数据结构</p>
+<p>操作</p>
+<ul>
+<li>插入：<strong>入队 enqueue()</strong></li>
+<li>删除：<strong>出队 dequeue()</strong></li>
+</ul>
+<p>先进先出</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.1.jpg" /></p>
+<table>
+<thead>
+<tr class="header">
+<th>实现</th>
+<th>数组</th>
+<th>链表</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>栈</td>
+<td>顺序栈</td>
+<td>链式栈</td>
+</tr>
+<tr class="even">
+<td>队列</td>
+<td>顺序队列</td>
+<td>链式队列</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>一个是 <code>head</code> 指针，指向队头</li>
+<li>一个是 <code>tail</code> 指针，指向队尾</li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.2.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.3.jpg" /></p>
+<p>数据搬移</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.4.jpg" /></p>
+<h4 id="基于链表的队列实现方法">基于链表的队列实现方法</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.5.jpg" /></p>
+<h4 id="循环队列">循环队列</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.6.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.7.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.8.jpg" /></p>
+<h4 id="阻塞队列和并发队列">阻塞队列和并发队列</h4>
+<p>阻塞队列：生产者-消费者模型</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.9.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/9.10.jpg" /></p>
+<p>并发队列：线程安全的队列</p>
+<p>对于大部分资源有限的场景，当没有空闲资源时，基本上都可以通过“队列”这种数据结构来实现请求排队。</p>
+<h4 id="内容小结-1">内容小结</h4>
+<p>队列：一种跟栈很相似的数据结构。</p>
+<p>队列最大的特点就是先进先出，主要的两个操作是入队和出队。跟栈一样，它既可以用数组来实现，也可以用链表来实现。用数组实现的叫顺序队列，用链表实现的叫链式队列。特别是长得像一个环的循环队列。在数组实现队列的时候，会有数据搬移操作，要想解决数据搬移的问题，我们就需要像环一样的循环队列。</p>
+<p>循环队列是我们这节的重点。要想写出没有bug的循环队列实现代码，关键要确定好队空和队满的判定条件，具体的代码你要能写出来。</p>
+<p>除此之外，我们还讲了几种高级的队列结构，阻塞队列、并发队列，底层都还是队列这种数据结构，只不过在之上附加了很多其他功能。阻塞队列就是入队、出队操作可以阻塞，并发队列就是队列的操作多线程安全。</p>
+<h3 id="递归">递归</h3>
+<ul>
+<li>去的过程叫“递”</li>
+<li>回来的过程叫“归”</li>
+</ul>
+<p>递归需要满足的三个条件</p>
+<ol type="1">
+<li>一个问题的解可以分解为几个子问题的解</li>
+<li>这个问题与分解之后的子问题，除了数据规模不同，求解思路完全一样</li>
+<li>存在递归终止条件</li>
+</ol>
+<p>编写递归代码</p>
+<ol type="1">
+<li>写出递推公式</li>
+<li>找到终止条件</li>
+<li>递推公式 -&gt; 代码</li>
+</ol>
+<p>写递归代码的关键就是找到如何将大问题分解为小问题的规律，并且基于此写出递推公式，然后再推敲终止条件，最后将递推公式和终止条件翻译成代码。</p>
+<ul>
+<li><p>递归代码要警惕堆栈溢出</p></li>
+<li><p>递归代码要警惕重复计算</p>
+<ul>
+<li>通过一个数据结构（比如散列表）来保存已经求解过的f(k)</li>
+</ul></li>
+<li><p>递归代码 -&gt; 为非递归代码（迭代循环）</p></li>
+</ul>
+<h4 id="内容小结-2">内容小结</h4>
+<p>递归是一种非常高效、简洁的编码技巧。只要是满足“三个条件”的问题就可以通过递归代码来解决。</p>
+<p>不过递归代码也比较难写、难理解。编写递归代码的关键就是不要把自己绕进去，正确姿势是写出递推公式，找出终止条件，然后再翻译成递归代码。</p>
+<p>递归代码虽然简洁高效，但是，递归代码也有很多弊端。比如，堆栈溢出、重复计算、函数调用耗时多、空间复杂度高等，所以，在编写递归代码的时候，一定要控制好这些副作用。</p>
+<h3 id="排序">排序</h3>
+<p>排序比较<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
+<table>
+<thead>
+<tr class="header">
+<th>排序</th>
+<th>排序算法</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>理论</td>
+<td>计算复杂性理论 大O符号 全序关系 数据结构列表 原地算法 稳定性 比较排序 自适应排序 排序网络 整数排序 X+Y排序 量子排序</td>
+</tr>
+<tr class="even">
+<td>交换排序</td>
+<td>冒泡排序 鸡尾酒排序 奇偶排序 梳排序 侏儒排序 快速排序 臭皮匠排序 Bogo排序</td>
+</tr>
+<tr class="odd">
+<td>选择排序</td>
+<td>选择排序 堆排序 平滑排序 笛卡尔树排序 锦标赛排序 圈排序 弱堆排序</td>
+</tr>
+<tr class="even">
+<td>插入排序</td>
+<td>插入排序 希尔排序 伸展排序 二叉查找树排序 图书馆排序 耐心排序</td>
+</tr>
+<tr class="odd">
+<td>归并排序</td>
+<td>归并排序 梯级归并排序 振荡归并排序 多相归并排序</td>
+</tr>
+<tr class="even">
+<td>分布排序</td>
+<td>美国旗帜排序 珠排序 桶排序 爆炸排序 计数排序 比較計數排序 插值排序 鸽巢排序 相邻图排序 基数排序 闪电排序</td>
+</tr>
+<tr class="odd">
+<td>并发排序</td>
+<td>双调排序器 Batcher归并网络 两两排序网络</td>
+</tr>
+<tr class="even">
+<td>混合排序</td>
+<td>塊排序 Tim排序 内省排序 Spread排序 归并插入排序</td>
+</tr>
+<tr class="odd">
+<td>其他</td>
+<td>拓扑排序 煎餅排序 意粉排序</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.en.png" alt="" /><figcaption>en</figcaption>
+</figure>
+<figure>
+<img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.zh.png" alt="" /><figcaption>zh</figcaption>
+</figure>
+<ul>
+<li>均按从小到大排列</li>
+<li>k 代表数值中的"数位"个数</li>
+<li>n 代表数据规模</li>
+<li>m 代表数据的最大值减最小值</li>
+</ul>
+<p>如何分析一个“排序算法”？</p>
+<ol type="1">
+<li>排序算法的执行效率
+<ol type="1">
+<li>最好情况、最坏情况、平均情况时间复杂度</li>
+<li>时间复杂度的系数、常数 、低阶</li>
+<li>比较次数和交换（或移动）次数</li>
+</ol></li>
+<li>排序算法的内存消耗
+<ol type="1">
+<li>原地排序（Sorted in place）</li>
+<li>空间复杂度是O(1)</li>
+</ol></li>
+<li>排序算法的稳定性</li>
+</ol>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.1.jpg" /></p>
+<h4 id="冒泡排序bubble-sort">冒泡排序（Bubble Sort）</h4>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span>，<span class="number">5</span>，<span class="number">6</span>，<span class="number">3</span>，<span class="number">2</span>，<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p>原子操作：</p>
+<ol type="1">
+<li>比较</li>
+<li>交换</li>
+</ol>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.2.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.3.jpg" /></p>
+<p>优化</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.4.jpg" /></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 冒泡排序，a表示数组，n表示数组大小</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">bubbleSort</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line"> </span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    <span class="comment">// 提前退出冒泡循环的标志位</span></span><br><span class="line">    <span class="keyword">boolean</span> flag = <span class="keyword">false</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; n - i - <span class="number">1</span>; ++j) &#123;</span><br><span class="line">      <span class="keyword">if</span> (a[j] &gt; a[j+<span class="number">1</span>]) &#123; <span class="comment">// 交换</span></span><br><span class="line">        <span class="keyword">int</span> tmp = a[j];</span><br><span class="line">        a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">        a[j+<span class="number">1</span>] = tmp;</span><br><span class="line">        flag = <span class="keyword">true</span>;  <span class="comment">// 表示有数据交换      </span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (!flag) <span class="keyword">break</span>;  <span class="comment">// 没有数据交换，提前退出</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>有序度</p>
+<p>有序元素对：<span class="math inline">\(a[i] &lt;= a[j]\)</span>, 如果 <span class="math inline">\(i &lt; j\)</span>。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.5.jpg" /></p>
+<p>满有序度</p>
+<p><span class="math inline">\(n*(n-1)/2\)</span></p>
+<p><strong>逆序度 = 满有序度 - 有序度</strong></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.6.jpg" /></p>
+<p>交换一次，有序度就加 1。</p>
+<h4 id="插入排序insertion-sort">插入排序（Insertion Sort）</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.7.jpg" /></p>
+<p>数据分为两个区间</p>
+<ol type="1">
+<li>已排序区间</li>
+<li>未排序区间</li>
+</ol>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.8.jpg" /></p>
+<p>原子操作：</p>
+<ol type="1">
+<li>比较</li>
+<li>移动</li>
+</ol>
+<p>移动次数 = 逆序度</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.9.jpg" /></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 插入排序，a表示数组，n表示数组大小</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">insertionSort</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    <span class="keyword">int</span> value = a[i];</span><br><span class="line">    <span class="keyword">int</span> j = i - <span class="number">1</span>;</span><br><span class="line">    <span class="comment">// 查找插入的位置</span></span><br><span class="line">    <span class="keyword">for</span> (; j &gt;= <span class="number">0</span>; --j) &#123;</span><br><span class="line">      <span class="keyword">if</span> (a[j] &gt; value) &#123;</span><br><span class="line">        a[j+<span class="number">1</span>] = a[j];  <span class="comment">// 数据移动</span></span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    a[j+<span class="number">1</span>] = value; <span class="comment">// 插入数据</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>为什么插入排序要比冒泡排序更受欢迎？</p>
+</blockquote>
+<p>冒泡排序中数据的交换操作：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a[j] &gt; a[j+<span class="number">1</span>]) &#123; <span class="comment">// 交换</span></span><br><span class="line">   <span class="keyword">int</span> tmp = a[j];</span><br><span class="line">   a[j] = a[j+<span class="number">1</span>];</span><br><span class="line">   a[j+<span class="number">1</span>] = tmp;</span><br><span class="line">   flag = <span class="keyword">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>插入排序中数据的移动操作：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (a[j] &gt; value) &#123;</span><br><span class="line">  a[j+<span class="number">1</span>] = a[j];  <span class="comment">// 数据移动</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">  <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="选择排序selection-sort">选择排序（Selection Sort）</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.10.jpg" /></p>
+<p>选择排序算法的实现思路有点类似插入排序，也分已排序区间和未排序区间。</p>
+<p>但是选择排序每次会从未排序区间中找到最小的元素，将其放到已排序区间的末尾。</p>
+<p><span class="math inline">\(O(n^{2})\)</span> 的排序算法：冒泡排序、插入排序、选择排序</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/11.10.jpg" /></p>
+<h4 id="归并排序merge-sort">归并排序（Merge Sort）</h4>
+<p>归并排序的核心思想</p>
+<p>如果要排序一个数组，我们先把数组从中间分成前后两部分，然后对前后两部分分别排序，再将排好序的两部分合并在一起，这样整个数组就都有序了。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/12.1.jpg" /></p>
+<p>归并排序使用的就是分治思想。分治，顾名思义，就是分而治之，将一个大问题分解成小的子问题来解决。小的子问题解决了，大问题也就解决了。</p>
+<ul>
+<li><code>分治</code> 是一种解决问题的处理思想</li>
+<li><code>递归</code> 是一种编程技巧</li>
+</ul>
+<p>递推公式：</p>
+<p><span class="math inline">\(merge_sort(p…r) = merge(merge_sort(p…q), merge_sort(q+1…r))\)</span></p>
+<p>终止条件：</p>
+<p><span class="math inline">\(p &gt;= r\)</span> 不用再继续分解</p>
+<p><code>merge_sort(p…r)</code> 表示，给下标从 <code>p</code> 到 <code>r</code> 之间的数组排序。我们将这个排序问题转化为了两个子问题，<code>merge_sort(p…q)</code> 和 <code>merge_sort(q+1…r)</code>，其中下标 <code>q</code> 等于 <code>p</code> 和 <code>r</code> 的中间位置，也就是 <code>(p+r)/2</code>。当下标从 <code>p</code> 到 <code>q</code> 和从 <code>q+1</code> 到 <code>r</code> 这两个子数组都排好序之后，我们再将两个有序的子数组合并在一起，这样下标从 <code>p</code> 到 <code>r</code> 之间的数据就也排好序了。</p>
+<p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 归并排序算法, A是数组，n表示数组大小</span></span><br><span class="line">merge_sort(A, n) &#123;</span><br><span class="line">  merge_sort_c(A, <span class="number">0</span>, n-<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 递归调用函数</span></span><br><span class="line">merge_sort_c(A, p, r) &#123;</span><br><span class="line">  <span class="comment">// 递归终止条件</span></span><br><span class="line">  <span class="keyword">if</span> p &gt;= r  then <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">// 取p到r之间的中间位置q</span></span><br><span class="line">  q = (p+r) / <span class="number">2</span></span><br><span class="line">  <span class="comment">// 分治递归</span></span><br><span class="line">  merge_sort_c(A, p, q)</span><br><span class="line">  merge_sort_c(A, q+<span class="number">1</span>, r)</span><br><span class="line">  <span class="comment">// 将A[p...q]和A[q+1...r]合并为A[p...r]</span></span><br><span class="line">  merge(A[p...r], A[p...q], A[q+<span class="number">1</span>...r])</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/12.2.jpg" /></p>
+<p><code>merge</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">merge(A[p...r], A[p...q], A[q+<span class="number">1</span>...r]) &#123;</span><br><span class="line">  <span class="keyword">var</span> i := p，j := q+<span class="number">1</span>，k := <span class="number">0</span> <span class="comment">// 初始化变量i, j, k</span></span><br><span class="line">  <span class="keyword">var</span> tmp := <span class="keyword">new</span> array[<span class="number">0</span>...r-p] <span class="comment">// 申请一个大小跟A[p...r]一样的临时数组</span></span><br><span class="line">  <span class="keyword">while</span> i&lt;=q AND j&lt;=r <span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> A[i] &lt;= A[j] &#123;</span><br><span class="line">      tmp[k++] = A[i++] <span class="comment">// i++等于i:=i+1</span></span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      tmp[k++] = A[j++]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 判断哪个子数组中有剩余的数据</span></span><br><span class="line">  <span class="keyword">var</span> start := i，end := q</span><br><span class="line">  <span class="keyword">if</span> j&lt;=r then start := j, end:=r</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 将剩余的数据拷贝到临时数组tmp</span></span><br><span class="line">  <span class="keyword">while</span> start &lt;= end <span class="keyword">do</span> &#123;</span><br><span class="line">    tmp[k++] = A[start++]</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="comment">// 将tmp中的数组拷贝回A[p...r]</span></span><br><span class="line">  <span class="keyword">for</span> i:=<span class="number">0</span> to r-p <span class="keyword">do</span> &#123;</span><br><span class="line">    A[p+i] = tmp[i]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="快速排序-快排quicksort">快速排序 / 快排（Quicksort）</h4>
+<p>快排的思想：</p>
+<p>如果要排序数组中下标从 <code>p</code> 到 <code>r</code> 之间的一组数据，我们选择 <code>p</code> 到 <code>r</code> 之间的任意一个数据作为 <code>pivot（分区点）</code>。</p>
+<p>遍历 <code>p</code> 到 <code>r</code> 之间的数据，将小于 <code>pivot</code> 的放到左边，将大于 <code>pivot</code> 的放到右边，将 <code>pivot</code> 放到中间。经过这一步骤之后，数组 <code>p</code> 到 <code>r</code> 之间的数据就被分成了三个部分，前面 <code>p</code> 到 <code>q-1</code> 之间都是小于 <code>pivot</code> 的，中间是 <code>pivot</code>，后面的 <code>q+1</code> 到 <code>r</code> 之间是大于 <code>pivot</code> 的。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/12.3.jpg" /></p>
+<p>根据分治、递归的处理思想，我们可以用递归排序下标从 <code>p</code> 到 <code>q-1</code> 之间的数据和下标从 <code>q+1</code> 到 <code>r</code> 之间的数据，直到区间缩小为 <code>1</code>，就说明所有的数据都有序了。</p>
+<p>递推公式：</p>
+<p><span class="math inline">\(quick_sort(p…r) = quick_sort(p…q-1) + quick_sort(q+1, r)\)</span></p>
+<p>终止条件：</p>
+<p><span class="math inline">\(p &gt;= r\)</span></p>
+<p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 快速排序，A是数组，n表示数组的大小</span></span><br><span class="line">quick_sort(A, n) &#123;</span><br><span class="line">  quick_sort_c(A, <span class="number">0</span>, n-<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 快速排序递归函数，p,r为下标</span></span><br><span class="line">quick_sort_c(A, p, r) &#123;</span><br><span class="line">  <span class="keyword">if</span> p &gt;= r then <span class="keyword">return</span></span><br><span class="line">  </span><br><span class="line">  q = partition(A, p, r) <span class="comment">// 获取分区点</span></span><br><span class="line">  quick_sort_c(A, p, q-<span class="number">1</span>)</span><br><span class="line">  quick_sort_c(A, q+<span class="number">1</span>, r)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>归并排序中有一个 <code>merge()</code> 合并函数，我们这里有一个 <code>partition()</code> 分区函数。</p>
+<p><code>partition()</code>分区函数实际上我们前面已经讲过了，就是随机选择一个元素作为 <code>pivot</code>（一般情况下，可以选择p到r区间的最后一个元素），然后对 <code>A[p…r]</code> 分区，函数返回 <code>pivot</code> 的下标。</p>
+<p>不考虑空间消耗，申请 2 个新数组</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/12.4.jpg" /></p>
+<p>考虑空间消耗，原地分区函数</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">partition(A, p, r) &#123;</span><br><span class="line">  pivot := A[r]</span><br><span class="line">  i := p</span><br><span class="line">  <span class="keyword">for</span> j := p to r-<span class="number">1</span> <span class="keyword">do</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> A[j] &lt; pivot &#123;</span><br><span class="line">      swap A[i] with A[j]</span><br><span class="line">      i := i+<span class="number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  swap A[i] with A[r]</span><br><span class="line">  <span class="keyword">return</span> i</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/12.5.jpg" /></p>
+<p>归并排序 VS 快排</p>
+<ol type="1">
+<li>归并排序的处理过程是由下到上的，先处理子问题，然后再合并。</li>
+<li>快排正好相反，它的处理过程是由上到下的，先分区，然后再处理子问题。</li>
+</ol>
+<blockquote>
+<p>为什么 <strong>归并排序</strong> 并没有像 <strong>快排</strong> 应用广泛？</p>
+</blockquote>
+<p>归并排序有一个致命的“弱点”，不是原地排序算法。</p>
+<p>内容小结</p>
+<p>归并排序和快速排序是两种稍微复杂的排序算法，它们用的都是分治的思想，代码都通过递归来实现，过程非常相似。理解归并排序的重点是理解递推公式和 <code>merge()</code> 合并函数。同理，理解快排的重点也是理解递推公式，还有 <code>partition()</code> 分区函数。</p>
+<p>归并排序算法是一种在任何情况下时间复杂度都比较稳定的排序算法，这也使它存在致命的缺点，即归并排序不是原地排序算法，空间复杂度比较高，是 <span class="math inline">\(O(n)\)</span>。正因为此，它也没有快排应用广泛。</p>
+<p>快速排序算法虽然最坏情况下的时间复杂度是 <span class="math inline">\(O(n^{2})\)</span>，但是平均情况下时间复杂度都是 <span class="math inline">\(O(n \log n)\)</span>。不仅如此，快速排序算法时间复杂度退化到 <span class="math inline">\(O(n^{2})\)</span> 的概率非常小，我们可以通过合理地选择 <code>pivot</code> 来避免这种情况。</p>
+<h4 id="桶排序bucket-sort">桶排序（Bucket sort）</h4>
+<p>桶排序，顾名思义，会用到“桶”，核心思想是将要排序的数据分到几个有序的桶里，每个桶里的数据再单独进行排序。桶内排完序之后，再把每个桶里的数据按照顺序依次取出，组成的序列就是有序的了。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/13.1.jpg" /></p>
+<p>复杂度： <span class="math inline">\(O(n)\)</span></p>
+<p>如果要排序的数据有 <span class="math inline">\(n\)</span> 个，我们把它们均匀地划分到 <span class="math inline">\(m\)</span> 个桶内，每个桶里就有 <span class="math inline">\(k=n/m\)</span> 个元素。每个桶内部使用快速排序，时间复杂度为 <span class="math inline">\(O(k * \log k)\)</span>。m个桶排序的时间复杂度就是 <span class="math inline">\(O(m * k * \log k)\)</span>，因为 <code>k=n/m</code>，所以整个桶排序的时间复杂度就是 <span class="math inline">\(O(n*log(n/m))\)</span>。当桶的个数m接近数据个数 <span class="math inline">\(n\)</span> 时，<span class="math inline">\(log(n/m)\)</span> 就是一个非常小的常量，这个时候桶排序的时间复杂度接近 <span class="math inline">\(O(n)\)</span>。</p>
+<blockquote>
+<p>桶排序看起来很优秀，那它是不是可以替代我们之前讲的排序算法呢？</p>
+</blockquote>
+<p>答案当然是否定的。为了让你轻松理解桶排序的核心思想，我刚才做了很多假设。实际上，桶排序对要排序数据的要求是非常苛刻的。</p>
+<p>首先，要排序的数据需要很容易就能划分成 <code>m</code> 个桶，并且，桶与桶之间有着天然的大小顺序。这样每个桶内的数据都排序完之后，桶与桶之间的数据不需要再进行排序。</p>
+<p>其次，数据在各个桶之间的分布是比较均匀的。如果数据经过桶的划分之后，有些桶里的数据非常多，有些非常少，很不平均，那桶内数据排序的时间复杂度就不是常量级了。在极端情况下，如果数据都被划分到一个桶里，那就退化为 <span class="math inline">\(O(n \log n)\)</span> 的排序算法了。</p>
+<p><strong>桶排序比较适合用在外部排序中</strong>。所谓的外部排序就是数据存储在外部磁盘中，数据量比较大，内存有限，无法将数据全部加载到内存中。</p>
+<h4 id="计数排序counting-sort桶排序的一种特殊情况">计数排序（Counting sort）：桶排序的一种特殊情况</h4>
+<p>当要排序的n个数据，所处的范围并不大的时候，比如最大值是k，我们就可以把数据划分成k个桶。每个桶内的数据值都是相同的，省掉了桶内排序的时间。</p>
+<p>示例：高考分数</p>
+<p>满分是 <span class="math inline">\(900\)</span> 分，最小是 <span class="math inline">\(0\)</span> 分，可以分成 <span class="math inline">\(901\)</span> 个桶，对应分数从 <span class="math inline">\(0\)</span> 分到 <span class="math inline">\(900\)</span> 分。</p>
+<p>桶内的数据都是分数相同的考生，所以并不需要再进行排序。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> A[<span class="number">8</span>] = &#123; <span class="number">2</span>，<span class="number">5</span>，<span class="number">3</span>，<span class="number">0</span>，<span class="number">2</span>，<span class="number">3</span>，<span class="number">0</span>，<span class="number">3</span> &#125;;</span><br></pre></td></tr></table></figure>
+<p>C[6] 表示桶 ,其中下标对应分数。不过，C[6] 内存储的并不是考生，而是对应的考生个数。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/13.2.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/13.3.jpg" /></p>
+<blockquote>
+<p>如何快速计算出，每个分数的考生在有序数组中对应的存储位置呢？</p>
+</blockquote>
+<p>思路是这样的：我们对C[6]数组顺序求和，C[6]存储的数据就变成了下面这样子。C[k]里存储小于等于分数k的考生个数。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/13.4.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/13.5.jpg" /></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 计数排序，a是数组，n是数组大小。假设数组中存储的都是非负整数。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">countingSort</span><span class="params">(<span class="keyword">int</span>[] a, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (n &lt;= <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 查找数组中数据的范围</span></span><br><span class="line">  <span class="keyword">int</span> max = a[<span class="number">0</span>];</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    <span class="keyword">if</span> (max &lt; a[i]) &#123;</span><br><span class="line">      max = a[i];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span>[] c = <span class="keyword">new</span> <span class="keyword">int</span>[max + <span class="number">1</span>]; <span class="comment">// 申请一个计数数组c，下标大小[0,max]</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt;= max; ++i) &#123;</span><br><span class="line">    c[i] = <span class="number">0</span>;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 计算每个元素的个数，放入c中</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    c[a[i]]++;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 依次累加</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= max; ++i) &#123;</span><br><span class="line">    c[i] = c[i-<span class="number">1</span>] + c[i];</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 临时数组r，存储排序之后的结果</span></span><br><span class="line">  <span class="keyword">int</span>[] r = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">  <span class="comment">// 计算排序的关键步骤，有点难理解</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = n - <span class="number">1</span>; i &gt;= <span class="number">0</span>; --i) &#123;</span><br><span class="line">    <span class="keyword">int</span> index = c[a[i]]-<span class="number">1</span>;</span><br><span class="line">    r[index] = a[i];</span><br><span class="line">    c[a[i]]--;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 将结果拷贝给a数组</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    a[i] = r[i];</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>计数排序只能用在数据范围不大的场景中，如果数据范围 <code>k</code> 比要排序的数据 <code>n</code> 大很多，就不适合用计数排序了。而且，计数排序只能给非负整数排序，如果要排序的数据是其他类型的，要将其在不改变相对大小的情况下，转化为非负整数。</p>
+<h4 id="基数排序radix-sort">基数排序（Radix sort）</h4>
+<p>手机号码从小到大排序</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/13.6.jpg" /></p>
+<p>按照每位来排序的排序算法要是稳定的。</p>
+<p>基数排序对要排序的数据是有要求的，需要可以分割出独立的“位”来比较，而且位之间有递进的关系，如果a数据的高位比b数据大，那剩下的低位就不用比较了。除此之外，每一位的数据范围不能太大，要可以用线性排序算法来排序，否则，基数排序的时间复杂度就无法做到O(n)了。</p>
+<p>线性排序（Linear sort）/ 复杂度是 <span class="math inline">\(O(n)\)</span> 的排序算法：桶排序、计数排序、基数排序</p>
+<p>它们对要排序的数据都有比较苛刻的要求，应用不是非常广泛。但是如果数据特征比较符合这些排序算法的要求，应用这些算法，会非常高效，线性时间复杂度可以达到O(n)。</p>
+<p>桶排序和计数排序的排序思想是非常相似的，都是针对范围不大的数据，将数据划分成不同的桶来实现排序。基数排序要求数据可以划分成高低位，位之间有递进关系。比较两个数，我们只需要比较高位，高位相同的再比较低位。而且每一位的数据范围不能太大，因为基数排序算法需要借助桶排序或者计数排序来完成每一个位的排序工作。</p>
+<h4 id="如何实现一个通用的高性能的排序函数">如何实现一个通用的、高性能的排序函数？</h4>
+<p><img src="https://2020.iosdevlog.com/2020/04/04/algorithm/14.jpg" /></p>
+<ol type="1">
+<li>线性排序算法的时间复杂度比较低，适用场景比较特殊。所以如果要写一个通用的排序函数，不能选择线性排序算法。</li>
+<li>首选时间复杂度是 <span class="math inline">\(O(n \log n)\)</span> 的排序算法
+<ol type="1">
+<li>小规模数据进行排序，可以选择时间复杂度是 <span class="math inline">\(O(n^{2})\)</span> 的算法</li>
+<li>大规模数据进行排序，时间复杂度是 <span class="math inline">\(O(n \log n)\)</span> 的算法更加高效</li>
+</ol></li>
+<li>对于小数据量的排序，不需要递归的插入排序算法</li>
+</ol>
+<blockquote>
+<p>如何优化快速排序？</p>
+</blockquote>
+<p>被分区点分开的两个分区中，数据的数量差不多。</p>
+<ol type="1">
+<li>三数取中法</li>
+<li>随机法</li>
+</ol>
+<p>堆栈溢出</p>
+<ol type="1">
+<li>限制递归深度
+<ul>
+<li>超过了我们事先设定的阈值，就停止递归</li>
+</ul></li>
+<li>堆上模拟实现一个函数调用栈
+<ul>
+<li>手动模拟递归压栈、出栈的过程</li>
+</ul></li>
+</ol>
+<p>分析了一下如何来实现一个工业级的通用的、高效的排序函数，内容比较偏实战，而且贯穿了一些前面几节的内容，你要多看几遍。我们大部分排序函数都是采用O(nlogn)排序算法来实现，但是为了尽可能地提高性能，会做很多优化。</p>
+<p>快速排序的一些优化策略，比如合理选择分区点、避免递归太深等等。</p>
+<p>C语言中 <code>qsort()</code> 的底层实现原理：</p>
+<ol type="1">
+<li>分区点
+<ul>
+<li>三数取中法</li>
+</ul></li>
+<li>堆栈溢出
+<ul>
+<li>实现一个堆上的栈，手动模拟递归</li>
+</ul></li>
+<li>元素的个数 &lt;= 4
+<ul>
+<li>插入排序</li>
+</ul></li>
+<li>优先使用
+<ul>
+<li>归并排序</li>
+</ul></li>
+<li>数据量比较大
+<ul>
+<li>快速排序</li>
+</ul></li>
+</ol>
+<h2 id="高级">高级</h2>
+<h2 id="实战">实战</h2>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p><a href="https://time.geekbang.org/column/intro/126" target="_blank" rel="noopener" class="uri">https://time.geekbang.org/column/intro/126</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p><a href="https://github.com/wangzheng0822/algo" target="_blank" rel="noopener" class="uri">https://github.com/wangzheng0822/algo</a><a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3" role="doc-endnote"><p><a href="https://zh.wikipedia.org/zh-cn/排序算法" target="_blank" rel="noopener" class="uri">https://zh.wikipedia.org/zh-cn/排序算法</a><a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/04/04/algorithm/" data-id="ck8lp6qnl00aww62wbz0n3cey" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/" rel="tag">data</a></li></ul>
+
+      
+        <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/" rel="tag">data</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/03/infoq/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">InfoQ 写作平台</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code/">code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/geek/">geek</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/software/">software</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%86%99%E4%BD%9C/">写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6-%E6%94%B9%E9%9D%A9-%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/">读书 - 改革 - 大江大河</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%90%E8%90%A5/">运营</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3b1b/" rel="tag">3b1b</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/" rel="tag">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/" rel="tag">CV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Code/" rel="tag">Code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DS/" rel="tag">DS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataMining/" rel="tag">DataMining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deployment/" rel="tag">Deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/calculus/" rel="tag">calculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheatsheets/" rel="tag">cheatsheets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheeksheet/" rel="tag">cheeksheet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/" rel="tag">data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dl/" rel="tag">dl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/download/" rel="tag">download</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/" rel="tag">free</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geek/" rel="tag">geek</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geektime/" rel="tag">geektime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/infoq/" rel="tag">infoq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/keras/" rel="tag">keras</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linear/" rel="tag">linear</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lr/" rel="tag">lr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manim/" rel="tag">manim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matplotlib/" rel="tag">matplotlib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mindmap/" rel="tag">mindmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml/" rel="tag">ml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nlp/" rel="tag">nlp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nn/" rel="tag">nn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scipy/" rel="tag">scipy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf/" rel="tag">tf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf2/" rel="tag">tf2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" rel="tag">大江大河</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E9%9D%A9/" rel="tag">改革</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9D%83/" rel="tag">版权</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3b1b/" style="font-size: 11.43px;">3b1b</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/ANN/" style="font-size: 11.43px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 12.86px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/CV/" style="font-size: 14.29px;">CV</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/Compiler/" style="font-size: 11.43px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.43px;">Construction</a> <a href="/tags/Coursera/" style="font-size: 10px;">Coursera</a> <a href="/tags/DL/" style="font-size: 17.14px;">DL</a> <a href="/tags/DS/" style="font-size: 11.43px;">DS</a> <a href="/tags/DataMining/" style="font-size: 10px;">DataMining</a> <a href="/tags/Deployment/" style="font-size: 10px;">Deployment</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 18.57px;">Godot</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Math/" style="font-size: 14.29px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.43px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 11.43px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 12.86px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 15.71px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TensorFlow/" style="font-size: 11.43px;">TensorFlow</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/algorithm/" style="font-size: 12.86px;">algorithm</a> <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/beginner/" style="font-size: 11.43px;">beginner</a> <a href="/tags/book/" style="font-size: 11.43px;">book</a> <a href="/tags/calculus/" style="font-size: 10px;">calculus</a> <a href="/tags/cheatsheets/" style="font-size: 10px;">cheatsheets</a> <a href="/tags/cheeksheet/" style="font-size: 10px;">cheeksheet</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/data/" style="font-size: 10px;">data</a> <a href="/tags/devops/" style="font-size: 12.86px;">devops</a> <a href="/tags/dl/" style="font-size: 12.86px;">dl</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/free/" style="font-size: 10px;">free</a> <a href="/tags/geek/" style="font-size: 10px;">geek</a> <a href="/tags/geektime/" style="font-size: 10px;">geektime</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 15.71px;">iOS</a> <a href="/tags/infoq/" style="font-size: 10px;">infoq</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/keras/" style="font-size: 10px;">keras</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/linear/" style="font-size: 10px;">linear</a> <a href="/tags/lr/" style="font-size: 10px;">lr</a> <a href="/tags/manim/" style="font-size: 15.71px;">manim</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/mindmap/" style="font-size: 10px;">mindmap</a> <a href="/tags/ml/" style="font-size: 14.29px;">ml</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/nlp/" style="font-size: 11.43px;">nlp</a> <a href="/tags/nn/" style="font-size: 11.43px;">nn</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/paper/" style="font-size: 12.86px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.43px;">plugin</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tf/" style="font-size: 10px;">tf</a> <a href="/tags/tf2/" style="font-size: 10px;">tf2</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.43px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.43px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 14.29px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" style="font-size: 10px;">大江大河</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%94%B9%E9%9D%A9/" style="font-size: 10px;">改革</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9D%83/" style="font-size: 10px;">版权</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">统计学习方法</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.43px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/04/algorithm/">《数据结构与算法之美》</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/03/infoq/">InfoQ 写作平台</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/02/math/">《程序员的数学基础课》</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/ml/">理解机器学习的24本书（免费）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/01/9787550298637/">《艰难的制造》读书笔记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iOSDevLog<br>
+      Powered by © 2020 - <a href="https://www.iosdevlog.com" target="_blank">贾献华 2020 博客</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/2020" class="mobile-nav-link">2020 Calendar</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
