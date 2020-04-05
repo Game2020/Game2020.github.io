@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>《统计学习方法》笔记 | Game 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="article">
+<meta property="og:title" content="《统计学习方法》笔记">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/04/05/slm/index.html">
+<meta property="og:site_name" content="Game 2020">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/05/slm/2.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/05/slm/1.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/05/slm/2.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/05/slm/3.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/05/slm/4.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/05/slm/5.png">
+<meta property="article:published_time" content="2020-04-05T14:41:34.000Z">
+<meta property="article:modified_time" content="2020-04-05T15:03:01.281Z">
+<meta property="article:author" content="iOSDevLog">
+<meta property="article:tag" content="slm">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/04/05/slm/2.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Game 2020</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">https://2020.iosdevlog.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/2020">2020 Calendar</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://2020.iosdevlog.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-slm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/05/slm/" class="article-date">
+  <time datetime="2020-04-05T14:41:34.000Z" itemprop="datePublished">2020-04-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《统计学习方法》笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="https://2020.iosdevlog.com/2020/04/05/slm/2.png" /></p>
+<a id="more"></a>
+<ul>
+<li>统计学习的定义、研究对象与方法</li>
+<li>监督学习，这是本书的主要内容</li>
+<li>统计学习方法的三要素
+<ul>
+<li>模型</li>
+<li>策略</li>
+<li>算法</li>
+</ul></li>
+<li>模型选择
+<ul>
+<li>正则化</li>
+<li>交叉验证</li>
+<li>学习的泛化能力</li>
+</ul></li>
+<li>生成模型与判别模型</li>
+<li>监督学习方法的应用
+<ul>
+<li>分类问题</li>
+<li>标注问题</li>
+<li>回归问题</li>
+</ul></li>
+</ul>
+<h2 id="统计学习">统计学习</h2>
+<h3 id="统计学习的特点">统计学习的特点</h3>
+<p>统计学习（statistical learning）是关于计算机基于数据构建概率统计模型并运用模型对数据进行预测与分析的一门学科。</p>
+<p><strong>统计学习也称为统计机器学习（statistical machine learning）</strong>。</p>
+<p>统计学习的主要特点是</p>
+<ol type="1">
+<li>统计学习以计算机及网络为平台，是建立在计算机及网络之上的</li>
+<li>统计学习以数据为研究对象，是数据驱动的学科</li>
+<li>统计学习的目的是对数据进行预测与分析</li>
+<li>统计学习以方法为中心，统计学习方法构建模型并应用模型进行预测与分析</li>
+<li>统计学习是概率论、统计学、信息论、计算理论、最优化理论及计算机科学等多个领域的交叉学科，并且在发展中逐步形成独自的理论体系与方法论。</li>
+</ol>
+<p>赫尔伯特·西蒙（Herbert A. Simon）曾对“学习”给出以下定义</p>
+<blockquote>
+<p>“如果一个系统能够通过执行某个过程改进它的性能，这就是学习。”</p>
+</blockquote>
+<p>按照这一观点，统计学习就是计算机系统通过运用数据及统计方法提高系统性能的机器学习。<strong>现在，当人们提及机器学习时，往往是指统计机器学习。</strong></p>
+<h3 id="统计学习的对象">统计学习的对象</h3>
+<p>统计学习的对象是<strong>数据（data）</strong>。</p>
+<p>它从数据出发，提取数据的特征，抽象出数据的模型，发现数据中的知识，又回到对数据的分析与预测中去。作为统计学习的对象，数据是多样的，包括存在于计算机及网络上的各种数字、文字、图像、视频、音频数据以及它们的组合。</p>
+<p>统计学习关于数据的基本假设是同类数据具有一定的统计规律性，这是统计学习的前提。这里的同类数据是指具有某种共同性质的数据，例如英文文章、互联网网页、数据库中的数据等。由于它们具有统计规律性，所以可以用概率统计方法来加以处理。比如，可以用随机变量描述数据中的特征，用概率分布描述数据的统计规律。</p>
+<p>在统计学习过程中，以变量或变量组表示数据。数据分为由连续变量和离散变量表示的类型。</p>
+<p><strong>离散变量的方法为主。</strong>另外，本书只涉及利用数据构建模型及利用模型对数据进行 <strong>分析与预测</strong>，对数据的 <strong>观测和收集 </strong>等问题 <strong>不作讨论</strong>。</p>
+<h3 id="统计学习的目的">统计学习的目的</h3>
+<p>统计学习用于对数据进行预测与分析，特别是对未知新数据进行预测与分析。</p>
+<ul>
+<li>对数据的预测可以使计算机更加智能化，或者说使计算机的某些性能得到提高</li>
+<li>对数据的分析可以让人们获取新的知识，给人们带来新的发现。</li>
+</ul>
+<h3 id="统计学习的方法">统计学习的方法</h3>
+<p>统计学习的方法是基于数据构建统计模型从而对数据进行预测与分析。</p>
+<p>统计学习由</p>
+<ul>
+<li>监督学习（supervised learning）</li>
+<li>非监督学习（unsupervised learning）</li>
+<li>半监督学习（semi-supervised learning）</li>
+<li>强化学习（reinforcement learning）</li>
+</ul>
+<p>本书主要讨论 <strong>监督学习</strong>，这种情况下统计学习的方法可以概括如下：</p>
+<ul>
+<li>从给定的、有限的、用于学习的训练数据（training data）集合出发，假设数据是独立同分布产生的</li>
+<li>并且假设要学习的模型属于某个函数的集合，称为假设空间（hypothesis space）</li>
+<li>应用某个评价准则（evaluation criterion），从假设空间中选取一个最优的模型，使它对已知训练数据及未知测试数据（test data）在给定的评价准则下有最优的预测</li>
+</ul>
+<p>最优模型的选取由算法实现</p>
+<p>统计学习方法的三要素：<strong>模型（model）、策略（strategy）和算法（algorithm）</strong></p>
+<ul>
+<li>模型： 模型的假设空间</li>
+<li>策略： 模型选择的准则</li>
+<li>算法： 模型学习的算法</li>
+</ul>
+<p>实现统计学习方法的步骤如下：</p>
+<ol type="1">
+<li>得到一个有限的训练数据集合</li>
+<li>确定包含所有可能的模型的假设空间，即学习模型的集合</li>
+<li>确定模型选择的准则，即学习的策略</li>
+<li>实现求解最优模型的算法，即学习的算法</li>
+<li>通过学习方法选择最优模型</li>
+<li>利用学习的最优模型对新数据进行预测或分析</li>
+</ol>
+<p>本书以介绍 <strong>统计学习方法为主</strong>，特别是 <strong>监督学习方法</strong>，主要包括用于分类、标注与回归问题的方法。这些方法在自然语言处理、信息检索、文本数据挖掘等领域中有着极其广泛的应用。</p>
+<h3 id="统计学习的研究">统计学习的研究</h3>
+<ul>
+<li>统计学习方法（statistical learning method）
+<ul>
+<li>开发新的学习方法</li>
+</ul></li>
+<li>统计学习理论（statistical learning theory）
+<ul>
+<li>探求统计学习方法的有效性与效率</li>
+<li>统计学习的基本理论问题</li>
+</ul></li>
+<li>统计学习应用（application of statistical learning）
+<ul>
+<li>将统计学习方法应用到实际问题中去，解决实际问题</li>
+</ul></li>
+</ul>
+<h3 id="统计学习的重要性">统计学习的重要性</h3>
+<ul>
+<li>统计学习是处理海量数据的有效方法</li>
+<li>统计学习是计算机智能化的有效手段</li>
+<li>统计学习是计算机科学发展的一个重要组成部分</li>
+</ul>
+<h2 id="监督学习">监督学习</h2>
+<ul>
+<li>监督学习</li>
+<li>非监督学习</li>
+<li>半监督学习</li>
+<li>强化学习</li>
+</ul>
+<p>本书主要讨论 <strong>监督学习</strong> 问题。</p>
+<p>监督学习（supervised learning）的 <strong>任务</strong> 是学习一个模型，使模型能够对任意给定的输入，对其相应的输出做出一个好的预测。</p>
+<h3 id="基本概念">基本概念</h3>
+<h4 id="输入空间特征空间-与-输出空间"><strong>输入空间</strong>、<strong>特征空间 </strong>与 <strong>输出空间</strong></h4>
+<p>在监督学习中，将输入与输出所有可能取值的集合分别称为 <strong>输入空间（input space）与输出空间（output space）</strong>。</p>
+<ul>
+<li><p>输入与输出空间可以是有限元素的集合，也可以是整个欧氏空间</p></li>
+<li><p>输入空间与输出空间可以是同一个空间，也可以是不同的空间</p></li>
+<li><p>但通常输出空间远远小于输入空间</p></li>
+</ul>
+<p>每个具体的输入是一个<strong>实例（instance）</strong>，通常由 <strong>特征向量（feature vector）</strong> 表示。这时，所有特征向量存在的空间称为 <strong>特征空间（feature space）</strong>。</p>
+<p><strong>模型实际上都是定义在特征空间上的</strong></p>
+<p>输入、输出变量用大写字母表示，习惯上输入变量写作 <span class="math inline">\(X\)</span>，输出变量写作 <span class="math inline">\(Y\)</span>。</p>
+<p>输入、输出变量所取的值用小写字母表示，输入变量的取值写作 <span class="math inline">\(x\)</span>，输出变量的取值写作 <span class="math inline">\(y\)</span>。变量可以是标量或向量，都用相同类型字母表示。</p>
+<p>本书中向量均为 <strong>列向量</strong>，输入实例 <span class="math inline">\(x\)</span> 的特征向量记作<br />
+<span class="math display">\[
+x=\left(x^{(1)}, x^{(2)}, \cdots, x^{(i)}, \cdots, x^{(n)}\right)^{\mathrm{T}}
+\]</span><br />
+<span class="math inline">\(\mathbf{x}^{(\mathrm{i})}\)</span> 表示 <span class="math inline">\(x\)</span> 的第 <span class="math inline">\(i\)</span> 个特征。注意，<span class="math inline">\(\mathbf{x}^{(\mathrm{i})}\)</span> 与 <span class="math inline">\(\mathbf{x}_{\mathbf{i}}\)</span> 不同，本书通常用 <span class="math inline">\(\mathbf{x}_{\mathbf{i}}\)</span> 表示多个输入变量中的第 <span class="math inline">\(i\)</span> 个，即</p>
+<p><span class="math display">\[
+x_{i}=\left(x_{i}^{(1)}, x_{i}^{(2)}, \cdots, x_{i}^{(n)}\right)^{\mathrm{T}}
+\]</span></p>
+<p>监督学习从训练数据（training data）集合中学习模型，对测试数据（test data）进行预测。训练数据由输入（或特征向量）与输出对组成，训练集通常表示为</p>
+<p><span class="math display">\[
+T=\left\{\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right), \cdots,\left(x_{N}, y_{N}\right)\right\}
+\]</span></p>
+<p>测试数据也由相应的输入与输出对组成。输入与输出对又称为 <strong>样本（sample）</strong> 或 <strong>样本点</strong>。</p>
+<p>输入变量 X 和输出变量 <span class="math inline">\(Y\)</span> 有不同的类型，可以是 <strong>连续</strong> 的，也可以是 <strong>离散</strong> 的。</p>
+<p>人们根据输入、输出变量的不同类型，对预测任务给予不同的名称</p>
+<ul>
+<li>回归问题: 输入变量与输出变量均为连续变量的预测问题</li>
+<li>分类问题: 输出变量为有限个离散变量的预测问题</li>
+<li>标注问题: 输入变量与输出变量均为变量序列的预测问题</li>
+</ul>
+<h4 id="联合概率分布">联合概率分布</h4>
+<p>监督学习假设输入与输出的随机变量X和Y遵循联合概率分布 <span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span>。</p>
+<p><span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span> 表示 <strong>分布函数</strong>，或 <strong>分布密度函数</strong>。注意，在学习过程中，假定这一联合概率分布存在，但对学习系统来说，联合概率分布的具体定义是未知的。训练数据与测试数据被看作是依联合概率分布 <span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span> 独立同分布产生的。统计学习假设数据存在一定的统计规律，<span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 具有联合概率分布的假设就是监督学习关于数据的基本假设。</p>
+<h4 id="假设空间">假设空间</h4>
+<p>监督学习的目的在于学习一个由输入到输出的映射，这一映射由模型来表示。换句话说，学习的目的就在于找到最好的这样的模型。模型属于由输入空间到输出空间的映射的集合，这个集合就是假设空间（hypothesis space）。假设空间的确定意味着学习范围的确定。</p>
+<p>监督学习的模型可以是概率模型或非概率模型，由 <strong>条件概率分布 <span class="math inline">\(\mathrm{P}(\mathrm{Y} | \mathrm{X})\)</span> 或 决策函数（decision function）<span class="math inline">\(Y=f(X)\)</span> 表示</strong>，随具体学习方法而定。对具体的输入进行相应的输出预测时，写作 <span class="math inline">\(\mathrm{P}(\mathrm{y} | \mathrm{x})\)</span> 或 <span class="math inline">\(Y=f(x)\)</span>。</p>
+<h3 id="问题的形式化">问题的形式化</h3>
+<p>监督学习利用训练数据集学习一个模型，再用模型对测试样本集进行预测（prediction）。</p>
+<p>由于在这个过程中需要训练数据集，而训练数据集往往是人工给出的，所以称为 <strong>监督学习</strong>。</p>
+<p>监督学习分为学习和预测两个过程</p>
+<ul>
+<li>学习系统</li>
+<li>预测系统</li>
+</ul>
+<p><img src="https://2020.iosdevlog.com/2020/04/05/slm/1.png" /></p>
+<p>图 1.1　监督学习问题</p>
+<p>首先给定一个训练数据集</p>
+<p><span class="math display">\[
+T=\left\{\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right), \cdots,\left(x_{N}, y_{N}\right)\right\}
+\]</span></p>
+<p>其中 <span class="math inline">\(\left(\mathrm{x}_{\mathrm{i}}, \mathrm{y}_{\mathrm{i}}\right), \quad \mathrm{i}=1,2, \ldots, \mathrm{N}\)</span>，称为样本或样本点。<span class="math inline">\(\mathbf{x}_{\mathbf{i}} \in \mathbf{X} \subseteq \mathbf{R}_{\mathbf{n}}\)</span> 输入的观测值，也称为输入或实例，<span class="math inline">\(\mathrm{y}_{\mathrm{i}} \in \mathcal{Y}\)</span> 是输出的观测值，也称为输出。</p>
+<p>监督学习中，假设训练数据与测试数据是依联合概率分布 <span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span> 独立同分布产生的。</p>
+<p>在学习过程中，学习系统利用给定的训练数据集，通过学习（或训练）得到一个模型，表示为条件概率分布 <span class="math inline">\(\hat{P}(\mathrm{Y} | \mathrm{X})\)</span> 或决策函数 <span class="math inline">\(\mathrm{Y}=\hat{f}(\mathrm{X})\)</span>。条件概率分布 <span class="math inline">\(\hat{P}(\mathrm{Y} | \mathrm{X})\)</span> 或决策函数 <span class="math inline">\(\mathrm{Y}=\hat{f}(\mathrm{X})\)</span> 描述输入与输出随机变量之间的映射关系。</p>
+<p>在预测过程中，预测系统对于给定的测试样本集中的输入 <span class="math inline">\(\mathbf{X}_{\mathbf{N}+1}\)</span>，由模型 <span class="math inline">\(y_{N+1}=\arg \max _{y_{N+1}} \hat{P}\left(y_{N+1} | x_{N+1}\right)\)</span> 或 <span class="math inline">\(\mathrm{y}_{\mathrm{N}+1}=\hat{\jmath}\left(\mathrm{x}_{\mathrm{N}+1}\right)\)</span> 给出相应的输出 <span class="math inline">\(\mathbf{y}_{\mathrm{N}+1}\)</span>。</p>
+<p>在学习过程中，<strong>学习系统</strong>（也就是 <strong>学习算法</strong>）试图通过训练数据集中的样本 <span class="math inline">\(\left(\mathbf{x}_{i}, \quad \mathbf{y}_{i}\right)\)</span> 带来的信息学习模型。</p>
+<p>具体地说，</p>
+<ul>
+<li>对输入 <span class="math inline">\(\mathbf{X}_{\mathbf{i}}\)</span>，一个具体的模型 <span class="math inline">\(y=f(x)\)</span> 可以产生一个输出 <span class="math inline">\(\mathrm{f}\left(\mathrm{x}_{\mathrm{i}}\right)\)</span></li>
+<li>训练数据集中对应的输出是 <span class="math inline">\(\mathbf{y}_{\mathrm{i}}\)</span></li>
+<li>如果这个模型有很好的预测能力，训练样本输出 <span class="math inline">\(\mathbf{y}_{\mathrm{i}}\)</span> 和模型输出 <span class="math inline">\(\mathrm{f}\left(\mathrm{x}_{\mathrm{i}}\right)\)</span> 之间的差就应该足够小</li>
+</ul>
+<p>学习系统通过不断的尝试，选取最好的模型，以便对训练数据集有足够好的预测，同时对未知的测试数据集的预测也有尽可能好的推广。</p>
+<h2 id="统计学习三要素">统计学习三要素</h2>
+<p>统计学习方法都是由模型、策略和算法构成的，即统计学习方法由 <strong>三要素</strong> 构成，可以简单地表示为</p>
+<p><strong>方法＝模型＋策略＋算法</strong></p>
+<p>下面论述监督学习中的统计学习三要素。非监督学习、强化学习也同样拥有这三要素。可以说构建一种统计学习方法就是确定具体的统计学习三要素。</p>
+<h3 id="模型">模型</h3>
+<p>统计学习首要考虑的问题是学习什么样的模型。在监督学习过程中，模型就是所要学习的 <strong>条件概率分布</strong> 或 <strong>决策函数</strong>。模型的假设空间（hypothesis space）包含所有可能的条件概率分布或决策函数。</p>
+<p>例如，假设决策函数是输入变量的线性函数，那么模型的假设空间就是所有这些线性函数构成的函数集合。假设空间中的模型一般有无穷多个。</p>
+<p>假设空间用 <span class="math inline">\(\mathcal{F}\)</span> 表示。假设空间可以定义为决策函数的集合</p>
+<p><span class="math display">\[
+\mathcal{F}=\{f | Y=f(X)\}
+\]</span></p>
+<p>其中，<span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 是定义在输入空间 <span class="math inline">\(x\)</span> 和输出空间 <span class="math inline">\(\mathcal{Y}\)</span> 上的变量。这时 <span class="math inline">\(\mathcal{F}\)</span> 通常是由一个参数向量决定的函数族：</p>
+<p><span class="math display">\[
+\mathcal{F}=\left\{f | Y=f_{\theta}(X), \theta \in \mathbf{R}^{n}\right\}
+\]</span></p>
+<p>参数向量 <span class="math inline">\(\theta\)</span> 取值于 <span class="math inline">\(n\)</span> 维欧氏空间 <span class="math inline">\(\mathbf{R}_{\mathrm{n}}\)</span>，称为参数空间（parameter space）。假设空间也可以定义为条件概率的集合</p>
+<p><span class="math display">\[
+\mathcal{F}=\{P|P(Y | X)\}
+\]</span></p>
+<p>其中，<span class="math inline">\(X\)</span> 和 <span class="math inline">\(Y\)</span> 是定义在输入空间 <span class="math inline">\(x\)</span> 和输出空间上的随 <span class="math inline">\(\mathcal{Y}\)</span> 机变量。这时 <span class="math inline">\(\mathcal{Y}\)</span> 通常是由一个参数向量决定的条件概率分布族：</p>
+<p><span class="math display">\[
+\mathcal{F}=\left\{P\left|P_{\theta}(Y | X), \theta \in \mathbf{R}^{n}\right\}\right.
+\]</span></p>
+<p>参数向量 <span class="math inline">\(\theta\)</span> 取值于 <span class="math inline">\(n\)</span> 维欧氏空间 <span class="math inline">\(\mathbf{R}_{\mathrm{n}}\)</span>，也称为参数空间。</p>
+<p>本书中称由决策函数表示的模型为 <strong>非概率模型</strong>，由条件概率表示的模型为 <strong>概率模型</strong>。</p>
+<h3 id="策略">策略</h3>
+<p>有了模型的假设空间，统计学习接着需要考虑的是按照什么样的准则学习或选择最优的模型。</p>
+<p>统计学习的目标: <strong>从假设空间中选取最优模型</strong>。</p>
+<p>首先引入损失函数与风险函数的概念。</p>
+<ul>
+<li>损失函数度量模型一次预测的好坏</li>
+<li>风险函数度量平均意义下模型预测的好坏</li>
+</ul>
+<h4 id="损失函数和风险函数">损失函数和风险函数</h4>
+<p>监督学习问题是在假设空间 <span class="math inline">\(\mathcal{F}\)</span>m中选取模型 <span class="math inline">\(f\)</span> 作为决策函数，对于给定的输入 <span class="math inline">\(X\)</span>，由 <span class="math inline">\(f(X)\)</span> 给出相应的输出 <span class="math inline">\(Y\)</span>，这个输出的预测值 <span class="math inline">\(f(X)\)</span> 与真实值 <span class="math inline">\(Y\)</span> 可能一致也可能不一致，用一个 <strong>损失函数（loss function） </strong>或 <strong>代价函数（cost function） </strong>来度量预测错误的程度。损失函数是 <span class="math inline">\(f(X)\)</span> 和 <span class="math inline">\(Y\)</span> 的非负实值函数，记作 <span class="math inline">\(\mathbf{L}(\mathbf{Y}, \mathrm{f}(\mathbf{X}))\)</span>。</p>
+<p>统计学习常用的损失函数有以下几种：</p>
+<ul>
+<li><strong>0-1 损失函数（0-1 loss function）</strong></li>
+</ul>
+<p><span class="math display">\[
+L(Y, f(X))=\left\{\begin{array}{ll}{1,} &amp; {Y \neq f(X)} \\ {0,} &amp; {Y=f(X)}\end{array}\right.
+\]</span></p>
+<ul>
+<li><strong>平方损失函数（quadratic loss function）</strong></li>
+</ul>
+<p><span class="math display">\[
+L(Y, f(X))=(Y-f(X))^{2}
+\]</span></p>
+<ul>
+<li><strong>绝对损失函数（absolute loss function）</strong></li>
+</ul>
+<p><span class="math display">\[
+L(Y, f(X))=|Y-f(X)|
+\]</span></p>
+<ul>
+<li><strong>对数损失函数（logarithmic loss function）</strong>或 <strong>对数似然损失函数（loglikelihood loss function）</strong></li>
+</ul>
+<p><span class="math display">\[
+L(Y, P(Y | X))=-\log P(Y | X)
+\]</span></p>
+<p>损失函数值越小，模型就越好。由于模型的输入、输出 <span class="math inline">\((\mathrm{X}, \mathrm{Y})\)</span> 是随机变量，遵循联合分布 <span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span>，所以损失函数的期望是<br />
+<span class="math display">\[
+R_{\mathrm{exp}}(f)=E_{p}[L(Y, f(X))]=\int_{X \times y} L(y, f(x)) P(x, y) \mathrm{d} x \mathrm{d} y
+\]</span></p>
+<p>这是理论上模型 <span class="math inline">\(\mathrm{f}(\mathrm{X})\)</span> 关于联合分布 <span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span> 的平均意义下的损失，称为 <strong>风险函数（risk function）</strong> 或 <strong>期望损失（expected loss）</strong>。</p>
+<p>学习的目标就是选择期望风险最小的模型。由于联合分布 <span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span> 是未知的，<span class="math inline">\(\mathrm{R}_{\mathrm{exp}}(\mathrm{f})\)</span> 不能直接计算。实际上，如果知道联合分布 <span class="math inline">\(\mathrm{P}(\mathrm{X}, \mathrm{Y})\)</span>，可以从联合分布直接求出条件概率分布 <span class="math inline">\(\mathrm{P}(\mathrm{Y} | \mathrm{X})\)</span>，也就不需要学习了。正因为不知道联合概率分布，所以才需要进行学习。</p>
+<p>这样一来，一方面根据期望风险最小学习模型要用到联合分布，另一方面联合分布又是未知的，所以监督学习就成为一个 <strong>病态问题（ill-formed problem）</strong>。</p>
+<p>给定一个训练数据集</p>
+<p><span class="math display">\[
+T=\left\{\left(x_{1}, y_{1}\right),\left(x_{2}, y_{2}\right), \cdots,\left(x_{N}, y_{N}\right)\right\}
+\]</span></p>
+<p>模型 <span class="math inline">\(\mathrm{f}(\mathrm{X})\)</span> 关于训练数据集的平均损失称为 <strong>经验风险（empirical risk）</strong>或 <strong>经验损失（empirical loss）</strong>，记作 <span class="math inline">\(\mathbf{R}_{\mathrm{emp}}\)</span>：</p>
+<p><span class="math display">\[
+R_{\mathrm{emp}}(f)=\frac{1}{N} \sum_{i=1}^{N} L\left(y_{i}, f\left(x_{i}\right)\right)
+\]</span></p>
+<p>期望风险 <span class="math inline">\(\mathrm{R}_{\mathrm{exp}}(\mathrm{f})\)</span> 是模型关于联合分布的期望损失，经验风险 <span class="math inline">\(\mathrm{R}_{\mathrm{emp}}(\mathrm{f})\)</span> 是模型关于训练样本集的平均损失。根据大数定律，当样本容量N趋于无穷时，经验风险 <span class="math inline">\(\mathrm{R}_{\mathrm{emp}}(\mathrm{f})\)</span> 趋于期望风险 <span class="math inline">\(\mathrm{R}_{\mathrm{exp}}(\mathrm{f})\)</span> 。</p>
+<p>这就关系到监督学习的两个基本策略：</p>
+<ul>
+<li>经验风险最小化</li>
+<li>结构风险最小化</li>
+</ul>
+<h4 id="经验风险最小化与结构风险最小化">经验风险最小化与结构风险最小化</h4>
+<p>经验风险最小化（empirical risk minimization，ERM）的策略认为：<strong>经验风险最小的模型是最优的模型</strong>。</p>
+<p>根据这一策略，按照经验风险最小化求最优模型就是求解最优化问题：<br />
+<span class="math display">\[
+\min _{f \in \mathcal{F}} \frac{1}{N} \sum_{i=1}^{N} L\left(y_{i}, f\left(x_{i}\right)\right)
+\]</span><br />
+其中，<span class="math inline">\(\mathcal{F}\)</span> 是假设空间。</p>
+<p>当样本容量足够大时，经验风险最小化能保证有很好的学习效果，在现实中被广泛采用。比如，极大似然估计（maximum likelihood estimation）就是经验风险最小化的一个例子。</p>
+<p>当模型是 <strong>条件概率</strong> 分布，损失函数是 <strong>对数损失函数</strong> 时，经验风险最小化就等价于 <strong>极大似然估计</strong>。</p>
+<p>但是，当样本容量很小时，经验风险最小化学习的效果就未必很好，会产生后面将要叙述的 <strong>“过拟合(over-fitting)”</strong> 现象。</p>
+<p>结构风险最小化（structural risk minimization，SRM）是为了防止过拟合而提出来的策略。</p>
+<p><strong>结构风险最小化</strong> 等价于 <strong>正则化（regularization）</strong>。</p>
+<p><strong>结构风险在经验风险上加上表示模型复杂度的正则化项（regularizer）或罚项（penalty term）</strong>。在假设空间、损失函数以及训练数据集确定的情况下，结构风险的定义是<br />
+<span class="math display">\[
+R_{\mathrm{smn}}(f)=\frac{1}{N} \sum_{i=1}^{N} L\left(y_{i}, f\left(x_{i}\right)\right)+\lambda J(f)
+\]</span><br />
+结构风险最小化的策略认为结构风险最小的模型是最优的模型。所以求最优模型，就是求解最优化问题：</p>
+<p><span class="math display">\[
+\min _{f \in \mathcal{F}} \frac{1}{N} \sum_{i=1}^{N} L\left(y_{i}, f\left(x_{i}\right)\right)+\lambda J(f)
+\]</span><br />
+这样，监督学习问题就变成了 <strong>经验风险</strong> 或 <strong>结构风险函数</strong> 的最优化问题。</p>
+<p>经验或结构风险函数是 <strong>最优化的目标函数</strong>。</p>
+<h3 id="算法">算法</h3>
+<p><strong>算法是指学习模型的具体计算方法</strong>。统计学习基于训练数据集，根据学习策略，从假设空间中选择最优模型，最后需要考虑用什么样的计算方法求解最优模型。</p>
+<p>这时，<strong>统计学习问题归结为最优化问题</strong>，统计学习的算法成为求解最优化问题的算法。如果最优化问题有显式的解析解，这个最优化问题就比较简单。但通常解析解不存在，这就需要用数值计算的方法求解。如何保证找到全局最优解，并使求解的过程非常高效，就成为一个重要问题。统计学习可以利用已有的最优化算法，有时也需要开发独自的最优化算法。</p>
+<p><strong>统计学习方法之间的不同，主要来自其模型、策略、算法的不同。确定了模型、策略、算法，统计学习的方法也就确定了。这也就是将其称为统计学习三要素的原因。</strong></p>
+<h2 id="统计学习方法总结">统计学习方法总结</h2>
+<p><img src="https://2020.iosdevlog.com/2020/04/05/slm/2.png" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/05/slm/3.png" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/05/slm/4.png" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/05/slm/5.png" /></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/04/05/slm/" data-id="ck8n6fzwo00awa82whfua5554" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/slm/" rel="tag">slm</a></li></ul>
+
+      
+        <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/slm/" rel="tag">slm</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/05/Information-theory/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">信息论</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code/">code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/geek/">geek</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/software/">software</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%86%99%E4%BD%9C/">写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6-%E6%94%B9%E9%9D%A9-%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/">读书 - 改革 - 大江大河</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%90%E8%90%A5/">运营</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3b1b/" rel="tag">3b1b</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/" rel="tag">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/" rel="tag">CV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Code/" rel="tag">Code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DS/" rel="tag">DS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataMining/" rel="tag">DataMining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deployment/" rel="tag">Deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/calculus/" rel="tag">calculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheatsheets/" rel="tag">cheatsheets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheeksheet/" rel="tag">cheeksheet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/" rel="tag">data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dl/" rel="tag">dl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/download/" rel="tag">download</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/" rel="tag">free</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geek/" rel="tag">geek</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geektime/" rel="tag">geektime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/infoq/" rel="tag">infoq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/information/" rel="tag">information</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/keras/" rel="tag">keras</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linear/" rel="tag">linear</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lr/" rel="tag">lr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manim/" rel="tag">manim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matplotlib/" rel="tag">matplotlib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mindmap/" rel="tag">mindmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml/" rel="tag">ml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nlp/" rel="tag">nlp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nn/" rel="tag">nn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scipy/" rel="tag">scipy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slm/" rel="tag">slm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf/" rel="tag">tf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf2/" rel="tag">tf2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theory/" rel="tag">theory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" rel="tag">大江大河</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E9%9D%A9/" rel="tag">改革</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9D%83/" rel="tag">版权</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3b1b/" style="font-size: 11.43px;">3b1b</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/ANN/" style="font-size: 11.43px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 12.86px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/CV/" style="font-size: 14.29px;">CV</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/Compiler/" style="font-size: 11.43px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.43px;">Construction</a> <a href="/tags/Coursera/" style="font-size: 10px;">Coursera</a> <a href="/tags/DL/" style="font-size: 17.14px;">DL</a> <a href="/tags/DS/" style="font-size: 11.43px;">DS</a> <a href="/tags/DataMining/" style="font-size: 10px;">DataMining</a> <a href="/tags/Deployment/" style="font-size: 10px;">Deployment</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 18.57px;">Godot</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Math/" style="font-size: 14.29px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.43px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 11.43px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 12.86px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 15.71px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TensorFlow/" style="font-size: 11.43px;">TensorFlow</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/algorithm/" style="font-size: 12.86px;">algorithm</a> <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/beginner/" style="font-size: 11.43px;">beginner</a> <a href="/tags/book/" style="font-size: 11.43px;">book</a> <a href="/tags/calculus/" style="font-size: 10px;">calculus</a> <a href="/tags/cheatsheets/" style="font-size: 10px;">cheatsheets</a> <a href="/tags/cheeksheet/" style="font-size: 10px;">cheeksheet</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/data/" style="font-size: 10px;">data</a> <a href="/tags/devops/" style="font-size: 12.86px;">devops</a> <a href="/tags/dl/" style="font-size: 12.86px;">dl</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/free/" style="font-size: 10px;">free</a> <a href="/tags/geek/" style="font-size: 10px;">geek</a> <a href="/tags/geektime/" style="font-size: 10px;">geektime</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 15.71px;">iOS</a> <a href="/tags/infoq/" style="font-size: 10px;">infoq</a> <a href="/tags/information/" style="font-size: 10px;">information</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/keras/" style="font-size: 10px;">keras</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/linear/" style="font-size: 10px;">linear</a> <a href="/tags/lr/" style="font-size: 10px;">lr</a> <a href="/tags/manim/" style="font-size: 15.71px;">manim</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/mindmap/" style="font-size: 10px;">mindmap</a> <a href="/tags/ml/" style="font-size: 14.29px;">ml</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/nlp/" style="font-size: 11.43px;">nlp</a> <a href="/tags/nn/" style="font-size: 11.43px;">nn</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/paper/" style="font-size: 12.86px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.43px;">plugin</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/slm/" style="font-size: 10px;">slm</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tf/" style="font-size: 10px;">tf</a> <a href="/tags/tf2/" style="font-size: 10px;">tf2</a> <a href="/tags/theory/" style="font-size: 10px;">theory</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.43px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.43px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 14.29px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" style="font-size: 10px;">大江大河</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%94%B9%E9%9D%A9/" style="font-size: 10px;">改革</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9D%83/" style="font-size: 10px;">版权</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">统计学习方法</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.43px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/05/slm/">《统计学习方法》笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/Information-theory/">信息论</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/04/algorithm/">《数据结构与算法之美》</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/03/infoq/">InfoQ 写作平台</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/02/math/">《程序员的数学基础课》</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iOSDevLog<br>
+      Powered by © 2020 - <a href="https://www.iosdevlog.com" target="_blank">贾献华 2020 博客</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/2020" class="mobile-nav-link">2020 Calendar</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
