@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+  
+
+  
+  <title>《数据结构与算法之美》-5-字符串匹配 | Game 2020</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="算法 预处理时间 匹配时间     BF算法 &#x2F; 朴素算法 0 (无需预处理) Θ(nm)   Rabin-Karp算法 Θ(m) 平均 Θ(n + m),最差 Θ((n-m)m)   基于有限状态机的搜索 Θ(mk) Θ(n)   克努斯-莫里斯-普拉特算法 Θ(m) Θ(n)   Boyer-Moore字符串搜索算法 Θ(m + k) 最好Ω(n&#x2F;m),最坏 O(n)   Bitap算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《数据结构与算法之美》-5-字符串匹配">
+<meta property="og:url" content="https://2020.iosdevlog.com/2020/04/08/String-searching-algorithm/index.html">
+<meta property="og:site_name" content="Game 2020">
+<meta property="og:description" content="算法 预处理时间 匹配时间     BF算法 &#x2F; 朴素算法 0 (无需预处理) Θ(nm)   Rabin-Karp算法 Θ(m) 平均 Θ(n + m),最差 Θ((n-m)m)   基于有限状态机的搜索 Θ(mk) Θ(n)   克努斯-莫里斯-普拉特算法 Θ(m) Θ(n)   Boyer-Moore字符串搜索算法 Θ(m + k) 最好Ω(n&#x2F;m),最坏 O(n)   Bitap算法">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.7.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.8.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.9.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.10.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.11.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.12.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.13.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.14.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.15.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.16.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.17.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.18.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.19.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.20.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.21.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.22.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.1.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.2.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.3.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.4.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.5.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.6.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.7.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.8.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.9.jpg">
+<meta property="article:published_time" content="2020-04-08T09:36:23.000Z">
+<meta property="article:modified_time" content="2020-04-08T10:55:30.824Z">
+<meta property="article:author" content="iOSDevLog">
+<meta property="article:tag" content="algorithm">
+<meta property="article:tag" content="data">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.1.jpg">
+  
+    <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Game 2020</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">https://2020.iosdevlog.com</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/2020">2020 Calendar</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://2020.iosdevlog.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-String-searching-algorithm" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/08/String-searching-algorithm/" class="article-date">
+  <time datetime="2020-04-08T09:36:23.000Z" itemprop="datePublished">2020-04-08</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/geek/">geek</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      《数据结构与算法之美》-5-字符串匹配
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <table>
+<thead>
+<tr class="header">
+<th>算法</th>
+<th>预处理时间</th>
+<th>匹配时间</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>BF算法 / 朴素算法</td>
+<td>0 (无需预处理)</td>
+<td>Θ(nm)</td>
+</tr>
+<tr class="even">
+<td>Rabin-Karp算法</td>
+<td>Θ(m)</td>
+<td>平均 Θ(n + m),最差 Θ((n-m)m)</td>
+</tr>
+<tr class="odd">
+<td>基于有限状态机的搜索</td>
+<td>Θ(mk)</td>
+<td>Θ(n)</td>
+</tr>
+<tr class="even">
+<td>克努斯-莫里斯-普拉特算法</td>
+<td>Θ(m)</td>
+<td>Θ(n)</td>
+</tr>
+<tr class="odd">
+<td>Boyer-Moore字符串搜索算法</td>
+<td>Θ(m + k)</td>
+<td>最好Ω(n/m),最坏 O(n)</td>
+</tr>
+<tr class="even">
+<td>Bitap算法</td>
+<td>Θ(m + k)</td>
+<td>O(mn)</td>
+</tr>
+</tbody>
+</table>
+<a id="more"></a>
+<h2 id="bf算法">BF算法</h2>
+<p>BF算法 中的 <code>BF</code> 是 <em>Brute Force</em> 的缩写，中文叫作 <strong>暴力匹配算</strong>法，也叫 <strong>朴素匹配算法</strong>。从名字可以看出，这种算法的字符串匹配方式很“暴力”，当然也就会比较简单、好懂，但相应的性能也不高。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.1.jpg" /></p>
+<ul>
+<li>主串</li>
+<li>模式串</li>
+</ul>
+<p>把主串的长度记作 <code>n</code>，模式串的长度记作 <code>m</code>。</p>
+<p>在主串中查找模式串，所以 <code>n&gt;m</code>。</p>
+<p>BF算法的思想：</p>
+<blockquote>
+<p>在主串中，检查起始位置分别是 <code>0、1、2…n-m</code> 且长度为 <code>m</code> 的 <code>n-m+1</code> 个子串，看有没有跟模式串匹配的。</p>
+</blockquote>
+<p>尽管理论上，BF算法的时间复杂度很高，是O(n*m)，但在实际的开发中，它却是一个比较常用的字符串匹配算法。为什么这么说呢？原因有两点。</p>
+<p>第一，实际的软件开发中，大部分情况下，模式串和主串的长度都不会太长。而且每次模式串与主串中的子串匹配的时候，当中途遇到不能匹配的字符的时候，就可以就停止了，不需要把m个字符都比对一下。所以，尽管理论上的最坏情况时间复杂度是O(n*m)，但是，统计意义上，大部分情况下，算法执行效率要比这个高很多。</p>
+<p>第二，朴素字符串匹配算法思想简单，代码实现也非常简单。简单意味着不容易出错，如果有bug也容易暴露和修复。在工程中，在满足性能要求的前提下，简单是首选。这也是我们常说的 <code>KISS（Keep it Simple and Stupid）</code> 设计原则。</p>
+<p>所以，在实际的软件开发中，绝大部分情况下，朴素的字符串匹配算法就够用了。</p>
+<h2 id="rk算法">RK算法</h2>
+<p>RK算法的全称叫 <em>Rabin-Karp算法</em>，是由它的两位发明者 <em>Rabin</em> 和 <em>Karp</em> 的名字来命名的。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.2.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.3.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.4.jpg" /></p>
+<blockquote>
+<p>通过哈希算法对主串中的 <code>n-m+1</code> 个子串分别求哈希值，然后逐个与模式串的哈希值比较大小。如果某个子串的哈希值与模式串相等，那就说明对应的子串和模式串匹配了（这里先不考虑哈希冲突的问题，后面我们会讲到）。因为哈希值是一个数字，数字之间比较是否相等是非常快速的，所以模式串和子串比较的效率就提高了。</p>
+</blockquote>
+<p>通过查表的方法来提高效率。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/32.5.jpg" /></p>
+<h2 id="bm算法1">BM算法<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<p>把模式串和主串的匹配过程，看作模式串在主串中不停地往后滑动。当遇到不匹配的字符时，BF算法和RK算法的做法是，模式串往后滑动一位，然后从模式串的第一个字符开始重新匹配。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.1.jpg" /></p>
+<p>一次性把模式串往后多滑动几位，把模式串移动到c的后面。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.2.jpg" /></p>
+<h3 id="bm算法原理分析">BM算法原理分析</h3>
+<p>坏字符规则（bad character rule）</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.3.jpg" /></p>
+<p>没有匹配的字符叫作坏字符（主串中的字符）。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.4.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.5.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.6.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.7.jpg" /></p>
+<p>好后缀规则（good suffix shift）</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.8.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.9.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.10.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.11.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.12.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.13.jpg" /></p>
+<p>BM算法代码实现</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.14.jpg" /></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> SIZE = <span class="number">256</span>; <span class="comment">// 全局变量或成员变量</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">generateBC</span><span class="params">(<span class="keyword">char</span>[] b, <span class="keyword">int</span> m, <span class="keyword">int</span>[] bc)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; SIZE; ++i) &#123;</span><br><span class="line">    bc[i] = -<span class="number">1</span>; <span class="comment">// 初始化bc</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123;</span><br><span class="line">    <span class="keyword">int</span> ascii = (<span class="keyword">int</span>)b[i]; <span class="comment">// 计算b[i]的ASCII值</span></span><br><span class="line">    bc[ascii] = i;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>先把 <em>BM算法</em> 代码的大框架写好，先不考虑好后缀规则，仅用坏字符规则，并且不考虑si-xi计算得到的移动位数可能会出现负数的情况。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">bm</span><span class="params">(<span class="keyword">char</span>[] a, <span class="keyword">int</span> n, <span class="keyword">char</span>[] b, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span>[] bc = <span class="keyword">new</span> <span class="keyword">int</span>[SIZE]; <span class="comment">// 记录模式串中每个字符最后出现的位置</span></span><br><span class="line">  generateBC(b, m, bc); <span class="comment">// 构建坏字符哈希表</span></span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0</span>; <span class="comment">// i表示主串与模式串对齐的第一个字符</span></span><br><span class="line">  <span class="keyword">while</span> (i &lt;= n - m) &#123;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">for</span> (j = m - <span class="number">1</span>; j &gt;= <span class="number">0</span>; --j) &#123; <span class="comment">// 模式串从后往前匹配</span></span><br><span class="line">      <span class="keyword">if</span> (a[i+j] != b[j]) <span class="keyword">break</span>; <span class="comment">// 坏字符对应模式串中的下标是j</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (j &lt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> i; <span class="comment">// 匹配成功，返回主串与模式串第一个匹配的字符的位置</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 这里等同于将模式串往后滑动j-bc[(int)a[i+j]]位</span></span><br><span class="line">    i = i + (j - bc[(<span class="keyword">int</span>)a[i+j]]); </span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.15.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.16.jpg" /></p>
+<p>引入最关键的变量 <code>suffix数组</code></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.17.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.18.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.19.jpg" /></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// b表示模式串，m表示长度，suffix，prefix数组事先申请好了</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">generateGS</span><span class="params">(<span class="keyword">char</span>[] b, <span class="keyword">int</span> m, <span class="keyword">int</span>[] suffix, <span class="keyword">boolean</span>[] prefix)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m; ++i) &#123; <span class="comment">// 初始化</span></span><br><span class="line">    suffix[i] = -<span class="number">1</span>;</span><br><span class="line">    prefix[i] = <span class="keyword">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; m - <span class="number">1</span>; ++i) &#123; <span class="comment">// b[0, i]</span></span><br><span class="line">    <span class="keyword">int</span> j = i;</span><br><span class="line">    <span class="keyword">int</span> k = <span class="number">0</span>; <span class="comment">// 公共后缀子串长度</span></span><br><span class="line">    <span class="keyword">while</span> (j &gt;= <span class="number">0</span> &amp;&amp; b[j] == b[m-<span class="number">1</span>-k]) &#123; <span class="comment">// 与b[0, m-1]求公共后缀子串</span></span><br><span class="line">      --j;</span><br><span class="line">      ++k;</span><br><span class="line">      suffix[k] = j+<span class="number">1</span>; <span class="comment">//j+1表示公共后缀子串在b[0, i]中的起始下标</span></span><br><span class="line">    &#125;</span><br><span class="line">    i</span><br><span class="line">    <span class="keyword">if</span> (j == -<span class="number">1</span>) prefix[k] = <span class="keyword">true</span>; <span class="comment">//如果公共后缀子串也是模式串的前缀子串</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.20.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.21.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/33.22.jpg" /></p>
+<p>在模式串跟主串匹配的过程中，遇到不能匹配的字符时，如何根据好后缀规则，计算模式串往后滑动的位数？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a,b表示主串和模式串；n，m表示主串和模式串的长度。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">bm</span><span class="params">(<span class="keyword">char</span>[] a, <span class="keyword">int</span> n, <span class="keyword">char</span>[] b, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span>[] bc = <span class="keyword">new</span> <span class="keyword">int</span>[SIZE]; <span class="comment">// 记录模式串中每个字符最后出现的位置</span></span><br><span class="line">  generateBC(b, m, bc); <span class="comment">// 构建坏字符哈希表</span></span><br><span class="line">  <span class="keyword">int</span>[] suffix = <span class="keyword">new</span> <span class="keyword">int</span>[m];</span><br><span class="line">  <span class="keyword">boolean</span>[] prefix = <span class="keyword">new</span> <span class="keyword">boolean</span>[m];</span><br><span class="line">  generateGS(b, m, suffix, prefix);</span><br><span class="line">  <span class="keyword">int</span> i = <span class="number">0</span>; <span class="comment">// j表示主串与模式串匹配的第一个字符</span></span><br><span class="line">  <span class="keyword">while</span> (i &lt;= n - m) &#123;</span><br><span class="line">    <span class="keyword">int</span> j;</span><br><span class="line">    <span class="keyword">for</span> (j = m - <span class="number">1</span>; j &gt;= <span class="number">0</span>; --j) &#123; <span class="comment">// 模式串从后往前匹配</span></span><br><span class="line">      <span class="keyword">if</span> (a[i+j] != b[j]) <span class="keyword">break</span>; <span class="comment">// 坏字符对应模式串中的下标是j</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (j &lt; <span class="number">0</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> i; <span class="comment">// 匹配成功，返回主串与模式串第一个匹配的字符的位置</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> x = j - bc[(<span class="keyword">int</span>)a[i+j]];</span><br><span class="line">    <span class="keyword">int</span> y = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">if</span> (j &lt; m-<span class="number">1</span>) &#123; <span class="comment">// 如果有好后缀的话</span></span><br><span class="line">      y = moveByGS(j, m, suffix, prefix);</span><br><span class="line">    &#125;</span><br><span class="line">    i = i + Math.max(x, y);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// j表示坏字符对应的模式串中的字符下标; m表示模式串长度</span></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">moveByGS</span><span class="params">(<span class="keyword">int</span> j, <span class="keyword">int</span> m, <span class="keyword">int</span>[] suffix, <span class="keyword">boolean</span>[] prefix)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span> k = m - <span class="number">1</span> - j; <span class="comment">// 好后缀长度</span></span><br><span class="line">  <span class="keyword">if</span> (suffix[k] != -<span class="number">1</span>) <span class="keyword">return</span> j - suffix[k] +<span class="number">1</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> r = j+<span class="number">2</span>; r &lt;= m-<span class="number">1</span>; ++r) &#123;</span><br><span class="line">    <span class="keyword">if</span> (prefix[m-r] == <span class="keyword">true</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> r;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> m;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="kmp算法基本原理">KMP算法基本原理</h3>
+<p>KMP算法是根据三位作者（D.E.Knuth，J.H.Morris和V.R.Pratt）的名字来命名的，算法的全称是Knuth Morris Pratt算法，简称为KMP算法。</p>
+<p>KMP算法的核心思想，跟上一节讲的BM算法非常相近。我们假设主串是a，模式串是b。在模式串与主串匹配的过程中，当遇到不可匹配的字符的时候，我们希望找到一些规律，可以将模式串往后多滑动几位，跳过那些肯定不会匹配的情况。</p>
+<p>这里我们可以类比一下，在模式串和主串匹配的过程中，把不能匹配的那个字符仍然叫作 <em>坏字符</em>，把已经匹配的那段字符串叫作 <em>好前缀</em>。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.1.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.2.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.3.jpg" /></p>
+<p>好前缀的所有后缀子串中，最长的可匹配前缀子串的那个后缀子串，叫作最长可匹配后缀子串；对应的前缀子串，叫作最长可匹配前缀子串。</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.4.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.5.jpg" /></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// a, b分别是主串和模式串；n, m分别是主串和模式串的长度。</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">kmp</span><span class="params">(<span class="keyword">char</span>[] a, <span class="keyword">int</span> n, <span class="keyword">char</span>[] b, <span class="keyword">int</span> m)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">int</span>[] next = getNexts(b, m);</span><br><span class="line">  <span class="keyword">int</span> j = <span class="number">0</span>;</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; ++i) &#123;</span><br><span class="line">    <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; a[i] != b[j]) &#123; <span class="comment">// 一直找到a[i]和b[j]</span></span><br><span class="line">      j = next[j - <span class="number">1</span>] + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (a[i] == b[j]) &#123;</span><br><span class="line">      ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (j == m) &#123; <span class="comment">// 找到匹配模式串的了</span></span><br><span class="line">      <span class="keyword">return</span> i - m + <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>失效函数计算方法</p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.6.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.7.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.8.jpg" /></p>
+<p><img src="https://2020.iosdevlog.com/2020/04/08/String-searching_algorithm/34.9.jpg" /></p>
+<h2 id="小结">小结</h2>
+<p><em>BF算法</em> 是最简单、粗暴的字符串匹配算法，它的实现思路是，拿模式串与主串中是所有子串匹配，看是否有能匹配的子串。所以，时间复杂度也比较高，是O(n*m)，n、m表示主串和模式串的长度。不过，在实际的软件开发中，因为这种算法实现简单，对于处理小规模的字符串匹配很好用。</p>
+<p><em>RK算法</em> 是借助哈希算法对BF算法进行改造，即对每个子串分别求哈希值，然后拿子串的哈希值与模式串的哈希值比较，减少了比较的时间。所以，理想情况下，<em>RK算法</em> 的时间复杂度是 <span class="math inline">\(O(n\)</span>)，跟BF算法相比，效率提高了很多。不过这样的效率取决于哈希算法的设计方法，如果存在冲突的情况下，时间复杂度可能会退化。极端情况下，哈希算法大量冲突，时间复杂度就退化为 <span class="math inline">\(O(n*m\)</span>)。</p>
+<p><em>BM算法</em> 尽管复杂、难懂，但匹配的效率却很高，在实际的软件开发中，特别是一些文本编辑器中，应用比较多。如果一遍看不懂的话，你就多看几遍。</p>
+<p>BM算法核心思想是，利用模式串本身的特点，在模式串中某个字符与主串不能匹配的时候，将模式串往后多滑动几位，以此来减少不必要的字符比较，提高匹配的效率。BM算法构建的规则有两类，坏字符规则和好后缀规则。好后缀规则可以独立于坏字符规则使用。因为坏字符规则的实现比较耗内存，为了节省内存，我们可以只用好后缀规则来实现BM算法。</p>
+<p>BM算法有两个规则，坏字符和好后缀。KMP算法借鉴BM算法的思想，可以总结成好前缀规则。这里面最难懂的就是next数组的计算。如果用最笨的方法来计算，确实不难，但是效率会比较低。</p>
+<p>一种类似动态规划的方法，按照下标i从小到大，依次计算 <code>next[i]</code>，并且 <code>next[i]</code> 的计算通过前面已经计算出来的 <code>next[0]，next[1]，……，next[i-1]</code> 来推导。</p>
+<p>KMP算法的时间复杂度是 <span class="math inline">\(O(n+m)\)</span>，不过它的分析过程稍微需要一点技巧，不那么直观，你只要看懂就好了，并不需要掌握，在我们平常的开发中，很少会有这么难分析的代码。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p><a href="http://www.cs.jhu.edu/~langmea/resources/lecture_notes/boyer_moore.pdf" target="_blank" rel="noopener" class="uri">http://www.cs.jhu.edu/~langmea/resources/lecture_notes/boyer_moore.pdf</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/04/08/String-searching-algorithm/" data-id="ck8r7vz1t00bjr22w77979p24" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/" rel="tag">data</a></li></ul>
+
+      
+        <p><span>作  者:</span><span><a href="https://iosdevlog.com" target="_blank" rel="noopener">iOSDevLog</a></span></p>
+        <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/data/" rel="tag">data</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/04/08/graph/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">《数据结构与算法之美》-4-图（Graph）</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code/">code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/geek/">geek</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/software/">software</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%86%99%E4%BD%9C/">写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6-%E6%94%B9%E9%9D%A9-%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/">读书 - 改革 - 大江大河</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%90%E8%90%A5/">运营</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3b1b/" rel="tag">3b1b</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/" rel="tag">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/" rel="tag">CV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Code/" rel="tag">Code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DS/" rel="tag">DS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataMining/" rel="tag">DataMining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deployment/" rel="tag">Deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/calculus/" rel="tag">calculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheatsheets/" rel="tag">cheatsheets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheeksheet/" rel="tag">cheeksheet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/" rel="tag">data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dl/" rel="tag">dl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/download/" rel="tag">download</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/" rel="tag">free</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geek/" rel="tag">geek</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geektime/" rel="tag">geektime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/infoq/" rel="tag">infoq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/information/" rel="tag">information</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/keras/" rel="tag">keras</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linear/" rel="tag">linear</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lr/" rel="tag">lr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manim/" rel="tag">manim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matplotlib/" rel="tag">matplotlib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mindmap/" rel="tag">mindmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml/" rel="tag">ml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nlp/" rel="tag">nlp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nn/" rel="tag">nn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scipy/" rel="tag">scipy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slm/" rel="tag">slm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf/" rel="tag">tf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf2/" rel="tag">tf2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theory/" rel="tag">theory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" rel="tag">大江大河</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E9%9D%A9/" rel="tag">改革</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9D%83/" rel="tag">版权</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/3b1b/" style="font-size: 11.25px;">3b1b</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/ANN/" style="font-size: 11.25px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 12.5px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/CV/" style="font-size: 13.75px;">CV</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/Compiler/" style="font-size: 11.25px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.25px;">Construction</a> <a href="/tags/Coursera/" style="font-size: 10px;">Coursera</a> <a href="/tags/DL/" style="font-size: 17.5px;">DL</a> <a href="/tags/DS/" style="font-size: 11.25px;">DS</a> <a href="/tags/DataMining/" style="font-size: 10px;">DataMining</a> <a href="/tags/Deployment/" style="font-size: 10px;">Deployment</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 18.75px;">Godot</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Math/" style="font-size: 13.75px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.25px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 11.25px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 12.5px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TensorFlow/" style="font-size: 11.25px;">TensorFlow</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/algorithm/" style="font-size: 16.25px;">algorithm</a> <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/beginner/" style="font-size: 11.25px;">beginner</a> <a href="/tags/book/" style="font-size: 11.25px;">book</a> <a href="/tags/calculus/" style="font-size: 10px;">calculus</a> <a href="/tags/cheatsheets/" style="font-size: 10px;">cheatsheets</a> <a href="/tags/cheeksheet/" style="font-size: 10px;">cheeksheet</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/data/" style="font-size: 13.75px;">data</a> <a href="/tags/devops/" style="font-size: 12.5px;">devops</a> <a href="/tags/dl/" style="font-size: 12.5px;">dl</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/free/" style="font-size: 10px;">free</a> <a href="/tags/geek/" style="font-size: 10px;">geek</a> <a href="/tags/geektime/" style="font-size: 10px;">geektime</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/infoq/" style="font-size: 10px;">infoq</a> <a href="/tags/information/" style="font-size: 10px;">information</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/keras/" style="font-size: 10px;">keras</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/linear/" style="font-size: 10px;">linear</a> <a href="/tags/lr/" style="font-size: 10px;">lr</a> <a href="/tags/manim/" style="font-size: 15px;">manim</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/mindmap/" style="font-size: 10px;">mindmap</a> <a href="/tags/ml/" style="font-size: 13.75px;">ml</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/nlp/" style="font-size: 11.25px;">nlp</a> <a href="/tags/nn/" style="font-size: 11.25px;">nn</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/paper/" style="font-size: 12.5px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.25px;">plugin</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/slm/" style="font-size: 10px;">slm</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tf/" style="font-size: 10px;">tf</a> <a href="/tags/tf2/" style="font-size: 10px;">tf2</a> <a href="/tags/theory/" style="font-size: 10px;">theory</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/vscode/" style="font-size: 11.25px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.25px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 13.75px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" style="font-size: 10px;">大江大河</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%94%B9%E9%9D%A9/" style="font-size: 10px;">改革</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9D%83/" style="font-size: 10px;">版权</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">统计学习方法</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.25px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/04/">April 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">December 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/04/08/String-searching-algorithm/">《数据结构与算法之美》-5-字符串匹配</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/08/graph/">《数据结构与算法之美》-4-图（Graph）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/06/tree/">《数据结构与算法之美》-2-树（Tree）</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/slm/">《统计学习方法》笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/05/Information-theory/">信息论</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 iOSDevLog<br>
+      Powered by © 2020 - <a href="https://www.iosdevlog.com" target="_blank">贾献华 2020 博客</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/2020" class="mobile-nav-link">2020 Calendar</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+            processEscapes: true
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax();
+        for (var i = 0; i < all.length; ++i)
+            all[i].SourceElement().parentNode.className += ' has-jax';
+    });
+</script>
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+</body>
+</html>
