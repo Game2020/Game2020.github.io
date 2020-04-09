@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-04-09T12:06:54.824Z</updated>
+  <updated>2020-04-09T13:07:28.374Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>设计模式</title>
+    <link href="https://2020.iosdevlog.com/2020/04/09/Design-pattern/"/>
+    <id>https://2020.iosdevlog.com/2020/04/09/Design-pattern/</id>
+    <published>2020-04-09T12:55:32.000Z</published>
+    <updated>2020-04-09T13:07:28.374Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/04/09/Design-pattern/Design-pattern.svg" /></p><a id="more"></a><h2 id="种经典的设计模式">23 种经典的设计模式</h2><ul><li><p>创建型</p><ul><li><ol type="1"><li>单例模式</li></ol></li><li><ol start="2" type="1"><li>工厂模式-工厂方法</li></ol></li><li><ol start="3" type="1"><li>工厂模式-抽象工厂</li></ol></li><li><ol start="4" type="1"><li>建造者模式</li></ol></li><li><ol start="5" type="1"><li>原型模式</li></ol></li></ul></li><li><p>结构型</p><ul><li><ol start="6" type="1"><li>代理模式</li></ol></li><li><ol start="7" type="1"><li>桥接模式</li></ol></li><li><ol start="8" type="1"><li>装饰者模式</li></ol></li><li><ol start="9" type="1"><li>适配器模式</li></ol></li><li><ol start="10" type="1"><li>门面模式</li></ol></li><li><ol start="11" type="1"><li>组合模式</li></ol></li><li><ol start="12" type="1"><li>享元模式</li></ol></li></ul></li><li><p>行为型</p><ul><li><ol start="13" type="1"><li>观察者模式</li></ol></li><li><ol start="14" type="1"><li>模板模式</li></ol></li><li><ol start="15" type="1"><li>策略模式</li></ol></li><li><ol start="16" type="1"><li>职责链模式</li></ol></li><li><ol start="17" type="1"><li>迭代器模式</li></ol></li><li><ol start="18" type="1"><li>状态模式</li></ol></li><li><ol start="19" type="1"><li>访问者模式</li></ol></li><li><ol start="20" type="1"><li>备忘录模式</li></ol></li><li><ol start="21" type="1"><li>命令模式</li></ol></li><li><ol start="22" type="1"><li>解释器模式</li></ol></li><li><ol start="23" type="1"><li>中介模式</li></ol></li></ul></li></ul><h2 id="设计原则">设计原则</h2><ul><li><p>SOLID 原则</p><ul><li><p>DIP 依赖倒置原则</p></li><li><p>LSP 里式替换原则</p></li><li><p>ISP 接口隔离原则</p></li><li><p>OCP 开闭原则</p></li><li><p>SRP 单一职责原则</p></li></ul></li><li><p>DRY 原则</p><ul><li><p>Yourself</p></li><li><p>Repeat</p></li><li><p>Don't</p></li></ul></li><li><p>KISS 原则</p><ul><li><p>Stupid</p></li><li><p>Simple</p></li><li><p>It</p></li><li><p>Keep</p></li></ul></li><li><p>YAGNI 原则</p><ul><li><p>It</p></li><li><p>Need</p></li><li><p>Gonna</p></li><li><p>Ain’t</p></li><li><p>You</p></li></ul></li><li><p>LOD 法则</p><ul><li><p>Detail</p></li><li><p>of</p></li><li><p>Levels</p></li></ul></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/04/09/Design-pattern/Design-pattern.svg&quot; /&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="cs" scheme="https://2020.iosdevlog.com/categories/cs/"/>
+    
+    
+      <category term="code" scheme="https://2020.iosdevlog.com/tags/code/"/>
+    
+  </entry>
   
   <entry>
     <title>算法思想</title>
@@ -376,9 +399,9 @@
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
-    
       <category term="book" scheme="https://2020.iosdevlog.com/tags/book/"/>
+    
+      <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
     
       <category term="free" scheme="https://2020.iosdevlog.com/tags/free/"/>
     
@@ -635,29 +658,6 @@ ISBN: 9787550298637&lt;/p&gt;
       <category term="tf" scheme="https://2020.iosdevlog.com/tags/tf/"/>
     
       <category term="keras" scheme="https://2020.iosdevlog.com/tags/keras/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>表格化数据挖掘</title>
-    <link href="https://2020.iosdevlog.com/2020/03/25/table/"/>
-    <id>https://2020.iosdevlog.com/2020/03/25/table/</id>
-    <published>2020-03-25T10:06:00.000Z</published>
-    <updated>2020-03-25T13:52:39.686Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/25/table/0.png" /></p><a id="more"></a><h2 id="经典的结构化数据挖掘方法">经典的结构化数据挖掘方法</h2><h3 id="什么是结构化数据">什么是结构化数据</h3><ul><li><p>结构化数据指的主要是表格数据(Tabular Data)</p></li><li><p>最简单的想象:可以记载在 Excel 表格中的均是表格数据</p><ul><li><p>每列数据一般称之为一个变量(字段)</p></li><li><p>变量可以分为离散型变量和连续型变量</p></li></ul></li><li><p>绝大多数的数据都是表格数据(或可以转化为表格数据)</p></li></ul><h3 id="结构化数据的传统建模流程">结构化数据的传统建模流程</h3><ul><li><p>传统来说(在某种意义上仍是如此)，结构化数据常常要求大量的业务理解</p></li><li><p>探索性数据分析往往占很大成分</p></li><li><p>90% 时间花在清洗数据和探索性分析上</p></li></ul><h3 id="传统建模流程的问题">传统建模流程的问题</h3><ul><li><p>最核心的悖论:业务理解从哪里来?</p></li><li><p>一些实际的问题</p><ul><li><p>高维稀疏变量</p></li><li><p>较差的变量质量</p></li><li><p>类似的业务理解能力</p></li><li><p>业务的多变性</p></li></ul></li></ul><h2 id="表格化数据挖掘基本流程">表格化数据挖掘基本流程</h2><h3 id="数据挖掘竞赛和新的建模流程">数据挖掘竞赛和新的建模流程</h3><ul><li><p>竞赛基本流程</p></li><li><p>挑战</p><ul><li><p>无业务理解</p></li><li><p>少数提交机会</p></li><li><p>测试集和训练集可能不一样-&gt; 建模结果必须稳定</p></li><li><p>时间短暂，必须充分利用时间</p></li></ul></li><li><p>数据挖掘竞赛和实际业务中的建模有类似挑战，但有一点重要不同</p><ul><li>实际业务建模必须要逐步引入更多变量，而竞赛中变量已经给定</li></ul></li></ul><h3 id="新的流程">新的流程</h3><ul><li><p>数据清理和EDA</p></li><li><p>半自动的变量构建+手动构建</p></li><li><p>一类模型主要提高准确率，另一些模型做集成备选</p><ul><li><p>传统来说主要用于提高准确率的是靠集成树的方法</p></li><li><p>近年来神经网络为基础的建模越来越多</p></li></ul></li><li><p>集成学习</p><ul><li><p>被集成的模型必须有一定准确性</p></li><li><p>被集成的模型必须有一定的多样性</p></li></ul></li></ul><p><img src="https://2020.iosdevlog.com/2020/03/25/table/1.png" /></p><p><img src="https://2020.iosdevlog.com/2020/03/25/table/2.png" /></p><h3 id="关于新的流程的一些说明">关于新的流程的一些说明</h3><ul><li><p>前三个环节经常需要反复进行</p></li><li><p>基本原则:尽可能利用算力和时间</p></li><li><p>不同人对于 EDA 重要性说法不同，个人建议初学者以实验为主</p></li><li><p>非常重要的原则:结合全局和局部信息</p></li></ul><h2 id="半自动特征构建">半自动特征构建</h2><h3 id="target-mean-encoding">Target Mean Encoding</h3><ul><li><p>Target Mean Encoding 简介</p><ul><li><p>对于离散变量最有效编码方法之一</p></li><li><p>对于维度较高的离散性变量效果很好</p></li><li><p>重点在于防止过拟合</p></li></ul></li><li><p>其他的 Groupby 函数应用</p><ul><li><p>实现 Target Mean Encoding 可以使用 df.groupby([A,B])[C].agg(func)</p></li><li><p>Groupby 函数可以应用于任何其他变量，在某种程度上捕捉了多变量之间的交叉效应</p></li><li><p>Func 可以是多种函数，如 mean，std，kurtosis，min，max 等等</p></li><li><p>可以对残差进行以上操作</p></li></ul></li></ul><h3 id="categorical-encoders">Categorical Encoders</h3><ul><li><p>One-hot Encoder</p></li><li><p>Ordinal Encoder</p></li><li><p>其他 Encoder</p><ul><li><p>Count Encoder</p></li><li><p>HashMap</p></li></ul></li></ul><h3 id="连续变量的离散化方法">连续变量的离散化方法</h3><ul><li><p>为什么要对连续变量进行离散化</p><ul><li><p>捕捉非线性效应</p></li><li><p>捕捉交叉效应</p></li></ul></li><li><p>常见的离散化方法</p><ul><li><p>Uniform</p></li><li><p>基于 Quantile</p></li><li><p>基于聚类</p></li><li><p>基于树</p></li></ul></li><li><p>树模型</p></li></ul><h3 id="entity-embedding">Entity Embedding</h3><ul><li><p>Entity Embedding 基础</p></li><li><p>如何加入 Vincinal Information</p></li></ul><h3 id="连续变量的转换">连续变量的转换</h3><ul><li><p>常见的数据转换方法</p></li><li><p>基于 ECDF 的方法</p></li><li><p>Box-Cox 变换和 Yeo-Johnson Transform</p></li></ul><h3 id="缺失值和异常值的处理">缺失值和异常值的处理</h3><ul><li><p>概述</p><ul><li><p>异常值和缺失值的定义常常是难以确定的</p></li><li><p>异常值的检验最可靠的方法</p><ul><li><p>EDA 加上业务逻辑</p></li><li><p>可以根据分位数或其他方法(其他方法未必靠谱)</p></li><li><p>如果异常值是由于输入失误造成的，则可以将之作为缺失值处理</p></li></ul></li><li><p>缺失值的填充往往可以根据业务决定</p><ul><li><p>其他可以采用平均值、中位数或众数进行填充</p></li><li><p>也可以单独构建模型进行预测</p></li></ul></li></ul></li><li><p>常见处理方法</p><ul><li><p>缺失值的填充往往可以根据业务决定</p></li><li><p>缺失和异常本身可能是有信息量的，可以构造哑变量进行处理</p><ul><li>成租的缺失值和异常值本身可能是有信息的</li></ul></li><li><p>对于部分异常值，还需要进行截断处理</p></li><li><p>对于重要的缺失变量，很有可能需要进行预测</p></li><li><p>R 中的一些包，如 MICE，可以帮助进行缺失值和异常值的处理</p></li></ul></li></ul><h2 id="自动特征构建方法">自动特征构建方法</h2><h3 id="自动特征挖掘">自动特征挖掘</h3><ul><li><p>应用</p></li><li><p>难点:组合优化问题</p></li></ul><h3 id="遗传算法简介">遗传算法简介</h3><h3 id="symbolic-learning-简介">Symbolic Learning 简介</h3><ul><li><p>采用遗传算法找寻如何构造衍生变量</p></li><li><p>在 gplearn 库当中已经实现</p></li></ul><h3 id="autocross-简介">AutoCross 简介</h3><ul><li><p>第四范式开发(未开源)</p></li><li><p>主要目的:寻找交叉效应</p></li><li><p>创新</p><ul><li><p>Beam Search</p></li><li><p>简化的逻辑回归求解方式</p></li></ul></li><li><p>可以进行提升</p><ul><li><p>Meta Feature</p></li><li><p>更好的优化方法</p></li></ul></li></ul><h2 id="降维方法">降维方法</h2><h3 id="pcanmf-和-tsne">PCA，NMF 和 tSNE</h3><ul><li><p>为什么要降维</p><ul><li><p>找到宏观信息</p></li><li><p>找到交叉效应</p></li><li><p>不建议先降维再拟合模型</p></li></ul></li><li><p>PCA和NMF简介</p></li><li><p>tSNE 简介</p></li><li><p>实现</p><ul><li><p>在 sklearn 当中均有实现</p><ul><li><p>PCA</p></li><li><p>NMF</p></li><li><p>tSNE</p></li></ul></li></ul></li><li><p>应用</p><ul><li><p>隐藏维度的选择取决于数据</p></li><li><p>数据需要进行预处理</p></li><li><p>标准化</p></li><li><p>选取重要变量</p></li><li><p>去掉过于稀疏的个别变量</p></li><li><p>可构建2折和3折交叉效应</p></li><li><p>降维方法的参数并不十分重要，一般来说如果有时间，选取所有参数并拟合模型进行测试</p></li></ul></li></ul><h3 id="denoising-autoencoder">Denoising AutoEncoder</h3><ul><li><p>Denoising AutoEncoder 简介</p></li><li><p>实践中的注意事项</p><ul><li><p>DAE 一般对多模态有很好效果</p></li><li><p>一般的噪声范畴:5%-20%</p></li><li><p>其他降维方法的 trick 也适用于 DAE</p></li><li><p>注意将中间层均拿出来进行预测</p></li></ul></li></ul><p><img src="https://2020.iosdevlog.com/2020/03/25/table/3.png" /></p><h3 id="variational-autoencoder">Variational AutoEncoder</h3><ul><li><p>Variational AutoEncoder 的数学形式</p></li><li><p>实践中的注意事项</p><ul><li><p>VAE 的实现可见</p></li><li><p>VAE 是很火的研究领域</p></li><li><p>训练常常难以收敛</p></li><li><p>在实际应用中较罕见</p></li></ul></li></ul><h2 id="变量选择方法">变量选择方法</h2><h3 id="概述">概述</h3><ul><li><p>变量重要 = 哲学问题</p></li><li><p>优化角度 = 组合优化问题</p></li><li><p>初步选择可根据数据特点</p><ul><li>最重要的指标为缺失值和变化率</li></ul></li><li><p>其他的一些选择方法</p><ul><li><p>“去一”的选择方法(主要方法)</p></li><li><p>模型相关的方法-&gt;和模型高度相关，不可靠</p></li><li><p>其他优化方法-&gt;不成熟</p></li></ul></li></ul><h3 id="去一选择法">“去一”选择法</h3><ul><li><p>整体流程</p></li><li><p>问题</p></li></ul><h2 id="集成树模型">集成树模型</h2><h3 id="概述-1">概述</h3><ul><li><p>树模型的缺点和优点</p><ul><li><p>优点</p><ul><li><p>非线性效应</p></li><li><p>交叉效应</p></li><li><p>稀疏</p></li></ul></li><li><p>缺点</p><ul><li><p>不稳定</p></li><li><p>表现力差</p></li><li><p>精度差</p></li></ul></li></ul></li><li><p>集成树模型分类</p><ul><li><p>基本思路</p><ul><li>将多个树模型构成进行平均</li></ul></li><li><p>方法</p><ul><li><p>随机森林类</p></li><li><p>随机森林</p></li><li><p>ExtraTrees</p></li><li><p>梯度提升树</p><ul><li><p>GBDT</p></li><li><p>XGBoost</p></li><li><p>LightGBM</p></li><li><p>CatBoost</p></li></ul></li></ul></li></ul></li></ul><h3 id="gbdt-和-xgboost">GBDT 和 XgBoost</h3><ul><li><p>GBDT 的数学</p></li><li><p>XgBoost 的数学</p></li><li><p>XgBoost 的实现</p></li><li><p>XgBoost 的重要参数</p><ul><li><p>最重要的参数</p><ul><li>树的深度</li></ul></li><li><p>其他参数</p><ul><li><p>Eta:一般选取为 0.01-0.2</p></li><li><p>min_child_weight:建议进行 CV finetune</p></li><li><p>Gamma:建议进行 CV finetune</p></li></ul></li></ul></li></ul><p>整理自：<a href="https://github.com/geektime-geekbang/NLP" target="_blank" rel="noopener">《NLP实战高手课》</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/25/table/0.png&quot; /&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="DataMining" scheme="https://2020.iosdevlog.com/tags/DataMining/"/>
     
   </entry>
   
