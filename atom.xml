@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-04-09T13:07:28.374Z</updated>
+  <updated>2020-04-09T14:33:18.081Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="https://2020.iosdevlog.com/2020/04/09/Design-pattern/"/>
     <id>https://2020.iosdevlog.com/2020/04/09/Design-pattern/</id>
     <published>2020-04-09T12:55:32.000Z</published>
-    <updated>2020-04-09T13:07:28.374Z</updated>
+    <updated>2020-04-09T14:33:18.081Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/04/09/Design-pattern/Design-pattern.svg" /></p><a id="more"></a><h2 id="种经典的设计模式">23 种经典的设计模式</h2><ul><li><p>创建型</p><ul><li><ol type="1"><li>单例模式</li></ol></li><li><ol start="2" type="1"><li>工厂模式-工厂方法</li></ol></li><li><ol start="3" type="1"><li>工厂模式-抽象工厂</li></ol></li><li><ol start="4" type="1"><li>建造者模式</li></ol></li><li><ol start="5" type="1"><li>原型模式</li></ol></li></ul></li><li><p>结构型</p><ul><li><ol start="6" type="1"><li>代理模式</li></ol></li><li><ol start="7" type="1"><li>桥接模式</li></ol></li><li><ol start="8" type="1"><li>装饰者模式</li></ol></li><li><ol start="9" type="1"><li>适配器模式</li></ol></li><li><ol start="10" type="1"><li>门面模式</li></ol></li><li><ol start="11" type="1"><li>组合模式</li></ol></li><li><ol start="12" type="1"><li>享元模式</li></ol></li></ul></li><li><p>行为型</p><ul><li><ol start="13" type="1"><li>观察者模式</li></ol></li><li><ol start="14" type="1"><li>模板模式</li></ol></li><li><ol start="15" type="1"><li>策略模式</li></ol></li><li><ol start="16" type="1"><li>职责链模式</li></ol></li><li><ol start="17" type="1"><li>迭代器模式</li></ol></li><li><ol start="18" type="1"><li>状态模式</li></ol></li><li><ol start="19" type="1"><li>访问者模式</li></ol></li><li><ol start="20" type="1"><li>备忘录模式</li></ol></li><li><ol start="21" type="1"><li>命令模式</li></ol></li><li><ol start="22" type="1"><li>解释器模式</li></ol></li><li><ol start="23" type="1"><li>中介模式</li></ol></li></ul></li></ul><h2 id="设计原则">设计原则</h2><ul><li><p>SOLID 原则</p><ul><li><p>DIP 依赖倒置原则</p></li><li><p>LSP 里式替换原则</p></li><li><p>ISP 接口隔离原则</p></li><li><p>OCP 开闭原则</p></li><li><p>SRP 单一职责原则</p></li></ul></li><li><p>DRY 原则</p><ul><li><p>Yourself</p></li><li><p>Repeat</p></li><li><p>Don't</p></li></ul></li><li><p>KISS 原则</p><ul><li><p>Stupid</p></li><li><p>Simple</p></li><li><p>It</p></li><li><p>Keep</p></li></ul></li><li><p>YAGNI 原则</p><ul><li><p>It</p></li><li><p>Need</p></li><li><p>Gonna</p></li><li><p>Ain’t</p></li><li><p>You</p></li></ul></li><li><p>LOD 法则</p><ul><li><p>Detail</p></li><li><p>of</p></li><li><p>Levels</p></li></ul></li></ul>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/04/09/Design-pattern/Design-pattern.svg" /></p><a id="more"></a><h2 id="种经典的设计模式">23 种经典的设计模式</h2><ul><li>创建型<ul><li><ol type="1"><li>单例模式</li></ol></li><li><ol start="2" type="1"><li>工厂模式-工厂方法</li></ol></li><li><ol start="3" type="1"><li>工厂模式-抽象工厂</li></ol></li><li><ol start="4" type="1"><li>建造者模式</li></ol></li><li><ol start="5" type="1"><li>原型模式</li></ol></li></ul></li><li>结构型<ul><li><ol start="6" type="1"><li>代理模式</li></ol></li><li><ol start="7" type="1"><li>桥接模式</li></ol></li><li><ol start="8" type="1"><li>装饰者模式</li></ol></li><li><ol start="9" type="1"><li>适配器模式</li></ol></li><li><ol start="10" type="1"><li>门面模式</li></ol></li><li><ol start="11" type="1"><li>组合模式</li></ol></li><li><ol start="12" type="1"><li>享元模式</li></ol></li></ul></li><li>行为型<ul><li><ol start="13" type="1"><li>观察者模式</li></ol></li><li><ol start="14" type="1"><li>模板模式</li></ol></li><li><ol start="15" type="1"><li>策略模式</li></ol></li><li><ol start="16" type="1"><li>职责链模式</li></ol></li><li><ol start="17" type="1"><li>迭代器模式</li></ol></li><li><ol start="18" type="1"><li>状态模式</li></ol></li><li><ol start="19" type="1"><li>访问者模式</li></ol></li><li><ol start="20" type="1"><li>备忘录模式</li></ol></li><li><ol start="21" type="1"><li>命令模式</li></ol></li><li><ol start="22" type="1"><li>解释器模式</li></ol></li><li><ol start="23" type="1"><li>中介模式</li></ol></li></ul></li></ul><p><img src="https://2020.iosdevlog.com/2020/04/09/Design-pattern/gof-23-design-patterns.png" /></p><p>设计模式中设计的可变方面<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p><p><img src="https://2020.iosdevlog.com/2020/04/09/Design-pattern/1.png" /></p><h2 id="设计原则">设计原则</h2><ul><li>SOLID 设计模式的六大原则<ul><li>SRP 单一职责原则<ul><li>Single Responsibility Principle</li></ul></li><li>OCP 开闭原则<ul><li>Open Closed Principle</li></ul></li><li>LSP 里式替换原则<ul><li>Liskov Substitution Principle</li></ul></li><li>LOD 法则<ul><li>Law of Demeter</li></ul></li><li>ISP 接口隔离原则<ul><li>Interface Segregation Principle</li></ul></li><li>DIP 依赖倒置原则<ul><li>Dependence Inversion Principle</li></ul></li></ul></li><li>DRY 原则<ul><li>Don't Repeat Yourself</li></ul></li><li>KISS 原则<ul><li>Keep it Simple and Stupid</li></ul></li><li>YAGNI 适可而止原则<ul><li>You Ain’t Gonna Need It</li></ul></li></ul><section class="footnotes" role="doc-endnotes"><hr /><ol><li id="fn1" role="doc-endnote"><p><a href="http://yuweijun.github.io/blog/" target="_blank" rel="noopener" class="uri">http://yuweijun.github.io/blog/</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li></ol></section>]]></content>
     
     <summary type="html">
     
@@ -399,9 +399,9 @@
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="book" scheme="https://2020.iosdevlog.com/tags/book/"/>
-    
       <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
+    
+      <category term="book" scheme="https://2020.iosdevlog.com/tags/book/"/>
     
       <category term="free" scheme="https://2020.iosdevlog.com/tags/free/"/>
     
