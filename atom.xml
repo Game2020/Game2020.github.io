@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-04-09T14:33:18.081Z</updated>
+  <updated>2020-04-10T15:59:16.408Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>人人都是产口经理 3.0</title>
+    <link href="https://2020.iosdevlog.com/2020/04/10/pm/"/>
+    <id>https://2020.iosdevlog.com/2020/04/10/pm/</id>
+    <published>2020-04-10T15:51:20.000Z</published>
+    <updated>2020-04-10T15:59:16.408Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/04/10/pm/pm.png" /></p><p><a href="https://time.geekbang.org/column/article/215594" target="_blank" rel="noopener">苏杰的产品创新课</a></p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/04/10/pm/network.png" /></p><p><a href="https://time.geekbang.org/column/article/92378" target="_blank" rel="noopener">深入浅出计算机组成原理</a></p><p><img src="https://2020.iosdevlog.com/2020/04/10/pm/computer.png" /></p><p><a href="https://time.geekbang.org/column/article/14905" target="_blank" rel="noopener">趣谈网络协议</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/04/10/pm/pm.png&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://time.geekbang.org/column/article/215594&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;苏杰的产品创新课&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="geek" scheme="https://2020.iosdevlog.com/categories/geek/"/>
+    
+    
+      <category term="manager" scheme="https://2020.iosdevlog.com/tags/manager/"/>
+    
+      <category term="pm" scheme="https://2020.iosdevlog.com/tags/pm/"/>
+    
+      <category term="cs" scheme="https://2020.iosdevlog.com/tags/cs/"/>
+    
+      <category term="network" scheme="https://2020.iosdevlog.com/tags/network/"/>
+    
+  </entry>
   
   <entry>
     <title>设计模式</title>
@@ -399,9 +429,9 @@
       <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
     
     
-      <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
-    
       <category term="book" scheme="https://2020.iosdevlog.com/tags/book/"/>
+    
+      <category term="ml" scheme="https://2020.iosdevlog.com/tags/ml/"/>
     
       <category term="free" scheme="https://2020.iosdevlog.com/tags/free/"/>
     
@@ -622,42 +652,6 @@ ISBN: 9787550298637&lt;/p&gt;
     
     
       <category term="devops" scheme="https://2020.iosdevlog.com/tags/devops/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI Cheatsheets</title>
-    <link href="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/"/>
-    <id>https://2020.iosdevlog.com/2020/03/26/aicheatsheets/</id>
-    <published>2020-03-26T15:45:13.000Z</published>
-    <updated>2020-03-26T16:41:00.772Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Scipy.png" /></p><p>我什么时候能总结得这么好呢？</p><a id="more"></a><p><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Numpy.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Pandas-1.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Pandas-2.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Pandas-3.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/matplotlib-cheatsheet.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Matplotlib.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Scikit_learn.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Neural_network_cells.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Neural_network_graphs.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Neural_networks_zoo.png" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/tensorflow_v_2.0-1.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/tensorflow_v_2.0-2.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/tensorflow_v_2.0-3.jpg" /><br /><img src="https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Keras.jpg" /></p><p><a href="https://aicheatsheets.com" target="_blank" rel="noopener" class="uri">https://aicheatsheets.com</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/03/26/aicheatsheets/Scipy.png&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;我什么时候能总结得这么好呢？&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="AI" scheme="https://2020.iosdevlog.com/categories/AI/"/>
-    
-    
-      <category term="cheatsheets" scheme="https://2020.iosdevlog.com/tags/cheatsheets/"/>
-    
-      <category term="numpy" scheme="https://2020.iosdevlog.com/tags/numpy/"/>
-    
-      <category term="scipy" scheme="https://2020.iosdevlog.com/tags/scipy/"/>
-    
-      <category term="matplotlib" scheme="https://2020.iosdevlog.com/tags/matplotlib/"/>
-    
-      <category term="pandas" scheme="https://2020.iosdevlog.com/tags/pandas/"/>
-    
-      <category term="tf" scheme="https://2020.iosdevlog.com/tags/tf/"/>
-    
-      <category term="keras" scheme="https://2020.iosdevlog.com/tags/keras/"/>
     
   </entry>
   
