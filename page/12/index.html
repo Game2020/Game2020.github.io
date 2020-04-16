@@ -72,6 +72,371 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-9787509005125" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/15/9787509005125/" class="article-date">
+  <time datetime="2020-01-15T04:12:23.000Z" itemprop="datePublished">2020-01-15</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/15/9787509005125/">《圣女的救济》人物关系图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+<a id="more"></a>
+<p>作者: [日] 东野圭吾<br />
+出版社: 当代世界出版社<br />
+译者: 袁斌<br />
+出版年: 2009-5<br />
+页数: 399<br />
+定价: 30.00<br />
+装帧: 精装<br />
+丛书: 乐读文库<br />
+ISBN: 9787509005125</p>
+<p>好友的自杀的原因，轮到自己身上，因爱生恨，既然无法挽回，那你就去死吧！</p>
+<p><code>死道友不死贫道</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/01/15/9787509005125/" data-id="ck92wj9rm0022wt2w6jis8ywl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li></ul>
+
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Construction" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/14/Construction/" class="article-date">
+  <time datetime="2020-01-14T05:58:32.000Z" itemprop="datePublished">2020-01-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/14/Construction/">实现一门脚本语言-原理篇</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+<a id="more"></a>
+<h2 id="理解代码编译器的前端技术">理解代码：编译器的前端技术</h2>
+<ul>
+<li><code>前端（Front End）</code>: 编译器对程序代码的分析和理解过程
+<ul>
+<li>词法分析（Lexical Analysis）
+<ul>
+<li><code>程序分割成一个个 Token 的过程，可以通过构造有限自动机来实现</code></li>
+<li>识别一个个的单词</li>
+<li><code>词法记号（Token）</code></li>
+<li>Lex（或其 GNU 版本，Flex）
+<ul>
+<li>正则文法（Regular Grammar）
+<ul>
+<li>符合正则文法的表达式</li>
+</ul></li>
+<li>有限自动机（Finite-state Automaton，FSA，or Finite Automaton） 算法</li>
+</ul></li>
+</ul></li>
+<li>语法分析 （Syntactic Analysis, or Parsing）
+<ul>
+<li><code>把程序的结构识别出来，并形成一棵便于由计算机处理的抽象语法树。可以用递归下降的算法来实现</code>。*`</li>
+<li>别出程序的语法结构</li>
+<li>Yacc（或 GNU 的版本，Bison）、Antlr、JavaCC</li>
+<li><code>抽象语法树（Abstract Syntax Tree，AST</code>）</li>
+<li><code>clang -cc1 -ast-dump hello.c</code></li>
+<li>递归下降算法（Recursive Descent Parsing）</li>
+</ul></li>
+<li>语义分析（Semantic Analysis）
+<ul>
+<li><code>消除语义模糊，生成一些属性信息，让计算机能够依据这些信息生成目标代码。</code></li>
+</ul></li>
+</ul></li>
+<li><code>后端（Back End）</code>: 生成目标代码的过程，跟目标机器有关</li>
+</ul>
+<h2 id="正则文法和有限自动机纯手工打造词法分析器">正则文法和有限自动机：纯手工打造词法分析器</h2>
+<ul>
+<li><code>关键字</code>: 语言设计中作为语法要素的词汇</li>
+<li><code>保留字</code>: 当前的语言设计中还没用到，但是保留下来，因为将来会用到</li>
+</ul>
+
+<blockquote>
+<p>关键字和保留字跟标识符区分开呢？</p>
+</blockquote>
+<ul>
+<li>识别普通的 <code>标识符</code> 之前，是否 <code>关键字</code> / <code>保留字</code></li>
+</ul>
+<h2 id="语法分析">语法分析</h2>
+
+<h3 id="纯手工打造公式计算器">纯手工打造公式计算器</h3>
+<p>推导（Derivation）过程</p>
+<ul>
+<li><code>左边</code>：非终结符（Non-terminal）</li>
+<li><code>右边</code>：产生式（Production Rule）</li>
+<li>语法解析的过程中，左边会被右边替代</li>
+<li>如果替代之后还有非终结符，那么继续这个替代过程，直到最后全部都是终结符（Terminal），也就是 Token。</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">intDeclaration : <span class="function">Int <span class="title">Identifier</span> <span class="params">(<span class="string">'='</span> additiveExpression)</span>?</span>;</span><br></pre></td></tr></table></figure>
+<p>伪代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">MatchIntDeclare() &#123;</span><br><span class="line">  MatchToken(Int)；        <span class="comment">// 匹配Int关键字</span></span><br><span class="line">  MatchIdentifier();       <span class="comment">// 匹配标识符</span></span><br><span class="line">  MatchToken(equal);       <span class="comment">// 匹配等号</span></span><br><span class="line">  MatchExpression();       <span class="comment">// 匹配表达式</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>“下降”的含义</p>
+<ol type="1">
+<li>上级文法嵌套下级文法</li>
+<li>上级的算法调用下级的算法</li>
+</ol>
+<ul>
+<li>上下文无关文法</li>
+<li>正则文法(不允许递归调用)</li>
+</ul>
+<h3 id="小结">小结</h3>
+<ul>
+<li>初步了解上下文无关文法，知道它能表达主流的计算机语言，以及与正则文法的区别。</li>
+<li>理解递归下降算法中的 <strong>下降</strong> 和 <strong>递归</strong> 两个特点。</li>
+<li>它跟文法规则基本上是同构的，通过文法一定能写出算法。通过遍历 AST 对表达式求值，加深对计算机程序执行机制的理解。</li>
+</ul>
+<h3 id="解决二元表达式中的难点">解决二元表达式中的难点</h3>
+<p><code>左递归（Left Recursive）</code>：产生式的第一个元素是它自身，那么程序就会无限地递归下去</p>
+<ul>
+<li><code>优先级（Priority）</code></li>
+<li><code>结合性（Associativity）</code></li>
+<li><code>产生式</code>: 一组替换规则</li>
+</ul>
+<p>巴科斯范（BNF):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">add ::&#x3D; mul | add + mul</span><br><span class="line">mul ::&#x3D; pri | mul * pri</span><br><span class="line">pri ::&#x3D; Id | Num | (add)</span><br></pre></td></tr></table></figure>
+<p>扩展巴科斯范式 (EBNF)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">add -&gt; mul (+ mul)*</span><br></pre></td></tr></table></figure>
+<h3 id="确保正确的优先级">确保正确的优先级</h3>
+<ul>
+<li>括号</li>
+</ul>
+<h3 id="确保正确的结合性">确保正确的结合性</h3>
+<ul>
+<li>左结合的运算符，递归项放在左边</li>
+<li>右结合的运算符，递归项放在右边</li>
+</ul>
+<h3 id="消除左递归">消除左递归</h3>
+<p>左递归文法 <code>-&gt;</code> 非左递归的文法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add -&gt; mul add&#39;</span><br><span class="line">add&#39; -&gt; + mul add&#39; | ε</span><br></pre></td></tr></table></figure>
+<ul>
+<li>ε（读作 epsilon）:空集</li>
+</ul>
+<h3 id="小结-1">小结</h3>
+<ul>
+<li><code>优先级</code> 是通过在语法推导中的层次来决定的，优先级越低的，越先尝试推导。</li>
+<li><code>结合性</code> 是跟左递归还是右递归有关的，左递归导致左结合，右递归导致右结合。</li>
+<li><code>左递归</code> 可以通过改写语法规则来避免，而改写后的语法又可以表达成简洁的 EBNF 格式，从而启发我们用循环代替右递归。</li>
+</ul>
+<h3 id="实现一门简单的脚本语言">实现一门简单的脚本语言</h3>
+<p><code>回溯</code>: 尝试一个规则不成功之后，恢复到原样，再去尝试另外的规则<br />
+<code>REPL（Read-Eval-Print Loop）</code>: 输入、执行、打印的循环过程</p>
+<h2 id="编译器前端工具">编译器前端工具</h2>
+<h3 id="用antlr生成词法语法分析器">用Antlr生成词法、语法分析器</h3>
+<p><code>Antlr:</code> Antlr 是一个开源的工具，支持根据规则文件生成词法分析器和语法分析器，它自身是用 <code>Java</code> 实现的。</p>
+<p><a href="https://github.com/antlr/antlr4/blob/master/doc/getting-started.md" target="_blank" rel="noopener" class="uri">https://github.com/antlr/antlr4/blob/master/doc/getting-started.md</a></p>
+<h4 id="用-antlr-生成词法分析器">用 Antlr 生成词法分析器</h4>
+<p><code>Hello.g4</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">lexer grammar Hello;  &#x2F;&#x2F; lexer关键字意味着这是一个词法规则文件，名称是Hello，要与文件名相同</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 关键字</span><br><span class="line">If :               &#39;if&#39;;</span><br><span class="line">Int :              &#39;int&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 字面量</span><br><span class="line">IntLiteral:        [0-9]+;</span><br><span class="line">StringLiteral:      &#39;&quot;&#39; .*? &#39;&quot;&#39; ;  &#x2F;&#x2F; 字符串字面量</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 操作符</span><br><span class="line">AssignmentOP:       &#39;&#x3D;&#39; ;   </span><br><span class="line">RelationalOP:       &#39;&gt;&#39;|&#39;&gt;&#x3D;&#39;|&#39;&lt;&#39; |&#39;&lt;&#x3D;&#39; ;   </span><br><span class="line">Star:               &#39;*&#39;;</span><br><span class="line">Plus:               &#39;+&#39;;</span><br><span class="line">Sharp:              &#39;#&#39;;</span><br><span class="line">SemiColon:          &#39;;&#39;;</span><br><span class="line">Dot:                &#39;.&#39;;</span><br><span class="line">Comm:               &#39;,&#39;;</span><br><span class="line">LeftBracket :       &#39;[&#39;;</span><br><span class="line">RightBracket:       &#39;]&#39;;</span><br><span class="line">LeftBrace:          &#39;&#123;&#39;;</span><br><span class="line">RightBrace:         &#39;&#125;&#39;;</span><br><span class="line">LeftParen:          &#39;(&#39;;</span><br><span class="line">RightParen:         &#39;)&#39;;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 标识符</span><br><span class="line">Id :                [a-zA-Z_] ([a-zA-Z_] | [0-9])*;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; 空白字符，抛弃</span><br><span class="line">Whitespace:         [ \t]+ -&gt; skip;</span><br><span class="line">Newline:            ( &#39;\r&#39; &#39;\n&#39;?|&#39;\n&#39;)-&gt; skip;</span><br></pre></td></tr></table></figure>
+<h5 id="编译词法规则">编译词法规则</h5>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">antlr Hello.g4</span><br></pre></td></tr></table></figure>
+<h5 id="编译-hello.java">编译 Hello.java</h5>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javac *.java</span><br></pre></td></tr></table></figure>
+<h5 id="测试">测试</h5>
+<p><code>hello.play</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int age &#x3D; 45;</span><br><span class="line">if (age &gt;&#x3D; 17+8+20) &#123;</span><br><span class="line">    printf(&quot;Hello old man!&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>词法分析</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grun Hello tokens -tokens hello.play</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[@0,0:2&#x3D;&#39;int&#39;,&lt;&#39;int&#39;&gt;,1:0]</span><br><span class="line">[@1,4:6&#x3D;&#39;age&#39;,&lt;Id&gt;,1:4]</span><br><span class="line">[@2,8:8&#x3D;&#39;&#x3D;&#39;,&lt;&#39;&#x3D;&#39;&gt;,1:8]</span><br><span class="line">[@3,10:11&#x3D;&#39;45&#39;,&lt;IntLiteral&gt;,1:10]</span><br><span class="line">[@4,12:12&#x3D;&#39;;&#39;,&lt;&#39;;&#39;&gt;,1:12]</span><br><span class="line">[@5,14:15&#x3D;&#39;if&#39;,&lt;&#39;if&#39;&gt;,2:0]</span><br><span class="line">[@6,17:17&#x3D;&#39;(&#39;,&lt;&#39;(&#39;&gt;,2:3]</span><br><span class="line">[@7,18:20&#x3D;&#39;age&#39;,&lt;Id&gt;,2:4]</span><br><span class="line">[@8,22:23&#x3D;&#39;&gt;&#x3D;&#39;,&lt;RelationalOP&gt;,2:8]</span><br><span class="line">[@9,25:26&#x3D;&#39;17&#39;,&lt;IntLiteral&gt;,2:11]</span><br><span class="line">[@10,27:27&#x3D;&#39;+&#39;,&lt;&#39;+&#39;&gt;,2:13]</span><br><span class="line">[@11,28:28&#x3D;&#39;8&#39;,&lt;IntLiteral&gt;,2:14]</span><br><span class="line">[@12,29:29&#x3D;&#39;+&#39;,&lt;&#39;+&#39;&gt;,2:15]</span><br><span class="line">[@13,30:31&#x3D;&#39;20&#39;,&lt;IntLiteral&gt;,2:16]</span><br><span class="line">[@14,32:32&#x3D;&#39;)&#39;,&lt;&#39;)&#39;&gt;,2:18]</span><br><span class="line">[@15,34:34&#x3D;&#39;&#123;&#39;,&lt;&#39;&#123;&#39;&gt;,2:20]</span><br><span class="line">[@16,40:45&#x3D;&#39;printf&#39;,&lt;Id&gt;,3:4]</span><br><span class="line">[@17,46:46&#x3D;&#39;(&#39;,&lt;&#39;(&#39;&gt;,3:10]</span><br><span class="line">[@18,47:62&#x3D;&#39;&quot;Hello old man!&quot;&#39;,&lt;StringLiteral&gt;,3:11]</span><br><span class="line">[@19,63:63&#x3D;&#39;)&#39;,&lt;&#39;)&#39;&gt;,3:27]</span><br><span class="line">[@20,64:64&#x3D;&#39;;&#39;,&lt;&#39;;&#39;&gt;,3:28]</span><br><span class="line">[@21,66:66&#x3D;&#39;&#125;&#39;,&lt;&#39;&#125;&#39;&gt;,4:0]</span><br><span class="line">[@22,68:67&#x3D;&#39;&lt;EOF&gt;&#39;,&lt;EOF&gt;,5:0]</span><br></pre></td></tr></table></figure>
+<h4 id="用-antlr-生成语法分析器">用 Antlr 生成语法分析器</h4>
+<p><code>PlayScript.g4</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">grammar PlayScript;</span><br><span class="line">import CommonLexer;   &#x2F;&#x2F;导入词法定义</span><br><span class="line"></span><br><span class="line">&#x2F;*下面的内容加到所生成的Java源文件的头部，如包名称，import语句等。*&#x2F;</span><br><span class="line">@header &#123;</span><br><span class="line">package antlrtest;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">expression</span><br><span class="line">    :   assignmentExpression</span><br><span class="line">    |   expression &#39;,&#39; assignmentExpression</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">assignmentExpression</span><br><span class="line">    :   additiveExpression</span><br><span class="line">    |   Identifier assignmentOperator additiveExpression</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">assignmentOperator</span><br><span class="line">    :   &#39;&#x3D;&#39;</span><br><span class="line">    |   &#39;*&#x3D;&#39;</span><br><span class="line">    |  &#39;&#x2F;&#x3D;&#39;</span><br><span class="line">    |   &#39;%&#x3D;&#39;</span><br><span class="line">    |   &#39;+&#x3D;&#39;</span><br><span class="line">    |   &#39;-&#x3D;&#39;</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">additiveExpression</span><br><span class="line">    :   multiplicativeExpression</span><br><span class="line">    |   additiveExpression &#39;+&#39; multiplicativeExpression</span><br><span class="line">    |   additiveExpression &#39;-&#39; multiplicativeExpression</span><br><span class="line">    ;</span><br><span class="line"></span><br><span class="line">multiplicativeExpression</span><br><span class="line">    :   primaryExpression</span><br><span class="line">    |   multiplicativeExpression &#39;*&#39; primaryExpression</span><br><span class="line">    |   multiplicativeExpression &#39;&#x2F;&#39; primaryExpression</span><br><span class="line">    |   multiplicativeExpression &#39;%&#39; primaryExpression</span><br><span class="line">    ;</span><br></pre></td></tr></table></figure>
+<h5 id="生成语法分析器">生成语法分析器</h5>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">antlr PlayScript.g4</span><br><span class="line">javac antlrtest/*.java</span><br></pre></td></tr></table></figure>
+<h5 id="测试-1">测试</h5>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grun antlrtest.PlayScript expression -gui</span><br></pre></td></tr></table></figure>
+<p>Console</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">age + 10 * 2  + 10</span><br><span class="line">^D</span><br></pre></td></tr></table></figure>
+<p><strong>懂得基础原理，会让你站得更高</strong></p>
+<h3 id="用antlr重构脚本语言">用Antlr重构脚本语言</h3>
+<ul>
+<li><p>完善表达式（Expression）的语法</p></li>
+<li><p>完善各类语句（Statement）的语法</p></li>
+<li><p>语句</p>
+<ul>
+<li>条件语句
+<ul>
+<li>if 语句</li>
+<li>switch 语句</li>
+</ul></li>
+<li>循环语句
+<ul>
+<li>for 循环语句</li>
+<li>while 循环语句</li>
+</ul></li>
+<li>return 语句</li>
+</ul></li>
+<li><p>表达式语句</p>
+<ul>
+<li>表达式后面加一个分号</li>
+</ul></li>
+</ul>
+<p>用 <code>Vistor</code> 模式升级脚本解释器</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">antlr -visitor PlayScript.g4</span><br></pre></td></tr></table></figure>
+<h2 id="作用域和生存期实现块作用域和函数">作用域和生存期：实现块作用域和函数</h2>
+<p><code>作用域（Scope）</code>: 计算机语言中变量、函数、类等起作用的范围<br />
+<code>生存期（Extent）</code>: 变量可以访问的时间段，也就是从分配内存给它，到收回它的内存之间的时间</p>
+<ol type="1">
+<li>实现作用域和栈</li>
+<li>实现块作用域</li>
+<li>实现函数功能: 参数
+<ul>
+<li>建立一个栈桢</li>
+<li>计算所有参数的值，并放入栈桢</li>
+<li>执行函数声明中的函数体。</li>
+</ul></li>
+</ol>
+<h2 id="面向对象实现数据和方法的封装">面向对象：实现数据和方法的封装</h2>
+<p>语法规则</p>
+<ul>
+<li>类声明以 class 关键字开头，有一个标识符是类型名称，后面跟着类的主体。</li>
+<li>类的主体里要声明类的成员。在简化的情况下，可以只关注类的属性和方法两种成员。</li>
+<li>类的方法也叫做 function，而不是 method，是想把对象方法和函数做一些统一的设计。</li>
+<li>函数声明现在的角色是类的方法。类的成员变量的声明和普通变量声明在语法上没什么区别。</li>
+</ul>
+<blockquote>
+<p>如何在内存里管理对象的数据</p>
+</blockquote>
+<p>把对象的数据像其他数据一样，保存在栈</p>
+<blockquote>
+<p>访问对象的属性和方法</p>
+</blockquote>
+<p>点操作符来</p>
+<h2 id="闭包-理解了原理它就不反直觉了">闭包： 理解了原理，它就不反直觉了</h2>
+<p>对于初学者来讲是一个挑战。其实，闭包就是把函数在静态作用域中所访问的变量的生存期拉长，形成一份可以由这个函数单独访问的数据。正因为这些数据只能被闭包函数访问，所以也就具备了对信息进行封装、隐藏内部细节的特性。</p>
+<h2 id="语义分析">语义分析</h2>
+<h3 id="如何建立一个完善的类型系统">如何建立一个完善的类型系统？</h3>
+<ul>
+<li><code>静态类型语言</code>: 全部或者几乎全部的类型检查是在编译期进行的</li>
+<li><code>动态类型语言</code>: 类型的检查是在运行期进行的</li>
+<li><code>强类型语言</code>: 变量的类型一旦声明就不能改变</li>
+<li><code>弱类型语言</code>: 变量类型在运行期时可以改变</li>
+</ul>
+<p>如何做类型检查、类型推导和类型转换</p>
+<ul>
+<li>类型推导（Type Inference）</li>
+<li>类型检查（Type Checking）
+<ul>
+<li>赋值语句（检查赋值操作左边和右边的类型是否匹配）</li>
+<li>变量声明语句（因为变量声明语句中也会有初始化部分，所以也需要类型匹配）</li>
+<li>函数传参（调用函数的时候，传入的参数要符合形参的要求）</li>
+<li>函数返回值（从函数中返回一个值的时候，要符合函数返回值的规定）。</li>
+</ul></li>
+<li>类型转换（Type Conversion）</li>
+</ul>
+<h3 id="如何做上下文相关情况的处理">如何做上下文相关情况的处理？</h3>
+<p><code>语义分析的本质，就是针对上下文相关的情况做处理。</code></p>
+<h4 id="语义分析场景引用的消解">语义分析场景：引用的消解</h4>
+<h4 id="语义分析场景左值和右值">语义分析场景：左值和右值</h4>
+<ul>
+<li><code>左值（L-value）</code>：最早是在 C 语言中提出的，通常出现在表达式的左边，如赋值语句的左边。左值取的是变量的地址（或者说变量的引用），获得地址以后，我们就可以把新值写进去了。</li>
+<li><code>右值（R-value）</code>：通常所说的值，不是地址。</li>
+</ul>
+<p>语义分析过程</p>
+<ol type="1">
+<li>类型和作用域解析（TypeAndScopeScanner.java）</li>
+<li>类型的消解（TypeResolver.java</li>
+<li>引用的消解和 S 属性的类型的推导（RefResolver.java）</li>
+<li>做类型检查（TypeChecker.java）</li>
+<li>做一些语义合法性的检查（SematicValidator.java）</li>
+</ol>
+<h2 id="继承和多态面向对象运行期的动态特性">继承和多态：面向对象运行期的动态特性</h2>
+<p>从类型体系的角度理解继承和多态</p>
+<ul>
+<li><code>继承</code>: 一个类的子类，自动具备了父类的属性和方法，除非被父类声明为私有的。</li>
+<li><code>多态</code>: 同一个类的不同子类，在调用同一个方法时会执行不同的动作。</li>
+</ul>
+<p><code>子类型</code>: is-a 的操作</p>
+<ul>
+<li>名义子类型（Nominal Subtyping）
+<ul>
+<li>像 Java 和 C++ 语言，需要显式声明继承了什么类，或者实现了什么接口</li>
+</ul></li>
+<li>结构化子类型（Structural Subtyping），又叫鸭子类型（Duck Type）
+<ul>
+<li>一个类不需要显式地说自己是什么类型，只要它实现了某个类型的所有方法，那就属于这个类型</li>
+</ul></li>
+</ul>
+<p>如何对继承和多态的特性做语义分析</p>
+<ol type="1">
+<li>识别出新的类型</li>
+<li>设置正确的作用域</li>
+<li>变量和函数做类型的引用消解</li>
+</ol>
+<h3 id="小结-2">小结</h3>
+<ol type="1">
+<li>从类型的角度，面向对象的继承和多态是一种叫做子类型的现象，子类型能够放宽对类型的检查，从而支持多态。</li>
+<li>在编译期，无法准确地完成对象方法和属性的消解，因为无法确切知道对象的子类型。在运行期，我们能够获得对象的确切的子类型信息，从而绑定正确的方法和属性，实现继承和多态。</li>
+<li>另一个需要注意的运行期的特征，是对象的逐级初始化过程。</li>
+</ol>
+<p>参考：<a href="https://time.geekbang.org/column/intro/219" target="_blank" rel="noopener">编译原理之美</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://2020.iosdevlog.com/2020/01/14/Construction/" data-id="ck92wj9rj001uwt2w62se1b5w" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li></ul>
+
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-Compiler-Construction" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/13/Compiler-Construction/" class="article-date">
@@ -98,16 +463,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2020/01/13/Compiler-Construction/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86%E4%B9%8B%E7%BE%8E.jpg" class="" title="宫文学-《编译原理之美》">
         
-          <p class="article-more-link">
-            <a href="/2020/01/13/Compiler-Construction/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<p>编译技术并不难学</p>
+<blockquote>
+<p>“我知道编译技术很重要，我也很想把它啃下，可是我每次鼓起勇气拿起《编译原理》，啃不了多少页就放下了。编译原理已经成了我的心魔……”</p>
+</blockquote>
+<ul>
+<li>具体的案例带你理解抽象的原理</li>
+<li>真正运用到编译技术
+<ul>
+<li>实现一门脚本语言
+<ul>
+<li>词法分析</li>
+<li>语法分析</li>
+<li>语义分析</li>
+</ul></li>
+<li>实现一门编译型语言
+<ul>
+<li>目标代码生成</li>
+<li>代码优化</li>
+</ul></li>
+<li>面向未来的编程语言
+<ul>
+<li>人工智能编程</li>
+<li>云编程的新模式</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>参考：<a href="https://time.geekbang.org/column/intro/219" target="_blank" rel="noopener">编译原理之美</a></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/13/Compiler-Construction/" data-id="ck91evovy001s5c2w167vhlza" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/13/Compiler-Construction/" data-id="ck92wj9ri001rwt2w11le8vu1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li></ul>
@@ -149,16 +538,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2020/01/13/9787544261678/9787544261678.png" class="" title="东野圭吾-《只差一个谎言》">
         
-          <p class="article-more-link">
-            <a href="/2020/01/13/9787544261678/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<p>作者: [日] 东野圭吾<br />
+出版社: 南海出版公司<br />
+副标题: 加贺探案集6<br />
+原作名: 嘘をもうひとつだけ<br />
+译者: 黄真<br />
+出版年: 2013-4<br />
+页数: 198<br />
+定价: 25.00元<br />
+装帧: 平装<br />
+丛书: 加贺探案集<br />
+ISBN: 9787544261678</p>
+
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544261678/" data-id="ck91evovp001l5c2wd3z8cpcw" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544261678/" data-id="ck92wj9rf001kwt2wftz26tdu" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li></ul>
@@ -211,7 +609,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544246873/" data-id="ck91evovh001d5c2w28uj3voo" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544246873/" data-id="ck92wj9r80018wt2w2u9q4tef" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li></ul>
@@ -253,16 +651,34 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2020/01/13/9787544255899/9787544255899.png" class="" title="东野圭吾-《红手指》">
         
-          <p class="article-more-link">
-            <a href="/2020/01/13/9787544255899/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<p>作者: [日] 东野圭吾<br />
+出版社: 南海出版公司<br />
+出品方: 新经典文化<br />
+副标题: 加贺探案集07<br />
+原作名: 赤い指<br />
+译者: 于壮<br />
+出版年: 2011-10<br />
+页数: 211<br />
+定价: 25.00元<br />
+装帧: 平装<br />
+丛书: 加贺探案集<br />
+ISBN: 9787544255899</p>
+<blockquote>
+<p>养不教，父之过。</p>
+<p>教不严，师之惰。</p>
+<p>子不学，非所宜。</p>
+<p>幼不学，老何为。</p>
+</blockquote>
+<p>--三字经</p>
+<p><code>逃避</code> 并不能解决问题。</p>
+<p>小的过错不及及时纠正，只会引来无法挽回的过错。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544255899/" data-id="ck91evovm001i5c2w4tuzapyo" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544255899/" data-id="ck92wj9rd001fwt2w710fhgta" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li></ul>
@@ -304,16 +720,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2020/01/13/9787544266161/9787544266161.png" class="" title="东野圭吾-《麒麟之翼》">
         
-          <p class="article-more-link">
-            <a href="/2020/01/13/9787544266161/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<p>作者: [日] 东野圭吾<br />
+出版社: 南海出版公司<br />
+副标题: 加贺探案集9<br />
+原作名: 麒麟の翼<br />
+译者: 田秀娟<br />
+出版年: 2013-8-1<br />
+页数: 288<br />
+定价: 33<br />
+装帧: 平装<br />
+丛书: 加贺探案集<br />
+ISBN: 9787544266161</p>
+<p>“够了！说什么不想伤害孩子。你根本不明白自己做错了什么！杉野刺杀了青柳先生之后，为什么不自首？你知道吗？就是因为你把他教错了！即使 <code>犯了错误，也能蒙混过关</code> ——这就是三年前你教给他们的。所以，杉野会做相同的事情，会<code>犯相同的错误</code>。而青柳先生，看到自己的儿子如此误入歧途，他想告诉儿子什么才是正确的。你如果连这点都不明白，就别当老师！你这样的人，根本没有资格教育别人！”</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544266161/" data-id="ck91evovu001p5c2w6l5keqc6" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/13/9787544266161/" data-id="ck92wj9rc001cwt2welc48vsi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li></ul>
@@ -355,16 +780,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2020/01/12/9787544274692/9787544274692.png" class="" title="东野圭吾-《祈祷落幕时》">
         
-          <p class="article-more-link">
-            <a href="/2020/01/12/9787544274692/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<p>祈祷落幕时</p>
+<p>作者: (日)东野圭吾<br />
+出版社: 南海出版公司<br />
+原作名: 祈りの幕が下りる时<br />
+译者: 代珂<br />
+出版年: 2015-1<br />
+页数: 296<br />
+定价: 39.50元<br />
+装帧: 精装<br />
+丛书: 新经典文库·东野圭吾作品<br />
+ISBN: 9787544274692</p>
+<p>两个离异家庭，一个父亲为了女儿，杀了两个无辜的人。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/12/9787544274692/" data-id="ck91evov400135c2wd05tgkgs" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/12/9787544274692/" data-id="ck92wj9r40012wt2wbet20tgo" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li></ul>
@@ -406,16 +840,66 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <img src="/2020/01/12/hot/%E5%BC%95%E6%93%8E.jpg" class="" title="引擎">
         
-          <p class="article-more-link">
-            <a href="/2020/01/12/hot/#more">Read More</a>
-          </p>
-        
+<a id="more"></a>
+<h2 id="html5技术是如何取代flash的">HTML5技术是如何取代Flash的？</h2>
+<ul>
+<li>H5 游戏拥有比 Flash 更好用更开放的规范，开发和发布也更方便，修改代码后放到网上，只需要刷新一下页面就可以看到修改的内容</li>
+<li>另外，Flash 技术需要安装一个插件，而 H5 技术直接在浏览器就可以呈现。所以 H5 技术完全替代 Flash 只是时间问题</li>
+</ul>
+<h2 id="如何选择一款html5引擎">如何选择一款HTML5引擎？</h2>
+<ul>
+<li>如果美术熟悉 Cocos2d-JS，或者想要快速上手 2D 游戏，可以选择 Cocos2d-JS</li>
+<li>如果对编程不太熟练，可以选择 Construct 2</li>
+<li>如果是拥有完整流程的开发公司，Cocos2d-JS 和白鹭都可以选择</li>
+</ul>
+<h2 id="试试看你也可以编写一款html5小游戏">试试看，你也可以编写一款HTML5小游戏！</h2>
+<p><code>lufylegend</code></p>
+<h2 id="安卓端和苹果端游戏开发有什么区别">安卓端和苹果端游戏开发有什么区别？</h2>
+<ul>
+<li>从游戏角度讲，手机、掌上游戏机、iPad 都属于移动端设备。而进入智能机时代之后，掌上游戏机逐渐退居幕后，成为少部分游戏发烧友的选择。</li>
+<li>安卓端和苹果端在开发游戏中的区别，主要体现在开发语言上。苹果系统大量使用 Objective-C、Swift，而安卓大量使用的是 Java。</li>
+<li>苹果端的比较流行的引擎 SpriteKit 以及适用于各种平台的 libGDX。使用 libGDX 在各个平台编写出的游戏，表现几乎是一样的，除了执行效率或者耗电水平会有细微的差别，但这和引擎其实关系不大。</li>
+</ul>
+<h2 id="如何选择移动端的游戏引擎">如何选择移动端的游戏引擎？</h2>
+
+<p>我决定用 Godot。</p>
+<h2 id="ar和人工智能在游戏领域有哪些应用">AR和人工智能在游戏领域有哪些应用？</h2>
+<ul>
+<li><code>VR</code>：虚拟现实（Virual Reality ）</li>
+<li><code>AR</code>：增强现实（Augmented Reality）</li>
+<li><code>MR</code>：混合现实（Mixed Reality）</li>
+<li><code>SLAM</code>：同时定位与映射（Simultaneously Localization And Mapping）</li>
+</ul>
+<h2 id="谈谈微信小游戏的成功点">谈谈微信小游戏的成功点</h2>
+<ul>
+<li>微信小游戏、小程序都是基于 HTML5 技术的，而微信小游戏的技术就是 HTML5 技术，只是在小游戏中运用的框架并不是普通的 HTML5 的框架。</li>
+<li>微信小程序用的是基于 WebView 的技术；小游戏却没有用到 WebView 技术，而是修改了 HTML5 规范的一些接口内容，成为腾讯自己的内容。</li>
+<li>微信平台之所以要自定义自己的一套体系，比如 Web 标准、开发标准等等，是因为可以结合微信本身的特性，在此基础上制作出更契合腾讯生态的产品，一句话就是，为了方便自己开发、优化和管理。</li>
+<li>微信小游戏基于微信的底层获取功能、广告接入优势和打击拷贝的能力，塑造了一个更好的微信小程序生态。</li>
+</ul>
+<h2 id="谈谈移动游戏的未来发展">谈谈移动游戏的未来发展</h2>
+<ul>
+<li>移动端游戏将往更加精品、高画质、高品位的游戏转型。3D、VR、AR 等游戏也会层出不穷，移动端和大屏幕之间的阻隔也会逐渐模糊，两边都可以互相游戏。</li>
+<li>如果摆脱了电池的掣肘，那么移动端游戏将往 PC 端游戏的方向发展，更高质量的 3D 游戏也不用担心电池耗尽而半途无法玩了。</li>
+</ul>
+<h2 id="谈谈独立开发者的未来发展">谈谈独立开发者的未来发展</h2>
+<p>职责</p>
+<ul>
+<li><p>策划</p></li>
+<li><p>美工</p></li>
+<li><p>原画</p></li>
+<li><p>推广</p></li>
+<li><p>DOS 时代的时候，一个人或者一个小团队就可以做出一款游戏，但是这种时代已经过去了。游戏开发难度变小了，但是游戏制作难度变得越来越大了。</p></li>
+<li><p>尽管 Steam 依旧是目前最大的发布平台，但是由于它本身没有对上架的游戏进行分类、整理，有选择的展示。对独立开发者其实是不利的。加上 Switch、XBOX 等主机游戏相继都推出了自己的独立游戏计划，我其实更看好主机游戏的发展。</p></li>
+<li><p>其实不管基于什么平台，把游戏本身做好，才是最重要的。</p></li>
+</ul>
+<p>参考：<a href="https://time.geekbang.org/column/intro/87" target="_blank" rel="noopener">从0开始学游戏开发</a></p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/12/hot/" data-id="ck91evov800155c2w9det7g2k" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/12/hot/" data-id="ck92wj9r60016wt2w366r5xdx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li></ul>
@@ -468,7 +952,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/11/Server-Development/" data-id="ck91evovd001a5c2w6yei456c" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/11/Server-Development/" data-id="ck92wj9qy000qwt2wbt95d8gl" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li></ul>
@@ -476,110 +960,6 @@
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Script-Language" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/10/Script-Language/" class="article-date">
-  <time datetime="2020-01-10T11:07:54.000Z" itemprop="datePublished">2020-01-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/game/">game</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/10/Script-Language/">Lua 脚本语言</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Lua-logo-nolabel.svg/1200px-Lua-logo-nolabel.svg.png" alt="" /><figcaption>Lua</figcaption>
-</figure>
-        
-          <p class="article-more-link">
-            <a href="/2020/01/10/Script-Language/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/10/Script-Language/" data-id="ck91evov0000z5c2whch765a7" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li></ul>
-
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-9787544244848" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/09/9787544244848/" class="article-date">
-  <time datetime="2020-01-09T13:50:03.000Z" itemprop="datePublished">2020-01-09</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/09/9787544244848/">《变身》人物关系图</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <img src="/2020/01/09/9787544244848/9787544244848.png" class="" title="变身">
-        
-          <p class="article-more-link">
-            <a href="/2020/01/09/9787544244848/#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/09/9787544244848/" data-id="ck91evouu000t5c2w5a9d3q56" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li></ul>
-
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li></ul>
 
     </footer>
   </div>
@@ -603,7 +983,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/academy/">academy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code/">code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cs/">cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/geek/">geek</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/software/">software</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%86%99%E4%BD%9C/">写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6-%E6%94%B9%E9%9D%A9-%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/">读书 - 改革 - 大江大河</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%90%E8%90%A5/">运营</a></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/1001/">1001</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/AI/">AI</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/DL/">DL</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Python/">Python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/academy/">academy</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/algorithm/">algorithm</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/code/">code</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/cs/">cs</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/dl/">dl</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/docker/">docker</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/editor/">editor</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/game/">game</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/geek/">geek</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/github/">github</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/math/">math</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/open-source/">open source</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/party/">party</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plan/">plan</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/python/">python</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/software/">software</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%86%99%E4%BD%9C/">写作</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%87%86%E5%A4%87/">准备</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%B0%8F%E6%AD%A6/">小武</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/">统计学习方法</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">编译原理</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%82%BA%E7%82%8E/">肺炎</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/">自我提升</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AE%A1%E5%88%92/">计划</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6/">读书</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6-%E6%94%B9%E9%9D%A9-%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/">读书 - 改革 - 大江大河</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%BF%90%E8%90%A5/">运营</a></li></ul>
     </div>
   </div>
 
@@ -613,7 +993,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3b1b/" rel="tag">3b1b</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/" rel="tag">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/" rel="tag">CV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Code/" rel="tag">Code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DS/" rel="tag">DS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataMining/" rel="tag">DataMining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deployment/" rel="tag">Deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/calculus/" rel="tag">calculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheatsheets/" rel="tag">cheatsheets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheeksheet/" rel="tag">cheeksheet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs/" rel="tag">cs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/" rel="tag">data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dl/" rel="tag">dl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/download/" rel="tag">download</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/" rel="tag">free</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geek/" rel="tag">geek</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geektime/" rel="tag">geektime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/infoq/" rel="tag">infoq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/information/" rel="tag">information</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jetbrain/" rel="tag">jetbrain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/keras/" rel="tag">keras</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kotlin/" rel="tag">kotlin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linear/" rel="tag">linear</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lr/" rel="tag">lr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manager/" rel="tag">manager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manim/" rel="tag">manim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matplotlib/" rel="tag">matplotlib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mindmap/" rel="tag">mindmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml/" rel="tag">ml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nlp/" rel="tag">nlp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nn/" rel="tag">nn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/" rel="tag">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/protocal/" rel="tag">protocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scipy/" rel="tag">scipy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slm/" rel="tag">slm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf/" rel="tag">tf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf2/" rel="tag">tf2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theory/" rel="tag">theory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" rel="tag">大江大河</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E9%9D%A9/" rel="tag">改革</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9D%83/" rel="tag">版权</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/3b1b/" rel="tag">3b1b</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AI/" rel="tag">AI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ANN/" rel="tag">ANN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/AR/" rel="tag">AR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebra/" rel="tag">Algebra</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/" rel="tag">Android</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/App/" rel="tag">App</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Apple/" rel="tag">Apple</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CV/" rel="tag">CV</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Client/" rel="tag">Client</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Code/" rel="tag">Code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coursera/" rel="tag">Coursera</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DL/" rel="tag">DL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DS/" rel="tag">DS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/DataMining/" rel="tag">DataMining</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Deployment/" rel="tag">Deployment</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/English/" rel="tag">English</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Godot/" rel="tag">Godot</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Google/" rel="tag">Google</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kindle/" rel="tag">Kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Language/" rel="tag">Language</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Lua/" rel="tag">Lua</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ML/" rel="tag">ML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MediaWiki/" rel="tag">MediaWiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/NN/" rel="tag">NN</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PyTorch/" rel="tag">PyTorch</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Scene/" rel="tag">Scene</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/" rel="tag">Swift</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/TensorFlow/" rel="tag">TensorFlow</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/UI/" rel="tag">UI</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VR/" rel="tag">VR</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/action/" rel="tag">action</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/algorithm/" rel="tag">algorithm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/basic/" rel="tag">basic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/beginner/" rel="tag">beginner</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/book/" rel="tag">book</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/calculus/" rel="tag">calculus</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheatsheets/" rel="tag">cheatsheets</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cheeksheet/" rel="tag">cheeksheet</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/code/" rel="tag">code</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs/" rel="tag">cs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cv/" rel="tag">cv</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/data/" rel="tag">data</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/devops/" rel="tag">devops</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/dl/" rel="tag">dl</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/download/" rel="tag">download</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/free/" rel="tag">free</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geek/" rel="tag">geek</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/geektime/" rel="tag">geektime</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/" rel="tag">git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/https/" rel="tag">https</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/" rel="tag">iOS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/infoq/" rel="tag">infoq</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/information/" rel="tag">information</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/java/" rel="tag">java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jetbrain/" rel="tag">jetbrain</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/" rel="tag">js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/keras/" rel="tag">keras</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kindle/" rel="tag">kindle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kotlin/" rel="tag">kotlin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linear/" rel="tag">linear</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/lr/" rel="tag">lr</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manager/" rel="tag">manager</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/manim/" rel="tag">manim</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/matplotlib/" rel="tag">matplotlib</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/microsoft/" rel="tag">microsoft</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mindmap/" rel="tag">mindmap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml/" rel="tag">ml</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/mobile/" rel="tag">mobile</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/" rel="tag">network</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/" rel="tag">nginx</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nlp/" rel="tag">nlp</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nn/" rel="tag">nn</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/numpy/" rel="tag">numpy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pandas/" rel="tag">pandas</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/paper/" rel="tag">paper</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plan/" rel="tag">plan</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/plugin/" rel="tag">plugin</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/pm/" rel="tag">pm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/protocal/" rel="tag">protocal</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/scipy/" rel="tag">scipy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/slm/" rel="tag">slm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/svm/" rel="tag">svm</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tech/" rel="tag">tech</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/test/" rel="tag">test</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf/" rel="tag">tf</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tf2/" rel="tag">tf2</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/theory/" rel="tag">theory</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/todo/" rel="tag">todo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tool/" rel="tag">tool</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/vscode/" rel="tag">vscode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/wiki/" rel="tag">wiki</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/year/" rel="tag">year</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" rel="tag">东野圭吾</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%B8%AD%E5%9B%BD/" rel="tag">中国</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BA%BA%E7%89%A9/" rel="tag">人物</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" rel="tag">伽利略系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E4%BD%93%E8%82%B2/" rel="tag">体育</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" rel="tag">假面系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%8D%E8%B4%B9/" rel="tag">免费</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" rel="tag">公众号</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">加贺恭一郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" rel="tag">地球编年史</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" rel="tag">大江大河</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" rel="tag">天下一大五郎系列</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%94%B9%E9%9D%A9/" rel="tag">改革</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%95%88%E7%8E%87/" rel="tag">效率</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" rel="tag">极客时间</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%83%AD%E7%82%B9/" rel="tag">热点</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%89%88%E6%9D%83/" rel="tag">版权</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%9B%B4%E6%92%AD/" rel="tag">直播</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A7%BB%E5%8A%A8/" rel="tag">移动</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%98%E6%9C%AC/" rel="tag">绘本</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" rel="tag">统计学习方法</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%A5%BF%E7%90%B4/" rel="tag">西琴</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1/" rel="tag">设计</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AF%BB%E4%B9%A6/" rel="tag">读书</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E9%94%99%E8%AF%AF/" rel="tag">错误</a></li></ul>
     </div>
   </div>
 
@@ -623,7 +1003,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/3b1b/" style="font-size: 11.11px;">3b1b</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/ANN/" style="font-size: 11.11px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 12.22px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/CV/" style="font-size: 13.33px;">CV</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/Compiler/" style="font-size: 11.11px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.11px;">Construction</a> <a href="/tags/Coursera/" style="font-size: 10px;">Coursera</a> <a href="/tags/DL/" style="font-size: 17.78px;">DL</a> <a href="/tags/DS/" style="font-size: 11.11px;">DS</a> <a href="/tags/DataMining/" style="font-size: 10px;">DataMining</a> <a href="/tags/Deployment/" style="font-size: 10px;">Deployment</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 18.89px;">Godot</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Math/" style="font-size: 13.33px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.11px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 11.11px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 12.22px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 14.44px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TensorFlow/" style="font-size: 11.11px;">TensorFlow</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/algorithm/" style="font-size: 16.67px;">algorithm</a> <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/beginner/" style="font-size: 11.11px;">beginner</a> <a href="/tags/book/" style="font-size: 11.11px;">book</a> <a href="/tags/calculus/" style="font-size: 10px;">calculus</a> <a href="/tags/cheatsheets/" style="font-size: 10px;">cheatsheets</a> <a href="/tags/cheeksheet/" style="font-size: 10px;">cheeksheet</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/cs/" style="font-size: 10px;">cs</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/data/" style="font-size: 15.56px;">data</a> <a href="/tags/devops/" style="font-size: 13.33px;">devops</a> <a href="/tags/dl/" style="font-size: 12.22px;">dl</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/free/" style="font-size: 11.11px;">free</a> <a href="/tags/geek/" style="font-size: 10px;">geek</a> <a href="/tags/geektime/" style="font-size: 10px;">geektime</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 14.44px;">iOS</a> <a href="/tags/infoq/" style="font-size: 10px;">infoq</a> <a href="/tags/information/" style="font-size: 10px;">information</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jetbrain/" style="font-size: 10px;">jetbrain</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/keras/" style="font-size: 10px;">keras</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/kotlin/" style="font-size: 10px;">kotlin</a> <a href="/tags/linear/" style="font-size: 10px;">linear</a> <a href="/tags/lr/" style="font-size: 10px;">lr</a> <a href="/tags/manager/" style="font-size: 10px;">manager</a> <a href="/tags/manim/" style="font-size: 14.44px;">manim</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/mindmap/" style="font-size: 10px;">mindmap</a> <a href="/tags/ml/" style="font-size: 13.33px;">ml</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/network/" style="font-size: 12.22px;">network</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nlp/" style="font-size: 11.11px;">nlp</a> <a href="/tags/nn/" style="font-size: 11.11px;">nn</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/paper/" style="font-size: 12.22px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.11px;">plugin</a> <a href="/tags/pm/" style="font-size: 10px;">pm</a> <a href="/tags/protocal/" style="font-size: 10px;">protocal</a> <a href="/tags/python/" style="font-size: 11.11px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/slm/" style="font-size: 10px;">slm</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tf/" style="font-size: 10px;">tf</a> <a href="/tags/tf2/" style="font-size: 10px;">tf2</a> <a href="/tags/theory/" style="font-size: 10px;">theory</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/vscode/" style="font-size: 11.11px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.11px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 13.33px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" style="font-size: 10px;">大江大河</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%94%B9%E9%9D%A9/" style="font-size: 10px;">改革</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9D%83/" style="font-size: 10px;">版权</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">统计学习方法</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.11px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
+      <a href="/tags/3b1b/" style="font-size: 11.25px;">3b1b</a> <a href="/tags/AI/" style="font-size: 10px;">AI</a> <a href="/tags/ANN/" style="font-size: 11.25px;">ANN</a> <a href="/tags/AR/" style="font-size: 10px;">AR</a> <a href="/tags/Algebra/" style="font-size: 10px;">Algebra</a> <a href="/tags/Android/" style="font-size: 12.5px;">Android</a> <a href="/tags/App/" style="font-size: 10px;">App</a> <a href="/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/tags/CV/" style="font-size: 13.75px;">CV</a> <a href="/tags/Client/" style="font-size: 10px;">Client</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/Compiler/" style="font-size: 11.25px;">Compiler</a> <a href="/tags/Construction/" style="font-size: 11.25px;">Construction</a> <a href="/tags/Coursera/" style="font-size: 10px;">Coursera</a> <a href="/tags/DL/" style="font-size: 17.5px;">DL</a> <a href="/tags/DS/" style="font-size: 11.25px;">DS</a> <a href="/tags/DataMining/" style="font-size: 10px;">DataMining</a> <a href="/tags/Deployment/" style="font-size: 10px;">Deployment</a> <a href="/tags/English/" style="font-size: 10px;">English</a> <a href="/tags/Godot/" style="font-size: 18.75px;">Godot</a> <a href="/tags/Google/" style="font-size: 10px;">Google</a> <a href="/tags/Kindle/" style="font-size: 10px;">Kindle</a> <a href="/tags/Language/" style="font-size: 10px;">Language</a> <a href="/tags/Lua/" style="font-size: 10px;">Lua</a> <a href="/tags/ML/" style="font-size: 20px;">ML</a> <a href="/tags/Math/" style="font-size: 13.75px;">Math</a> <a href="/tags/MediaWiki/" style="font-size: 11.25px;">MediaWiki</a> <a href="/tags/NN/" style="font-size: 11.25px;">NN</a> <a href="/tags/PyTorch/" style="font-size: 12.5px;">PyTorch</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/Scene/" style="font-size: 10px;">Scene</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a> <a href="/tags/TensorFlow/" style="font-size: 11.25px;">TensorFlow</a> <a href="/tags/UI/" style="font-size: 10px;">UI</a> <a href="/tags/VR/" style="font-size: 10px;">VR</a> <a href="/tags/action/" style="font-size: 10px;">action</a> <a href="/tags/algorithm/" style="font-size: 17.5px;">algorithm</a> <a href="/tags/basic/" style="font-size: 10px;">basic</a> <a href="/tags/beginner/" style="font-size: 11.25px;">beginner</a> <a href="/tags/book/" style="font-size: 11.25px;">book</a> <a href="/tags/calculus/" style="font-size: 10px;">calculus</a> <a href="/tags/cheatsheets/" style="font-size: 10px;">cheatsheets</a> <a href="/tags/cheeksheet/" style="font-size: 10px;">cheeksheet</a> <a href="/tags/code/" style="font-size: 10px;">code</a> <a href="/tags/cs/" style="font-size: 11.25px;">cs</a> <a href="/tags/cv/" style="font-size: 10px;">cv</a> <a href="/tags/data/" style="font-size: 16.25px;">data</a> <a href="/tags/devops/" style="font-size: 15px;">devops</a> <a href="/tags/dl/" style="font-size: 12.5px;">dl</a> <a href="/tags/download/" style="font-size: 10px;">download</a> <a href="/tags/free/" style="font-size: 11.25px;">free</a> <a href="/tags/geek/" style="font-size: 10px;">geek</a> <a href="/tags/geektime/" style="font-size: 10px;">geektime</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/https/" style="font-size: 10px;">https</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/infoq/" style="font-size: 10px;">infoq</a> <a href="/tags/information/" style="font-size: 10px;">information</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/jetbrain/" style="font-size: 10px;">jetbrain</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/keras/" style="font-size: 10px;">keras</a> <a href="/tags/kindle/" style="font-size: 10px;">kindle</a> <a href="/tags/kotlin/" style="font-size: 10px;">kotlin</a> <a href="/tags/linear/" style="font-size: 10px;">linear</a> <a href="/tags/lr/" style="font-size: 10px;">lr</a> <a href="/tags/manager/" style="font-size: 10px;">manager</a> <a href="/tags/manim/" style="font-size: 15px;">manim</a> <a href="/tags/matplotlib/" style="font-size: 10px;">matplotlib</a> <a href="/tags/microsoft/" style="font-size: 10px;">microsoft</a> <a href="/tags/mindmap/" style="font-size: 10px;">mindmap</a> <a href="/tags/ml/" style="font-size: 13.75px;">ml</a> <a href="/tags/mobile/" style="font-size: 10px;">mobile</a> <a href="/tags/network/" style="font-size: 12.5px;">network</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a> <a href="/tags/nlp/" style="font-size: 11.25px;">nlp</a> <a href="/tags/nn/" style="font-size: 11.25px;">nn</a> <a href="/tags/numpy/" style="font-size: 10px;">numpy</a> <a href="/tags/pandas/" style="font-size: 10px;">pandas</a> <a href="/tags/paper/" style="font-size: 12.5px;">paper</a> <a href="/tags/plan/" style="font-size: 10px;">plan</a> <a href="/tags/plugin/" style="font-size: 11.25px;">plugin</a> <a href="/tags/pm/" style="font-size: 10px;">pm</a> <a href="/tags/protocal/" style="font-size: 10px;">protocal</a> <a href="/tags/python/" style="font-size: 11.25px;">python</a> <a href="/tags/scipy/" style="font-size: 10px;">scipy</a> <a href="/tags/slm/" style="font-size: 10px;">slm</a> <a href="/tags/svm/" style="font-size: 10px;">svm</a> <a href="/tags/tech/" style="font-size: 10px;">tech</a> <a href="/tags/test/" style="font-size: 10px;">test</a> <a href="/tags/tf/" style="font-size: 10px;">tf</a> <a href="/tags/tf2/" style="font-size: 10px;">tf2</a> <a href="/tags/theory/" style="font-size: 10px;">theory</a> <a href="/tags/todo/" style="font-size: 10px;">todo</a> <a href="/tags/tool/" style="font-size: 10px;">tool</a> <a href="/tags/vscode/" style="font-size: 11.25px;">vscode</a> <a href="/tags/wiki/" style="font-size: 11.25px;">wiki</a> <a href="/tags/year/" style="font-size: 10px;">year</a> <a href="/tags/%E4%B8%9C%E9%87%8E%E5%9C%AD%E5%90%BE/" style="font-size: 20px;">东野圭吾</a> <a href="/tags/%E4%B8%AD%E5%9B%BD/" style="font-size: 10px;">中国</a> <a href="/tags/%E4%BA%BA%E7%89%A9/" style="font-size: 10px;">人物</a> <a href="/tags/%E4%BC%BD%E5%88%A9%E7%95%A5%E7%B3%BB%E5%88%97/" style="font-size: 10px;">伽利略系列</a> <a href="/tags/%E4%BD%93%E8%82%B2/" style="font-size: 10px;">体育</a> <a href="/tags/%E5%81%87%E9%9D%A2%E7%B3%BB%E5%88%97/" style="font-size: 10px;">假面系列</a> <a href="/tags/%E5%85%8D%E8%B4%B9/" style="font-size: 10px;">免费</a> <a href="/tags/%E5%85%AC%E4%BC%97%E5%8F%B7/" style="font-size: 10px;">公众号</a> <a href="/tags/%E5%8A%A0%E8%B4%BA%E6%81%AD%E4%B8%80%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 13.75px;">加贺恭一郎系列</a> <a href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" style="font-size: 10px;">可视化</a> <a href="/tags/%E5%9C%B0%E7%90%83%E7%BC%96%E5%B9%B4%E5%8F%B2/" style="font-size: 10px;">地球编年史</a> <a href="/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/" style="font-size: 10px;">大江大河</a> <a href="/tags/%E5%A4%A9%E4%B8%8B%E4%B8%80%E5%A4%A7%E4%BA%94%E9%83%8E%E7%B3%BB%E5%88%97/" style="font-size: 10px;">天下一大五郎系列</a> <a href="/tags/%E6%94%B9%E9%9D%A9/" style="font-size: 10px;">改革</a> <a href="/tags/%E6%95%88%E7%8E%87/" style="font-size: 10px;">效率</a> <a href="/tags/%E6%9E%81%E5%AE%A2%E6%97%B6%E9%97%B4/" style="font-size: 10px;">极客时间</a> <a href="/tags/%E7%83%AD%E7%82%B9/" style="font-size: 10px;">热点</a> <a href="/tags/%E7%89%88%E6%9D%83/" style="font-size: 10px;">版权</a> <a href="/tags/%E7%9B%B4%E6%92%AD/" style="font-size: 10px;">直播</a> <a href="/tags/%E7%A7%BB%E5%8A%A8/" style="font-size: 10px;">移动</a> <a href="/tags/%E7%BB%98%E6%9C%AC/" style="font-size: 10px;">绘本</a> <a href="/tags/%E7%BB%9F%E8%AE%A1%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/" style="font-size: 10px;">统计学习方法</a> <a href="/tags/%E8%A5%BF%E7%90%B4/" style="font-size: 10px;">西琴</a> <a href="/tags/%E8%AE%BE%E8%AE%A1/" style="font-size: 10px;">设计</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 11.25px;">读书</a> <a href="/tags/%E9%94%99%E8%AF%AF/" style="font-size: 10px;">错误</a>
     </div>
   </div>
 
@@ -645,6 +1025,14 @@
       <ul>
         
           <li>
+            <a href="/2020/04/16/Microsoft/">首届 微软在线技术峰会 的云原生、开源与 DevOps 专场</a>
+          </li>
+        
+          <li>
+            <a href="/2020/04/15/Data-structure/">《大话数据结构》读书笔记</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/15/github/">GitHub 组织也可以免费创建私有仓库</a>
           </li>
         
@@ -654,14 +1042,6 @@
         
           <li>
             <a href="/2020/04/12/nginx/">Nginx 思维导图</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/11/jetbrains/">JetBrains Academy Knowledge Map</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/10/pm/">人人都是产口经理 3.0</a>
           </li>
         
       </ul>
@@ -710,21 +1090,6 @@
 
 
 
-  </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </div><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
