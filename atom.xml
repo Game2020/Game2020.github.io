@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://2020.iosdevlog.com/"/>
-  <updated>2020-04-16T15:10:16.724Z</updated>
+  <updated>2020-04-18T15:56:04.033Z</updated>
   <id>https://2020.iosdevlog.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>适用于 iOS 的虚拟机</title>
+    <link href="https://2020.iosdevlog.com/2020/04/18/utm/"/>
+    <id>https://2020.iosdevlog.com/2020/04/18/utm/</id>
+    <published>2020-04-18T15:49:23.000Z</published>
+    <updated>2020-04-18T15:56:04.033Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://raw.githubusercontent.com/utmapp/UTM/master/screen.png" /></p><blockquote><p>It is possible to invent a single machine which can be used to compute any computable sequence.</p></blockquote><p>-- Alan Turing, 1936</p><blockquote><p>有可能发明一台可以用来计算任何可计算序列的机器。</p></blockquote><p>-艾伦·图灵（Alan Turing），1936年</p><p>UTM 是 <code>iOS</code> 的功能齐全的虚拟机主机。简而言之，它使您可以在 <code>iPhone</code> 和 <code>iPad</code> 上运行 <code>Windows</code>，<code>Android</code> 等。有关更多信息，请访问https://getutm.app/</p><a id="more"></a><h2 id="特征">特征</h2><ul><li>借助 <code>qemu</code> 作为后端，支持 30 多种处理器，包括 <code>x86_64</code>，<code>ARM64</code> 和 <code>RISC-V</code></li><li>借助 <code>SPICE</code>，可通过半虚拟化实现快速本地图形处理</li><li>使用 <code>Qemu TCG</code> 的基于JIT的加速</li><li>使用最新和最出色的 <code>API</code> 从头开始为 <code>iOS11+</code> 设计的前端</li><li>直接从设备创建，管理，运行 <code>VM</code></li><li>无需越狱！</li></ul><h2 id="安装">安装</h2><p><a href="https://getutm.app/install/" target="_blank" rel="noopener" class="uri">https://getutm.app/install/</a></p><h2 id="github">GitHub</h2><p><a href="https://github.com/utmapp/UTM" target="_blank" rel="noopener" class="uri">https://github.com/utmapp/UTM</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/utmapp/UTM/master/screen.png&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is possible to invent a single machine which can be used to compute any computable sequence.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;-- Alan Turing, 1936&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有可能发明一台可以用来计算任何可计算序列的机器。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;-艾伦·图灵（Alan Turing），1936年&lt;/p&gt;
+&lt;p&gt;UTM 是 &lt;code&gt;iOS&lt;/code&gt; 的功能齐全的虚拟机主机。简而言之，它使您可以在 &lt;code&gt;iPhone&lt;/code&gt; 和 &lt;code&gt;iPad&lt;/code&gt; 上运行 &lt;code&gt;Windows&lt;/code&gt;，&lt;code&gt;Android&lt;/code&gt; 等。有关更多信息，请访问https://getutm.app/&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="iOS" scheme="https://2020.iosdevlog.com/categories/iOS/"/>
+    
+    
+      <category term="github" scheme="https://2020.iosdevlog.com/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>首届 微软在线技术峰会 的云原生、开源与 DevOps 专场</title>
@@ -620,40 +652,6 @@
       <category term="book" scheme="https://2020.iosdevlog.com/tags/book/"/>
     
       <category term="free" scheme="https://2020.iosdevlog.com/tags/free/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《艰难的制造》读书笔记</title>
-    <link href="https://2020.iosdevlog.com/2020/04/01/9787550298637/"/>
-    <id>https://2020.iosdevlog.com/2020/04/01/9787550298637/</id>
-    <published>2020-04-01T08:28:03.000Z</published>
-    <updated>2020-04-01T08:43:01.983Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="https://2020.iosdevlog.com/2020/04/01/9787550298637/1.jpg" /></p><p>作者: 阿耐<br />出版社: 北京联合出版公司<br />副标题: 讲述制造业在政策和市场夹缝中的生存故事<br />出版年: 2017-6<br />页数: 672<br />定价: 69.90<br />装帧: 平装<br />丛书: 读客·知识小说文库<br />ISBN: 9787550298637</p><a id="more"></a><h2 id="内容简介">内容简介</h2><p>宁炒一座楼，不办一家厂，开厂为啥干不过炒房，做实业的为啥干不过搞金融的？作为立国之本、创造财富的制造业发生了什么？市场的大手，政策的大手，究竟在其中起到什么样的作用？</p><p>小说以一家中小型机械制造厂切入，以手术解剖的方式娓娓道来秉持实业理想的柳钧和从事金融的好友钱宏明的典型遭遇。无论是山寨模仿、技术剽窃、恶意抢单、黑社会威胁、税务查账、环保穿小鞋还是信用证诈骗、房地产投机、民间高利贷、非法集资，从起步到发展过程中大到政策，小到员工管理的九九八十一难一一为你呈现。</p><p>本书作者阿耐曾为浙江某著名民营制造业高管，几十年经营管理经验，写出来的都是“实打实的真材实料”。自连载以来，引发珠三角、长三角众多制造业老板及金融从业者的广泛共鸣。</p><h2 id="结局对比">结局对比</h2><p>最后一章里面，这一（2008）年，<strong>柳钧</strong> 失去最好的朋友，却还晦气得在年底前出国洽商的时候撞见宿仇 <strong>杨巡</strong>。</p><p><strong>柳钧</strong> 以为 <strong>杨巡</strong> 要逃，杨巡说：</p><blockquote><p>"人在青山在，只要公司不倒，所有债务都只是账面数字，哪家公司不是负债运行的。"</p></blockquote><p><strong>杨巡</strong> 的世界只有利益相关，<strong>柳钧</strong> 和 <strong>宋运辉</strong> 观点：</p><blockquote><p>“创造力无价。”</p></blockquote><blockquote><p>“你该不会还以为我送了宋总和梁姐很多好处？”两人对视，柳钧从杨巡眼里看出一丝恍惚。“或许，你的世界只有利益相关，但我们的世界里有一些傻傻的东西，比如你近来才意识到知识无价，因为这个社会发展到现阶段，人力成本上升趋势已不可逆转，无论国内外的市场竞争都将越来越靠科研技术。只是眼下的大环境并不支持这种脚踏实地的竞争方式，有很多傻傻的人内心很焦虑，很着急，很想尽一己之力稍微改变一下这样的结构问题。我们都在努力，我非常感谢宋总支持我的努力。他是个很有精神感召力的人。</p></blockquote><p>——第106章 2008年新劳动合同法和新政策带来的负担(14) / 最后一章</p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://2020.iosdevlog.com/2020/04/01/9787550298637/1.jpg&quot; /&gt;&lt;/p&gt;
-&lt;p&gt;作者: 阿耐&lt;br /&gt;
-出版社: 北京联合出版公司&lt;br /&gt;
-副标题: 讲述制造业在政策和市场夹缝中的生存故事&lt;br /&gt;
-出版年: 2017-6&lt;br /&gt;
-页数: 672&lt;br /&gt;
-定价: 69.90&lt;br /&gt;
-装帧: 平装&lt;br /&gt;
-丛书: 读客·知识小说文库&lt;br /&gt;
-ISBN: 9787550298637&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="读书" scheme="https://2020.iosdevlog.com/categories/%E8%AF%BB%E4%B9%A6/"/>
-    
-    
-      <category term="改革" scheme="https://2020.iosdevlog.com/tags/%E6%94%B9%E9%9D%A9/"/>
-    
-      <category term="大江大河" scheme="https://2020.iosdevlog.com/tags/%E5%A4%A7%E6%B1%9F%E5%A4%A7%E6%B2%B3/"/>
     
   </entry>
   
