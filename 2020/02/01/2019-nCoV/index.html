@@ -7,17 +7,24 @@
   
   <title>新型肺炎最新可视化 | Game 2020</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据源 DataSource 腾讯新闻： https:&#x2F;&#x2F;news.qq.com&#x2F;zt2020&#x2F;page&#x2F;feiyan.htm  开发者工具  json 数据 https:&#x2F;&#x2F;view.inews.qq.com&#x2F;g2&#x2F;getOnsInfo?name&#x3D;disease_h5  https:&#x2F;&#x2F;www.json.cn  vscode 替换 &quot;  转换 model https:&#x2F;&#x2F;quicktype.">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="新型肺炎最新可视化">
 <meta property="og:url" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/index.html">
 <meta property="og:site_name" content="Game 2020">
-<meta property="og:description" content="数据源 DataSource 腾讯新闻： https:&#x2F;&#x2F;news.qq.com&#x2F;zt2020&#x2F;page&#x2F;feiyan.htm  开发者工具  json 数据 https:&#x2F;&#x2F;view.inews.qq.com&#x2F;g2&#x2F;getOnsInfo?name&#x3D;disease_h5  https:&#x2F;&#x2F;www.json.cn  vscode 替换 &quot;  转换 model https:&#x2F;&#x2F;quicktype.">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/2019-nCoV.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/1.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/2.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/3.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/4.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/5.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/6.png">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/7.png">
 <meta property="article:published_time" content="2020-02-01T09:13:29.000Z">
 <meta property="article:modified_time" content="2020-02-01T15:10:35.872Z">
 <meta property="article:author" content="iOSDevLog">
 <meta property="article:tag" content="可视化">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/2019-nCoV.png">
   
     <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
   
@@ -98,23 +105,23 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <img src="/2020/02/01/2019-nCoV/2019-nCoV.png" class="">
 <a id="more"></a>
 <h2 id="数据源-datasource">数据源 DataSource</h2>
 <p>腾讯新闻： <a href="https://news.qq.com/zt2020/page/feiyan.htm" target="_blank" rel="noopener" class="uri">https://news.qq.com/zt2020/page/feiyan.htm</a></p>
-
+<img src="/2020/02/01/2019-nCoV/1.png" class="">
 <p>开发者工具</p>
-
+<img src="/2020/02/01/2019-nCoV/2.png" class="">
 <p><code>json</code> 数据</p>
 <p><a href="https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5" target="_blank" rel="noopener" class="uri">https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5</a></p>
-
+<img src="/2020/02/01/2019-nCoV/3.png" class="">
 <p><a href="https://www.json.cn" target="_blank" rel="noopener" class="uri">https://www.json.cn</a></p>
-
+<img src="/2020/02/01/2019-nCoV/4.png" class="">
 <p><code>vscode</code> 替换 <em>"</em></p>
-
+<img src="/2020/02/01/2019-nCoV/5.png" class="">
 <p>转换 <code>model</code></p>
 <p><a href="https://quicktype.io" target="_blank" rel="noopener" class="uri">https://quicktype.io</a></p>
-
+<img src="/2020/02/01/2019-nCoV/6.png" class="">
 <p>保存 <code>nCoV2019.py</code></p>
 <figure class="highlight py"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-*- coding: utf-8 -*-</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># This code parses date/times, so please</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     pip install python-dateutil</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To use this code, make sure you</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     import json</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># and then, to convert JSON from a string, do</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     result = n_co_v2019_from_dict(json.loads(json_string))</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">from</span> datetime <span class="keyword">import</span> datetime</span><br><span class="line"><span class="keyword">import</span> dateutil.parser</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">from_int</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">assert</span> isinstance(x, int) <span class="keyword">and</span> <span class="keyword">not</span> isinstance(x, bool)</span><br><span class="line">    <span class="keyword">return</span> x</span><br><span class="line"></span><br><span class="line">...</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">n_co_v2019_from_dict</span><span class="params">(s)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> NCoV2019.from_dict(s)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">n_co_v2019_to_dict</span><span class="params">(x)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> to_class(NCoV2019, x)</span><br></pre></td></tr></table></figure>
 <h2 id="虚拟环境">虚拟环境</h2>
@@ -134,7 +141,7 @@
 <h3 id="step-3-运行项目">Step 3: 运行项目</h3>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chmod +x app.py</span><br><span class="line">./app.py</span><br></pre></td></tr></table></figure>
 <p>使用浏览器打开 <a href="http://127.0.0.1:5000" target="_blank" rel="noopener" class="uri">http://127.0.0.1:5000</a> 即可访问服务</p>
-
+<img src="/2020/02/01/2019-nCoV/7.png" class="">
 <h3 id="step-3-编写代码">Step 3: 编写代码</h3>
 <p>剩下就是编码阶段了，全部代码可以去 GitHub 查看</p>
 <p><a href="https://github.com/Game2020/nCoV2019" target="_blank" rel="noopener" class="uri">https://github.com/Game2020/nCoV2019</a></p>
@@ -142,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/" data-id="ck98ocjh1003jio2w8bc31svg" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/02/01/2019-nCoV/" data-id="ck99ahlxs003qun2w5oupc380" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/" rel="tag">可视化</a></li></ul>

@@ -7,18 +7,20 @@
   
   <title>实现一门脚本语言-原理篇 | Game 2020</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="理解代码：编译器的前端技术  前端（Front End）: 编译器对程序代码的分析和理解过程  词法分析（Lexical Analysis）  程序分割成一个个 Token 的过程，可以通过构造有限自动机来实现 识别一个个的单词 词法记号（Token） Lex（或其 GNU 版本，Flex）  正则文法（Regular Grammar）  符合正则文法的表达式  有限自动机（Finite-st">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="article">
 <meta property="og:title" content="实现一门脚本语言-原理篇">
 <meta property="og:url" content="https://2020.iosdevlog.com/2020/01/14/Construction/index.html">
 <meta property="og:site_name" content="Game 2020">
-<meta property="og:description" content="理解代码：编译器的前端技术  前端（Front End）: 编译器对程序代码的分析和理解过程  词法分析（Lexical Analysis）  程序分割成一个个 Token 的过程，可以通过构造有限自动机来实现 识别一个个的单词 词法记号（Token） Lex（或其 GNU 版本，Flex）  正则文法（Regular Grammar）  符合正则文法的表达式  有限自动机（Finite-st">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/Compiler.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/Token.jpg">
+<meta property="og:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/AST.jpg">
 <meta property="article:published_time" content="2020-01-14T05:58:32.000Z">
 <meta property="article:modified_time" content="2020-02-16T07:03:36.368Z">
 <meta property="article:author" content="iOSDevLog">
 <meta property="article:tag" content="Compiler">
 <meta property="article:tag" content="Construction">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://2020.iosdevlog.com/2020/01/14/Construction/Compiler.jpg">
   
     <link rel="alternate" href="/atom.xml" title="Game 2020" type="application/atom+xml">
   
@@ -99,7 +101,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <img src="/2020/01/14/Construction/Compiler.jpg" class="" title="宫文学- 编译原理">
 <a id="more"></a>
 <h2 id="理解代码编译器的前端技术">理解代码：编译器的前端技术</h2>
 <ul>
@@ -140,7 +142,7 @@
 <li><code>关键字</code>: 语言设计中作为语法要素的词汇</li>
 <li><code>保留字</code>: 当前的语言设计中还没用到，但是保留下来，因为将来会用到</li>
 </ul>
-
+<img src="/2020/01/14/Construction/Token.jpg" class="" title="Token">
 <blockquote>
 <p>关键字和保留字跟标识符区分开呢？</p>
 </blockquote>
@@ -148,7 +150,7 @@
 <li>识别普通的 <code>标识符</code> 之前，是否 <code>关键字</code> / <code>保留字</code></li>
 </ul>
 <h2 id="语法分析">语法分析</h2>
-
+<img src="/2020/01/14/Construction/AST.jpg" class="" title="AST">
 <h3 id="纯手工打造公式计算器">纯手工打造公式计算器</h3>
 <p>推导（Derivation）过程</p>
 <ul>
@@ -363,7 +365,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://2020.iosdevlog.com/2020/01/14/Construction/" data-id="ck98ocjfv001zio2wcp8q3un6" class="article-share-link">Share</a>
+      <a data-url="https://2020.iosdevlog.com/2020/01/14/Construction/" data-id="ck99ahlv8001xun2w3aro6rb5" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Compiler/" rel="tag">Compiler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Construction/" rel="tag">Construction</a></li></ul>
